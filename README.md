@@ -1,101 +1,109 @@
-# FEW-2.2-Build-Systems-and-State-Management-with-Webpack-and-Redux-js
+# Single Page Applications
+
+---
+Prerequisites: BEW 1.1, FEW 1.2
+Projects: 
+
+The course covers the process and tools used to build single page applications (SPA) using the most up-to-date tools and techniques. Students will learn to manage state and render on state changes using reactive programming techniques. Modern JavaScript libraries including React and Redux will be used. 
+
+Tools: HTML, CSS, JavaScript, React JS
+
+---
 
 ## Course Description
 
-JavaScript applications can get pretty complex. Buils systems 
-automate and customize the process for you. 
+Describe your course here. A short elevator pitch for the course. This will be listed as the course description in the course catalog.
 
-## Prerequisites
+## Course Specifics
 
-A list of prerequisites students need to be successful 
-in this class. Include previous classes you expect 
-students should have taken, and knowledge and skills 
-that students should have coming into the class.
+Weeks to Completion:  7 <br>
+Total Seat Hours:  37.5 hours <br>
+Total Out-of-Class Hours: 75 hours <br>
+Total Hours: 112.5 hours <br>
+Units:  3 units <br>
+Delivery Method:  Residential <br>
+Class Sessions:  14 classes, 7 labs 
 
-1. Use an...
-1. ordered list. 
+## Prerequisites:  
 
-### Who should enroll (optional)
+MOB 1.1, MOB 1.2, MOB 1.3, MOB 1.4 <br>
 
-A short description of who would benefit most from 
-taking this class. This is optional. Include this if you 
-feel your class would not benefit everyone.
+## Learning Objectives or Competencies (5-8)
 
-## Competencies & Objectives
+Students by the end of the course will be able to ...
 
-A description of the skills a student aquire by taking 
-the class.
+1. Identify & Describe
+1. Explain
+1. Compare & Contrast
+1. Design & Implement
+1. Master
 
-Must be measurable! Make School does not have grades 
-but we do evaluate student progress. Usually this 
-will evaluate to something a student will be able to 
-do after taking the class.
+## Tutorials & Projects
 
-Follow the guide here for writing competencies.
+- Link to all of the technical tutorials, projects, and course-level assignments (i.e. tutorials, contractor project, custom projects, etc)
+- Use a list
 
-https://sph.uth.edu/content/uploads/2012/01/Competencies-and-Learning-Objectives.pdf
+## Evaluation
 
-1. List all of the course 
-1. Competencies here.
-1. Use an orderd list
+To pass this course you must meet the following requirements:
 
-## Required Text and Materials (Optional)
-
-- List required materials here
-
-### Evaluation
-
-Define what students need to do to pass this class. 
-Be clear and accurate, avoid vague terms. 
-
-Make School does not provide grades but we do evaulate 
-student work. Determine what work assigned in class is 
-required to pass.
-
-All work must Must have Pass Fail Criteria!
-
-As a general guide list the number of projects and 
-baseline challenges that must be completed to pass the 
-class.
-
-Here is some more information on learning assessment.
-
-https://www.cte.cornell.edu/teaching-ideas/assessing-student-learning/measuring-student-learning.html
-
-- Use a list 
+- No more than two no call no shows
+- No more than four excused absences
+- Make up all classwork from all absences
+- Finish all required tutorials and projects
+- Pass the final exam (summative assessment) >=80%
 
 ## Lessons
 
-- List your lessons here
-- Provide a link to each lesson
-- Use a list
+Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
 
-### Projects 
+1. Lesson Title & Topic
+    - **Before Class**
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
+1. Lesson Title & Topic
+    - **In Class Activities**
+    - **After Class**
 
-- List all of the projects 
-- Use a list
+## Make School Course Policies
 
-### Vocabulary & Conventions
-
-- List vocabulary
-- and definitions 
-- for terms students 
-- need to understand
-- This is optional 
-
-### Best Practices
-
-- List best practices 
-- This is optional 
-
-### Resources
-
-Any resources to be used by students in class. Include:
-
-- books
-- videos
-- blog posts
-- online articles
-- links to tutorials
-- other media
-
+[Academic Honesty](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Academic-Honesty-and-Plagiarism.md)<br>
+[Accomodation Policy](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Accommodation-Policy.md)<br>
+[Diversity Statement](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Diversity-Statement.md)<br>
+[Evaluation Methods](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Evaluation-Methods.md)
+<br>
+[Title IX Disclaimer](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Evaluations-Title-X-Disclaimer.md)<br>
+[Program Learning Outcomes](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Program-Learning-Outcomes.md)
