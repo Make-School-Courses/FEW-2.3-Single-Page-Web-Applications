@@ -1,0 +1,61 @@
+
+Each class begins or ends with quiz 
+Class ends with code review random student
+Commit during class 
+
+
+- Week 1 
+	- intro tutorial
+	- Shopping Cart
+	- Class 1 
+		- What is, why use… 
+			- React Virtual DOM
+		- Components 
+		- props and state (ref and value)
+		- What Reactive programming 
+		- JSX 
+		- Work on tutorial 
+	- Class 2
+		- Rendering Arrays with React using keys 
+		- Map, filter, reduce 
+		- Shopping cart
+- Week 2
+	- API project (from a list)
+	- Class 1: 
+		- Fetch, async, promise 
+		- Work on project in class
+	- Class 2: 
+		- Conditional rendering 
+		- Work in class 
+- Week 3
+	- Redux Why Redux? What Redux? 
+		- ref vs value
+	- Start Tutorial 
+	- Class 1: 
+		- Redux why and why?
+			- Actions, Dispatcher, Store, reducers
+	- Class 2: 
+		- react-redux connect, create store
+- Week 4
+	- Redux Tutorial 
+	-	Class 1
+		- Styling components 
+	- Class 2
+		- 
+- Week 5
+	- React Express Final project 
+	- If available React Express tutorial
+	- Class 1: 	
+		- Proxy server express 
+	- Class 2: 
+		- Maybe Router ???
+- Week 6
+	- React Express
+	- Class 1
+		- Maybe Router ???
+	- Class 2
+		- Trouble shooting 
+- Week 7
+	- Review Final projects 
+		- Study for final 
+	- Final Assessment 
