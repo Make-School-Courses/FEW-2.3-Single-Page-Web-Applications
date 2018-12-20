@@ -2,11 +2,12 @@
 
 ## Course Description
 
-The course covers the process and tools used to build single page applications (SPA) using the most up-to-date tools and techniques. Students will learn to manage state and render on state changes using reactive programming techniques. Modern JavaScript libraries including React and Redux will be used. 
+This course covers the process and tools used to build single page applications (SPA) using the most up-to-date tools and techniques. Students will learn to manage state and render on state changes using reactive programming techniques. Modern JavaScript libraries including React and Redux will be used.
 
-### Why you should take this class
+### Why you should know this (optional)
 
-You are passionate about frontend web development and want to gain experience with important indistry standard frameworks. 
+**Mitchell to do**
+Explain why students should care to learn the material presented in this class.
 
 ## Course Specifics
 
@@ -18,53 +19,117 @@ Units:  3 units <br>
 Delivery Method:  Residential <br>
 Class Sessions:  14 classes, 7 labs
 
-## Prerequisites
+## Prerequisites:  
 
-Prerequisites: BEW 1.1, FEW 1.2
+- BEW 1.1
+- FEW 1.2
 
-## Learning Objectives
+## Learning Objectives or Competencies (5-8)
 
-1. Reactive Programming
-1. Application State 
-1. Component Based Architecture
-1. Develop JS skills
-1. Identify & Describe
-1. Explain
-1. Compare & Contrast
-1. Design & Implement
-1. Master
+Students by the end of the course will be able to ...
+
+1. Build Single Page Applications (SPAs)
+1. Identify and utilize Reactive Programming when building SPAs, and how it differs from other programming paradigms
+1. Manage application states using the FLUX architecture pattern
+1. Use conditional rendering to programatically manage the user interface
+1.
+
+
 
 ## Schedule
+---
+### _INSTRUCTOR NOTE: PLEASE REMOVE THIS BEFORE SUBMITTING_
+If you teach **M/W** or **Tu/Th**, please pick from a template below and delete the other one
 
-**Course Dates:** Tuesday, October 23 – Thursday, December 13, 2018 (7 weeks)
+---
+### M/W Template
+**Course Dates:** Monday, January 21 – Wednesday, March 6, 2019 (7 weeks)
 
-**Class Times:** Tuesday and Thursday at 3:30–5:20pm (13 class sessions)
+**Class Times:** Monday and Wednesday at 3:30–5:20pm (10 class sessions)
 
-| Class | Date                             | Topics                   |
-|:-----:|:--------------------------------:|:------------------------:|
-|  Wk 1 |  Day 1 or Tuesday, October 23    | [Lesson 1](lesson-01)    |
-|  Wk 1 | Thursday, October 25             | [Lesson 2](lesson-02)    |
-|  Wk 2 |  Tuesday, October 30             | [Lesson 1](lesson-03)    |
-|  Wk 2 | Thursday, November 1             | [Lesson 1](lesson-04)    |
-|  Wk 5 |  Tuesday, November 6             | [Lesson 1](lesson-05)    |
-|  Wk 6 | Thursday, November 8             | [Lesson 1](lesson-06)    |
-|  Wk 7 |  Tuesday, November 13            | [Lesson 1](lesson-07)    |
-|  Wk 8 | Thursday, November 15            | [Lesson 1](lesson-08)    |
-|       |  Tuesday, November 20            | **Don Rags**             |
-|       | Thursday, November 22            | **Fall Break**           |
-|  Wk 9 |  Tuesday, November 27            | [Lesson 1](lesson-09)    |
-|  Wk 10| Thursday, November 29            | [Lesson 1](lesson-10)    |
-|  Wk 11|  Tuesday, December 4             | [Lesson 1](lesson-11)    |
-|  Wk 12| Thursday, December 6             | [Lesson 1](lesson-12)    |
-|  Wk 13| Tuesday, December 11             | [Final Exams](lesson-13) |
-|  Wk 14| Thursday, December 13            | [Final Class](lesson-14) |
+| Class |          Date          |                 Topics                  |
+|:-----:|:----------------------:|:---------------------------------------:|
+|  -  | Monday, January 21             | **MLK Jr. Day** |
+|  1 | Wednesday, January 23    | [Lesson 1] |
+|  2 | Monday, January 28             | [Lesson 2] |
+|  3 |  Wednesday, January 30             | [Lesson 3] |
+|  4 | Monday, February 4             | [Lesson 4] |
+|  5 |  Wednesday, February 6             | [Lesson 5] |
+|  6 | Monday, February 11             | [Lesson 6] |
+|  7 |  Wednesday, February 13            | [Lesson 7] |
+|  -  | Monday, February 18             | **President's Day (Observed)** |
+|  8  | **Tuesday, February 19**             | [Lesson 8] |
+|  9 |  Wednesday, February 20            | [Lesson 9] |
+|  10 | Monday, February 25             | [Lesson 10] |
+|  11 |  Wednesday, February 27            | [Lesson 11] |
+|  12 | Monday, March 4             | Final Class (presentations, etc) |
+|  13 |  Wednesday, March 6            | Final Exams/Presentations |
 
-## Class Assignments
+### Tu/Th Template
+**Course Dates:** Tuesday, January 22 – Thursday, March 7, 2019 (7 weeks)
 
+**Class Times:** Tuesday and Thursday at 3:30–5:20pm (12 class sessions)
+
+| Class |          Date          |                 Topics                  |
+|:-----:|:----------------------:|:---------------------------------------:|
+|  1 |  Tuesday, January 22              | [Lesson 1] |
+|  2 | Thursday, January 24             | [Lesson 2] |
+|  3 |  Tuesday, January 29             | [Lesson 3] |
+|  4 | Thursday, January 31             | [Lesson 4] |
+|  5 |  Tuesday, February 5             | [Lesson 5] |
+|  6 | Thursday, February 7             | [Lesson 6] |
+|  7 |  Tuesday, February 12             | [Lesson 7] |
+|  8 | Thursday, February 14             | [Lesson 8] |
+|  - |  Tuesday, February 19             | **President's Day (Observed)** |
+|  9 | Thursday, February 21             | [Lesson 9] |
+|  10 |  Tuesday, February 26             | [Lesson 10] |
+|  11 | Thursday, February 28             | [Lesson 11] |
+|  12 |  Tuesday, March 5             | Final Class (presentations, etc) |
+|  13 | Thursday, March 7             | Final Exams/Presentations |
+
+[Lesson 1]: Lessons/Lesson1.md
+[Lesson 2]: Lessons/Lesson2.md
+[Lesson 3]: Lessons/Lesson3.md
+[Lesson 4]: Lessons/Lesson4.md
+[Lesson 5]: Lessons/Lesson5.md
+[Lesson 6]: Lessons/Lesson6.md
+[Lesson 7]: Lessons/Lesson7.md
+[Lesson 8]: Lessons/Lesson8.md
+[Lesson 9]: Lessons/Lesson9.md
+[Lesson 10]: Lessons/Lesson10.md
+[Lesson 11]: Lessons/Lesson11.md
+[Lesson 12]: Lessons/Lesson12.md
+
+## Class Assignments [Remove header if you like]
+- List (with links) of all course-level assignments (i.e. tutorials, challenge sets, contractor project, custom projects, etc)
+- Under each assignment link the rubric used to evaluate it or describe how it is evaluated.
+- Projects should be linked to a project page which has a description & requirements.
 
 ### Tutorials
+[REWORD AS RELEVANT TO YOUR COURSE] Tutorials are to help you get started in a topic.  They are graded on completion only.
+
+- [Do Cool Stuff Tutorial]()
 
 ### Projects
+**All projects will require a minimum of 10 commits, and must take place throughout the entirety of the course**
+
+- **Good Example:** 40+ commits throughout the length of the course, looking for a healthy spattering of commits each week (such as 3-5 per day).
+- **Bad Example:** 10 commits on one day during the course and no others. Students who do this will be at severe risk of not passing the class.
+- **Unacceptable Example:** 2 commits the day before a project is due. Students who do this should not expect to pass the class.
+
+#### Why are we doing this?
+
+We want to encourage best practices that you will see working as a professional software engineer. Breaking up a project by doing a large amount of commits helps engineers in the following ways:
+
+- It's much easier to retrace your steps if you break your project/product/code up into smaller pieces
+- It helps with being able to comprehend the larger problem, and also will help with your debugging (i.e. finding exactly when you pushed that piece of broken code)
+- It allows for more streamlined, iterative communication in your team, as it's much easier to hand off a small change to someone (updating a function) than a huge one (changed the architecture of the project)
+
+Through this requirement, we hope to encourage you to think about projects with an iterative, modular mindset. Doing so will allow you to break projects down into smaller milestones that come together to make your fully-realized solution.
+
+[REWORD AS RELEVANT TO YOUR COURSE] Projects are a chance for you to build and ship code that is based on class concepts.  Many are open ended allowing you to be creative and to have individual work for your portfolio.
+- [Sample Project](Sample_Project.md)
+    -   [Sample Project Rubric](Sample_Rubric.md)
 
 ### Other Class assignments
 
@@ -72,7 +137,7 @@ Prerequisites: BEW 1.1, FEW 1.2
 [MAKE SPECIFIC TO YOUR COURSE SO IT IS SUPER CLEAR]
 To pass this course you must meet the following requirements:
 
-- Complete all required tutorials 
+- Complete all required tutorials
 - Pass all projects according to the associated project rubric
 - Pass the final summative assessment >=75%
 - Actively participate in class and abide by the attendance policy
@@ -85,124 +150,16 @@ Attendance requirements for scheduled sessions are:
 - No more than two no call no shows per term in any scheduled session.
 - No more than four excused absences per term in any scheduled session.
 
-Failure to meet these requirements will result in a PIP (Participation Improvement Plan).  Failure to improve after the PIP is cause for not being allowed to continue at Make School. 
+Failure to meet these requirements will result in a PIP (Participation Improvement Plan).  Failure to improve after the PIP is cause for not being allowed to continue at Make School.
+
 
 ## Make School Course Policies
 
-[Academic Honesty](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Academic-Honesty-and-Plagiarism.md)<br>
-[Accommodation Policy](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Accommodation-Policy.md)<br>
-[Attendance Policy]()  
-[Diversity Statement](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Diversity-Statement.md)<br>
-[Evaluation Methods](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Evaluation-Methods.md)
+[Academic Honesty](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.2mjdzgr0kzu4)<br>
+[Accommodations for Students](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.s2ivlubnpny2)<br>
+[Attendance Policy](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.l04zmmqhvj85)  
+[Diversity and Inclusion Policy](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.u0lbvv9zq3hw)<br>
+[Grading System](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.cxbhr2jav1ot)
 <br>
-[Title IX Disclaimer](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Evaluations-Title-X-Disclaimer.md)<br>
-[Program Learning Outcomes](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Program-Learning-Outcomes.md)
-
-
----
-Prerequisites: BEW 1.1, FEW 1.2
-Projects: 
-
-The course covers the process and tools used to build single page applications (SPA) using the most up-to-date tools and techniques. Students will learn to manage state and render on state changes using reactive programming techniques. Modern JavaScript libraries including React and Redux will be used. 
-
-Tools: HTML, CSS, JavaScript, React JS
-
----
-
-## Course Description
-
-Describe your course here. A short elevator pitch for the course. This will be listed as the course description in the course catalog.
-
-## Course Specifics
-
-Weeks to Completion:  7 <br>
-Total Seat Hours:  37.5 hours <br>
-Total Out-of-Class Hours: 75 hours <br>
-Total Hours: 112.5 hours <br>
-Units:  3 units <br>
-Delivery Method:  Residential <br>
-Class Sessions:  14 classes, 7 labs 
-
-## Prerequisites:  
-
-MOB 1.1, MOB 1.2, MOB 1.3, MOB 1.4 <br>
-
-## Learning Objectives or Competencies (5-8)
-
-Students by the end of the course will be able to ...
-
-1. Identify & Describe
-1. Explain
-1. Compare & Contrast
-1. Design & Implement
-1. Master
-
-## Tutorials & Projects
-
-- Link to all of the technical tutorials, projects, and course-level assignments (i.e. tutorials, contractor project, custom projects, etc)
-- Use a list
-
-## Evaluation
-
-To pass this course you must meet the following requirements:
-
-- No more than two no call no shows
-- No more than four excused absences
-- Make up all classwork from all absences
-- Finish all required tutorials and projects
-- Pass the final exam (summative assessment) >=80%
-
-## Lessons
-
-Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
-
-1. Lesson Title & Topic
-    - **Before Class**
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-1. Lesson Title & Topic
-    - **In Class Activities**
-    - **After Class**
-
-## Make School Course Policies
-
-[Academic Honesty](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Academic-Honesty-and-Plagiarism.md)<br>
-[Accomodation Policy](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Accommodation-Policy.md)<br>
-[Diversity Statement](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Diversity-Statement.md)<br>
-[Evaluation Methods](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Evaluation-Methods.md)
-<br>
-[Title IX Disclaimer](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Evaluations-Title-X-Disclaimer.md)<br>
-[Program Learning Outcomes](https://github.com/Product-College-Courses/Common-Syllabus-Sections/blob/master/Program-Learning-Outcomes.md)
+[Title IX Policy](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.i4ms67qdl6oq)<br>
+[Program Learning Outcomes](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.mmypxnefbswv)
