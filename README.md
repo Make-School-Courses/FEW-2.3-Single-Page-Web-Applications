@@ -6,8 +6,11 @@ This course covers the process and tools used to build single page applications 
 
 ### Why you should know this (optional)
 
-**Mitchell to do**
-Explain why students should care to learn the material presented in this class.
+Single pages Applications are the norm for web applications today. They provide a higher level of functionality not available to simple web pages. 
+
+Single page applications are the basis for most of your favorite web destinations. I would also argue that they are the future of mobile computing. 
+
+If you want to build next generation mobile experiences that reach the widest possible audience with greatest fucntionality single page applications are a good bet. 
 
 ## Course Specifics
 

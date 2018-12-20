@@ -6,7 +6,6 @@ Commit during class
 
 - Week 1 
 	- intro tutorial
-	- Shopping Cart
 	- Class 1 
 		- What is, why use… 
 			- React Virtual DOM
@@ -21,41 +20,45 @@ Commit during class
 		- Shopping cart
 - Week 2
 	- API project (from a list)
-	- Class 1: 
+	- Class 3: 
 		- Fetch, async, promise 
 		- Work on project in class
-	- Class 2: 
+	- Class 4: 
 		- Conditional rendering 
 		- Work in class 
 - Week 3
 	- Redux Why Redux? What Redux? 
 		- ref vs value
 	- Start Tutorial 
-	- Class 1: 
+	- Class 5: 
 		- Redux why and why?
 			- Actions, Dispatcher, Store, reducers
-	- Class 2: 
+	- Class 6: 
 		- react-redux connect, create store
 - Week 4
 	- Redux Tutorial 
-	-	Class 1
+	-	Class 7:
 		- Styling components 
-	- Class 2
+	- Class 8:
 		- 
 - Week 5
 	- React Express Final project 
-	- If available React Express tutorial
-	- Class 1: 	
+		- If available React Express tutorial
+	- Class 9: 	
 		- Proxy server express 
-	- Class 2: 
-		- Maybe Router ???
+		- Writing your own API
+	- Class 10: 
+		- React Router 
+			- Router Components 
 - Week 6
 	- React Express
-	- Class 1
+	- Class 11:
 		- Maybe Router ???
-	- Class 2
+	- Class 12:
 		- Trouble shooting 
 - Week 7
 	- Review Final projects 
 		- Study for final 
 	- Final Assessment 
+	- Class 13: 
+	- Class 14:

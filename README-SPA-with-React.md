@@ -5,8 +5,6 @@
 Single page applications are applications that run in 
 the browser. The killer application was Gmail.
 
-
-
 ## Prerequisites
 
 A list of prerequisites students need to be successful 
