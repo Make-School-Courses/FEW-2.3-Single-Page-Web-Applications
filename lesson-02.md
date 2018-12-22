@@ -1,5 +1,14 @@
 # FEW 1.2 - Lesson 2
 
+## Intro 
+
+React is built on functional programming. This class you will look at some functional programming concepts in the context of React. 
+
+## ES6 Modules 
+
+- Using import from and export, default 
+- One Component per file 
+
 # React iterating with keys 
 
 Often you'll want to render a collection of JSX elements. React will automatically render a collection without you having to write a loop to do the work. 
@@ -12,6 +21,34 @@ To generate a collection JSX elements you'll usually start with a collection of 
 1. Define 
 1. Desgin 
 1. Implement 
+
+## ES5 Modules 
+
+This project needs to display a list of products and a list of categories for those products. All this information is in `inventory.js`. 
+
+Your first job is to share this information with `App.js`. You can do just this with `import`.
+
+Take a look at `inventory.js`. At the top of the file the variable `inventory` is declared and assigned an array of objects. 
+
+Scroll to the bottom of the page. Here inventory is transformed filtered, and sorted. And, another variable `categories` is declared and assigned a value. 
+
+`inventory` holds the array of products you need to display, and `categories` holds the names of the categories of those products. 
+
+How are these variables shared with the rest of our program from this file? Look at the last two lines: 
+
+```JS
+export var categories = _.uniq(c)
+export default inventory
+```
+
+The `export` statement allows these values to be shared from this 'Module'. Notice inventory is marked with `default` keyword. A module is a js file. Any module can export only a single default element! 
+
+Import an exported value using the `import` statement.  Take a look at `App.js`. At the top of the file you will see: 
+
+```JS
+import inventory, { categories } from './inventory'
+```
+Here inventory is the default export (it is outside the {}), and categories is not default (it is inside the {}). 
 
 ## Functional Programming 
 
@@ -41,43 +78,26 @@ Array reduce, reduces converts an array into a single value. It takes many value
 
 - Reduce data to display the total
 
-## Initial Exercise
+## Building the Product Lister
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
+Your goal is to build a small scale React project that shows a list of products. 
 
-## Overview/TT I 
+- Start by forking the starter project
+- Post a link to your fork of the project to the tracker 
+- You must commit each time you sit down to work on this project
 
-- Why learn this? 
-- Industry examples of usage
-- Best practices
-- Personal anecdote 
-
-## In Class Activity I
-
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
-
-## Overview/TT II (optional)
-
-## In Class Activity II (optional)
+- Show the categories
+	- Transform `categories` into array of JSX with map
+	- Make a component for each category
+	- Map `inventory` to components
 
 ## After Class
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+- Continue working on the product list
+- The project should: 
+	- Show the list of categories 
+	- Show the list of products
+	- 
 
 ## Additional Resources
 

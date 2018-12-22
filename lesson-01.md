@@ -27,12 +27,14 @@ React is one of the  most popular web frameworks available today and with good r
 - Pandora
 - and many more...
 
+If you are going to master a single framework make it this one. it's hugely popular right now and all of the top companies are using it. Expect to see React on job applications and in use at companies you migth apply to. 
+
 ## Learning Objectives/Competencies
 
-1. Identify and describe
-1. Define 
-1. Desgin 
-1. Implement 
+1. Create components
+1. Define the virtual DOM
+1. Use JSX 
+1. Differentiate props and state 
 
 ## What is react?
 
@@ -60,9 +62,9 @@ What you need to know:
 
 - React Projects are built from components
 - Most of your work with React will be writing components. 
-- Components can be nested one with in another. 
-- Components are objects that instantiates and reused as needed. 
-- Components encapsulate both logic (methods and code), state (properties), and a view (components render themselves)
+- Components can be nested one with in another. In other words a component can have children or be the child of another component
+- Components are objects. You can make instances of them. 
+- Components encapsulate both logic (methods and code), state (properties), and a view (components render themselves.)
 
 ### Virtual DOM 
 
@@ -74,13 +76,19 @@ What you need to know:
 
 - React keeps track of all components in the virtual DOM.
 - Making changes to DOM directly doe not work with React! 
-- To manipulating the DOM within a React project should almost always be handled with a Component
+- Mmanipulating the DOM within a React project should almost always be handled with a Component!
 
 Read more about the virtual DOM [here](https://reactjs.org/docs/faq-internals.html).
 
 ## Getting Started
 
-- Install Create React App 
+Your first assignment is to complete this [tutorial](https://reactjs.org/tutorial/tutorial.html)
+
+We will get started in class and walk through the first part of the tutorial. 
+
+- Install Create React App
+	- Following the tutorial 
+		- Get the starter code and look through it.
 - Make a component 
 - Working with JSX 
 - ES6 modules import from and export and default
@@ -91,44 +99,16 @@ Read more about the virtual DOM [here](https://reactjs.org/docs/faq-internals.ht
 	- Post a link to the repo in the tracker
 	- This should be completed By class 2
 	- Time spent 3 hours
+	- It's more important to get to the end of the tutorial rather than feel you understand everything in the tutorial at this point. You'll get more practice and be able to look at all of the things in the tutorial as the term progresses. 
+	Be sure to take advantage of the "view full code at this point" notes along the way as you do the tutorial to check your work. 
+	
+###  After Class: React Tutorial (3 hrs)
 
-## Initial Exercise
+Your goal is to complete this [tutorial](https://reactjs.org/tutorial/tutorial.html)
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
-
-## Overview/TT I 
-
-- Why learn this? 
-- Industry examples of usage
-- Best practices
-- Personal anecdote 
-
-## In Class Activity I
-
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
-
-## Overview/TT II (optional)
-
-## In Class Activity II (optional)
-
-## After Class
-
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+- Your goal is to get through the tutorial in 3 hours. 
+	- Don't spend too much time researching every new topic that might come up. You'll get a chance to revisit all of these as the term progresses. 
+	- In the setup options choose option 2: Local Development environment. 
 
 ## Additional Resources
 
