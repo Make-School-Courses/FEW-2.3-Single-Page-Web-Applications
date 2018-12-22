@@ -17,10 +17,10 @@ To generate a collection JSX elements you'll usually start with a collection of 
 
 ## Learning Objectives/Competencies
 
-1. Identify and describe
-1. Define 
-1. Desgin 
-1. Implement 
+1. Create component based SPA
+1. Use functional programming concepts: Map, Filter, and Reduce 
+1. Implement event handlers in React   
+1. Build an Application with component based architecture 
 
 ## ES5 Modules 
 
@@ -78,26 +78,13 @@ Array reduce, reduces converts an array into a single value. It takes many value
 
 - Reduce data to display the total
 
-## Building the Product Lister
+## After Class: React Product Lister
 
-Your goal is to build a small scale React project that shows a list of products. 
+Your goal is to build an app using React. This app is simpole and borrows ideas from the React tutorial. 
 
-- Start by forking the starter project
-- Post a link to your fork of the project to the tracker 
-- You must commit each time you sit down to work on this project
+Get the starter project code here: [Product List Challenge](https://github.com/Product-College-Labs/react-product-list).
 
-- Show the categories
-	- Transform `categories` into array of JSX with map
-	- Make a component for each category
-	- Map `inventory` to components
-
-## After Class
-
-- Continue working on the product list
-- The project should: 
-	- Show the list of categories 
-	- Show the list of products
-	- 
+Follow the instructions in the Readme. 
 
 ## Additional Resources
 
