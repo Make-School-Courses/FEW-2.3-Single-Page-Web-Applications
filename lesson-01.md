@@ -80,6 +80,10 @@ What you need to know:
 
 Read more about the virtual DOM [here](https://reactjs.org/docs/faq-internals.html).
 
+## ES6 Functions 
+
+Quick Review of ES6 functions
+
 ## Getting Started
 
 Your first assignment is to complete this [tutorial](https://reactjs.org/tutorial/tutorial.html)

@@ -4,7 +4,7 @@ Class ends with code review random student
 Commit during class 
 
 
-- Week 1 
+- Week 1 Intro, React JSX, Components, Props, and State
 	- intro tutorial
 	- Class 1 
 		- What is, why use… 
@@ -18,44 +18,51 @@ Commit during class
 		- Rendering Arrays with React using keys 
 		- Map, filter, reduce 
 		- Shopping cart
-- Week 2
+- Week 2 React Practice, 
 	- API project (from a list)
 	- Class 3: 
-		- Fetch, async, promise 
-		- Work on project in class
-	- Class 4: 
+		- Fetch, async, promise
+		- Input pattern
 		- Conditional rendering 
-		- Work in class 
+		- Work on project in class
+	- Class 4: ESLint and troubleshooting
+		- 
 - Week 3
+	- Class 5: 
+		- Create React app 
+			- setup 
+			- tour 
+			- working within
+		- Express Server
+			- Setup Express server
+			- Setup api route should respond with JSON
+		- Connect to Express server with React app 
+		- Assignment CRUD one resource?
+	- Express and React 
+	- Define an API
+	- Class 6: 
+		- 
+- Week 4
+	- React Express
+	- Class 7:
+		- Maybe Router ???
+	- Class 8:
+		- Trouble shooting 
+- Week 5
 	- Redux Why Redux? What Redux? 
 		- ref vs value
 	- Start Tutorial 
-	- Class 5: 
+	- Class 9: 
 		- Redux why and why?
 			- Actions, Dispatcher, Store, reducers
-	- Class 6: 
-		- react-redux connect, create store
-- Week 4
-	- Redux Tutorial 
-	-	Class 7:
-		- Styling components 
-	- Class 8:
-		- 
-- Week 5
-	- React Express Final project 
-		- If available React Express tutorial
-	- Class 9: 	
-		- Proxy server express 
-		- Writing your own API
 	- Class 10: 
-		- React Router 
-			- Router Components 
+		- react-redux connect, create store
 - Week 6
-	- React Express
-	- Class 11:
-		- Maybe Router ???
+	- Redux Tutorial 
+	-	Class 11:
+		- Styling components 
 	- Class 12:
-		- Trouble shooting 
+		-
 - Week 7
 	- Review Final projects 
 		- Study for final 

@@ -1,6 +1,41 @@
 # FEW 1.2 - Lesson 3
 
-# Lesson Title
+# React API app 
+
+Use React with a web API. 
+
+The React input pattern 
+
+
+## Input Pattern 
+
+- Controlled Components 
+	- https://reactjs.org/docs/forms.html
+- React uses a special pattern for input elements 
+	- This is due to the virtual DOM
+
+## Conditionally Rendering Components
+
+- Pattern 1
+
+## Using Fetch
+
+- fetch
+	- CORS
+	- Promise
+
+## Challenges 3 hours
+
+Your goal is to create a component that interacts with a Web API. Use the starter project. Follow the guide in the read me.
+
+https://github.com/Product-College-Labs/react-api-project
+
+## All the APIs!
+
+- [Rapid API](https://rapidapi.com)
+- [Programable Web](https://www.programmableweb.com/apis/directory)
+- [API List](https://apilist.fun)
+- [Any API](https://any-api.com)
 
 ## Learning Objectives/Competencies
 
@@ -49,4 +84,7 @@
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+1. https://jsonformatter.curiousconcept.com
+1. https://reactjs.org/docs/forms.html
+1. https://reactjs.org/docs/jsx-in-depth.html#comments
+1. https://reactjs.org/docs/conditional-rendering.html
