@@ -1,5 +1,26 @@
 # FEW 1.2 - Lesson 5
 
+Start React+Express project
+
+Setup Express Server
+
+- Server runs on Express at localhost 3001
+- Setup a couple simple routes 
+	- These routes return JSON use res.json({ ... })
+
+Setup React project 
+
+- Use Create React App to bootstrap a react project
+- This project proxies to localhost 3001
+	- Add the following to package JSON
+	
+
+## Starting a Project with Create React App
+
+
+## Starting an Express project
+
+
 # Lesson Title
 
 ## Learning Objectives/Competencies

@@ -26,7 +26,20 @@ Commit during class
 		- Conditional rendering 
 		- Work on project in class
 	- Class 4: ESLint and troubleshooting
-		- 
+		- Writing good code
+			- What is linting? 
+			- Why lint? 
+			- Who lints?
+		- Getting started
+			- https://eslint.org/docs/user-guide/getting-started
+			- npm install eslint --save-dev
+			- eslint --init
+				- choose popular style guide
+				- airbnb
+				- Do you use React? (depends, right?)
+				- Format for config: JavaScript 
+				- Install Y
+				- Close your files and reopen them to start linting!
 - Week 3
 	- Class 5: 
 		- Create React app 
