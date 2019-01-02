@@ -22,9 +22,9 @@ To generate a collection JSX elements you'll usually start with a collection of 
 1. Implement event handlers in React   
 1. Build an Application with component based architecture 
 
-## ES5 Modules 
+## ES6 Modules 
 
-This project needs to display a list of products and a list of categories for those products. All this information is in `inventory.js`. 
+The challenge project needs to display a list of categories and a list of products for those categories. All this information is in `inventory.js`. 
 
 Your first job is to share this information with `App.js`. You can do just this with `import`.
 
@@ -56,15 +56,21 @@ Functional programming is a paradigm or style of programming based on functions.
 
 It's hard to put functional programming into a nushell explanation other than to say it's all about making programs built from functions. 
 
-The entry point for most to the world of functional programming are the Array methods: map, filter, and reduce. 
+The entry point for most to the world of functional programming are the Array methods: `map`, `filter`, and `reduce`. 
 
-### map, filter, reduce
+### `map`, `filter`, `reduce`
 
-Array map, transforms an array of data into new data. With map you should have a one to relationship with the source array. Use it to convert an array of one type into an array of another type. 
+`Array.map()`, map transforms an array of data into a . With map you should have a one to one relationship with the source array. Use it to convert an array of one type into an array of another type. 
 
-Array filter, filter returns an array containing none, some, or all of the elements from the source array. Use it to filter the contents of an array. 
+For example you might transform an array of numbers into a an array of strings. 
 
-Array reduce, reduces converts an array into a single value. It takes many values and returns an aggregate value. 
+`Array.filter`, filter returns an array containing none, some, or all of the elements from the source array. Use it to filter the contents of an array. 
+
+For example you might filter an array of products to create an array products with prices less than $10. 
+
+`Array.reduce`, reduce converts an array into a single value. It takes many values and returns an aggregate value. 
+
+For example, you might use reduce to get the total cost of all products in a shop cart array. 
 
 ## Using Array.map 
 

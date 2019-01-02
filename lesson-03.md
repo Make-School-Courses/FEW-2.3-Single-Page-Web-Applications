@@ -4,8 +4,7 @@
 
 Use React with a web API. 
 
-The React input pattern 
-
+Input pattern, and forms with React.
 
 ## Input Pattern 
 
@@ -16,7 +15,10 @@ The React input pattern
 
 ## Conditionally Rendering Components
 
-- Pattern 1
+- Pattern 1 - function returns component based on props. 
+- Pattern 2 - render a variable set to a component based on props or state.
+- Pattern 3 = in if statement using && or ternary
+- Pattern 4 - prevent component from rendering using null
 
 ## Using Fetch
 
@@ -39,10 +41,9 @@ https://github.com/Product-College-Labs/react-api-project
 
 ## Learning Objectives/Competencies
 
-1. Identify and describe
-1. Define 
-1. Desgin 
-1. Implement 
+1. Use conditional rendering
+1. Create forms using the React controlled component pattern
+1. Use state to manage asynchornus actions
 
 ## Initial Exercise
 
@@ -72,10 +73,6 @@ https://github.com/Product-College-Labs/react-api-project
 - Form into groups
 - etc (get creative :D)
 
-## Overview/TT II (optional)
-
-## In Class Activity II (optional)
-
 ## After Class
 
 - Continue working on your current tutorial
@@ -88,3 +85,4 @@ https://github.com/Product-College-Labs/react-api-project
 1. https://reactjs.org/docs/forms.html
 1. https://reactjs.org/docs/jsx-in-depth.html#comments
 1. https://reactjs.org/docs/conditional-rendering.html
+1. https://blog.logrocket.com/conditional-rendering-in-react-c6b0e5af381e

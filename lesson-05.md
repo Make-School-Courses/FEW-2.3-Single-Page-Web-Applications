@@ -1,5 +1,7 @@
 # FEW 1.2 - Lesson 5
 
+Single Page Applications SPA FTW! What you see in the browser today is very sophisticated. Gone are the days is simple 
+
 Start React+Express project
 
 Setup Express Server
@@ -16,6 +18,7 @@ Setup React project
 	
 
 ## Starting a Project with Create React App
+
 
 
 ## Starting an Express project

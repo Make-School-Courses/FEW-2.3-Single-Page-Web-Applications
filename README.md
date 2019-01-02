@@ -1,5 +1,7 @@
 # Single Page Applications
 
+Single Page Applications (SPA) FTW! 
+
 ## Course Description
 
 This course covers the process and tools used to build single page applications (SPA) using the most up-to-date tools and techniques. Students will learn to manage state and render on state changes using reactive programming techniques. Modern JavaScript libraries including React and Redux will be used.
@@ -8,7 +10,7 @@ This course covers the process and tools used to build single page applications 
 
 Single pages Applications are the norm for web applications today. They provide a higher level of functionality not available to simple web pages. 
 
-Single page applications are the basis for most of your favorite web destinations. I would also argue that they are the future of mobile computing. 
+Single page applications are the basis for most of your favorite web destinations and the future of mobile computing!
 
 If you want to build next generation mobile experiences that reach the widest possible audience with greatest fucntionality single page applications are a good bet. 
 
@@ -35,9 +37,6 @@ Students by the end of the course will be able to ...
 1. Identify and utilize Reactive Programming when building SPAs, and how it differs from other programming paradigms
 1. Manage application states using the FLUX architecture pattern
 1. Use conditional rendering to programatically manage the user interface
-1.
-
-
 
 ## Schedule
 ---
@@ -50,23 +49,29 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 
 **Class Times:** Monday and Wednesday at 3:30–5:20pm (10 class sessions)
 
-| Class |          Date          |                 Topics                  |
-|:-----:|:----------------------:|:---------------------------------------:|
-|  -  | Monday, January 21             | **MLK Jr. Day** |
-|  1 | Wednesday, January 23    | [Lesson 1] |
-|  2 | Monday, January 28             | [Lesson 2] |
-|  3 |  Wednesday, January 30             | [Lesson 3] |
-|  4 | Monday, February 4             | [Lesson 4] |
-|  5 |  Wednesday, February 6             | [Lesson 5] |
-|  6 | Monday, February 11             | [Lesson 6] |
-|  7 |  Wednesday, February 13            | [Lesson 7] |
-|  -  | Monday, February 18             | **President's Day (Observed)** |
-|  8  | **Tuesday, February 19**             | [Lesson 8] |
-|  9 |  Wednesday, February 20            | [Lesson 9] |
-|  10 | Monday, February 25             | [Lesson 10] |
-|  11 |  Wednesday, February 27            | [Lesson 11] |
-|  12 | Monday, March 4             | Final Class (presentations, etc) |
-|  13 |  Wednesday, March 6            | Final Exams/Presentations |
+| Class | Date          |    Topics                  |
+|:-----:|:-------------:|:--------------------------:|
+| **Week 1**| - 	         | Getting started with React |
+|  -    | Monday, January 21 |       **MLK Jr. Day** |
+|  1    | Wednesday, January 23 |         [Lesson 1](lesson-01.md) |
+|  2    | Monday, January 28 |            [Lesson 2](lesson-02.md) |
+| **Week 2**| -          | React API/ESLint |
+|  3    |  Wednesday, January 30        | [Lesson 3](lesson-03.md) |
+|  4    | Monday, February 4            | [Lesson 4](lesson-04.md) |
+|  5    |  Wednesday, February 6        | [Lesson 5](lesson-05.md) |
+| **Week 3**| -          | React and Express part 1 |
+|  6    | Monday, February 11           | [Lesson 6](lesson-06.md) |
+|  7    |  Wednesday, February 13       | [Lesson 7](lesson-07.md) |
+| **Week 4**| -          | React Express part 2 |
+|  -    | Monday, February 18 | **President's Day (Observed)** |
+|  8    | **Tuesday, February 19**      | [Lesson 8](lesson-08.md) |
+|  9    |  Wednesday, February 20       | [Lesson 9](lesson-09.md) |
+| **Week 5**| -          | ?? Redux or Router ?? |
+|  10   | Monday, February 25          | [Lesson 10](lesson-10.md) |
+|  11   |  Wednesday, February 27      | [Lesson 11](lesson-11.md) |
+| **Week 7**| -          | Wrap up      |
+|  12   | Monday, March 4 | Final Class (presentations, etc) |
+|  13   |  Wednesday, March 6    | Final Exams/Presentations |
 
 ### Tu/Th Template
 **Course Dates:** Tuesday, January 22 – Thursday, March 7, 2019 (7 weeks)
