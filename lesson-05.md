@@ -44,19 +44,69 @@ The goal this week is to create an Express server with an API that returns JSON 
 
 ### Start Express project
 
-- install 
-- run
+Follow these steps to install and run the project.
 
-### Testing the API
+- `npm install`
+- `npm server.js` or `nodemon server.js`
 
-- Make some calls
-- view the JSON response
+### About the Demo project
+
+This demo project is very simple it provides a simple service to generate random numbers. The API is simple but incomplete at this point. Your goal is to extend the API and add features. 
+
+### The demo project API
+
+The API of the current project has two endpoints that return JSON. 
+
+- `/about` 
+	- returns - `{ about: 'description string' }`
+	- Example - `/about`
+- `/random` 
+	- query - n: Int
+	- returns - random number from 0 to n - 1
+	- Example - `/random/?n=6` 
+
+#### Testing the API
+
+You should test the API for yourself to make sure everything is running. Follow the instructions above and launch the Express Server.
+
+There are three end points and each returns JSON. Type these into the address bar of the browser or just click the links below: 
+
+- [http://localhost:4000](http://localhost:4000)
+- [http://localhost:4000/about](http://localhost:4000/about)
+- [http://localhost:4000/random/?n=6](http://localhost:4000/random/?n=6)
+
+Notice each of these endpoints returns JSON. The browser should display this. 
+
+The last endpoint in the list above includes query params. Try changing the value here and check the results. 
 
 ### Unit testing 
 
-- Install Mocha and Chai
-- Add "test": "mocha" to package.json
-- Write some tests 
+Unit testing is the idea of testing your software in units. A unit is usally an method with a single output. 
+
+Unit testing is done with software. That is you're wiring software that runs your software and tests it along the way. 
+
+Why unit test?
+
+- It's profesional best practice
+- All of the big companies use it
+- Makes better more reliable code
+
+## Testing with Mocha and Chai
+
+Mocha is a testing framework, it runs all of the tests. Think of Mocha as the wrapper that gives a place for testing and shows the results of your tests.
+
+Chai is an assertion library. Think of an assertion as the actual test of code. An assertion is an expression of what you expect from a situation. 
+
+Install Mocha and Chai like this: 
+
+- Add mocha and chai as dependencies
+	- `npm install --save mocha chai`
+- Add a test script to your package.json. Add the following under "scripts"
+	- `"test": "mocha"`
+- Add a `test` folder to your project
+	- `mkdir test`
+- Add a test file. Here is where you will write your tests
+	- `touch test/test.js`
 
 ## After Class
 
