@@ -1,74 +1,67 @@
 # FEW 1.2 - Lesson 5
 
-Start React+Express project
+The goal this week is to set up and express server to work with React. This week you will build the server and define it's API. 
 
-Setup Express Server
+## Introduction
 
-- Server runs on Express at localhost 3001
-- Setup a couple simple routes 
-	- These routes return JSON use res.json({ ... })
+Single Page Applications run in the browser. You'll often want to use your Single Page Applications to communicate with a server. Servers provide data and act as a hub for client applications.
 
-Setup React project 
+The goal of this week is creating a simple server to connect to your SPA front end. 
 
-- Use Create React App to bootstrap a react project
-- This project proxies to localhost 3001
-	- Add the following to package JSON
-	
+## Express 
 
-## Starting a Project with Create React App
+Express is a framework that runs on a Node.js server. Express describes itself as: 
 
+> Fast, unopinionated, minimalist web framework for Node.js. 
 
+Let's take that apart. Express is leaves a lot of the work of creating the server to you, it doesn't provide premade systems for for tackling big problems. Instead it provides a set tools you can use to solve your problems. 
 
-## Starting an Express project
+The servers you create act as services for the applications that connect to them. The language of this communication is the API.
 
+Your goal this week is create a simple API. 
 
-# Lesson Title
+**Discussion:** 
 
-## Learning Objectives/Competencies
+- What is an API?
+- What APIs have you worked with? 
+- What does an API look like? 
 
-1. Identify and describe
-1. Define 
-1. Desgin 
-1. Implement 
+## Creating APIs
 
-## Initial Exercise
+Your goal is to create a service with an API. 
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
+> In computer programming, an application programming interface (API) is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
 
-## Overview/TT I 
+The API makes features and data from the service available to any front end application that connects with it.
 
-- Why learn this? 
-- Industry examples of usage
-- Best practices
-- Personal anecdote 
+I'm sure you've worked with APIs by now. Well written APIs help you get more done at a higher quality. Poorly written APIs can make your work more difficult and your products less capable than you envision. 
 
-## In Class Activity I
+**Dsicussion:** What makes a good API? 
 
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
+## Getting Started
 
-## Overview/TT II (optional)
+The goal this week is to create an Express server with an API that returns JSON data. Later you will connect this service to a React client. 
 
-## In Class Activity II (optional)
+### Start Express project
+
+- install 
+- run
+
+### Testing the API
+
+- Make some calls
+- view the JSON response
+
+### Unit testing 
+
+- Install Mocha and Chai
+- Add "test": "mocha" to package.json
+- Write some tests 
 
 ## After Class
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+- Complete the challenges in the [React Expres Server](https://github.com/Product-College-Labs/react-express-server) Demo project.
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+1. 
