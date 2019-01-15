@@ -1,6 +1,6 @@
 # Single Page Applications
 
-Single Page Applications (SPA) FTW! 
+Single Page Applications (SPAs) FTW! 
 
 ## Course Description
 
@@ -35,7 +35,7 @@ Students by the end of the course will be able to ...
 
 1. Build Single Page Applications (SPAs)
 1. Identify and utilize Reactive Programming when building SPAs, and how it differs from other programming paradigms
-1. Manage application states using the FLUX architecture pattern
+1. Manage application states using the Flux architecture pattern
 1. Use conditional rendering to programatically manage the user interface
 
 ## Schedule
@@ -95,20 +95,27 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 |  12 |  Tuesday, March 5             | Final Class (presentations, etc) |
 |  13 | Thursday, March 7             | Final Exams/Presentations |
 
-[Lesson 1]: Lessons/Lesson1.md
-[Lesson 2]: Lessons/Lesson2.md
-[Lesson 3]: Lessons/Lesson3.md
-[Lesson 4]: Lessons/Lesson4.md
-[Lesson 5]: Lessons/Lesson5.md
-[Lesson 6]: Lessons/Lesson6.md
-[Lesson 7]: Lessons/Lesson7.md
-[Lesson 8]: Lessons/Lesson8.md
-[Lesson 9]: Lessons/Lesson9.md
-[Lesson 10]: Lessons/Lesson10.md
-[Lesson 11]: Lessons/Lesson11.md
-[Lesson 12]: Lessons/Lesson12.md
+- [Lesson 1](lesson1.md)
+- [Lesson 2](lesson2.md)
+- [Lesson 3](Lesson3.md)
+- [Lesson 4](Lesson4.md)
+- [Lesson 5](lesson5.md)
+- [Lesson 6](lesson6.md)
+- [Lesson 7](lesson7.md)
+- [Lesson 8](lesson8.md)
+- [Lesson 9](lesson9.md)
+- [Lesson 10](lesson10.md)
+- [Lesson 11](lesson11.md)
+- [Lesson 12](lesson12.md)
 
-## Class Assignments [Remove header if you like]
+## Class Assignments 
+
+- Lesson 1 - [React Tutorial](lesson-01.md#After-Class)
+- Lesson 2 - [React Product Lister](lesson-02.md#After-Class)
+- Lesson 3 - [React API Challenge](lesson-03.md#After-Class)
+- Lesson 4 - [Code Quality](lesson-04.md#After-Class)
+- Lesson 5 - [Code Quality](lesson-05.md#After-Class)
+
 - List (with links) of all course-level assignments (i.e. tutorials, challenge sets, contractor project, custom projects, etc)
 - Under each assignment link the rubric used to evaluate it or describe how it is evaluated.
 - Projects should be linked to a project page which has a description & requirements.

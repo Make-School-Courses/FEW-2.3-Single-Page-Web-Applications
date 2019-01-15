@@ -35,10 +35,6 @@
 - Form into groups
 - etc (get creative :D)
 
-## Overview/TT II (optional)
-
-## In Class Activity II (optional)
-
 ## After Class
 
 - Continue working on your current tutorial

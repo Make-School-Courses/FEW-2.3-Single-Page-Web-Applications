@@ -106,13 +106,23 @@ We will get started in class and walk through the first part of the tutorial.
 	- Post a link to the repo in the tracker
 	- This should be completed By class 2
 
-###  After Class: React Tutorial (3 hrs)
+## After Class 
+
+**React Tutorial (3 hrs)**
 
 Your goal is to complete this [tutorial](https://reactjs.org/tutorial/tutorial.html)
 
 - Your goal is to get through the tutorial in 3 hours. 
 	- Don't spend too much time researching every new topic that might come up. You'll get a chance to revisit all of these as the term progresses. 
 	- In the setup options choose option 2: Local Development environment. 
+	
+## React Tutorial Rubric
+
+| -            | Does not meet expectations | Meets expectations       | Exceeds expectations |
+|:-------------|:---------------------------|:-------------------------|:---------------------|
+| Completed    | Did not complete           | Completed tutorial       | Solved some or all challenges |
+| Functional   | Is not functional          | Base tutorial functional | Challenges are functioning |
+| Code quality | Indentation is bad spacing is inconsistent | Uses consistent indentation and spacing | Well written and well commented |
 
 ## Additional Resources
 

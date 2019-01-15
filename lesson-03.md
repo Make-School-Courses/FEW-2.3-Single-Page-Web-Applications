@@ -115,7 +115,9 @@ Cross Origin Resouce Sharing is know as CORS. This is a problem you will run int
 
 In short CORS is a security feature that prevents JavaScript from making requests against a different domain. this is meant to prevent hacking a safeguard a users data. 
 
-## Challenges 3 hours
+## After Class
+
+**React API Challenge 3hrs**
 
 Your goal is to create a component that interacts with a Web API. Use the starter project. Follow the guide in the read me.
 

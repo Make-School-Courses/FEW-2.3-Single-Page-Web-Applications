@@ -81,7 +81,9 @@ For more information there is button (dot or lighbulb) you can click for options
 	- Suppress this rule the file
 	- Show documentation for this rule
 
-## After Class 3 hours
+## After Class 
+
+**Code Quality 3 hours**
 
 Using the linter review _all_ of the code you have written so far and lint!
 

@@ -110,6 +110,8 @@ Install Mocha and Chai like this:
 
 ## After Class
 
+**Express API Server 3hrs**
+
 - Complete the challenges in the [React Expres Server](https://github.com/Product-College-Labs/react-express-server) Demo project.
 
 ## Additional Resources
