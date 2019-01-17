@@ -2,7 +2,15 @@
 
 Getting started with Single Page Applications and React. 
 
-# Intro
+## Single Page Applications (SPA)
+
+Single Page Applications are web pages that act as software applications. A traditional web site is made up several pages all linked, where the current web page is removed from memory when a new page is loaded.  A Single Page Application is a single web page that loads data, and displays different content by changing the content of the current page without loading a new web page.
+
+The [Killer App](https://en.wikipedia.org/wiki/Killer_application) for SPAs was Gmail. Gmail is a single web page that lists your email, views email, sends email and more all within a single HTML document.
+
+SPAs are the way web pages of more than minimal complexity are created these days. These days every page you view in a browser is like loading and running a new application!
+
+## What is React 
 
 React is one of the  most popular web frameworks available today and with good reason. It's fast effecient and has a great work flow. React uses functional reactive programming to solve many of the headaches of creating user interfaces.
 
@@ -29,64 +37,83 @@ It's also popular with all of the big name companies.
 - Pandora
 - and many more...
 
-If you are going to master a single framework make it this one! It's hugely popular right now and all of the top companies are using it. Expect to see React on job applications and in use at companies you migth apply to. 
+If you are going to master a single framework make it this one! It's hugely popular right now and all of the top companies are using it. Expect to see React on job applications and in use at companies you might apply to. 
+
+Beyond this React has moved frontend web development forward and laid the ground modern front end systems. Expect future front end frameworks to build and evolve on what React has done. 
 
 ## Learning Objectives
 
 1. Create components
-1. Define the virtual DOM
 1. Use JSX 
 1. Differentiate props and state 
+1. Define the virtual DOM
 
-## What is react?
+## But, What is React really?
 
-This is how React describes itself: 
+React describes itself as: 
 
 > A JavaScript library for building user interfaces
 
-React is based on Functional Reactive programming. 
+React is used for building user interfaces. It's the view in any system. It's a little more but building UI is what React was made to do. 
+
+### Functional Programming 
+
+React is built on Functional Reactive programming. In a nutshell functional programming is programming with functions. FP avoids mutable data and shared state. 
+
+### Reactive Programming
 
 In a nutshell Reactive programming is programming with Event Streams. 
 
-An Event Stream is like an Array of events, or things that can happen. Arrays map things in space. Event streams map things in time. 
+An Event Stream is like an Array of events. Arrays map things in space. Event streams map things in time. 
 
-React uses Reactive Programming to create a front end architecture that updates components with streams of events as they occur in time. 
+React uses Reactive Programming to create a front end architecture that updates views with streams of events as they occur in time. Changing a value will update a view in React.  
 
-React is built on  two core features: Components, and Virtual DOM. 
+## React core features
+
+React is built on three core features: Components, JSX, and Virtual DOM. 	
 
 ### Components 
 
-Components encapsulate state and view. A component updates it's view in response to in coming events. 
+Components encapsulate state and view. A component updates it's view in response to changing values. 
 
 What you need to know: 
 
 - React Projects are built from components
 - Most of your work with React will be writing components. 
-- Components can be nested one with in another. In other words a component can have children or be the child of another component
+- Components can be nested one within another. In other words a component can have children or be the child of another component
 - Components are objects. You can make instances of them. 
 - Components encapsulate both logic (methods and code), state (properties), and a view (components render themselves.)
-- The view of a component is written in JSX. JSX is an extension of the JavaScript language. You'll write it along with with your other JavaScript. 
+
+### JSX
+
+JSX is an extension of the JavaScript language. It allows you to write code using an XML like syntax along side regular JavaScript. 
+
+JSX is compiled into vanilla JavaScript. 
+
+What you need to know: 
+
+- The view of a component is written in JSX
+- JSX is an extension of the JavaScript language 
+- JSX compiles to vanilla JavaScript 
+- JSX has it's own special syntax
+	- More on this in the tutorial
 
 ### Virtual DOM 
 
 Updating the DOM is a slow opperation. To speed this up React creates a virtual DOM. Manipulating the virtual DOM is much faster than manipulating the DOM directly. 
 
-In a React app **making changes to the virtual DOM has no effect on the actual DOM**. 
+In a React App making changes to the DOM will often not work as expected since those changes will overwritten by the virtual DOM! 
 
-Your code makes changes to the virutal DOM while behind the scenes react makes chnages to the DOM. 
+ReactDOM looks at the virtual DOM and compares it real DOM making changes only where necessary. 
 
 What you need to know: 
 
 - React keeps track of all components in the virtual DOM.
 - Making changes to DOM directly does not work with React! 
-- Mmanipulating the DOM within a React project should almost always be handled with a Component!
+- Manipulating the DOM within a React project should almost always be handled with a Component!
 	- In other words `document.getElementById()` is not compatible with React! 
 
 Read more about the virtual DOM [here](https://reactjs.org/docs/faq-internals.html).
-
-## ES6 Functions 
-
-Quick Review of ES6 functions
 
 ## Getting Started
 
@@ -126,4 +153,4 @@ Your goal is to complete this [tutorial](https://reactjs.org/tutorial/tutorial.h
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+1. [ES6 Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
