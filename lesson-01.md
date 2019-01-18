@@ -150,7 +150,10 @@ Your goal is to complete this [tutorial](https://reactjs.org/tutorial/tutorial.h
 | Completed    | Did not complete           | Completed tutorial       | Solved some or all challenges |
 | Functional   | Is not functional          | Base tutorial functional | Challenges are functioning |
 | Code quality | Indentation is bad spacing is inconsistent | Uses consistent indentation and spacing | Well written and well commented |
+| Work Ethic   | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
 
 ## Additional Resources
 
 1. [ES6 Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+1. [tutorial](https://reactjs.org/tutorial/tutorial.html)
+1. [JSX](https://reactjs.org/docs/introducing-jsx.html)

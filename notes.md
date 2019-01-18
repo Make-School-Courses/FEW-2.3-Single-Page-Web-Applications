@@ -4,7 +4,7 @@ Class ends with code review random student
 Commit during class 
 
 - Week 1 Intro, React, JSX, Components, Props, and State
-	- Class 1 
+	- **Class 1** 
 		- Intro 
 			- What is React?
 				- Library for making user interfaces
@@ -26,7 +26,7 @@ Commit during class
 		- Resources
 			- [Functional Programming Intro](https://medium.freecodecamp.org/an-introduction-to-the-basic-principles-of-functional-programming-a2c2a15c84)
 			- [Reactive in a Nutshell](https://www.codekitchen.ca/what-is-reactive-programming/)
-	- Class 2 - Functional programming **map**, filter, reduce
+	- **Class 2** - Functional programming **map**, filter, reduce
 		- Map, filter, reduce 
 			- Map, use it to transform an array of one type into an array of another type. A common process with react is transforming an array of data into an array of components. 
 		- Rendering Arrays with React using keys 

@@ -2,35 +2,42 @@
 
 # React API app 
 
-Use React with a web API. 
+The first goal for this class is to use React with a public web API. 
 
-Input pattern, and forms with React.
+The second goal is to work with form elements and user input with React. React has a special pattern for this due to the way it handles the virtual DOM. 
 
 ## Introduction 
 
-This lesson focusses on the example project [here](https://github.com/Product-College-Labs/react-api-project). Download this project and run it. 
+The demo project is a simple web app that displays weather data. You'll need to make an account and get a valid API key. 
 
-This is a simple web app that display s weather data.
-
-Follow the instructions setup and run the demo project. 
-
-- Download or fork the [project](https://github.com/Product-College-Labs/react-api-project)
-- Make an account with [OpenWeatherMap.org](https://home.openweathermap.org/)
-- Go to your profile page: API Keys
-- Generate and copy your API key
-- Add the following to the '.env' file: 
-
-`REACT_APP_OPENWEATHERMAP_API_KEY=467355df4c808dd6134a3b64e9ace282`
+The project needs to accept user input for a zipcode. Text input and other form elements use a special pattern in React called the Controlled Component. 
 
 ## Getting Started
 
-Everything in theproject happens in App.js. There are many comments trying to explain what is going on. 
+Follow the instructions to setup and run the demo project. 
+
+- Download or fork the [project](https://github.com/Product-College-Labs/react-api-project)
+- Make an account with [OpenWeatherMap.org](https://home.openweathermap.org/)
+	- Go to your profile page: API Keys
+	- Generate and copy your API key
+	- Add the following to the '.env' file: 
+
+`REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY_HERE`
+
+Pro tips! 
+
+- The Create React App starter project is set up to use dotenv, you don't need to add this package. 
+- Any environment variables you define **must** begin with `REACT_APP_`
+
+Read more about [Adding Custom Environment Variables](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables)
+
+Everything in the example project happens in App.js. There are many comments explaining what is going on, read these closely. 
 
 ## Input Pattern 
 
-The project has a single input field. Find it in the `render` method. 
+The project has a single input field. Find it in the `render` method of App.js. 
 
-```
+```JavaScript
 <input 
   value={this.state.inputValue} 
   onChange={e => this.setState({ inputValue: e.target.value })}
@@ -46,7 +53,7 @@ This started as a simple input element.
 
 The input should take a zip code so I set the placeholder to "enter zip" and used the pattern attribute and a little regex magic to limit input to zip code patterns. 
 
-```
+```JavaScript
 <input 
 	...
   type="text" 
@@ -55,29 +62,75 @@ The input should take a zip code so I set the placeholder to "enter zip" and use
 />
 ```
 
-The value and onChange attributes are used for the for the React input pattern. 
+The `value` and `onChange` attributes are used for the for the React input pattern. 
 
-The controlled pattern stores the value input on state in the component, and displays the value in the component via it's value attribute. 
+```JavaScript
+<input 
+  value={this.state.inputValue} 
+  onChange={e => this.setState({ inputValue: e.target.value })}
+  ...
+/>
+```
 
-- Controlled Components 
-	- https://reactjs.org/docs/forms.html
-- React uses a special pattern for input elements 
-	- This is due to the virtual DOM
+The controlled component pattern stores the value entered in state, and displays the value in the component via it's value attribute. 
+
+Imagine you are entering a zip code into a text input field. You type the first number of the zip code which is 9. The onChange method fires and assigns the value in the text field to state `this.setState({zip:e.target.value})`. When the component is rendered the value displayed is the value set on state `this.state.zip`. 
+
+This may seem a little strange, but it's important for two reasons. 
+
+- Reacts virtual DOM may replace the input component at any time when the DOM is redrawn. This would loose values stored in real DOM elements. 
+- It stores input values on state where they are easy to access when you need them without have to access the input and retrieve it's value. 
+
+- [Controlled Components](https://reactjs.org/docs/forms.html)
 
 ## Conditionally Rendering Components
 
-- Pattern 1 - function returns component based on props. 
-- Pattern 2 - render a variable set to a component based on props or state.
-- Pattern 3 = in if statement using && or ternary
-- Pattern 4 - prevent component from rendering using null
+Commonly in React you will need to render different components under different conditions. Here are two patterns you can apply to your work: 
+
+**Pattern 1** - Use a function to return one JSX expression or another based on a value. 
+
+```JavaScript
+function toggle(hasMustard) {
+	if (hasMustard) {
+		return <HotdogWithMustard />
+	}
+	return <Hotdog />
+}
+```
+
+**Pattern 2** - Assign a JSX element to variables and render that. 
+
+```JavaSxcript
+render() {
+	const { time } = this.state
+	let element
+	if (time === 'morning') {
+		element = <Eggs />
+	} else if (time === 'lunch') {
+		element = <Burrito />
+	} else {
+		element = <Icecream />
+	}
+
+	return (
+		<div>
+			{element}
+		</div>
+	)
+}
+```
+
+Read more about [Conditional Rendering in React](https://reactjs.org/docs/conditional-rendering.html)
 
 ## Using Fetch
 
-This component uses `fetch()` to load JSON data from the OpenWeatherMap API. Take a look at the `handleSubmit()` method. 
+The example project uses `fetch()` to load JSON data from the OpenWeatherMap API. Take a look at the `handleSubmit()` method in App.js.
+
+Read the comments here to follow the process. 
 
 ### .env
 
-The .env or "dot" env file is used to store sensitive information, like the API keys! The Create React Starter project has support for .env baked in. 
+The .env or "dot" env file is used to store sensitive information, like API keys! The Create React Starter project has support for .env baked in. 
 
 Look at Line 36 of App.js. 
 
@@ -89,7 +142,9 @@ Here you are getting a value stored in the dot env file stored in the key: `REAC
 
 Open '.env' and define `REACT_APP_OPENWEATHERMAP_API_KEY` with your openweathermap api key. Something like: 
 
-`REACT_APP_OPENWEATHERMAP_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+`REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY_HERE`
+
+Make sure your API key is set here. 
 
 ### Fetch
 
@@ -108,12 +163,6 @@ fetch('http://someurl.com').then((res) => {
 	console.log(err.message)
 })
 ```
-
-### CORS
-
-Cross Origin Resouce Sharing is know as CORS. This is a problem you will run into often when working with JS on the frontend. 
-
-In short CORS is a security feature that prevents JavaScript from making requests against a different domain. this is meant to prevent hacking a safeguard a users data. 
 
 ## After Class
 
@@ -136,17 +185,21 @@ https://github.com/Product-College-Labs/react-api-project
 1. Create forms using the React controlled component pattern
 1. Use state to manage asynchornus actions
 
-## Initial Exercise
+## React API Project
 
-- Build and run the Reacvt API project
-- Follow the challenges presented in this [project](https://github.com/Product-College-Labs/react-api-project)
-	- Spend three hours working on this challenges here
+| -            | Does not meet expectations | Meets expectations       | Exceeds expectations |
+|:-------------|:---------------------------|:-------------------------|:---------------------|
+| Completed    | Did not complete           | Completed challenges 1-3 | Completed challenges 4+ |
+| Functional   | Is not functional          | Displays the weather data and handles errors | Displays the temp in F and C along description and atmospheric conditions and has some CSS styles |
+| Code quality | Indentation is bad spacing is inconsistent | Uses consistent indentation and spacing | Well written and well commented |
+| Code Architecture and Structure | All code is in App.js | Uses 3 components | Uses 5 or more components, components are specialized and perform formatting and display of data based on props |
+| Work Ethic   | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
 
 ## Additional Resources
 
-1. https://jsonformatter.curiousconcept.com
-1. https://reactjs.org/docs/forms.html
-1. https://reactjs.org/docs/jsx-in-depth.html#comments
-1. https://reactjs.org/docs/conditional-rendering.html
-1. https://blog.logrocket.com/conditional-rendering-in-react-c6b0e5af381e
-1. https://jameschambers.co/writing/cors/
+1. [JSON Formatter](https://jsonformatter.curiousconcept.com)
+1. [React Forms](https://reactjs.org/docs/forms.html)
+1. [JSX in depth](https://reactjs.org/docs/jsx-in-depth.html#comments)
+1. [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
+1. [Conditional Rendering in React](https://blog.logrocket.com/conditional-rendering-in-react-c6b0e5af381e)
+1. [Custom environment variables](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables)

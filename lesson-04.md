@@ -97,7 +97,15 @@ Do your best to fix all of the problems.
 
 Use any spare time to fix other problems and improve your previous work! Remember, you should dedicate 3 hours to this! 
 
+## ESLint and Code Quality
+
+| -            | Does not meet expectations | Meets expectations       | Exceeds expectations |
+|:-------------|:---------------------------|:-------------------------|:---------------------|
+| Completed    | Linted less than 70% of code | Linted 70% or more code | Linted 100% of code |
+| Work Ethic   | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
+
 ## Additional Resources
 
-1. http://imtiazrayhan.com/install-a-package-in-atom/
-1. https://eslint.org/docs/user-guide/getting-started
+1. [ESLint Getting Started](https://eslint.org/docs/user-guide/getting-started)
+1. [Install ESLint for Atom](http://imtiazrayhan.com/install-a-package-in-atom/)
+
