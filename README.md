@@ -4,7 +4,7 @@ Single Page Applications (SPAs) FTW!
 
 ## Course Description
 
-This course covers the process and tools used to build single page applications (SPA) using the most up-to-date tools and techniques. Students will learn to manage state and render on state changes using reactive programming techniques. Modern JavaScript libraries including React and Redux will be used.
+This course covers the process and tools used to build single page applications (SPA) using the most up-to-date tools and techniques. Students will learn to manage state and render on state changes using reactive programming techniques. Modern JavaScript libraries including React will be used.
 
 ### Why you should know this (optional)
 
@@ -33,15 +33,14 @@ Class Sessions:  14 classes, 7 labs
 
 Students by the end of the course will be able to ...
 
-1. Build Single Page Applications (SPAs)
+1. Design and implement Single Page Applications (SPAs)
 1. Identify and utilize Reactive Programming when building SPAs, and how it differs from other programming paradigms
-1. Manage application states using the Flux architecture pattern
 1. Use conditional rendering to programatically manage the user interface
+1. Build SPAs using a component based architecture
+1. Use Public and custom APIs
+1. Integrate SPAs with Express servers
 
 ## Schedule
----
-### _INSTRUCTOR NOTE: PLEASE REMOVE THIS BEFORE SUBMITTING_
-If you teach **M/W** or **Tu/Th**, please pick from a template below and delete the other one
 
 ---
 ### M/W Template
@@ -49,51 +48,30 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 
 **Class Times:** Monday and Wednesday at 3:30–5:20pm (10 class sessions)
 
-| Class | Date          |    Topics                  |
-|:-----:|:-------------:|:--------------------------:|
-| **Week 1**| - 	         | Getting started with React |
-|  -    | Monday, January 21 |       **MLK Jr. Day** |
-|  1    | Wednesday, January 23 |         [Lesson 1](lesson-01.md) |
-|  2    | Monday, January 28 |            [Lesson 2](lesson-02.md) |
-| **Week 2**| -          | React API/ESLint |
-|  3    |  Wednesday, January 30        | [Lesson 3](lesson-03.md) |
-|  4    | Monday, February 4            | [Lesson 4](lesson-04.md) |
-|  5    |  Wednesday, February 6        | [Lesson 5](lesson-05.md) |
+| Class     | Date               |    Topics                  |
+|:---------:|:------------------:|:--------------------------:|
+| **Week 1**| - 	               | Getting started with React |
+|  -        | Monday, January 21 |       **MLK Jr. Day** |
+|  1        | Wednesday, January 23 |         [Lesson 1](lesson-01.md) |
+|  2        | Monday, January 28 |            [Lesson 2](lesson-02.md) |
+| **Week 2**| -                  | React API/ESLint |
+|  3        |  Wednesday, January 30        | [Lesson 3](lesson-03.md) |
+|  4        | Monday, February 4            | [Lesson 4](lesson-04.md) |
+|  5        |  Wednesday, February 6        | [Lesson 5](lesson-05.md) |
 | **Week 3**| -          | React and Express part 1 |
-|  6    | Monday, February 11           | [Lesson 6](lesson-06.md) |
-|  7    |  Wednesday, February 13       | [Lesson 7](lesson-07.md) |
+|  6        | Monday, February 11           | [Lesson 6](lesson-06.md) |
+|  7        |  Wednesday, February 13       | [Lesson 7](lesson-07.md) |
 | **Week 4**| -          | React Express part 2 |
-|  -    | Monday, February 18 | **President's Day (Observed)** |
-|  8    | **Tuesday, February 19**      | [Lesson 8](lesson-08.md) |
-|  9    |  Wednesday, February 20       | [Lesson 9](lesson-09.md) |
+|  -        | Monday, February 18 | **President's Day (Observed)** |
+|  8        | **Tuesday, February 19**      | [Lesson 8](lesson-08.md) |
+|  9        |  Wednesday, February 20       | [Lesson 9](lesson-09.md) |
 | **Week 5**| -          | ?? Redux or Router ?? |
-|  10   | Monday, February 25          | [Lesson 10](lesson-10.md) |
-|  11   |  Wednesday, February 27      | [Lesson 11](lesson-11.md) |
+|  10       | Monday, February 25          | [Lesson 10](lesson-10.md) |
+|  11       |  Wednesday, February 27      | [Lesson 11](lesson-11.md) |
 | **Week 7**| -          | Wrap up      |
-|  12   | Monday, March 4 | Final Class (presentations, etc) |
-|  13   |  Wednesday, March 6    | Final Exams/Presentations |
-
-### Tu/Th Template
-**Course Dates:** Tuesday, January 22 – Thursday, March 7, 2019 (7 weeks)
-
-**Class Times:** Tuesday and Thursday at 3:30–5:20pm (12 class sessions)
-
-| Class |          Date          |                 Topics                  |
-|:-----:|:----------------------:|:---------------------------------------:|
-|  1 |  Tuesday, January 22              | [Lesson 1] |
-|  2 | Thursday, January 24             | [Lesson 2] |
-|  3 |  Tuesday, January 29             | [Lesson 3] |
-|  4 | Thursday, January 31             | [Lesson 4] |
-|  5 |  Tuesday, February 5             | [Lesson 5] |
-|  6 | Thursday, February 7             | [Lesson 6] |
-|  7 |  Tuesday, February 12             | [Lesson 7] |
-|  8 | Thursday, February 14             | [Lesson 8] |
-|  - |  Tuesday, February 19             | **President's Day (Observed)** |
-|  9 | Thursday, February 21             | [Lesson 9] |
-|  10 |  Tuesday, February 26             | [Lesson 10] |
-|  11 | Thursday, February 28             | [Lesson 11] |
-|  12 |  Tuesday, March 5             | Final Class (presentations, etc) |
-|  13 | Thursday, March 7             | Final Exams/Presentations |
+|  12       | Monday, March 4 | Final Class (presentations, etc) |
+|  13       |  Wednesday, March 6    | Final Exams/Presentations |
+|  13       |  Wednesday, March 6    | Final Exams/Presentations |
 
 - [Lesson 1](lesson1.md)
 - [Lesson 2](lesson2.md)
