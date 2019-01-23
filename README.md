@@ -6,7 +6,7 @@ Single Page Applications (SPAs) FTW!
 
 This course covers the process and tools used to build single page applications (SPA) using the most up-to-date tools and techniques. Students will learn to manage state and render on state changes using reactive programming techniques. Modern JavaScript libraries including React will be used.
 
-### Why you should know this (optional)
+### Why you should know this
 
 Single pages Applications are the norm for web applications today. They provide a higher level of functionality not available to simple web pages. 
 
@@ -26,10 +26,10 @@ Class Sessions:  14 classes, 7 labs
 
 ## Prerequisites:  
 
-- BEW 1.1
-- FEW 1.2
+- [BEW 1.1](https://github.com/Make-School-Courses/BEW-1.1-RESTful-and-Resourceful-MVC-Architecture)
+- [FEW 1.2](https://github.com/Make-School-Courses/FEW-1.2-JavaScript-Foundations)
 
-## Learning Objectives or Competencies (5-8)
+## Learning Objectives
 
 Students by the end of the course will be able to ...
 
@@ -41,50 +41,27 @@ Students by the end of the course will be able to ...
 1. Integrate SPAs with Express servers
 
 ## Schedule
-
----
-### M/W Template
 **Course Dates:** Monday, January 21 – Wednesday, March 6, 2019 (7 weeks)
 
 **Class Times:** Monday and Wednesday at 3:30–5:20pm (10 class sessions)
 
 | Class     | Date               |    Topics                  |
 |:---------:|:------------------:|:--------------------------:|
-| **Week 1**| - 	               | Getting started with React |
 |  -        | Monday, January 21 |       **MLK Jr. Day** |
 |  1        | Wednesday, January 23 |         [Lesson 1](lesson-01.md) |
 |  2        | Monday, January 28 |            [Lesson 2](lesson-02.md) |
-| **Week 2**| -                  | React API/ESLint |
 |  3        |  Wednesday, January 30        | [Lesson 3](lesson-03.md) |
 |  4        | Monday, February 4            | [Lesson 4](lesson-04.md) |
 |  5        |  Wednesday, February 6        | [Lesson 5](lesson-05.md) |
-| **Week 3**| -          | React and Express part 1 |
 |  6        | Monday, February 11           | [Lesson 6](lesson-06.md) |
 |  7        |  Wednesday, February 13       | [Lesson 7](lesson-07.md) |
-| **Week 4**| -          | React Express part 2 |
 |  -        | Monday, February 18 | **President's Day (Observed)** |
 |  8        | **Tuesday, February 19**      | [Lesson 8](lesson-08.md) |
 |  9        |  Wednesday, February 20       | [Lesson 9](lesson-09.md) |
-| **Week 5**| -          | ?? Redux or Router ?? |
 |  10       | Monday, February 25          | [Lesson 10](lesson-10.md) |
 |  11       |  Wednesday, February 27      | [Lesson 11](lesson-11.md) |
-| **Week 7**| -          | Wrap up      |
 |  12       | Monday, March 4 | Final Class (presentations, etc) |
 |  13       |  Wednesday, March 6    | Final Exams/Presentations |
-|  13       |  Wednesday, March 6    | Final Exams/Presentations |
-
-- [Lesson 1](lesson1.md)
-- [Lesson 2](lesson2.md)
-- [Lesson 3](Lesson3.md)
-- [Lesson 4](Lesson4.md)
-- [Lesson 5](lesson5.md)
-- [Lesson 6](lesson6.md)
-- [Lesson 7](lesson7.md)
-- [Lesson 8](lesson8.md)
-- [Lesson 9](lesson9.md)
-- [Lesson 10](lesson10.md)
-- [Lesson 11](lesson11.md)
-- [Lesson 12](lesson12.md)
 
 ## Class Assignments 
 
@@ -94,14 +71,8 @@ Students by the end of the course will be able to ...
 - Lesson 4 - [Code Quality](lesson-04.md#After-Class)
 - Lesson 5 - [Code Quality](lesson-05.md#After-Class)
 
-- List (with links) of all course-level assignments (i.e. tutorials, challenge sets, contractor project, custom projects, etc)
-- Under each assignment link the rubric used to evaluate it or describe how it is evaluated.
-- Projects should be linked to a project page which has a description & requirements.
 
 ### Tutorials
-[REWORD AS RELEVANT TO YOUR COURSE] Tutorials are to help you get started in a topic.  They are graded on completion only.
-
-- [Do Cool Stuff Tutorial]()
 
 ### Projects
 **All projects will require a minimum of 10 commits, and must take place throughout the entirety of the course**
@@ -120,14 +91,9 @@ We want to encourage best practices that you will see working as a professional 
 
 Through this requirement, we hope to encourage you to think about projects with an iterative, modular mindset. Doing so will allow you to break projects down into smaller milestones that come together to make your fully-realized solution.
 
-[REWORD AS RELEVANT TO YOUR COURSE] Projects are a chance for you to build and ship code that is based on class concepts.  Many are open ended allowing you to be creative and to have individual work for your portfolio.
-- [Sample Project](Sample_Project.md)
-    -   [Sample Project Rubric](Sample_Rubric.md)
-
 ### Other Class assignments
 
 ## Evaluation
-[MAKE SPECIFIC TO YOUR COURSE SO IT IS SUPER CLEAR]
 To pass this course you must meet the following requirements:
 
 - Complete all required tutorials
@@ -148,11 +114,11 @@ Failure to meet these requirements will result in a PIP (Participation Improveme
 
 ## Make School Course Policies
 
-[Academic Honesty](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.2mjdzgr0kzu4)<br>
-[Accommodations for Students](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.s2ivlubnpny2)<br>
-[Attendance Policy](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.l04zmmqhvj85)  
-[Diversity and Inclusion Policy](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.u0lbvv9zq3hw)<br>
-[Grading System](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.cxbhr2jav1ot)
+[Academic Honesty](https://make.sc/academic-honesty)<br>
+[Accommodations for Students](https://make.sc/accommodations-for-students)<br>
+[Attendance Policy](https://make.sc/attendance-policy)  
+[Diversity and Inclusion Policy](https://make.sc/diversity-and-inclusion-policy)<br>
+[Grading System](https://make.sc/grading-system)
 <br>
-[Title IX Policy](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.i4ms67qdl6oq)<br>
-[Program Learning Outcomes](https://docs.google.com/document/d/1C4Nm-aWa-l_omuyJRkOoNCBpxcK4LvyYlhcdzvNjwGs/preview#heading=h.mmypxnefbswv)
+[Title IX Policy](https://make.sc/title-ix-policy)<br>
+[Program Learning Outcomes](https://make.sc/program-learning-outcomes)
