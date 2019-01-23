@@ -1,28 +1,14 @@
 # FEW 1.2 - Lesson 10
 
-# Lesson Title
+# More React Router 
 
 ## Learning Objectives/Competencies
 
-1. Identify and describe
-1. Define 
-1. Desgin 
-1. Implement 
+1. 
 
 ## Initial Exercise
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
-
-## Overview/TT I 
-
-- Why learn this? 
-- Industry examples of usage
-- Best practices
-- Personal anecdote 
+- 
 
 ## In Class Activity I
 
@@ -43,10 +29,8 @@
 
 ## After Class
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+- Continue the custom project 
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+1. 

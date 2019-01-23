@@ -1,52 +1,36 @@
 # FEW 1.2 - Lesson 8
 
-# Lesson Title
+# Brainstorming Custom Project  
+
+Now it's time to do your own thing. You're goal is to build a SPA project using React. Make this something you want to put in your portfolio. 
+
+
 
 ## Learning Objectives/Competencies
 
-1. Identify and describe
-1. Define 
-1. Desgin 
-1. Implement 
+1. Design and SPA
+1. Identify the features and use case for SPA
+1. Define a backend API for use with a front end
 
 ## Initial Exercise
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
-
-## Overview/TT I 
-
-- Why learn this? 
-- Industry examples of usage
-- Best practices
-- Personal anecdote 
+- Discuss what are your favorite web apps? 
+	- What makes these good? 
+	- What are their features 
 
 ## In Class Activity I
 
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
-
-## Overview/TT II (optional)
-
-## In Class Activity II (optional)
+- Think, pair, share: Brainstorm ideas for your custom project
+- Define features of the project 
+- What does the Express API look like? 
+- What does the front end look like? 
+	- What type of components will you have to build?
 
 ## After Class
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+- Start working on the custom project. 
+- Desfine the API and configure the backend 
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+1. 

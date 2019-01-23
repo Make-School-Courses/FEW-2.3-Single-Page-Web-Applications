@@ -1,52 +1,30 @@
 # FEW 1.2 - Lesson 9
 
-# Lesson Title
+# Router
+
+Reactr Router is a tool for navigating between components. React Router is a set of components that handle all of the routing needs your project will need.
 
 ## Learning Objectives/Competencies
 
-1. Identify and describe
-1. Define 
-1. Desgin 
-1. Implement 
+1. Use navigation in a React project 
+1. Implement React Router
 
 ## Initial Exercise
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
-
-## Overview/TT I 
-
-- Why learn this? 
-- Industry examples of usage
-- Best practices
-- Personal anecdote 
+- What the heck is a router and why do I need one? 
 
 ## In Class Activity I
 
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
-
-## Overview/TT II (optional)
-
-## In Class Activity II (optional)
+- Importing Router 
+- Components Overview 
+	- BrowserRouter 
+	- Route
+	- Link
 
 ## After Class
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+- Continue the custom project 
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+1. 

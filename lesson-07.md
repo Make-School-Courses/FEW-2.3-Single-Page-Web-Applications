@@ -2,53 +2,34 @@
 
 # Lesson Title
 
-Some GraphQL???
+Workshop react and Express
 
 ## Learning Objectives/Competencies
 
-1. Identify and describe
-1. Define 
-1. Desgin 
-1. Implement 
+1. Identify strategies for solving propblems 
 
 ## Initial Exercise
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
+- Brainstorm ideas for custom project
 
 ## Overview/TT I 
 
-- Why learn this? 
-- Industry examples of usage
-- Best practices
-- Personal anecdote 
+Most web applications integrate both a front end and a backend. The goal of this project is to do that. 
+
+The API defined on the back end is the interface used by the front end. A good interface can facilitate yopur work as a front end developer. A poorly implemented interface can slow the development process. 
 
 ## In Class Activity I
 
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
-
-## Overview/TT II (optional)
-
-## In Class Activity II (optional)
+- Think pair share: 
+	- What are your favorite APIs
+	- What does a good interface look like? 
+- Define an interface
+	- 
 
 ## After Class
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+- Complete the Express + React project 
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+1. 

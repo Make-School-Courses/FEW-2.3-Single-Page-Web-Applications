@@ -51,21 +51,22 @@ Students by the end of the course will be able to ...
 | Class     | Date               |    Topics                  |
 |:---------:|:------------------:|:--------------------------:|
 | **Week 1**| - 	               | Getting started with React |
-|  -        | Monday, January 21 |       **MLK Jr. Day** |
-|  1        | Wednesday, January 23 |         [Lesson 1](lesson-01.md) |
-|  2        | Monday, January 28 |            [Lesson 2](lesson-02.md) |
-| **Week 2**| -                  | React API/ESLint |
-|  3        |  Wednesday, January 30        | [Lesson 3](lesson-03.md) |
-|  4        | Monday, February 4            | [Lesson 4](lesson-04.md) |
-|  5        |  Wednesday, February 6        | [Lesson 5](lesson-05.md) |
-| **Week 3**| -          | React and Express part 1 |
-|  6        | Monday, February 11           | [Lesson 6](lesson-06.md) |
-|  7        |  Wednesday, February 13       | [Lesson 7](lesson-07.md) |
-| **Week 4**| -          | React Express part 2 |
+|  -        | Monday, January 21 |       **MLK Jr. Day**      |
+|  1        | Wednesday, January 23 |[Lesson 1](lesson-01.md) |
+| **Week 2**| -                  | API Project                |
+|  2        | Monday, January 28 |   [Lesson 2](lesson-02.md) |
+|  3        | Wednesday, January 30 | [Lesson 3](lesson-03.md) |
+| **Week 3**| -                  | Express + React |
+|  4        | Monday, February 4 | [Lesson 4](lesson-04.md) |
+|  5        | Wednesday, February 6 | [Lesson 5](lesson-05.md) |
+| **Week 4**| -                  | React Express part 2 |
+|  6        | Monday, February 11 | [Lesson 6](lesson-06.md) |
+|  7        | Wednesday, February 13 | [Lesson 7](lesson-07.md) |
+| **Week 5**| -          | Express + React |
 |  -        | Monday, February 18 | **President's Day (Observed)** |
 |  8        | **Tuesday, February 19**      | [Lesson 8](lesson-08.md) |
 |  9        |  Wednesday, February 20       | [Lesson 9](lesson-09.md) |
-| **Week 5**| -          | ?? Redux or Router ?? |
+| **Week 6**| -          |  |
 |  10       | Monday, February 25          | [Lesson 10](lesson-10.md) |
 |  11       |  Wednesday, February 27      | [Lesson 11](lesson-11.md) |
 | **Week 7**| -          | Wrap up      |

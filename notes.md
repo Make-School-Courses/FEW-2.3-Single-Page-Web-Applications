@@ -130,16 +130,21 @@ Commit during class
 		- After Class 
 			- Work on Challenges in react-express-project
 - Week 4
-	- React Express
-	- networking fetch() proxy
-	- Create React app 
-			- setup 
-			- tour 
-			- working within
-	- Class 7:
-		- Maybe Router ???
-	- Class 8:
-		- Trouble shooting 
+	- Class 7: React Express Workshop
+	- Class 8: Brainstorm custom project 
+		- What is the goal?
+		- Does it have a backend? 
+			- What does the API look like?
+		- 
+- Week 5 - Navigation 
+	- Class 9: React Router 
+	- Class 10: More React Rounter 
+- Week 6 - 
+	- Class 11: Workshop 
+	- Class 12: Testing 
+- Week 7 - 
+	- Class 13: Final project presentations 
+	- Class 14: Final Assessment 
 		
 		
 Conditional Rendering Components 
