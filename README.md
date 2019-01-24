@@ -66,6 +66,7 @@ Students by the end of the course will be able to ...
 | **Week 6**| -          |  |
 |  10       | Monday, February 25          | [Lesson 10](lesson-10.md) |
 |  11       |  Wednesday, February 27      | [Lesson 11](lesson-11.md) |
+| **Week 6**| -          |  |
 |  12       | Monday, March 4 | Final Class (presentations, etc) |
 |  13       |  Wednesday, March 6    | Final Exams/Presentations |
 

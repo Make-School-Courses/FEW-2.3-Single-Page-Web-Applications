@@ -4,11 +4,13 @@ Getting started with Single Page Applications and React.
 
 ## Single Page Applications (SPA)
 
-Single Page Applications are web pages that act as software applications. A traditional web site is made up several pages all linked, where the current web page is removed from memory when a new page is loaded.  A Single Page Application is a single web page that loads data, and displays different content by changing the content of the current page without loading a new web page.
+Single Page Applications (SPA) are web pages that act as software applications. A traditional web site is made up several pages all linked, where the current web page is removed from memory when a new page is loaded.  A Single Page Application is a single web page that loads data, and displays different content by changing the content of the current page without loading a new web page.
 
 The [Killer App](https://en.wikipedia.org/wiki/Killer_application) for SPAs was Gmail. Gmail is a single web page that lists your email, views email, sends email and more all within a single HTML document.
 
 SPAs are the way web pages of more than minimal complexity are created these days. These days every page you view in a browser is like loading and running a new application!
+
+![dilbert-killer-app.gif.png](dilbert-killer-app.gif.png)
 
 ## What is React 
 
