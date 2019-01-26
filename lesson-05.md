@@ -91,7 +91,7 @@ Why unit test?
 - All of the big companies use it
 - Makes better more reliable code
 
-## Testing with Mocha and Chai
+## Testing with Jest
 
 Mocha is a testing framework, it runs all of the tests. Think of Mocha as the wrapper that gives a place for testing and shows the results of your tests.
 
