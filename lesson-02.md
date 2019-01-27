@@ -179,7 +179,19 @@ const ListOfButtons = ({ items }) => {
 }	
 ```
 
+## Add Styles 
 
+There are a few different techniques that can be used to style React projects. We will cover different techniques in class. For the project you can use a traditional approach of class names and stylesheet. 
+
+Put your styles in index.css. Use class names to assign styles to elements. 
+
+For any component asssign a class name by using the `className` attribute. For example: 
+
+`<button className="category-button" ... />`
+
+In your stylesheet you might style this with:
+
+`.category-button { color: red }`
 
 ## In Class 
 
