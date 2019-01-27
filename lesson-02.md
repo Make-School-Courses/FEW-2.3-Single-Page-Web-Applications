@@ -25,7 +25,6 @@ Map is a pure function. Pure functions don't cause side effects (change global v
 	- `Array.reduce()`
 1. Transform data with `Array.map()`
 1. Organize code with ES6 Modules 
-1. Handle user interaction with `onClick`
 
 ## ES6 Modules 
 
@@ -69,23 +68,23 @@ Take a look at the example project. Look at the file
 
 Functional programming is a paradigm or style of programming based on functions. This is different from Object Oriented Programming which based around Objects, or precedural programming which is based on prcedures.  
 
-It's hard to put functional programming into a nushell explanation other than to say it's all about making programs built from functions. 
+It's hard to put functional programming into a nushell explanation other than to say it's all about making programs built from functions and avoids shared state and mutable data. 
 
 The entry point for most to the world of functional programming are the Array methods: `map`, `filter`, and `reduce`. 
 
 ### `map`, `filter`, `reduce`
 
-`Array.map()`, map transforms an array of data into a . With map you should have a one to one relationship with the source array. Use it to convert an array of one type into an array of another type. 
+`Array.map()` transforms an array of data and returns a new array. With map you should have a one to one relationship with the source array. Use it to convert an array of one type into an array of another type. 
 
 For example you might transform an array of numbers into a an array of strings. 
 
-`Array.filter`, filter returns an array containing none, some, or all of the elements from the source array. Use it to filter the contents of an array. 
+`Array.filter` returns an array containing none, some, or all of the elements from the source array. Filter returns a new Array.  
 
 For example you might filter an array of products to create an array products with prices less than $10. 
 
-`Array.reduce`, reduce converts an array into a single value. It takes many values and returns an aggregate value. 
+`Array.reduce` converts an array of elemenets into a single value. It takes many values and returns an aggregate value. 
 
-For example, you might use reduce to get the total cost of all products in a shop cart array. 
+For example, you might use reduce to get the total cost of all products in a shopping cart array. 
 
 ## Using Array.map 
 
@@ -99,7 +98,7 @@ const catButtons = categories.map((catName) => {
 })
 ```
 
-Important! `catButtons` is a new Array not a mutated `categories` 
+Important! `catButtons` is a new Array!
 
 The function parameter used with map returns the new value. 
 
@@ -133,6 +132,66 @@ The first parameter of reduce is a function, the second parameter is the startin
 
 The first param of reduce takes in the acculumator and the current value. The accumulator is the running total, and the current value is one of the items from the Array.
 
+## React collections and Keys 
+
+React will automatically display a collection of JSX elements in JSX. For example: 
+
+```JavaScript 
+const ListOfButtons = (props) => {
+	const buttons = [<button />, <button />, <button />]
+	return (
+		<div>
+			{buttons}
+		</div>
+	)
+}	
+```
+
+React automatically renders the array of JSX elements, no need to iterate. 
+
+More often than not you will be receiving an Array of one type and converting it to an Array of JSX. So the example above is more likely to look like this: 
+
+```JavaScript 
+const ListOfButtons = ({ items }) => {
+	const buttons = items.map( item => <button label={item.label} />)
+	return (
+		<div>
+			{buttons}
+		</div>
+	)
+}	
+```
+
+Here you can imagine the `items` as an array if objects with a label property. 
+
+React needs to be able to keep track of elements with a stable identity. To do this you'll get elements in a list a `key`. The value for key can be any value that is unique among siblings. While you can use an index, save this as a last resort. Use a unique id or other unqiue string that describes your data. 
+
+In the example above, if we knew that the label was unique it could be used as the key. 
+
+```JavaScript 
+const ListOfButtons = ({ items }) => {
+	const buttons = items.map( item => <button key={item.label} label={item.label} />)
+	return (
+		<div>
+			{buttons}
+		</div>
+	)
+}	
+```
+
+
+
+## In Class 
+
+Using the starter project try the following challenges with Map, Filter, and Reduce. 
+
+- List all of the categories
+	- Map the array of strings to an array of JSX buttons. 
+	- Make a component for the category button
+- List all of the products 
+	- Map the inventory of Objects into an array of JSX components
+	- Make a component for the inventory item
+
 ## After Class
 
 **React Product Lister**
@@ -158,4 +217,5 @@ Follow the instructions in the Readme.
 1. [Array Map, Filter, Reduce](https://medium.com/jsguru/javascript-functional-programming-map-filter-and-reduce-846ff9ba492d)
 1. [ES6 Module Practical Guide](https://medium.freecodecamp.org/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773)
 1. [ES6 Modules reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+1. [React Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
 
