@@ -91,22 +91,9 @@ Why unit test?
 - All of the big companies use it
 - Makes better more reliable code
 
-## Testing with Mocha and Chai
+## Testing with Jest
 
-Mocha is a testing framework, it runs all of the tests. Think of Mocha as the wrapper that gives a place for testing and shows the results of your tests.
-
-Chai is an assertion library. Think of an assertion as the actual test of code. An assertion is an expression of what you expect from a situation. 
-
-Install Mocha and Chai like this: 
-
-- Add mocha and chai as dependencies
-	- `npm install --save mocha chai`
-- Add a test script to your package.json. Add the following under "scripts"
-	- `"test": "mocha"`
-- Add a `test` folder to your project
-	- `mkdir test`
-- Add a test file. Here is where you will write your tests
-	- `touch test/test.js`
+Jest is a test librasry from the FaceBook team. It's included as part of the Create-React-App boilerplate code. 
 
 ## After Class
 

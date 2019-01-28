@@ -49,7 +49,7 @@ Students by the end of the course will be able to ...
 |:---------:|:------------------:|:--------------------------:|
 | **Week 1**| - 	               | Getting started with React |
 |  -        | Monday, January 21 |       **MLK Jr. Day**      |
-|  1        | Wednesday, January 23 |[Lesson 1](lesson-01.md) |
+|  1        | Wednesday, January 23 | [Lesson 1](lesson-01.md) |
 | **Week 2**| -                  | API Project                |
 |  2        | Monday, January 28 |   [Lesson 2](lesson-02.md) |
 |  3        | Wednesday, January 30 | [Lesson 3](lesson-03.md) |
@@ -70,6 +70,21 @@ Students by the end of the course will be able to ...
 |  12       | Monday, March 4 | Final Class (presentations, etc) |
 |  13       |  Wednesday, March 6    | Final Exams/Presentations |
 
+- [Lesson 1](lesson-01.md)
+- [Lesson 2](lesson-02.md)
+- [Lesson 3](lesson-03.md)
+- [Lesson 4](lesson-04.md)
+- [Lesson 5](lesson-05.md)
+- [Lesson 6](lesson-06.md)
+- [Lesson 7](lesson-07.md)
+- [Lesson 8](lesson-08.md)
+- [Lesson 9](lesson-09.md)
+- [Lesson 10](lesson-10.md)
+- [Lesson 11](lesson-11.md)
+- [Lesson 12](lesson-12.md)
+- [Lesson 13](lesson-13.md)
+- [Lesson 14](lesson-14.md)
+
 ## Class Assignments
 
 - Lesson 1 - [React Tutorial](lesson-01.md#After-Class)
@@ -77,16 +92,17 @@ Students by the end of the course will be able to ...
 - Lesson 3 - [React API Challenge](lesson-03.md#After-Class)
 - Lesson 4 - [Code Quality](lesson-04.md#After-Class)
 - Lesson 5 - [Code Quality](lesson-05.md#After-Class)
-
+- Lesson 6 - [React + Express](lesson-06.md#After-Class)
+- Lesson 8 - [Custom Project Concept](lesson-08.md#After-Class)
+- Lesson 11 - [Custom project Review](lesson-11.md#After-Class)
 
 ### Tutorials
 
 ### Projects
-**All projects will require a minimum of 10 commits, and must take place throughout the entirety of the course**
 
-- **Good Example:** 40+ commits throughout the length of the course, looking for a healthy spattering of commits each week (such as 3-5 per day).
-- **Bad Example:** 10 commits on one day during the course and no others. Students who do this will be at severe risk of not passing the class.
-- **Unacceptable Example:** 2 commits the day before a project is due. Students who do this should not expect to pass the class.
+Begin each project by creating a GitHub Repo for that project. Start with a Readme that has a short description of what you doing. 
+
+Each time you sit down to work on the project you should commit at least once. Commit more often if you like. 
 
 #### Why are we doing this?
 
