@@ -4,27 +4,29 @@
 
 React is built on functional programming. This class you will look at some functional programming concepts in the context of React.
 
-# React iterating with keys
+## React collections and Keys
 
-Often you'll want to render a collections of elements. Like lists of names, products etc. React will automatically render a collection of JSX elements without you having to write a loop to do the work.
+Often you will need to render Arrays of JSX components. You'll often have arrays of raw data that need to be converted into an array of JSX. 
 
-To generate a collection JSX elements you'll usually start with a collection of other data which needs to be transformed into JSX.
+To do this we will delve into functional programming with map, filter, and reduce. 
 
-This is such a common practice that Array gives us a method specialized for it: `Array.map()`.
-
-Map is a functional programming construct. Map is a method on Array that takes another function as a parameter, and returns a new Array. 
-
-Map is a pure function. Pure functions don't cause side effects (change global variables), and it is Non-Mutative (doesn't mutate the array and instead returns a new Array).
+React will automatically iterate over an collection of JSX elements. To avoid error these elements need to have a unqiue keys. 
 
 ## Learning Objectives/Competencies
 
+1. Organize code with ES6 Modules 
 1. Identify functional programming concepts
 1. Use functional programming 
 	- `Array.map()`
 	- `Array.filter()`
 	- `Array.reduce()`
 1. Transform data with `Array.map()`
-1. Organize code with ES6 Modules 
+
+## The Sample project 
+
+To get started download the sample project. This project was created with the Create React App starter. 
+
+[Product List Challenge](https://github.com/Product-College-Labs/react-product-list)
 
 ## ES6 Modules 
 
@@ -72,7 +74,9 @@ It's hard to put functional programming into a nushell explanation other than to
 
 The entry point for most to the world of functional programming are the Array methods: `map`, `filter`, and `reduce`. 
 
-### `map`, `filter`, `reduce`
+### Array `map`, `filter`, `reduce`
+
+The functions map, filter, and reduce are a gateway into functional programming concepts. Functional programming uses Pure Functions. These are functions that have no side effects. For the same input a pure function will always return the same output. 
 
 `Array.map()` transforms an array of data and returns a new array. With map you should have a one to one relationship with the source array. Use it to convert an array of one type into an array of another type. 
 
@@ -82,7 +86,7 @@ For example you might transform an array of numbers into a an array of strings.
 
 For example you might filter an array of products to create an array products with prices less than $10. 
 
-`Array.reduce` converts an array of elemenets into a single value. It takes many values and returns an aggregate value. 
+`Array.reduce` converts an array of values into a single value. It takes many values and returns a single aggregate value. 
 
 For example, you might use reduce to get the total cost of all products in a shopping cart array. 
 
@@ -98,9 +102,7 @@ const catButtons = categories.map((catName) => {
 })
 ```
 
-Important! `catButtons` is a new Array!
-
-The function parameter used with map returns the new value. 
+Important! `catButtons` is a new Array! The source array `categories` is unmodified! 
 
 ## Using Array.filter
 
@@ -118,7 +120,7 @@ The sample returns a new array containing items from inventory where the categor
 
 ## Using Array.reduce
 
-Use `Array.redcue()` to reduce a collection of values to a single value. 
+Use `Array.reduce()` to reduce a collection of values to a single value. 
 
 For example you get the total cost of the inventory by adding all of the prices. 
 
@@ -164,7 +166,7 @@ const ListOfButtons = ({ items }) => {
 
 Here you can imagine the `items` as an array if objects with a label property. 
 
-React needs to be able to keep track of elements with a stable identity. To do this you'll get elements in a list a `key`. The value for key can be any value that is unique among siblings. While you can use an index, save this as a last resort. Use a unique id or other unqiue string that describes your data. 
+React needs to be able to keep track of elements with a stable identity. To do this you'll get elements in a list a `key`. The value for key can be any value that is **unique among siblings**. While you can use an index, save this as a last resort. Use a unique id or other unqiue string that describes your data. 
 
 In the example above, if we knew that the label was unique it could be used as the key. 
 
