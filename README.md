@@ -91,7 +91,7 @@ Students by the end of the course will be able to ...
 - Lesson 2 - [React Product Lister](lesson-02.md#After-Class)
 - Lesson 3 - [React API Challenge](lesson-03.md#After-Class)
 - Lesson 4 - [Code Quality](lesson-04.md#After-Class)
-- Lesson 5 - [Code Quality](lesson-05.md#After-Class)
+- Lesson 5 - [Express Server](lesson-05.md#After-Class)
 - Lesson 6 - [React + Express](lesson-06.md#After-Class)
 - Lesson 8 - [Custom Project Concept](lesson-08.md#After-Class)
 - Lesson 11 - [Custom project Review](lesson-11.md#After-Class)

@@ -4,7 +4,17 @@
 
 The first goal for this class is to use React with a public web API. 
 
-The second goal is to work with form elements and user input with React. React has a special pattern for this due to the way it handles the virtual DOM. 
+The second goal is to work with form elements and user input with React. React has a special pattern for this due to the way it handles the virtual DOM.
+
+Last, the goal will be to look conditional rendering techniques that can be implemented with React. 
+
+## Objectives 
+
+- Implement the Controlled Component Pattern
+	- Use forms and form data in React
+- Build an app that works with a public API
+- Build system to handle network errors gracefully
+- Use conditional rendering patterns in React
 
 ## Introduction 
 
@@ -24,14 +34,17 @@ Follow the instructions to setup and run the demo project.
 
 `REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY_HERE`
 
-Pro tips! 
+**Pro tip!** 
 
 - The Create React App starter project is set up to use dotenv, you don't need to add this package. 
-- Any environment variables you define **must** begin with `REACT_APP_`
+- Any environment variables you define **must** begin with `REACT_APP_`. This prevents clashes with environment variables that you may not be aware of. 
 
 Read more about [Adding Custom Environment Variables](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables)
 
-Everything in the example project happens in App.js. There are many comments explaining what is going on, read these closely. 
+Everything in the example project happens in App.js. There are many comments explaining what is going on, read these closely.
+
+- `npm install`
+- `npm start` or `yarn start`
 
 ## Input Pattern 
 
@@ -51,7 +64,7 @@ This started as a simple input element.
 
 `<input type="text">`
 
-The input should take a zip code so I set the placeholder to "enter zip" and used the pattern attribute and a little regex magic to limit input to zip code patterns. 
+The input should take a zip code so I set the placeholder to "enter zip" and used the pattern attribute and a little regex "magic" to limit input to zip code patterns. 
 
 ```JavaScript
 <input 
@@ -62,7 +75,7 @@ The input should take a zip code so I set the placeholder to "enter zip" and use
 />
 ```
 
-The `value` and `onChange` attributes are used for the for the React input pattern. 
+The `value` and `onChange` attributes are used for the for the React input pattern.
 
 ```JavaScript
 <input 
@@ -72,13 +85,13 @@ The `value` and `onChange` attributes are used for the for the React input patte
 />
 ```
 
-The controlled component pattern stores the value entered in state, and displays the value in the component via it's value attribute. 
+The controlled component pattern stores the value entered on `this.state`, and displays the value in the component via it's value attribute. 
 
-Imagine you are entering a zip code into a text input field. You type the first number of the zip code which is 9. The onChange method fires and assigns the value in the text field to state `this.setState({zip:e.target.value})`. When the component is rendered the value displayed is the value set on state `this.state.zip`. 
+Imagine you are entering a zip code into a text input field. You type the first number of the zip code which is 9. The onChange method fires and assigns the value in the text field to state with: `this.setState({zip:e.target.value})`. When the component is rendered the value displayed is the value set on state `this.state.zip`.
 
 This may seem a little strange, but it's important for two reasons. 
 
-- Reacts virtual DOM may replace the input component at any time when the DOM is redrawn. This would loose values stored in real DOM elements. 
+- React's virtual DOM may replace the input component at any time when the DOM is redrawn. This would lose values stored in real DOM elements. 
 - It stores input values on state where they are easy to access when you need them without have to access the input and retrieve it's value. 
 
 - [Controlled Components](https://reactjs.org/docs/forms.html)
@@ -98,9 +111,11 @@ function toggle(hasMustard) {
 }
 ```
 
+This is nice as it removes logic from cluttering your render method.
+
 **Pattern 2** - Assign a JSX element to variables and render that. 
 
-```JavaSxcript
+```JavaScript
 render() {
 	const { time } = this.state
 	let element
