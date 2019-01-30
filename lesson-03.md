@@ -139,6 +139,14 @@ This might be good when you want to see the logic at the point where something i
 
 Read more about [Conditional Rendering in React](https://reactjs.org/docs/conditional-rendering.html)
 
+Conditional Rendering techniques
+
+- Function returns a component
+- Element Variables
+- Inline if with logical && Operator
+- Inline if-else with Conditional Operator (ternary)
+- Prevent Component from rendering
+
 ## Making Network Requests
 
 The example project uses `fetch()` to load JSON data from the OpenWeatherMap API. Take a look at the `handleSubmit()` method in App.js.
