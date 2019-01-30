@@ -135,9 +135,11 @@ render() {
 }
 ```
 
+This might be good when you want to see the logic at the point where something is rendered. 
+
 Read more about [Conditional Rendering in React](https://reactjs.org/docs/conditional-rendering.html)
 
-## Using Fetch
+## Making Network Requests
 
 The example project uses `fetch()` to load JSON data from the OpenWeatherMap API. Take a look at the `handleSubmit()` method in App.js.
 
@@ -163,7 +165,7 @@ Make sure your API key is set here.
 
 ### Fetch
 
-Fetch is a browser API for fetching resources including resources across a network. 
+> Fetch is a browser API for fetching resources including resources across a network. 
 
 Load JSON with `fetch` like this: 
 
@@ -174,7 +176,9 @@ fetch('http://someurl.com').then((res) => {
 	return res.json()
 }).then((data) => {
 	// handle JSON data here
+	// ...
 }).catch((err) => {
+	// Handle error messages 
 	console.log(err.message)
 })
 ```
