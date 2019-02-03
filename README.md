@@ -12,7 +12,7 @@ Single pages Applications are the norm for web applications today. They provide 
 
 Single page applications are the basis for most of your favorite web destinations and the future of mobile computing!
 
-If you want to build next generation mobile experiences that reach the widest possible audience with greatest fucntionality single page applications are a good bet.
+If you want to build next-generation mobile experiences that reach the widest possible audience with greatest functionality single page applications are a good bet.
 
 ## Course Specifics
 
@@ -35,19 +35,19 @@ Students by the end of the course will be able to ...
 
 1. Design and implement Single Page Applications (SPAs)
 1. Identify and utilize Reactive Programming when building SPAs, and how it differs from other programming paradigms
-1. Use conditional rendering to programatically manage the user interface
-1. Build SPAs using a component based architecture
+1. Use conditional rendering to programmatically manage the user interface
+1. Build SPAs using a component-based architecture
 1. Use Public and custom APIs
 1. Integrate SPAs with Express servers
 
 ## Schedule
 **Course Dates:** Monday, January 21 – Wednesday, March 6, 2019 (7 weeks)
 
-**Class Times:** Monday and Wednesday at 3:30–5:20pm (10 class sessions)
+**Class Times:** Monday and Wednesday at 3:30–5:20 pm (10 class sessions)
 
 | Class     | Date               |    Topics                  |
 |:---------:|:------------------:|:--------------------------:|
-| **Week 1**| - 	               | Getting started with React |
+| **Week 1**| -                    | Getting started with React |
 |  -        | Monday, January 21 |       **MLK Jr. Day**      |
 |  1        | Wednesday, January 23 | [Lesson 1](lesson-01.md) |
 | **Week 2**| -                  | API Project                |
@@ -106,7 +106,7 @@ Each time you sit down to work on the project you should commit at least once. C
 
 #### Why are we doing this?
 
-We want to encourage best practices that you will see working as a professional software engineer. Breaking up a project by doing a large amount of commits helps engineers in the following ways:
+We want to encourage best practices that you will see working as a professional software engineer. Breaking up a project by doing a large number of commits helps engineers in the following ways:
 
 - It's much easier to retrace your steps if you break your project/product/code up into smaller pieces
 - It helps with being able to comprehend the larger problem, and also will help with your debugging (i.e. finding exactly when you pushed that piece of broken code)
@@ -126,7 +126,7 @@ To pass this course you must meet the following requirements:
 - Make up all classwork from all absences
 
 ## Attendance
-Just like any job, attendance at Make School is required and a key component of your success. Attendance is being onsite from 9:30 to 5:30 each day, attending all scheduled sessions including classes, huddles, coaching and school meetings, and working in the study labs when not in a scheduled session. Working onsite allows you to learn with your peers, have access to support from TAs, instructors and others, and is vital to your learning.
+Just like any job, attendance at Make School is required and a key component of your success. Attendance is being on site from 9:30 to 5:30 each day, attending all scheduled sessions including classes, huddles, coaching, and school meetings, and working in the study labs when not in a scheduled session. Working onsite allows you to learn with your peers, have access to support from TAs, instructors, and others, and is vital to your learning.
 
 Attendance requirements for scheduled sessions are:
 - No more than two no call no shows per term in any scheduled session.

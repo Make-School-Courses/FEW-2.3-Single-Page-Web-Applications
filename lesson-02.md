@@ -10,16 +10,16 @@ Often you will need to render Arrays of JSX components. You'll often have arrays
 
 To do this we will delve into functional programming with map, filter, and reduce. 
 
-React will automatically iterate over an collection of JSX elements. To avoid error these elements need to have a unqiue keys. 
+React will automatically iterate over a collection of JSX elements. To avoid error these elements need to have unique keys. 
 
 ## Learning Objectives/Competencies
 
 1. Organize code with ES6 Modules 
 1. Identify functional programming concepts
 1. Use functional programming 
-	- `Array.map()`
-	- `Array.filter()`
-	- `Array.reduce()`
+    - `Array.map()`
+    - `Array.filter()`
+    - `Array.reduce()`
 1. Transform data with `Array.map()`
 
 ## The Sample project 
@@ -34,9 +34,9 @@ The challenge project needs to display a list of categories and a list of produc
 
 Your first job is to share this information with `App.js`. You can do just this with `import`.
 
-Take a look at `inventory.js`. At the top of the file the variable `inventory` is declared and assigned an array of objects. 
+Take a look at `inventory.js`. At the top of the file, the variable `inventory` is declared and assigned an array of objects. 
 
-Scroll to the bottom of the page. Here inventory is transformed filtered, and sorted. And, another variable `categories` is declared and assigned a value.
+Scroll to the bottom of the page. Here inventory is transformed filtered and sorted. And, another variable `categories` is declared and assigned a value.
 
 `inventory` holds the array of products you need to display, and `categories` holds the names of the categories of those products.
 
@@ -62,29 +62,29 @@ import inventory, { categories } from './inventory'
 ```
 Here inventory is the default export (it is outside the {}), and categories is not default (it is inside the {}).
 
-Look at the export statements above. Where 	`inventory` is exported it includes the keyword `default`. This makes `inventory` the default export. A module may only have one default export. 
+Look at the export statements above. Where     `inventory` is exported it includes the keyword `default`. This makes `inventory` the default export. A module may only have one default export. 
 
 ## Functional Programming 
 
 Take a look at the example project. Look at the file 
 
-Functional programming is a paradigm or style of programming based on functions. This is different from Object Oriented Programming which based around Objects, or precedural programming which is based on prcedures.  
+Functional programming is a paradigm or style of programming based on functions. This is different from Object Oriented Programming which based on Objects, or procedural programming which is based on procedures.  
 
-It's hard to put functional programming into a nushell explanation other than to say it's all about making programs built from functions and avoids shared state and mutable data. 
+It's hard to put functional programming into a nutshell explanation other than to say it's all about making programs built from functions and avoids shared state and mutable data. 
 
-The entry point for most to the world of functional programming are the Array methods: `map`, `filter`, and `reduce`. 
+The entry point for most to the world of functional programming is the Array methods: `map`, `filter`, and `reduce`. 
 
 ### Array `map`, `filter`, `reduce`
 
-The functions map, filter, and reduce are a gateway into functional programming concepts. Functional programming uses Pure Functions. These are functions that have no side effects. For the same input a pure function will always return the same output. 
+The functions map, filter, and reduce are a gateway into functional programming concepts. Functional programming uses Pure Functions. These are functions that have no side effects. For the same input, a pure function will always return the same output. 
 
 `Array.map()` transforms an array of data and returns a new array. With map you should have a one to one relationship with the source array. Use it to convert an array of one type into an array of another type. 
 
-For example you might transform an array of numbers into a an array of strings. 
+For example, you might transform an array of numbers into an array of strings. 
 
 `Array.filter` returns an array containing none, some, or all of the elements from the source array. Filter returns a new Array.  
 
-For example you might filter an array of products to create an array products with prices less than $10. 
+For example, you might filter an array of products to create an array of products with prices less than $10. 
 
 `Array.reduce` converts an array of values into a single value. It takes many values and returns a single aggregate value. 
 
@@ -92,13 +92,13 @@ For example, you might use reduce to get the total cost of all products in a sho
 
 ## Using Array.map 
 
-Use `Array.map()` to transform an Array of elements into an array different elements. When working with React you will often want to transform an array of data into an Array JSX elements to display. 
+Use `Array.map()` to transform an Array of elements into an array of different elements. When working with React you will often want to transform an array of data into an Array of JSX elements to display. 
 
 Imagine you have an array of category names that are strings, and you want to make them JSX buttons. 
 
 ```JavaScript
 const catButtons = categories.map((catName) => {
-	return <button>{catName}</button>
+    return <button>{catName}</button>
 })
 ```
 
@@ -112,7 +112,7 @@ For example, to get a list of only items in a category.
 
 ```JavaScript
 const allToys = inventory.filter((item) => {
-	return item.category = 'Toys'
+    return item.category = 'Toys'
 })
 ```
 
@@ -122,17 +122,17 @@ The sample returns a new array containing items from inventory where the categor
 
 Use `Array.reduce()` to reduce a collection of values to a single value. 
 
-For example you get the total cost of the inventory by adding all of the prices. 
+For example, you get the total cost of the inventory by adding all of the prices. 
 
 ```JavaScript
 const allToys = inventory.reduce((total, item) => {
-	return total += item.price
+    return total += item.price
 }, 0)
 ```
 
 The first parameter of reduce is a function, the second parameter is the starting value of the accumulator. Here the starting value is 0. 
 
-The first param of reduce takes in the acculumator and the current value. The accumulator is the running total, and the current value is one of the items from the Array.
+The first param of reduce takes in the accumulator and the current value. The accumulator is the running total, and the current value is one of the items from the Array.
 
 ## React collections and Keys 
 
@@ -140,13 +140,13 @@ React will automatically display a collection of JSX elements in JSX. For exampl
 
 ```JavaScript 
 const ListOfButtons = (props) => {
-	const buttons = [<button />, <button />, <button />]
-	return (
-		<div>
-			{buttons}
-		</div>
-	)
-}	
+    const buttons = [<button />, <button />, <button />]
+    return (
+        <div>
+            {buttons}
+        </div>
+    )
+}    
 ```
 
 React automatically renders the array of JSX elements, no need to iterate. 
@@ -155,35 +155,35 @@ More often than not you will be receiving an Array of one type and converting it
 
 ```JavaScript 
 const ListOfButtons = ({ items }) => {
-	const buttons = items.map( item => <button label={item.label} />)
-	return (
-		<div>
-			{buttons}
-		</div>
-	)
-}	
+    const buttons = items.map( item => <button label={item.label} />)
+    return (
+        <div>
+            {buttons}
+        </div>
+    )
+}    
 ```
 
-Here you can imagine the `items` as an array if objects with a label property. 
+Here you can imagine the `items` as an array of objects with a label property. 
 
-React needs to be able to keep track of elements with a stable identity. To do this you'll get elements in a list a `key`. The value for key can be any value that is **unique among siblings**. While you can use an index, save this as a last resort. Use a unique id or other unqiue string that describes your data. 
+React needs to be able to keep track of elements with a stable identity. To do this you'll get elements in a list a `key`. The value for the key can be any value that is **unique among siblings**. While you can use an index, save this as a last resort. Use a unique id or other unique string that describes your data. 
 
 In the example above, if we knew that the label was unique it could be used as the key. 
 
 ```JavaScript 
 const ListOfButtons = ({ items }) => {
-	const buttons = items.map( item => <button key={item.label} label={item.label} />)
-	return (
-		<div>
-			{buttons}
-		</div>
-	)
-}	
+    const buttons = items.map( item => <button key={item.label} label={item.label} />)
+    return (
+        <div>
+            {buttons}
+        </div>
+    )
+}    
 ```
 
 ## Add Styles 
 
-There are a few different techniques that can be used to style React projects. We will cover different techniques in class. For this project you can use a traditional approach of class names and stylesheet. 
+There are a few different techniques that can be used to style React projects. We will cover different techniques in class. For this project, you can use a traditional approach of class names and stylesheet. 
 
 Put your styles in index.css. Use class names to assign styles to JSX elements. 
 
@@ -200,17 +200,17 @@ In your stylesheet you might style this with:
 Using the starter project try the following challenges with Map, Filter, and Reduce. 
 
 - List all of the categories
-	- Map the array of strings to an array of JSX buttons. 
-	- Make a component for the category button
+    - Map the array of strings to an array of JSX buttons. 
+    - Make a component for the category button
 - List all of the products 
-	- Map the inventory of Objects into an array of JSX components
-	- Make a component for the inventory item
+    - Map the inventory of Objects into an array of JSX components
+    - Make a component for the inventory item
 
 ## After Class
 
 **React Product Lister**
 
-Your goal is to build an app using React. This app is simpole and borrows ideas from the React tutorial. 
+Your goal is to build an app using React. This app is simple and borrows ideas from the React tutorial. 
 
 Get the starter project code here: [Product List Challenge](https://github.com/Product-College-Labs/react-product-list).
 

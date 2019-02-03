@@ -11,26 +11,26 @@ Last, the goal will be to look conditional rendering techniques that can be impl
 ## Objectives 
 
 - Implement the Controlled Component Pattern
-	- Use forms and form data in React
+    - Use forms and form data in React
 - Build an app that works with a public API
-- Build system to handle network errors gracefully
+- Build a system to handle network errors gracefully
 - Use conditional rendering patterns in React
 
 ## Introduction 
 
 The demo project is a simple web app that displays weather data. You'll need to make an account and get a valid API key. 
 
-The project needs to accept user input for a zipcode. Text input and other form elements use a special pattern in React called the Controlled Component. 
+The project needs to accept user input for a zip code. Text input and other form elements use a special pattern in React called the Controlled Component. 
 
 ## Getting Started
 
-Follow the instructions to setup and run the demo project. 
+Follow the instructions to set up and run the demo project. 
 
 - Download or fork the [project](https://github.com/Product-College-Labs/react-api-project)
 - Make an account with [OpenWeatherMap.org](https://home.openweathermap.org/)
-	- Go to your profile page: API Keys
-	- Generate and copy your API key
-	- Add the following to the '.env' file: 
+    - Go to your profile page: API Keys
+    - Generate and copy your API key
+    - Add the following to the '.env' file: 
 
 `REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY_HERE`
 
@@ -68,7 +68,7 @@ The input should take a zip code so I set the placeholder to "enter zip" and use
 
 ```JavaScript
 <input 
-	...
+    ...
   type="text" 
   pattern="(\d{5}([\-]\d{4})?)"
   placeholder="enter zip"
@@ -85,29 +85,29 @@ The `value` and `onChange` attributes are used for the for the React input patte
 />
 ```
 
-The controlled component pattern stores the value entered on `this.state`, and displays the value in the component via it's value attribute. 
+The controlled component pattern stores the value entered on `this.state` and displays the value in the component via its value attribute. 
 
 Imagine you are entering a zip code into a text input field. You type the first number of the zip code which is 9. The onChange method fires and assigns the value in the text field to state with: `this.setState({zip:e.target.value})`. When the component is rendered the value displayed is the value set on state `this.state.zip`.
 
 This may seem a little strange, but it's important for two reasons. 
 
 - React's virtual DOM may replace the input component at any time when the DOM is redrawn. This would lose values stored in real DOM elements. 
-- It stores input values on state where they are easy to access when you need them without have to access the input and retrieve it's value. 
+- It stores input values on `state` where they are easy to access when you need them without having to access the input and retrieve its value. 
 
 - [Controlled Components](https://reactjs.org/docs/forms.html)
 
 ## Conditionally Rendering Components
 
-Commonly in React you will need to render different components under different conditions. Here are two patterns you can apply to your work: 
+Commonly in React, you will need to render different components under different conditions. Here are two patterns you can apply to your work: 
 
-**Pattern 1** - Use a function to return one JSX expression or another based on a value. 
+**Pattern 1** - Use a function to return one JSX expression or another based on state or props. 
 
 ```JavaScript
 function toggle(hasMustard) {
-	if (hasMustard) {
-		return <HotdogWithMustard />
-	}
-	return <Hotdog />
+    if (hasMustard) {
+        return <HotdogWithMustard />
+    }
+    return <Hotdog />
 }
 ```
 
@@ -117,21 +117,21 @@ This is nice as it removes logic from cluttering your render method.
 
 ```JavaScript
 render() {
-	const { time } = this.state
-	let element
-	if (time === 'morning') {
-		element = <Eggs />
-	} else if (time === 'lunch') {
-		element = <Burrito />
-	} else {
-		element = <Icecream />
-	}
+    const { time } = this.state
+    let element
+    if (time === 'morning') {
+        element = <Eggs />
+    } else if (time === 'lunch') {
+        element = <Burrito />
+    } else {
+        element = <Icecream />
+    }
 
-	return (
-		<div>
-			{element}
-		</div>
-	)
+    return (
+        <div>
+            {element}
+        </div>
+    )
 }
 ```
 
@@ -141,7 +141,7 @@ Read more about [Conditional Rendering in React](https://reactjs.org/docs/condit
 
 Conditional Rendering techniques
 
-- Function returns a component
+- A function returns a component
 - Element Variables
 - Inline if with logical && Operator
 - Inline if-else with Conditional Operator (ternary)
@@ -165,7 +165,7 @@ Here you are getting a value stored in the dot env file stored in the key: `REAC
 
 **Important!** User defined keys must begin with "REACT_APP_"! 
 
-Open '.env' and define `REACT_APP_OPENWEATHERMAP_API_KEY` with your openweathermap api key. Something like: 
+Open '.env' and define `REACT_APP_OPENWEATHERMAP_API_KEY` with your openweathermap API key. Something like: 
 
 `REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY_HERE`
 
@@ -180,14 +180,14 @@ Load JSON with `fetch` like this:
 ```JS
 // Call fetch
 fetch('http://someurl.com').then((res) => {
-	// Make a connection and handle the stream as JSON
-	return res.json()
+    // Make a connection and handle the stream as JSON
+    return res.json()
 }).then((data) => {
-	// handle JSON data here
-	// ...
+    // handle JSON data here
+    // ...
 }).catch((err) => {
-	// Handle error messages 
-	console.log(err.message)
+    // Handle error messages 
+    console.log(err.message)
 })
 ```
 
@@ -210,7 +210,7 @@ https://github.com/Product-College-Labs/react-api-project
 
 1. Use conditional rendering
 1. Create forms using the React controlled component pattern
-1. Use state to manage asynchornus actions
+1. Use state to manage asynchronous actions
 
 ## React API Project
 
