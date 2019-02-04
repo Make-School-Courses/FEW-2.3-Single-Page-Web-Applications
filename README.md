@@ -45,28 +45,28 @@ Students by the end of the course will be able to ...
 
 **Class Times:** Monday and Wednesday at 3:30–5:20 pm (10 class sessions)
 
-| Class     | Date               |    Topics                  |
-|:---------:|:------------------:|:--------------------------:|
-| **Week 1**| -                    | Getting started with React |
-|  -        | Monday, January 21 |       **MLK Jr. Day**      |
-|  1        | Wednesday, January 23 | [Lesson 1](lesson-01.md) |
-| **Week 2**| -                  | API Project                |
-|  2        | Monday, January 28 |   [Lesson 2](lesson-02.md) |
-|  3        | Wednesday, January 30 | [Lesson 3](lesson-03.md) |
-| **Week 3**| -                  | Express + React |
-|  4        | Monday, February 4 | [Lesson 4](lesson-04.md) |
-|  5        | Wednesday, February 6 | [Lesson 5](lesson-05.md) |
-| **Week 4**| -                  | React Express part 2 |
-|  6        | Monday, February 11 | [Lesson 6](lesson-06.md) |
-|  7        | Wednesday, February 13 | [Lesson 7](lesson-07.md) |
-| **Week 5**| -          | Express + React |
-|  -        | Monday, February 18 | **President's Day (Observed)** |
-|  8        | **Tuesday, February 19**      | [Lesson 8](lesson-08.md) |
-|  9        |  Wednesday, February 20       | [Lesson 9](lesson-09.md) |
-| **Week 6**| -          |  |
-|  10       | Monday, February 25          | [Lesson 10](lesson-10.md) |
-|  11       |  Wednesday, February 27      | [Lesson 11](lesson-11.md) |
-| **Week 6**| -          |  |
+| Class     | Date                   |    Topics                 |
+|:---------:|:----------------------:|:-------------------------:|
+| **Week 1**| -                      | Getting started with React|
+|  -        | Monday, January 21     |     **MLK Jr. Day**       |
+|  1        | Wednesday, January 23  | [Lesson 1](lesson-01.md)  |
+| **Week 2**| -                      | API Project               |
+|  2        | Monday, January 28     | [Lesson 2](lesson-02.md)  |
+|  3        | Wednesday, January 30  | [Lesson 3](lesson-03.md)  |
+| **Week 3**| -                      | Express + React           |
+|  4        | Monday, February 4     | [Lesson 4](lesson-04.md)  |
+|  5        | Wednesday, February 6  | [Lesson 5](lesson-05.md)  |
+| **Week 4**| -                      | React Express part 2      |
+|  6        | Monday, February 11    | [Lesson 6](lesson-06.md)  |
+|  7        | Wednesday, February 13 | [Lesson 7](lesson-07.md)  |
+| **Week 5**| -                      | Express + React           |
+|  -        | Monday, February 18 |**President's Day (Observed)**|
+|  8        | **Tuesday, February 19**| [Lesson 8](lesson-08.md) |
+|  9        |  Wednesday, February 20 | [Lesson 9](lesson-09.md) |
+| **Week 6**| -                       |                          |
+|  10       | Monday, February 25     | [Lesson 10](lesson-10.md)|
+|  11       |  Wednesday, February 27 | [Lesson 11](lesson-11.md)|
+| **Week 6**| -                       |                          |
 |  12       | Monday, March 4 | Final Class (presentations, etc) |
 |  13       |  Wednesday, March 6    | Final Exams/Presentations |
 
@@ -94,9 +94,7 @@ Students by the end of the course will be able to ...
 - Lesson 5 - [Express Server](lesson-05.md#After-Class)
 - Lesson 6 - [React + Express](lesson-06.md#After-Class)
 - Lesson 8 - [Custom Project Concept](lesson-08.md#After-Class)
-- Lesson 11 - [Custom project Review](lesson-11.md#After-Class)
-
-### Tutorials
+- Lesson 11 -[Custom project Review](lesson-11.md#After-Class)
 
 ### Projects
 
