@@ -112,6 +112,8 @@ Pair and share the qualities of a good API design
 
 ## Additional Resources
 
+1. https://medium.com/@RossWhitehouse/setting-up-eslint-in-react-c20015ef35f7
+1. https://blog.usejournal.com/how-not-to-design-restful-apis-fb4892d9057a
 1. https://medium.com/@rkuris/good-apis-cd861b8b70a3
 1. https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
 1. https://techburst.io/6-apis-you-should-learn-in-2018-81aca1b06465
