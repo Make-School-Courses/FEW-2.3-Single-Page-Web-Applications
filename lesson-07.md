@@ -1,34 +1,52 @@
-# FEW 1.2 - Lesson 7
+# FEW 1.2 - Lesson 7 
 
-# Lesson Title
+# React Router
 
-Workshop react and Express
+Routing is the concept of navigating through pages of content and connecting the change in content to the URL in the address bar. 
+
+This example covers using React Router a library of Components that facilitates routing. 
 
 ## Learning Objectives/Competencies
 
-1. Identify strategies for solving propblems 
+1. Identify navigation 
+	- Components that divide a page into content
+	- Paths to define routes
+1. Use React Router with a React
+	- Define Component to be handled with Routes
+	- Define Links to display Routes
 
-## Initial Exercise
+## Basic Routing
 
-- Brainstorm ideas for custom project
+### Set up React Router
 
-## Overview/TT I 
+Setup the demo project and create simple routes.
 
-Most web applications integrate both a front end and a backend. The goal of this project is to do that. 
+Install
 
-The API defined on the back end is the interface used by the front end. A good interface can facilitate yopur work as a front end developer. A poorly implemented interface can slow the development process. 
+- Create a new React project
+	- `npx create-react-app react-router-example`
+- Navigate to the project 
+	- `cd react-router-example`
+- Install dependancies
+	- `npm install react-router-dom`
+- Start the project 
+	- `npm start` or `yarn start`
 
-## In Class Activity I
+### Using `BrowserRouter`, `Route`, and `Link`
 
-- Think pair share: 
-	- What are your favorite APIs
-	- What does a good interface look like? 
-- Define an interface
-	- 
+Use the `BrowserRouter`, `Route`, and `Link` components
+
+### Nested Routes 
+
+
+
+## In Class 
+
+Build your personal Static Website with React and React Router! 
 
 ## After Class
 
-- Complete the Express + React project 
+- Continue building your custom project
 
 ## Additional Resources
 

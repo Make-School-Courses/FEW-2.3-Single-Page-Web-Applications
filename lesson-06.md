@@ -8,6 +8,12 @@ Connect a React front end to an Express backend.
 
 Frontend applications often need to communicate with backend applications. The goal in this lesson is to connect React with Express.
 
+## Learning Objectives 
+
+- Use Proxy to connect two local servers
+- Connect front end and back end systems
+- Identify the qualities of good API design
+
 ## Proxy
 
 When you're testing your projects in development mode you're running a local server. This true for the Express project and for the React project. 
@@ -103,7 +109,7 @@ Pair and share the qualities of a good API design
 
 ## Challenges 
 
-- Define your project 
+- Define your project
     - Provide a short description of the MVP product that you intend to create for the end of the term
     - Create a wireframe for the project
         - While drawing all of the boxes on the wireframe define the components you think you might need to build. 
