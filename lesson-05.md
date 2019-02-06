@@ -8,6 +8,13 @@ Single Page Applications run in the browser. You'll often want to use your Singl
 
 The goal of this week is creating a simple server to connect to your SPA front end. 
 
+## Learning Objectives 
+
+- Build a web server with Express JS
+- Identify what makes a good API
+- Define an API
+- Build a public API that serves JSON
+
 ## Express 
 
 Express is a framework that runs on a Node.js server. Express describes itself as: 
@@ -16,7 +23,7 @@ Express is a framework that runs on a Node.js server. Express describes itself a
 
 Let's take that apart. Express is leaving a lot of the work of creating the server to you, it doesn't provide premade systems for tackling big problems. Instead, it provides a set of tools you can use to solve your problems. 
 
-The servers you create to act as services for the applications that connect to them. The language of this communication is the API.
+The servers you create act as services for the applications that connect to them. The language of this communication is the API.
 
 Your goal this week is to create a simple API. 
 
@@ -32,7 +39,7 @@ Your goal is to create a service with an API.
 
 > In computer programming, an application programming interface (API) is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
 
-The API makes features and data from the service available to any front end application that connects with it.
+A web API makes features and data from the service available to any front end application that connects with it.
 
 I'm sure you've worked with APIs by now. Well written APIs help you get more done at a higher quality. Poorly written APIs can make your work more difficult and your products less capable than you envision. 
 

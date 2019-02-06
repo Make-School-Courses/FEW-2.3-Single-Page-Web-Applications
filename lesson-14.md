@@ -2,21 +2,13 @@
 
 # Final Assessment
 
-## Learning Objectives/Competencies
-
-1. 
-
-## Initial Exercise
+## Taking the test
 
 - 
 
-## In Class Activity I
+## After Class 
 
-- 
 
-## After Class
-
-- 
 
 ## Additional Resources
 

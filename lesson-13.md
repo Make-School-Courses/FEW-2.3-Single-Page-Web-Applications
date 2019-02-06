@@ -4,9 +4,11 @@
 
 ## Learning Objectives/Competencies
 
-1. 
+1. Observe and identify what is working and what is not working 
+1. Present your work with a profesional demeanor
+1. Synthesize constructive actionable feedback
 
-## Initial Exercise
+## project presentations
 
 - 
 

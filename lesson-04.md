@@ -2,7 +2,7 @@
 
 ## Technical Debt, ESLint, Troubleshooting
 
-This class we will work on improving the code base we've developed in the previous classes. 
+This class you will work on improving the code base you've developed in the previous classes.
 
 ## Technical Debt
 
@@ -16,7 +16,7 @@ There are times when you need to pay this "debt."
 
 Your goal is to write the best quality code you can. The hard part is learning what good quality code looks like. 
 
-A linter is a tool that analyzes your code and flags errors, bad style, suspicious constructs. 
+A linter is a tool that analyzes your code and flags errors, bad style, and suspicious constructs. 
 
 Besides finding bugs the linter ensures consistency in your code. Doing things consistently creates the best quality code that runs reliably. Consistency is also important for working on teams. 
 
