@@ -12,7 +12,7 @@ Frontend applications often need to communicate with backend applications. The g
 
 - Use Proxy to connect two local servers
 - Connect front end and back end systems
-- Identify the qualities of good API design
+- Use your own API to excahnge JSON with server
 
 ## Proxy
 

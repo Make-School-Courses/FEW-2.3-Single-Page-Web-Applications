@@ -47,7 +47,9 @@ I'm sure you've worked with APIs by now. Well written APIs help you get more don
 
 ## Getting Started
 
-The goal this week is to create an Express server with an API that returns JSON data. Later you will connect this service to a React client. 
+The goal this week is to create an Express server with an API that returns JSON data. Later you will connect this service to a React client.
+
+Download, fork or clone the [demo project](https://github.com/Make-School-Labs/react-express-server).
 
 ### Start Express project
 
