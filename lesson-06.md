@@ -1,4 +1,4 @@
-# FEW 1.2 - Lesson 6
+# FEW 2.3 - Lesson 6
 
 # React + Express
 

@@ -131,3 +131,5 @@ Do that now. Get the components from one of your other projects and add them to 
 
 1. https://github.com/ReactTraining/react-router
 2. https://reacttraining.com/react-router/web/guides/quick-start
+3. https://reactjs.org/docs/thinking-in-react.html
+4. https://reactjs.org/docs/design-principles.html

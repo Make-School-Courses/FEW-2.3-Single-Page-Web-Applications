@@ -1,4 +1,4 @@
-# FEW 1.2 - Lesson 1
+# FEW 2.3 - Lesson 1
 
 Getting started with Single Page Applications and React. 
 

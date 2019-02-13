@@ -1,4 +1,4 @@
-# FEW 1.2 - Lesson 8
+# FEW 2.3 - Lesson 8
 
 # React Router Part 2
 

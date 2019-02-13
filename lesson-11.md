@@ -1,4 +1,4 @@
-# FEW 1.2 - Lesson 11
+# FEW 2.3 - Lesson 11
 
 # Redux Part 2
 

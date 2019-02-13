@@ -1,8 +1,8 @@
-# FEW 1.2 - Lesson 9
+# FEW 2.3 - Lesson 9
 
 # Work shop problem solving
 
-PRoblem solving work shop.
+Problem solving work shop.
 
 ## Learning Objectives/Competencies
 

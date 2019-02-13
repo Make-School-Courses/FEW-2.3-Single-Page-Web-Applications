@@ -1,4 +1,4 @@
-# FEW 1.2 - Lesson 3
+# FEW 2.3 - Lesson 3
 
 # React API app 
 

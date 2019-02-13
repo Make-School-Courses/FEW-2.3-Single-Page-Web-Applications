@@ -1,4 +1,4 @@
-# FEW 1.2 - Lesson 2
+# FEW 2.3 - Lesson 2
 
 ## Intro 
 
