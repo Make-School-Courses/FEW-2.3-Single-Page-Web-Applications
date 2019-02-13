@@ -70,6 +70,12 @@ A `<Route>` is responsible for displaying a component when it's path matches the
 
 `<Route path="/" exact component={Index} />`
 
+**Note**: If you need to configure a component for a route use this syntax:
+
+`<Route path="/" exact render={() => <Index title={title} />} />`
+
+In this example we're passing a function to the `render` prop and that function is returning a component. 
+
 ### Nested Routes 
 
 A nested Route is a route that displays inside another Route. 
