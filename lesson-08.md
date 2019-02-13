@@ -1,26 +1,32 @@
 # FEW 2.3 - Lesson 8
 
-# React Router Part 2
+# Lab Day
 
-Here you will take a deeper look into React Router. 
+Lab day fix all those bugs, solve problems and remove blockers. 
 
 ## Learning Objectives
 
-1. Passing values to routes
-1. 
+- Practice pair programming 
+- Define your own objective for todays class
+- Identify problems 
+- Identify and strategize solution
 
 ## Initial Exercise
 
-- 
-
-## In Class Activity I
-
-- 
+- Choose a project that has a problem
+	- Bug/errors
+	- non functional feature
+- Pair with another student
+- Choose one project to start with 
+- Explain the problem
+- Pair program to solve the problem
+- Switch, pair and solve a problem in the other project
 
 ## After Class
 
-- 
+- List other bugs or problems
+- Schedule time with another student to pair and solve problems
 
 ## Additional Resources
 
-1. 
+

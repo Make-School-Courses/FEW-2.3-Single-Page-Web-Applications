@@ -1,6 +1,6 @@
 # FEW 2.3 - Lesson 10
 
-# Redux
+# Redux Part 2
 
 This class will cover Redux which is an application state management tool. Application represents the data that your app manages and displays. Often it is shared across mulitple views and can be updated in complex ways. 
 
