@@ -1,6 +1,6 @@
 # FEW 1.2 - Lesson 6
 
-# React+Express
+# React + Express
 
 Connect a React front end to an Express backend.
 
@@ -16,7 +16,7 @@ Frontend applications often need to communicate with backend applications. The g
 
 ## Proxy
 
-When you're testing your projects in development mode you're running a local server. This true for the Express project and for the React project. 
+When you're testing your projects in development mode you're running a local server. This is true for the Express project and for the React project. 
 
 To get make the two work together you'll need to have both servers running at the same time. In this case, they will both be running at a different address. The Express server [demo project](https://github.com/Product-College-Labs/react-express-server) runs on port 4000, the address: http://localhost:4000/. 
 
