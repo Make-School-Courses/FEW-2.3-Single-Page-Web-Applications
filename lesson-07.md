@@ -6,7 +6,7 @@ Routing is the concept of navigating through pages of content and connecting the
 
 This example covers using React Router a library of Components that facilitates routing. 
 
-## Learning Objectives/Competencies
+## Learning Objectives
 
 1. Identify navigation 
     - Components that divide a page into content elements
