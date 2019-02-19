@@ -79,8 +79,13 @@ Note: some tasks are relient on other tasks that must be completed first.
 
 ## After Class
 
-Make a project tracker for your project. List all of the deliverables and assign them a due date. 
+Make a project tracker for your project. Your project must include a list of all tasks required to complete your project. Your tracker should contain the following: 
 
-## Additional Resources
+- List of all Tasks
 
+Each task should define: 
+
+- The deliverable 
+	- This needs to be clearly defined and measurable
+- The date it should be completed
 
