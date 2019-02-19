@@ -56,6 +56,7 @@ In other words Redux holds state outside of components and components can regist
 ## After Class
 
 - Continue the custom project 
+- Follow this [tutorial](https://www.youtube.com/watch?v=qeY73Ja6KLM&list=PLoN_ejT35AEjvJwYyPCo3WTpZDpdlGrRu) to review Redux
 
 ## Additional Resources
 
