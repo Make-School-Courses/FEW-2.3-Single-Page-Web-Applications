@@ -1,31 +1,85 @@
 # FEW 2.3 - Lesson 8
 
-# Lab Day
+## Defining your custom project
 
-Lab day fix all those bugs, solve problems and remove blockers. 
+To really own your learning you need to build something that you are invested in. The goal for this class is to define your custom project and set a list of weekly milestones that take it from concept to completion from now to the end of the term. 
+
+#### Questions
+
+Q: What is required?
+
+- The project should react and be a Single Page Application
+- The project is due for review class 11. Why this date?
+	- This will give you time for other class projects that are due class 12 and 13
+	- It will give you a chance for review and revision before the end of the term.
+
+Q: Does it have to have a server component? 
+
+- No, this is not required
+- If you do include a server it can be something from one of you BEW projects or an intensive project. 
 
 ## Learning Objectives
 
-- Practice pair programming 
-- Define your own objective for todays class
-- Identify problems 
-- Identify and strategize solution
+- Create a plan for the project
+- Identify deliverables 
+- Define your project
 
-## Initial Exercise
+## Defining your custom project 
 
-- Choose a project that has a problem
-	- Bug/errors
-	- non functional feature
-- Pair with another student
-- Choose one project to start with 
-- Explain the problem
-- Pair program to solve the problem
-- Switch, pair and solve a problem in the other project
+Ask yourself: 
+
+- What interests you? 
+- What problem can you solve?
+- What can you do between now and class 12? 
+	- It's important this project be completed by class 12 scope accordingly. 
+	
+Define your project by writing a short description of what the project is and does.
+
+Ask yourself how you are going to scope this to be able to complete it by class 12. 
+	
+### Defining Components 
+
+The project will be built with React. The basic building block of React projects is Components. The second step to defining the project be to define the components that will be used to create it. 
+
+Start by drawing a wire frame. Identify each of the components you might use. It's easier to think of them in your head than to create them. 
+
+Think about naming carefully. Identify each component in your wireframe with the name you will use for that component. 
+
+Components take in props that configure the component. Take notes about what values will be required by each component you have defined. 
+
+![tmrz-app-1](images/tmrz-app-1.png)
+
+![tmrz-app-2](images/tmrz-app-2.png)
+
+![tmrz-app-3](images/tmrz-app-3.png)
+
+![tmrz-app-4](images/tmrz-app-4.png)
+
+### Define Milestones 
+
+To keep the project moving forward and gauge progress you will define milestones. Milestones should be tied to something concrete and tangible. I'd like you to think about the components you will build and use these to mark the progress of this project. 
+
+Miletones are made up of the things you did to move your project to completion. Every milestone should have a deliverable. A deliverable is something tangible. That is you can measure it, it esixts i the world. These are things like files or working features in a larger project. 
+
+### Challenge defining your project
+
+Your goal is to use a spread sheet or Trello board that, or other tool. It has to be something you can link to in the project tracker that I can view. 
+
+List all of the tasks it will take to complete your project. For a React project we can look at each component as a deliverable. There maybe other tasks like defining a backend API, you should list these also. 
+
+Your goal is to list all of the things you need to do to finish your project. List everything with a deliverable that proves this thing is complete. 
+
+Add a date to every task. 
+
+Let's sum that up. You are going to define the tasks that need to be completed to build the project you are proposing. Every task must have a deliverable to prove it has been completed. Each task must also have date when it should be completed. 
+
+Make a tracker for your project that lists all of the tasks with their deliverables and dates. 
+
+Note: some tasks are relient on other tasks that must be completed first. 
 
 ## After Class
 
-- List other bugs or problems
-- Schedule time with another student to pair and solve problems
+Make a project tracker for your project. List all of the deliverables and assign them a due date. 
 
 ## Additional Resources
 
