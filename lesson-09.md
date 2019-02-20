@@ -46,16 +46,106 @@ In other words Redux holds state outside of components and components can regist
 
 ### Why use Redux? 
 
+**Pros**
+
 - Easier to Debug Applications
 	- State is held in a single location
 	- Changes all happen through a single system
+- Predicatable 
+	- State changes can only be initiated with an action
+	- Any change has to complete before another action is handled
+- Easier to reason about your application
+	- Actions are listed in one location
+	- Reducers handling changes to state exist in one location
+- Makes it easy to expand your applications
+	- Adding new actions and reducers is easier than building every new system from scratch
+	- Defines a pettern for working with state
 	
+**Cons** 
+
+- Setup and tooling 
+	- There are a few steps required to set up Redux
+	- There is a learning curve
 
 - https://redux.js.org
+
+## The Flux Pattern
+
+## The problem
+
+Typically our apps use two way communication. This creates a complex mashup that 
+invites problems as apps grow in complexity. 
+
+![image-1.png](images/image-1.png)
+
+## The solution
+
+One way data flow.
+
+Redux enforces a one way data flow. This creates reliable and reproducible 
+results. Redux has four parts:
+
+- action - action creators
+- dispatcher - reducers
+- store 
+- views - React Components
+
+![image-2.png](images/image-2.png)
+
+## Views may generate actions 
+
+When a view issues an action it flows through the system. 
+
+![image-3.png](images/image-3.png)
+
+## Actions 
+
+An action is an Object with a type. 
+
+![image-4.png](images/image-4.png)
+
+## Action creators
+
+Action creators are methods that generate actions. While these are not 
+required, it is best practice. 
+
+![image-5.png](images/image-5.png)
+
+## Reducers 
+
+Reducers make changes to state. A reducer is a function that takes in state 
+and an action as parameters and returns **new state**. State is never modifed! 
+Instead, **when state changes new state is created**. 
+
+![image-6.png](images/image-6.png)
+
+The store holds your application state. The only way to change state is to 
+send actions to the dispatcher. 
+
+Unlike MVC Redux uses a unidirectional data flow. A View may generate actions
+it will **never interact with a data store directly**. 
+
+Instead actions flow into the dispatch and are passed on to reducers which 
+make the appropriate changes to state. Updated state flows into components
+via props. 
+
+## Store 
+
+The store contains a JavaScript object with properties that represent the 
+state of your application. These properties hold the data that your 
+application takes as input and displays in views. 
+
+![image-7.png](images/image-7.png)
+
+
+## Views send action the store sends data to views
+
+![image-8.png](images/image-8.png)
 
 ## After Class
 
 - Continue the custom project 
+- [Starter project](https://github.com/Make-School-Labs/react-redux-counter) for tutorial
 - Follow this [tutorial](https://www.youtube.com/watch?v=qeY73Ja6KLM&list=PLoN_ejT35AEjvJwYyPCo3WTpZDpdlGrRu) to review Redux
 
 ## Additional Resources
