@@ -8,13 +8,13 @@ Redux is a JS library based on the Flux pattern that
 
 ## Learning Objectives/Competencies
 
-1. Identify Application state 
-1. Define Actions and Action Creators 
-1. Define Reducers
+1. Define Reference and value types
+2. Identify references and values in JavaScript
+3. Use destructuring to create shallow copy of objects and arrays
 
 ## Initial Exercise
 
--  
+-  Review Redux
 
 ## In Class Activity I
 
