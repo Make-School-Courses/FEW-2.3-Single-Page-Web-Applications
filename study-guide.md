@@ -95,3 +95,5 @@ You should be able to implement redux in basic form.
 	- connect()
 		- mapStateToProps
 		- mapDispatchToProps
+		
+		
