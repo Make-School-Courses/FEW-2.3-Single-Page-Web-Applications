@@ -77,8 +77,8 @@ Set up as much of Redux as you can. Use this to handle the Cookie Clicker. I'll 
 Add ESLint and lint all of your code! Install ESLint. Fix all of the Linter warnings and errors. 
 
 ## Extra Credit - Map, Filter, Reduce
-
-Using the data below use map to convert the objects in the array into a strings that read: "<name> <price> * <qty>"
+`
+Using the data below use map to convert the objects in the array into a strings that read: "<name> <price> * <qty>"`
 	
 Use filter to display all of the item with a qty of 0. 
 
