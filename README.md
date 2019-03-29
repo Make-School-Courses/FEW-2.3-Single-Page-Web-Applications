@@ -41,34 +41,34 @@ Students by the end of the course will be able to ...
 1. Integrate SPAs with Express servers
 
 ## Schedule
-**Course Dates:** Monday, January 21 – Wednesday, March 6, 2019 (7 weeks)
+**Course Dates:** Monday, April 1 – Wednesday, May 15, 2019 (7 weeks)
 
 **Class Times:** Monday and Wednesday at 3:30–5:20 pm (10 class sessions)
 
-| Class     | Date                   |    Topics                 |
-|:---------:|:----------------------:|:-------------------------:|
+| Class |          Date          |                 Topics                  |
+|:-----:|:----------------------:|:---------------------------------------:|
 | **Week 1**| -                      | Getting started with React|
-|  -        | Monday, January 21     |     **MLK Jr. Day**       |
-|  1        | Wednesday, January 23  | [Lesson 1](lesson-01.md)  |
+|  1 |  Monday, April 1                         | [Lesson 1] |
+|  2 |  Wednesday, April 3                      | [Lesson 2] |
 | **Week 2**| -                      | API Project               |
-|  2        | Monday, January 28     | [Lesson 2](lesson-02.md)  |
-|  3        | Wednesday, January 30  | [Lesson 3](lesson-03.md)  |
+|  3 |  Monday, April 8                         | [Lesson 3] |
+|  4 |  Wednesday, April 10                     | [Lesson 4] |
 | **Week 3**| -                      | Express + React           |
-|  4        | Monday, February 4     | [Lesson 4](lesson-04.md)  |
-|  5        | Wednesday, February 6  | [Lesson 5](lesson-05.md)  |
+|  5 |  Monday, April 15                        | [Lesson 5] |
+|  6 |  Wednesday, April 17                     | [Lesson 6] |
 | **Week 4**| -                      | React Express part 2      |
-|  6        | Monday, February 11    | [Lesson 6](lesson-06.md)  |
-|  7        | Wednesday, February 13 | [Lesson 7](lesson-07.md)  |
+|  7 |  Monday, April 22                        | [Lesson 7] |
+|  8 |  Wednesday, April 24                     | [Lesson 8] |
 | **Week 5**| -                      | Express + React           |
-|  -        | Monday, February 18 |**President's Day (Observed)**|
-|  8        | **Tuesday, February 19**| [Lesson 8](lesson-08.md) |
-|  9        |  Wednesday, February 20 | [Lesson 9](lesson-09.md) |
+|  9 |  Monday, April 29                        | [Lesson 9] |
+| 10 |  Wednesday, May 1                        | [Lesson 10] |
 | **Week 6**| -                       |                          |
-|  10       | Monday, February 25     | [Lesson 10](lesson-10.md)|
-|  11       |  Wednesday, February 27 | [Lesson 11](lesson-11.md)|
-| **Week 6**| -                       |                          |
-|  12       | Monday, March 4 | Final Class (presentations, etc) |
-|  13       |  Wednesday, March 6    | Final Exams/Presentations |
+| 11 |  Monday, May 6                           | [Lesson 11] |  
+| 12 |  Wednesday, May 8                        | [Lesson 12] |
+| **Week 7**| -                       | Final Exam                         |
+| 13 |  Monday, May 13                          | Final Class (presentations, etc) |
+| 14 |  Wednesday, May 15                       | Final Exams/Presentations |
+
 
 - [Lesson 1](lesson-01.md)
 - [Lesson 2](lesson-02.md)
@@ -111,6 +111,13 @@ We want to encourage best practices that you will see working as a professional 
 - It allows for more streamlined, iterative communication in your team, as it's much easier to hand off a small change to someone (updating a function) than a huge one (changed the architecture of the project)
 
 Through this requirement, we hope to encourage you to think about projects with an iterative, modular mindset. Doing so will allow you to break projects down into smaller milestones that come together to make your fully-realized solution.
+
+### Final Exam
+
+-  **Passing the exam is a requirement for passing the class.**
+- You will have 2 hours to complete this exam - it will be in class using paper and pencil, or a format of the instructor's choosing
+- There are no retakes of the exam.
+- If you have a disability that needs an accommodation such as extended time or a different format, please take advantage of our [accommodations program](make.sc/disability-policy).
 
 ### Other Class assignments
 
