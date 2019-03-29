@@ -70,20 +70,20 @@ Students by the end of the course will be able to ...
 | 14 |  Wednesday, May 15                       | Final Exams/Presentations |
 
 
-- [Lesson 1](lesson-01.md)
-- [Lesson 2](lesson-02.md)
-- [Lesson 3](lesson-03.md)
-- [Lesson 4](lesson-04.md)
-- [Lesson 5](lesson-05.md)
-- [Lesson 6](lesson-06.md)
-- [Lesson 7](lesson-07.md)
-- [Lesson 8](lesson-08.md)
-- [Lesson 9](lesson-09.md)
-- [Lesson 10](lesson-10.md)
-- [Lesson 11](lesson-11.md)
-- [Lesson 12](lesson-12.md)
-- [Lesson 13](lesson-13.md)
-- [Lesson 14](lesson-14.md)
+[Lesson 1]: lesson-01.md
+[Lesson 2]: lesson-02.md
+[Lesson 3]: lesson-03.md
+[Lesson 4]: lesson-04.md
+[Lesson 5]: lesson-05.md
+[Lesson 6]: lesson-06.md
+[Lesson 7]: lesson-07.md
+[Lesson 8]: lesson-08.md
+[Lesson 9]: lesson-09.md
+[Lesson 10]: lesson-10.md
+[Lesson 11]: lesson-11.md
+[Lesson 12]: lesson-12.md
+[Lesson 13]: lesson-13.md
+[Lesson 14]: lesson-14.md
 
 ## Class Assignments
 
