@@ -2,7 +2,7 @@
 
 # React + Express
 
-Connect a React front end to an Express backend.
+The goal this class is to take the work from last class and connect a React front end to your Express server.
 
 ## Introduction 
 

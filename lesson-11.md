@@ -5,7 +5,6 @@
 ## Learning Objectives/Competencies
 
 1. Use react-redux
-1. 
 
 ## Initial Exercise
 

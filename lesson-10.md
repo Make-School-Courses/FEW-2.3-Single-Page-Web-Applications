@@ -14,11 +14,21 @@ Redux is a JS library based on the Flux pattern that
 
 ## Initial Exercise
 
--  Review Redux
+Review Redux, take a second tour through the elements that make up the Redux system. Review and answer questions. 
 
-## In Class Activity I
+- Actions 
+	- Actions and Actions Creators 
+- Reducers 
+	- `combineReducers()` 
+- Defining the store 
+- `Provider` Component 
+- Containers (components connected to the Redux store)
+	- `mapStateToProps()`
+	- `mapDispatchToProps()`
 
-- 
+## Identify questions issues with Redux in your projects
+
+Redux is a complex system. Let's take a look at your current project and identify the areas where it works and you're not sure why, where it doesn't work, and solve any issues. 
 
 ## After Class
 

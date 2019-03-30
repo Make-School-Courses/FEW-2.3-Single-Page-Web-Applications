@@ -47,25 +47,25 @@ Students by the end of the course will be able to ...
 
 | Class |          Date          |                 Topics                  |
 |:-----:|:----------------------:|:---------------------------------------:|
-| **Week 1**| -                      | Getting started with React|
+| **Week 1**| -                  | Getting started with React|
 |  1 |  Monday, April 1                         | [Lesson 1] |
 |  2 |  Wednesday, April 3                      | [Lesson 2] |
-| **Week 2**| -                      | API Project               |
+| **Week 2**| -                  | API Project               |
 |  3 |  Monday, April 8                         | [Lesson 3] |
 |  4 |  Wednesday, April 10                     | [Lesson 4] |
-| **Week 3**| -                      | Express + React           |
+| **Week 3**| -                  | Express + React           |
 |  5 |  Monday, April 15                        | [Lesson 5] |
 |  6 |  Wednesday, April 17                     | [Lesson 6] |
-| **Week 4**| -                      | React Express part 2      |
+| **Week 4**| -                  | React Express part 2      |
 |  7 |  Monday, April 22                        | [Lesson 7] |
 |  8 |  Wednesday, April 24                     | [Lesson 8] |
-| **Week 5**| -                      | Express + React           |
+| **Week 5**| -                  | Express + React           |
 |  9 |  Monday, April 29                        | [Lesson 9] |
 | 10 |  Wednesday, May 1                        | [Lesson 10] |
-| **Week 6**| -                       |                          |
+| **Week 6**| -                  |                          |
 | 11 |  Monday, May 6                           | [Lesson 11] |  
 | 12 |  Wednesday, May 8                        | [Lesson 12] |
-| **Week 7**| -                       | Final Exam                         |
+| **Week 7**| -                  | Final Exam                         |
 | 13 |  Monday, May 13                          | Final Class (presentations, etc) |
 | 14 |  Wednesday, May 15                       | Final Exams/Presentations |
 
