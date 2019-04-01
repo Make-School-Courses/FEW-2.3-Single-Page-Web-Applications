@@ -50,7 +50,7 @@ Beyond this React has moved frontend web development forward and laid the ground
 1. Differentiate props and state 
 1. Define the virtual DOM
 
-## But, What is React really?
+## What is React?
 
 React describes itself as: 
 
@@ -134,6 +134,17 @@ We will get started in class and walk through the first part of the tutorial.
     - Make a Repo for the tutorial
     - Post a link to the repo in the tracker
     - This should be completed By class 2
+
+## Activity 
+
+- Create React App
+- Create Components 
+	- Function based Component 
+	- Class Based Component 
+- Import, Export, Default
+- Working with Components 
+	- Props
+	- State
 
 ## After Class 
 
