@@ -6,9 +6,13 @@ React is built on functional programming. This class you will look at some funct
 
 ## React collections and Keys
 
+What's a [collection](https://en.wikipedia.org/wiki/Collection_(abstract_data_type))?
+
+In short a collection is an Array or an Object
+
 Often you will need to render Arrays of JSX components. You'll often have arrays of raw data that need to be converted into an array of JSX. 
 
-To do this we will delve into functional programming with map, filter, and reduce. 
+To do this we will delve into functional programming with `map`, `filter`, and `reduce`. 
 
 React will automatically iterate over a collection of JSX elements. To avoid error these elements need to have unique keys. 
 
@@ -30,11 +34,11 @@ To get started download the sample project. This project was created with the Cr
 
 ## ES6 Modules 
 
-The challenge project needs to display a list of categories and a list of products for those categories. All this information is in `inventory.js`. 
+The challenge project needs to display a list of categories and a list of products for those categories. All this information is in `inventory.js`.
 
 Your first job is to share this information with `App.js`. You can do just this with `import`.
 
-Take a look at `inventory.js`. At the top of the file, the variable `inventory` is declared and assigned an array of objects. 
+Take a look at `inventory.js`. At the top of the file, the variable `inventory` is declared and assigned an array of objects.
 
 Scroll to the bottom of the page. Here inventory is transformed filtered and sorted. And, another variable `categories` is declared and assigned a value.
 
@@ -51,9 +55,9 @@ export default inventory
 
 The `export` statement allows these values to be shared from this 'Module'. Notice inventory is marked with `default` keyword. A module is a js file. Any module can export only a single **default** element! 
 
-(I used the Lodash library here to sort the list of products and categories and create a unique list of the categories in the inventory array. This is not important to the lesson.)
+(I used the [Lodash](https://lodash.com) library to sort the list of products and categories and create a unique list of the categories in the inventory array. This is not important to the lesson. Just know that `_.sortBy(inventory, 'category')` sorts the array inventory on the field 'category', and `_.uniq(c)` removes all duplicate entries in the array c)
 
-**Import** 
+**Import**
 
 Import an exported value using the `import` statement. Take a look at `App.js`. At the top of the file you will see: 
 
@@ -62,7 +66,7 @@ import inventory, { categories } from './inventory'
 ```
 Here inventory is the default export (it is outside the {}), and categories is not default (it is inside the {}).
 
-Look at the export statements above. Where     `inventory` is exported it includes the keyword `default`. This makes `inventory` the default export. A module may only have one default export. 
+Look at the export statements above. Where `inventory` is exported it includes the keyword `default`. This makes `inventory` the default export. A module may only have one default export. 
 
 ## Functional Programming 
 
@@ -76,9 +80,9 @@ The entry point for most to the world of functional programming is the Array met
 
 ### Array `map`, `filter`, `reduce`
 
-The functions map, filter, and reduce are a gateway into functional programming concepts. Functional programming uses Pure Functions. These are functions that have no side effects. For the same input, a pure function will always return the same output. 
+The functions map, filter, and reduce are a gateway into functional programming concepts. Functional programming uses [Pure Functions](https://www.sitepoint.com/functional-programming-pure-functions/). These functions have no side effects, in other words calling a pure function doesn't make changes to a shared or global state. For the same input, a pure function will always return the same output. 
 
-`Array.map()` transforms an array of data and returns a new array. With map you should have a one to one relationship with the source array. Use it to convert an array of one type into an array of another type. 
+[`Array.map()`]() transforms an array of data and **returns a new array**. With map you should have a one to one relationship with the source array. Use it to convert an array of one type into an array of another type. 
 
 For example, you might transform an array of numbers into an array of strings. 
 
