@@ -103,7 +103,7 @@ Build your personal Static Website with React and React Router!
 - All of your pages are connected and share a common constantly running code base. 
 - Share variables and data/Application state across all of the content.
 - Leverage React Components.
-- It's not a Single Page Application if it's made of multiple pages.
+- It's not a Single Page Application if it's made of multiple pages!
 - Don't believe me, take a look at all of these static site generators currently available:
     - https://blog.bitsrc.io/9-react-static-site-generators-for-2019-f54a66e519d2
 

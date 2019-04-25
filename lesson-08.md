@@ -82,6 +82,9 @@ Note: some tasks are relient on other tasks that must be completed first.
 Make a project tracker for your project. Your project must include a list of all tasks required to complete your project. Your tracker should contain the following: 
 
 - List of all Tasks
+	- Make a list of all of the components you need to make to get your project completed. 
+	- List all of the other things you need to do. These are things like: setup express server or make an API key. 
+- Map all of your tasks (these are the things you listed above) across the classes left in the term. This is class 8, start with class 9 through 13. There is a spot for each on the progress tracker. You'll check these off each class until the end of the term. 
 
 Each task should define: 
 
