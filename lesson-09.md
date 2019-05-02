@@ -144,6 +144,23 @@ The store contains a JavaScript object with properties that represent the state 
 
 ![image-8.png](images/image-8.png)
 
+## Example: Counter with Redux
+
+Create the Counter example with Redux. 
+
+### Counter Challenges 
+
+With the counter working try these challenges 
+
+- [easy] Add a reset button - Clicking this button should reset the counter to 0
+	- You'll need to add a `RESET` action and a `reset` action creator. You'll need to modify the reducer to handle this action. 
+- [easy] Set the count amount - Allow the increment and decrement actions to increase or decrease the count by any amount. Currently these actions change the count by adding or subtracting 1. Modify these actions to control the amount of change by any amount. While you can just change the amount of the increase or decrease in the reducer the goal of this challenge is to do this from where you call the `increase` and `decrease` actions. 
+- [moderate] Handle a list of counter - Rather than storing a single counter you need to store an array of counters. This requires some retooling. 
+	- State needs to be an array
+	- To increase a counter the actions need to know the index of the counter
+	- Display a list of counters
+- [moderate] Add an add counter button - 
+
 ## After Class
 
 - Continue the custom project 
