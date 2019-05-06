@@ -62,7 +62,7 @@ State is defined within a component and a component changes it's state.
 
 Changes to props or state causes a component to render.
 
-## Component patterns
+## Controlled Component (form input pattern)
 
 The controlled component pattern refers to the pattern used in React to handle form elements and form input. You should be able to set up a component that accepts user input in an `<input />` element and display the value in the element and stores the value on state. 
 
