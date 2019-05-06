@@ -2,25 +2,44 @@
 
 # Redux Part 2
 
+Redux has many parts the best way to own them is review! 
+
 ## Learning Objectives/Competencies
 
-1. Use react-redux
+1. Review and identify all of the parts of Redux
+  - Actions 
+  - Action Creators 
+  - Reducers 
+  - Combined Reducers 
+  - The Store
+2. Review and identify all of the parts used by React Redux
+  - Provider component 
+  - connect()
+    - mapStateToProps()
+    - mapDispatchToProps()
+3. Identify and describe the parts of Redux and React Redux
+  - Actions 
+  - Store 
+  - Reducers
+  - Immutable State 
+  - connected components
+4. Identify and described Application State
 
-## Initial Exercise
+## Redux Review 
 
-- 
+Walk through Redux
 
-## In Class Activity I
+## Apply Redux to your project
 
-- 
+Questions and Discussion topics? 
 
-## Overview/TT II (optional)
+- What is Redux? 
+- What is Application State? 
+- What is an Action? 
 
-## In Class Activity II (optional)
+## After Class 
 
-## After Class
-
-- Continue the custom project 
+- Continue working on your final project
 
 ## Additional Resources
 
