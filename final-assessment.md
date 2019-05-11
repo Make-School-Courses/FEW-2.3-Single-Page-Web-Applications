@@ -1,83 +1,135 @@
 # FEW 2.3 Final Assessment
 
-Your goal is to create a React application with the components and features described below. 
+Your goal is to create a React application with the components and features described below.
 
 The Problems below are presented in order of complexity. 
 
-Do not post this project to GitHub! Instead you will submit your work to me by first removing the node_modules folder then copying your work to my USB drive. 
+Complete each step to the best of your ability. I have listed a point value for each step. Do as much of the step as you can I will award partial credit for the work that you do complete. 
 
-## Problem 1 - Getting started (25pts)
+Do not post this project to GitHub! Instead you will submit your work to me by first removing the node_modules folder then copying your work to my USB drive.
 
-Create a boiler plate React Project. I should be able to run this project with `npm start`.
+## Getting started (20pts)
 
-Name your project `<final>-<first>-<last>`
+Your final assessment is a React Project.
 
-## Question 2 - Components simple (25pts)
+Create a React Project and name it with 'final' your first and last name:
 
-Create a component that displays a title with your name. This component should take a prop that sets the text of the title.
+`final-<first>-<last>`
 
-Put the Title component in the root component of your project so your name appears at the top of the page. 
+I should be able to run this project with `npm start`.
 
-### Extra Credit - Style the Title (5pts)
+## Home Components (simple 20pts)
 
-Style the title component. Use a style sheet. 
+Create a **Home** component that displays your name and the name of this class. 
 
-## Questions 3 - Components moderate (25pts)
+Make a **Title** component, use it to display your name. The Title Component should take a prop that sets the text displayed in the title.
 
-Create a "Cookie clicker" component. Your component should dipslay a count and have a button that increases the count by 1 with each click of the button. 
+In this step you are creating two Components `Home` and `Title` and using the `Title` component inside the `Home` Component. 
 
-Use the Title component to display the count.
+## Components moderate (20pts)
 
-Display the Clicker component in the root of your project below the title. 
+Create a 'Clicker' component. 
 
-### Extra Credit - Increasing the Count (5pts)
+Create a new Component that contains a button and the Title component you created earlier.  
 
-After every ten clicks the amount that clicker increments doubles. 
+This component should count the number of times the button was clicked and display the count in the Title. Use state for this. 
 
-## Question 4 - Components Patterns (25pts)
+When you're done with this step the title should display an initial count of 0, and increase the count by 1 each time I click the button. 
 
-Star Wars API component. This component should display the name of a Star Wars character. Use `https://swapi.co/api/people/`. This is a public API that doesn't require authentication or an account. 
+Use state to hold the count. 
+
+## Components Patterns (20pts)
+
+Display data from the Star Wars API. 
+
+The Star Wars API is a simple API that takes a number and returns a JSON object describing a character in one of the Star Wars movies. 
+
+For example:
+
+`https://swapi.co/api/people/1/`
+
+Returns: 
+
+```JSON
+{
+    "name": "Luke Skywalker", 
+    "height": "172", 
+    "mass": "77", 
+    "hair_color": "blond", 
+    "skin_color": "fair", 
+    "eye_color": "blue", 
+    "birth_year": "19BBY", 
+    "gender": "male", 
+    "homeworld": "https://swapi.co/api/planets/1/", 
+    "films": [
+        "https://swapi.co/api/films/2/", 
+        "https://swapi.co/api/films/6/", 
+        "https://swapi.co/api/films/3/", 
+        "https://swapi.co/api/films/1/", 
+        "https://swapi.co/api/films/7/"
+    ], 
+    "species": [
+        "https://swapi.co/api/species/1/"
+    ], 
+    "vehicles": [
+        "https://swapi.co/api/vehicles/14/", 
+        "https://swapi.co/api/vehicles/30/"
+    ], 
+    "starships": [
+        "https://swapi.co/api/starships/12/", 
+        "https://swapi.co/api/starships/22/"
+    ], 
+    "created": "2014-12-09T13:50:51.644000Z", 
+    "edited": "2014-12-20T21:17:56.891000Z", 
+    "url": "https://swapi.co/api/people/1/"
+}
+```
+
+Create a new **StarWars** component that has an input, a button, and a Title. Entering a number in the input and clicking the button should show the name of a Star Wars Character in the Title. 
+
+Use fetch to make a request using the SWAPI api below, handle the response by displaying the name of the character.
 
 `https://swapi.co/api/people/<number>/`
 
-The number at the end of the API URL is a character code. Luke Sky Walker is 1. Your goal is to create an input that accepts a number and displays that character. For example: 
+## Add Router (20pts)
 
-https://swapi.co/api/people/1/
+You'll use React Router to create a React site with three "pages"/"Routes". 
 
-Displays Luke Skywalker in a title component. 
+Add `react-router` to your project. 
+
+Create three routes to display each of the three components you created in the earlier steps: 
+
+- Home
+- Clicker
+- StarWars
+
+Create a link for each of these routes. 
 
 ### Extra Credit - Displaying more information (5pts)
 
-Display more info from the Star Wars API. This could be: 
+In the StarWars component, besides the name, display the information listed below:  
 
-- homeworld
-- films
-- species 
-- etc. 
+- Height
+- Mass 
+- Hair Color
+- Eye Color
 
 ### Extra Credit - Error Checking (5pts)
 
-In the case of `https://swapi.co/api/people/999/` the API returns 404. Handle this in your code and display an approrpiate error message. 
+In the StarWars component check for errors. 
 
-## Extra Credit - Redux (10pts)
+Some values sent to the SWAPI will return an error. For example: `https://swapi.co/api/people/999/` returns 404.
 
-Set up as much of Redux as you can. Use this to handle the Cookie Clicker. I'll give you points for as much of this as you set up. 
+Modify your StarWars Component so it handles errors with an appropriate message.
 
-- Actions
-- Reducers
-- Combine reducers
-- Store 
-- Provider
-- Connect a component 
-- Map State to Props
-- Map Dispatch to props
+### Extra Credit - Increasing the Count (5pts)
 
-## Extra Credit - ESLint (5pts)
+After every ten clicks the amount that clicker increments should double. For example: 
 
-Add ESLint and lint all of your code! Install ESLint. Fix all of the Linter warnings and errors. 
+- 1, 2, ..., 9, 10, 12, 14, ..., 18, 20, 24, 28 etc. 
 
-## Extra Credit - Map, Filter, Reduce
-`
+## Extra Credit - Map, Filter, Reduce (5pts)
+
 Using the data below use map to convert the objects in the array into a strings that read: "<name> <price> * <qty>"`
 	
 Use filter to display all of the item with a qty of 0. 
@@ -116,7 +168,20 @@ Use Reduce to calculate the total cost of all items. The cost of each purchase i
 }]
 ```
 
-## Total 135pts
+## Extra Credit - Redux (10pts)
+
+Set up as much of Redux as you can. Use this to handle the Cookie Clicker. I'll give you points for as much of this as you set up. 
+
+- Actions
+- Reducers
+- Combine reducers
+- Store 
+- Provider
+- Connect a component 
+- Map State to Props
+- Map Dispatch to props
+
+## Total 130pts
 
 
 
