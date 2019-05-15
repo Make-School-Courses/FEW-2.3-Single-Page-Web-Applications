@@ -2,9 +2,9 @@
 
 Your goal is to create a React application with the components and features described below.
 
-The Problems below are presented in order of complexity. 
+The Problems below are presented in order of complexity. Doing them in order will be easier. 
 
-Complete each step to the best of your ability. I have listed a point value for each step. Do as much of the step as you can I will award partial credit for the work that you do complete. 
+Complete each step to the best of your ability. I have listed a point value for each step. Do as much of each step as you can I will award partial credit for the work that you do complete. 
 
 Do not post this project to GitHub! Instead you will submit your work to me by first removing the node_modules folder then copying your work to my USB drive.
 
@@ -24,19 +24,17 @@ Create a **Home** component that displays your name and the name of this class.
 
 Make a **Title** component, use it to display your name. The Title Component should take a prop that sets the text displayed in the title.
 
-In this step you are creating two Components `Home` and `Title` and using the `Title` component inside the `Home` Component. 
+In this step you are creating two Components `Home` and `Title` and using the `Title` component inside the `Home` Component to display your name. 
 
 ## Components moderate (20pts)
 
 Create a 'Clicker' component. 
 
-Create a new Component that contains a button and the Title component you created earlier.  
+Create a new **Clicker** Component that displays a _button_ and the _Title_ component you created earlier.  
 
-This component should count the number of times the button was clicked and display the count in the Title. Use state for this. 
+This component should count the number of times the button was clicked and display the count in the Title. Use state to track the count. 
 
-When you're done with this step the title should display an initial count of 0, and increase the count by 1 each time I click the button. 
-
-Use state to hold the count. 
+When you're done with this step the Title should display an initial count of 0, and increase the count by 1 each time I click the button. 
 
 ## Components Patterns (20pts)
 
@@ -85,7 +83,7 @@ Returns:
 }
 ```
 
-Create a new **StarWars** component that has an input, a button, and a Title. Entering a number in the input and clicking the button should show the name of a Star Wars Character in the Title. 
+Create a new **StarWars** component that has a _text input_, a _button_, and a _Title_. Entering a number in the input and clicking the button should show the name of a Star Wars Character in the Title. 
 
 Use fetch to make a request using the SWAPI api below, handle the response by displaying the name of the character.
 
@@ -93,7 +91,7 @@ Use fetch to make a request using the SWAPI api below, handle the response by di
 
 ## Add Router (20pts)
 
-You'll use React Router to create a React site with three "pages"/"Routes". 
+Use React Router to create a React/Single Page Application with three pages/Routes. 
 
 Add `react-router` to your project. 
 
@@ -104,6 +102,10 @@ Create three routes to display each of the three components you created in the e
 - StarWars
 
 Create a link for each of these routes. 
+
+I should be able to click one of the links and see one of the components. 
+
+### Total: 100pts
 
 ### Extra Credit - Displaying more information (5pts)
 
@@ -116,11 +118,23 @@ In the StarWars component, besides the name, display the information listed belo
 
 ### Extra Credit - Error Checking (5pts)
 
-In the StarWars component check for errors. 
+Check for errors in the StarWars component.  
 
 Some values sent to the SWAPI will return an error. For example: `https://swapi.co/api/people/999/` returns 404.
 
 Modify your StarWars Component so it handles errors with an appropriate message.
+
+### Extra Credit - Displaying lists
+
+The Star Wars API returns several items that are arrays of links to more data. 
+
+In the StarWars component display some lists. The keys: films, vehicles, and starships contain urls. Display these as a list of anchor tags where the text content is the url value and the href is the same value. 
+
+Display a list of films **(5pts)**
+
+Display a list of vehicles **(5pts)**
+
+Display a list of Starships **(5pts)**
 
 ### Extra Credit - Increasing the Count (5pts)
 
@@ -128,11 +142,17 @@ After every ten clicks the amount that clicker increments should double. For exa
 
 - 1, 2, ..., 9, 10, 12, 14, ..., 18, 20, 24, 28 etc. 
 
-## Extra Credit - Map, Filter, Reduce (5pts)
+## Extra Credit - Map, Filter, Reduce
+
+**Map (5pts)**
 
 Using the data below use map to convert the objects in the array into a strings that read: "<name> <price> * <qty>"`
 	
+**Filter (5pts)**
+	
 Use filter to display all of the item with a qty of 0. 
+
+**Reduce (5pts)**
 
 Use Reduce to calculate the total cost of all items. The cost of each purchase is qty * price.
 
@@ -172,16 +192,25 @@ Use Reduce to calculate the total cost of all items. The cost of each purchase i
 
 Set up as much of Redux as you can. Use this to handle the Cookie Clicker. I'll give you points for as much of this as you set up. 
 
+- Import dependencies
+	- redux
+	- react-redux
 - Actions
+	- Define an INCREMENT action
+	- Define an increment action creator
 - Reducers
-- Combine reducers
-- Store 
+	- Define a clickerReducer
+	- Define a root reducer (use combineReducers redux)
+- Store
+	- define store (createStore redux) 
 - Provider
+	- Define the Provider (react-redux)
 - Connect a component 
-- Map State to Props
-- Map Dispatch to props
+	- Map State to Props
+	- Map Dispatch to props
+	- connect (react-redux)
 
-## Total 130pts
+## Total 155pts
 
 
 
