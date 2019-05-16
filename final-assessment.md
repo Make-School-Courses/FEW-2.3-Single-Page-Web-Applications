@@ -146,7 +146,7 @@ After every ten clicks the amount that clicker increments should double. For exa
 
 **Map (5pts)**
 
-Using the data below use map to convert the objects in the array into a strings that read: "<name> <price> * <qty>"`
+Using the data below use map to convert the objects in the array into a strings that read: "`<name> <price> * <qty>`"
 	
 **Filter (5pts)**
 	
