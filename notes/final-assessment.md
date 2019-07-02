@@ -212,5 +212,3 @@ Set up as much of Redux as you can. Use this to handle the Cookie Clicker. I'll 
 
 ## Total 155pts
 
-
-
