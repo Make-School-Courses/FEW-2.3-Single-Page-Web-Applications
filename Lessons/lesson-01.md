@@ -8,13 +8,15 @@ Single Page Applications (SPA) are web pages that act as software applications. 
 
 The [Killer App](https://en.wikipedia.org/wiki/Killer_application) for SPAs was Gmail. Gmail is a single web page that lists your email, views email, sends email and more all within a single HTML document.
 
-SPAs are the way web pages of more than minimal complexity are created these days. These days every page you view in a browser is like loading and running a new application!
+SPAs are the way web pages of more than minimal complexity are created these days. These days when you visit a web site you are loading a single HTML file that displays many different views that provide the experience of a fully interactive multipage site. 
 
 ![dilbert-killer-app.gif.png](dilbert-killer-app.gif.png)
 
 ## What is React 
 
-React is one of the most popular web frameworks available today and with good reason. It's fast efficient and has a great workflow. React uses functional reactive programming to solve many of the headaches of creating user interfaces.
+React is one of the most popular web frameworks available today and with good reason. It's fast efficient and has a great workflow and developer experience. 
+
+React uses functional reactive programming to solve many of the headaches of creating user interfaces.
 
 It's also popular with all of the big name companies. 
 
@@ -39,9 +41,9 @@ It's also popular with all of the big name companies.
 - Pandora
 - and many more...
 
-If you are going to master a single framework make it this one! It's hugely popular right now and all of the top companies are using it. Expect to see React on job applications and in use at companies you might apply to. 
+If you are going to master a single framework make it this one! It's hugely popular and all of the top companies are using it. Expect to see React on job applications and in use at companies you might apply to. 
 
-Beyond this React has moved frontend web development forward and laid the ground modern front end systems. Expect future front end frameworks to build and evolve on what React has done. 
+Beyond this React has moved frontend web development forward and laid the groundwork for modern front end systems. Expect future front end frameworks to build and evolve on what React has done. 
 
 ## Learning Objectives
 
@@ -51,6 +53,10 @@ Beyond this React has moved frontend web development forward and laid the ground
 1. Define the virtual DOM
 
 ## What is React?
+
+What does the React team have to say about React? 
+
+> Pair up and read this: [https://reactjs.org](https://reactjs.org)
 
 React describes itself as: 
 
@@ -76,7 +82,9 @@ React is built on three core features: Components, JSX, and Virtual DOM.
 
 ### Components 
 
-Components encapsulate state and view. A component updates its view in response to changing values. 
+**Components encapsulate state and view**. A component updates its view in response to changing values. 
+
+> Pair up and read and dicsuss this "A Simple Component" at [https://reactjs.org](https://reactjs.org). Test the code sample and do your best to explain what's going on here. 
 
 What you need to know: 
 
@@ -88,23 +96,28 @@ What you need to know:
 
 ### JSX
 
-JSX is an extension of the JavaScript language. It allows you to write code using an XML like syntax alongside regular JavaScript. 
+**JSX is an extension of the JavaScript language**. It allows you to write code using an XML like syntax alongside regular JavaScript. 
 
-JSX is compiled into vanilla JavaScript. 
+JSX is compiled into vanilla JavaScript.
+
+> Pair up and copy the code in the Simple Component example. Go to [Babel](https://babeljs.io/repl/#?presets=react&code_lz=MYewdgzgLgBApgGzgWzmWBeGAeAFgRgD4AJRBEAGhgHcQAnBAEwEJsB6AwgbgChRJY_KAEMAlmDh0YWRiGABXVOgB0AczhQAokiVQAQgE8AkowAUAcjogQUcwEpeAJTjDgUACIB5ALLK6aRklTRBQ0KCohMQk6Bx4gA) and paste the code into the left panel of the editor. Look at and discuss what appears in the right side of the editor. 
 
 What you need to know: 
 
-- The view of a component is written in JSX
-- JSX is an extension of the JavaScript language 
-- JSX compiles to vanilla JavaScript 
-- JSX has its own special syntax
-    - More on this in the tutorial
+- The _view_ of a component is written in JSX
+- JSX is an _extension_ of the JavaScript language 
+- JSX compiles to _vanilla JavaScript_ 
+- JSX has its own _special syntax_ (More on this in the tutorial)
 
 ### Virtual DOM 
 
-Updating the DOM is a slow operation. To speed this up React creates a virtual DOM. Manipulating the virtual DOM is much faster than manipulating the DOM directly. 
+**Updating the DOM is a slow operation**. To speed this up React creates a virtual DOM. Manipulating the virtual DOM is much faster than manipulating the DOM directly.
 
-In a React App making changes to the DOM will often not work as expected since those changes will be overwritten by the virtual DOM! 
+> Pair up, read and dicuss the [Virtual DOM](https://reactjs.org/docs/faq-internals.html).
+
+In a React App making changes to the DOM will often not work as expected since those changes will be overwritten by the virtual DOM! You should always rely on components to make changes to the DOM rather than you manipulating the outside of components. 
+
+In other words, you won't see code like this `document.getElementById('name').innerHTML ='<h1>Hello</h1>'` in React apps!
 
 ReactDOM looks at the virtual DOM and compares it real DOM making changes only where necessary. 
 
@@ -115,13 +128,13 @@ What you need to know:
 - Manipulating the DOM within a React project should almost always be handled with a Component!
     - In other words `document.getElementById()` is not compatible with React! 
 
-Read more about the virtual DOM [here](https://reactjs.org/docs/faq-internals.html).
-
 ## Getting Started
 
-Your first assignment is to complete this [tutorial](https://reactjs.org/tutorial/tutorial.html)
+**Your first assignment** is to complete this tutorial
 
-We will get started in class and walk through the first part of the tutorial. 
+- [react-tutorial-1.md](react-tutorial-1.md)
+
+The tutorial covers the following things. These are important foundational React concepts that will be used throughout the class and in every react project you might create in the future. 
 
 - Install Create React App
     - Following the tutorial 
@@ -135,35 +148,18 @@ We will get started in class and walk through the first part of the tutorial.
     - Post a link to the repo in the tracker
     - This should be completed By class 2
 
+**Stretch Challenge:** Complete the React tutorial from the React Team. This tutorial includes all of the React concepts in one place. We will be covering the concepts here in class later. If you want to get ahead you can practice here. 
+
+- [React Tutorial](https://reactjs.org/tutorial/tutorial.html)
+
 ## Activity 
 
-- Create React App
-- Create Components 
-	- Function based Component 
-	- Class Based Component 
-- Import, Export, Default
-- Working with Components 
-	- Props
-	- State
+Walk through the first part of the [tutorial](react-tutorial-1.md). 
 
-## After Class 
+## After Class
 
-**React Tutorial (3 hrs)**
-
-Your goal is to complete this [tutorial](https://reactjs.org/tutorial/tutorial.html)
-
-- Your goal is to get through the tutorial in 3 hours. 
-    - Don't spend too much time researching every new topic that might come up. You'll get a chance to revisit all of these as the term progresses. 
-    - In the setup options choose option 2: Local Development environment. 
-    
-## React Tutorial Rubric
-
-| -            | Does not meet expectations | Meets expectations       | Exceeds expectations |
-|:-------------|:---------------------------|:-------------------------|:---------------------|
-| Completed    | Did not complete           | Completed tutorial       | Solved some or all challenges |
-| Functional   | Is not functional          | Base tutorial functional | Challenges are functioning |
-| Code quality | Indentation is bad spacing is inconsistent | Uses consistent indentation and spacing | Well written and well commented |
-| Work Ethic   | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
+- Challenge: [React tutorial: Components](react-tutorial-1.md)
+- Stretch Challenge: [React tutorial](https://reactjs.org/tutorial/tutorial.html)
 
 ## Additional Resources
 
