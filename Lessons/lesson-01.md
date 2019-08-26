@@ -128,29 +128,9 @@ What you need to know:
 - Manipulating the DOM within a React project should almost always be handled with a Component!
     - In other words `document.getElementById()` is not compatible with React! 
 
-## Getting Started
+## Homework
 
-**Your first assignment** is to complete this tutorial
-
-- [react-tutorial-1.md](react-tutorial-1.md)
-
-The tutorial covers the following things. These are important foundational React concepts that will be used throughout the class and in every react project you might create in the future. 
-
-- Install Create React App
-    - Following the tutorial 
-        - Get the starter code and look through it.
-- Make a component 
-- Working with JSX 
-- ES6 modules import from and export and default
-- Nesting Components 
-- Get started on [tutorial](https://reactjs.org/tutorial/tutorial.html)
-    - Make a Repo for the tutorial
-    - Post a link to the repo in the tracker
-    - This should be completed By class 2
-
-**Stretch Challenge:** Complete the React tutorial from the React Team. This tutorial includes all of the React concepts in one place. We will be covering the concepts here in class later. If you want to get ahead you can practice here. 
-
-- [React Tutorial](https://reactjs.org/tutorial/tutorial.html)
+- [Assignment 1](Assignments/Assignment-01.md
 
 ## Activity 
 
