@@ -128,13 +128,15 @@ What you need to know:
 - Manipulating the DOM within a React project should almost always be handled with a Component!
     - In other words `document.getElementById()` is not compatible with React! 
 
+## Activity
+
+- `npx create-react-app ...`
+- Creating Components
+- Adding Styles
+
 ## Homework
 
 - [Assignment 1](Assignments/Assignment-01.md)
-
-## Activity 
-
-Walk through the first part of the [tutorial](react-tutorial-1.md). 
 
 ## After Class
 
