@@ -130,7 +130,7 @@ What you need to know:
 
 ## Homework
 
-- [Assignment 1](Assignments/Assignment-01.md
+- [Assignment 1](Assignments/Assignment-01.md)
 
 ## Activity 
 
