@@ -8,13 +8,45 @@ React is built on functional programming. This class you will look at some funct
 
 What's a [collection](https://en.wikipedia.org/wiki/Collection_(abstract_data_type))?
 
-In short a collection is an Array or an Object
+> In short a collection is an Array or an Object
 
 Often you will need to render Arrays of JSX components. You'll often have arrays of raw data that need to be converted into an array of JSX. 
 
 To do this we will delve into functional programming with `map`, `filter`, and `reduce`. 
 
 React will automatically iterate over a collection of JSX elements. To avoid error these elements need to have unique keys. 
+
+**tl;dr** Anytime you have an array of JSX elements each should have a unique key prop. For example: 
+
+```JS
+const things = [1,2,3,4].map((item, index) => {
+    return <p key={`thing-${index}`}>{item}</p>
+})
+```
+
+(if you're not familiar with `Array.map()` read more below)
+
+**Q: What are keys and why do they need to be unique?**
+
+**A:** Earlier we mentioned React's virtual DOM. This is React's system for managing components. The viritual DOM looks for changes to components, finds the things that change and updates only the elements that have been changed. 
+
+The purpose is effeciency and speed. Updating the DOM is a slow process in the browser. 
+
+To do this the React DOM renderer must keep track of elements uniquely. When you have lists of elements React asks that you provide a key fro each element in a list. 
+
+**Q: What is a key? (what kinds of values can be used as keys)**
+
+**A:** Any _unique_ value can be used as a key. You can use ids that come with data. You can generate your own values. These don't need to be special they only need to be unique. 
+
+A key value should uniquely idenitfy a list item. In other words it should be the same value each time the list is generated. 
+
+**Q: How do you _set_ a key?**
+
+**A:** The key is a prop. Set it like any other prop. 
+
+`<SomeComponent key='unique-1' />`
+
+Read more about React Lists and Keys here: https://reactjs.org/docs/lists-and-keys.html
 
 ## Learning Objectives/Competencies
 
