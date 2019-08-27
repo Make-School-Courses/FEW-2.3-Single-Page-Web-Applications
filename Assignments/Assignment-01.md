@@ -36,6 +36,28 @@ The subject for this assignment is your portfolio. The project should contain a 
 
 Post your completed tutorial to GitHub and add a link to the Progress Tracker. 
 
+### Challenges 
+
+After you complete the tutorial try these challenges. Try to complete as many of these challenges as you can.  
+
+- Make a component that displays a copyright message with the date in the footer. 
+    - You should be able to use the component like this: `<Copyright owner="Mitchell Hudson" />`
+    - It should display something like: "Mitchell Hudson © 2019"
+    - The Year should be generated automatically. Use the Date Object to get the current year. 
+- Add a Like Count to each project. This is fixed number that you can invent for each project.
+    - Pass the number of likes to each component as a prop.
+    - Display the number of likes in the Project component. 
+    - Apply a style to likes.
+- Add more styles to the project. This is an open ended challenge. 
+    - Style the header
+    - Style the footer
+    - Style the project
+- Add a new Info section that displays information about you. 
+    - This should be a new component.
+    - It should appear below your project and above the footer.
+
+If you're looking for even tougher challenges try this stretch challenge. 
+
 **Stretch Challenge:** Complete the React tutorial from the React Team. This tutorial includes all of the React concepts in one place. We will be covering the concepts here in class later. If you want to get ahead you can practice here. 
 
 - [React Tutorial](https://reactjs.org/tutorial/tutorial.html)
