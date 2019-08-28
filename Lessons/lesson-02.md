@@ -242,25 +242,9 @@ Using the starter project try the following challenges with Map, Filter, and Red
     - Map the inventory of Objects into an array of JSX components
     - Make a component for the inventory item
 
-## After Class
+## Homework
 
-**React Product Lister**
-
-Your goal is to build an app using React. This app is simple and borrows ideas from the React tutorial. 
-
-Get the starter project code here: [Product List Challenge](https://github.com/Product-College-Labs/react-product-list).
-
-Follow the instructions in the Readme. 
-
-## React Product List Project
-
-| -            | Does not meet expectations | Meets expectations       | Exceeds expectations |
-|:-------------|:---------------------------|:-------------------------|:---------------------|
-| Completed    | Did not complete           | Completed challenges 1-3 | Completed challenges 4-6 |
-| Functional   | Is not functional          | Base functionality, displays products and categories, can filter products by category | Has the All button, and highlights current category |
-| Code quality | Indentation is bad spacing is inconsistent | Uses consistent indentation and spacing | Well written and well commented |
-| Structure and Architecture | All code is in App.js | Uses App.js and two other components | Uses App.js, 3 or more components, and makes use of presentational and stateful components to best advantage |
-| Work Ethic   | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
+- [Product List Challenges](../Assignments/Assignment-02.md)
 
 ## Additional Resources
 
