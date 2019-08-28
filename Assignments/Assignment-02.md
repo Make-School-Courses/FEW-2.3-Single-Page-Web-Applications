@@ -217,11 +217,9 @@ Add a shopping cart. The cart should display a list of items that have been adde
 
 Some people like pictures. Here are a few images showing what the project might look like when you are finished, with some notes. 
 
-![picture-1](notes/picture-1.png)
+![picture-1](../notes/picture-1.png)
 
-![picture-2](notes/picture-2.png)
-
-![picture-3](notes/picture-3.png)
+![picture-2](../notes/picture-2.png)
 
 ### Deliverable
 
