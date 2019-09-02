@@ -11,7 +11,7 @@ Last, the goal will be to look conditional rendering techniques that can be impl
 ## Objectives 
 
 - Implement the Controlled Component Pattern
-    - Use forms and form data in React
+  - Use forms and form data in React
 - Build an app that works with a public API
 - Build a system to handle network errors gracefully
 - Use conditional rendering patterns in React
@@ -20,7 +20,7 @@ Last, the goal will be to look conditional rendering techniques that can be impl
 
 The demo project is a simple web app that displays weather data. You'll need to make an account and get a valid API key. 
 
-The project needs to accept user input for a zip code. Text input and other form elements use a special pattern in React called the Controlled Component. 
+The project needs to accept user input for a zip code. Text input and other form elements use a special pattern in React called the _Controlled Component Pattern_. 
 
 ## Getting Started
 

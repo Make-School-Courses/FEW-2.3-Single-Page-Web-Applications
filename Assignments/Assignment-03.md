@@ -40,7 +40,7 @@ const projects = [
   {title:"Amazing Colors", image: "/images/kitten-2.jpeg", link: "#" },
   {title:"Flip Toggle", image: "/images/kitten-3.jpeg", link: "#" },
   {title:"121 Second St", image: "/images/kitten-4.jpeg", link: "#" },
-  {title:"Slide Shows", image: "/images/kitten-5.jpeg", link: "#" },
+  {title:"Slide Shows", image: "/images/kitten-5.jpeg", link: "#" }
 ]
 
 // Map data into Project components
