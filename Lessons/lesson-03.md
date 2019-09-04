@@ -195,22 +195,6 @@ fetch('http://someurl.com').then((res) => {
 
 [Addignment 3](../Assignments/Assignment-03.md)
 
-## Learning Objectives/Competencies
-
-1. Use conditional rendering
-1. Create forms using the React controlled component pattern
-1. Use state to manage asynchronous actions
-
-## React API Project
-
-| -            | Does not meet expectations | Meets expectations       | Exceeds expectations |
-|:-------------|:---------------------------|:-------------------------|:---------------------|
-| Completed    | Did not complete           | Completed challenges 1-3 | Completed challenges 4+ |
-| Functional   | Is not functional          | Displays the weather data and handles errors | Displays the temp in F and C along description and atmospheric conditions and has some CSS styles |
-| Code quality | Indentation is bad spacing is inconsistent | Uses consistent indentation and spacing | Well written and well commented |
-| Code Architecture and Structure | All code is in App.js | Uses 3 components | Uses 5 or more components, components are specialized and perform formatting and display of data based on props |
-| Work Ethic   | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
-
 ## Additional Resources
 
 1. [JSON Formatter](https://jsonformatter.curiousconcept.com)
