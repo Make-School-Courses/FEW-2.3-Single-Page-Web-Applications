@@ -83,7 +83,11 @@ For more information, there is a button (dot or lightbulb) you can click for opt
 
 ## After Class 
 
-**Code Quality 3 hours**
+Apply the ideas from class to your portfolio project: 
+
+[Assignment 4](../Assignments/Assignment-04.md)
+
+**Improve your Code Quality**
 
 Using the linter review _all_ of the code you have written so far and lint!
 
