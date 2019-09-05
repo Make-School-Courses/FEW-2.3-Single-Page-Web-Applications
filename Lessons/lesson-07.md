@@ -1,141 +1,126 @@
-# FEW 2.3 - Lesson 7 
+# FEW 2.3 - Lesson 6
 
-# React Router
+# React + Express
 
-Routing is the concept of navigating through pages of content and connecting the change in content to the URL in the address bar. 
+The goal this class is to take the work from last class and connect a React front end to your Express server.
 
-This example covers using React Router a library of Components that facilitates routing. 
+## Introduction 
 
-## Learning Objectives
+Frontend applications often need to communicate with backend applications. The goal in this lesson is to connect React with Express.
 
-1. Identify navigation 
-    - Components that divide a page into content elements
-    - Paths to define routes
-1. Use React Router with a React
-    - Define Component to be handled with Routes
-    - Define Links to display Routes
-1. Build projects by sharing components
+## Learning Objectives 
 
-## Basic Routing
+- Use Proxy to connect two local servers
+- Connect front end and back end systems
+- Use your own API to excahnge JSON with server
 
-### Set up React Router
+## Proxy
 
-Setup the demo project and create simple routes.
+When you're testing your projects in development mode you're running a local server. This is true for the Express project and for the React project. 
 
-Install
+To get make the two work together you'll need to have both servers running at the same time. In this case, they will both be running at a different address. The Express server [demo project](https://github.com/Product-College-Labs/react-express-server) runs on port 4000, the address: http://localhost:4000/. 
 
-- Create a new React project
-    - `npx create-react-app react-router-example`
-- Navigate to the project 
-    - `cd react-router-example`
-- Install dependencies
-    - `npm install react-router-dom`
-- Start the project 
-    - `npm start` or `yarn start`
+The [React demo project](https://github.com/Product-College-Labs/react-express-project) for this lesson runs on port 3000, at http://localhost:3000. 
 
-### Using `BrowserRouter`, `Route`, and `Link`
+While both projects are running you need to get the React Front end (running on port 3000) to make networks requests to your Express backend server on port 4000. This can be accomplished with a proxy.
 
-Use the `BrowserRouter`, `Route`, and `Link` components to "navigate" between components. Really what's happening is a _conditional rendering_ of components. 
+Proxy is an option in package.json. 
 
-Use `BorwserRouter` to at the top level to manage routing. This should be at the top level parent to all router components. 
+`"proxy": "http://localhost:4000",`
 
-Use `Link` to trigger navigation. This like an anchor tag. Link uses a `to` attribute to name a path. 
+From what I can tell requests to root `/` are still sent to the default address. While requests any other address are sent to the proxy. For example in this project running on port 3000, with proxy 
 
-Use `Route` to define a route to navigate to. A route includes a `path` and `component`. A `Link` navigates to a `path`. When these match a `component` is rendered.
+- `/` -> `http://localhost:3000`
+- `/about` -> `http://localhost:4000/about`
+- `/random` -> `http://localhost:4000/random`
 
-### `props.match`
+It doesn't mention this in the docs, that I could find, but seemed to be the case when I was testing. I did a little searching around on this and the answer I found was that this was "expected behavior". It could be specific to Create React App. 
 
-`BrowserRouter` supplies all child components with a prop called `match`. This prop contains information about the current route including: 
+https://docs.npmjs.com/misc/config#proxy
 
-- params
-- isExact
-- path
-- url
+## Getting started
 
-See the example on nested routes for examples of `match` in use. 
+Download the demo project for this lesson [here](https://github.com/Product-College-Labs/react-express-project). Set up and then run the project: 
 
-### Link 
+- `npm install`
+- `npm start`
 
-Use `<Link>` to display a route. Use the `to` prop/attribute to define the route. A route is a relative URL that will navigate to a matching route. 
+The demo project was created with Create React App and should open in a browser and be hosted at localhost:3000. You can check the address in the address bar. 
 
-`<Link to="/">Home</Link>`
+This is a simple starter project and doesn't do much. It's probably not doing anything at the moment. You should see an error in the console: 
 
-### Route 
+> Failed to load resource: the server responded with a status of 500
 
-A `<Route>` is responsible for displaying a component when it's path matches the current address. There three important props/attributes. 
+A 500 error means something has gone wrong at the server. If the server isn't running that would explain it! 
 
-- `path` defines the URL that will display this route
-- `component` defines the component that will be displayed by this route
-- `exact` if included the route must be an exact match. For example "/" is a match for "/about" and "/sales" it is an exact match only for "/"
+Launch the server by opening a new terminal window and navigating to the directory that contains the Express project from the previous class. Launch the server. 
 
-`<Route path="/" exact component={Index} />`
+- `node server.js` or `nodemon server.js`
 
-**Note**: If you need to configure a component for a route use this syntax:
+Refresh the React project in the browser. You should see the "about" message display and a random number. This data came from the server you just launched! 
 
-`<Route path="/" exact render={() => <Index title={title} />} />`
+### Tour the Demo Project 
 
-In this example we're passing a function to the `render` prop and that function is returning a component. 
+Open the demo React project and look at 'package.json'. Look at line 10. 
 
-### Nested Routes 
+`"proxy": "http://localhost:4000",`
 
-A nested Route is a route that displays inside another Route. 
+Here is where the proxy server is set to 4000. 
 
-Use a path that shares the parent path and don't use exact. 
+Open the Express Project. Look at 'server.js'. Scroll to the bottom of the file. Find these lines: 
 
-You can guarantee that path matches by getting the current path with `match.url`. 
+```js
+const port = 4000
+app.listen(port, () => console.log(`LISTENING ON PORT ${port}`))
+```
 
-The Link to a nested Route might look like: 
+Here is where the port for this application is set to 4000 and the server is launched with that port. 
 
-`<Link to={`${match.url}/project-1`}>Project 1</Link>`
+From this point, when both applications are running, the React project will run at **localhost:3000** but it will make network requests to **localhost:4000**. The express project will be running at **localhost:4000** and respond to requests from there. 
 
-The Route might look like: 
+## Planning your custom project
 
-`<Route path={`${match.url}/:projectName`} component={Project} />`
+The goal from here to end of the term will be to define and create a custom project using React. Your custom project should use a backend created by you. You can also use an API from another service if you like. 
 
-Here `/:projectName` is a param that can be accessed by the Route. Inside the Route, you could access this param with: `match.params.projectName`.
+Connecting to a server and requesting data hinges on the API that is provided by the service. If you make the backend you get to define the API, if you are using a third-party service you must follow their API. 
 
-## In Class 
+A well-written API makes your job on the frontend easier. A poorly defined API makes your job more difficult. 
 
-Build your personal Static Website with React and React Router! 
+### What APIs have you used in the past
 
-**Why Make a static site with React?**
+Pair and share your previous experiences with APIs. Answer these questions: 
 
-- All of your pages are connected and share a common constantly running code base. 
-- Share variables and data/Application state across all of the content.
-- Leverage React Components.
-- It's not a Single Page Application if it's made of multiple pages!
-- Don't believe me, take a look at all of these static site generators currently available:
-    - https://blog.bitsrc.io/9-react-static-site-generators-for-2019-f54a66e519d2
+- What APIs have you used? 
+- Quickly describe them
+    - What did the endpoints look like? 
+    - What parameters did they take? 
+- Rate the experience of using these APIs
+    - When did it work well?
+    - Were there any problems?
 
-Imagine you need a static site quick. It's going to be a portfolio for your React work. 
+### What makes a good API? 
 
-You'll need to navigate between "pages", better use React Router!
+Pair and share the qualities of a good API design
 
-**Challenge 1**: Set up React Router
+- What makes a good API? 
+    - Naming?
+    - Parameters?
+    - Other features?
 
-- Import `react-router`
-- Add `BrowserRouter` to your root component
-- Define some `Links` and `Routes`
+## Challenges 
 
-Follow the guide here: https://reacttraining.com/react-router/web/guides/quick-start
-
-**Challenge 2**: Add some content to the components presented by Routes you defined. 
-
-This can be anything you like for now. Make sure when we navigate to a page we know what page we're on. 
-
-**Challenge 3**: Now it's time to show your React work. Remember those components you wrote for previous projects? 
-
-You can easily share components with other projects by copying the component file into a new project. 
-
-Do that now. Get the components from one of your other projects and add them to this project. Connect it with a Link and a Route.
-
-## After Class
-
-- Start on the custom project
+- Define your project
+    - Provide a short description of the MVP product that you intend to create for the end of the term
+    - Create a wireframe for the project
+        - While drawing all of the boxes on the wireframe define the components you think you might need to build. 
+    - Create a GitHub Repo for the new project
+        - Use Create React App to create a new starter project
 
 ## Additional Resources
 
-1. https://github.com/ReactTraining/react-router
-2. https://reacttraining.com/react-router/web/guides/quick-start
-3. https://reactjs.org/docs/thinking-in-react.html
-4. https://reactjs.org/docs/design-principles.html
+1. https://medium.com/@RossWhitehouse/setting-up-eslint-in-react-c20015ef35f7
+1. https://blog.usejournal.com/how-not-to-design-restful-apis-fb4892d9057a
+1. https://medium.com/@rkuris/good-apis-cd861b8b70a3
+1. https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
+1. https://techburst.io/6-apis-you-should-learn-in-2018-81aca1b06465
+1. https://codeburst.io/6-interesting-apis-to-check-out-in-2018-5d6830063f29
