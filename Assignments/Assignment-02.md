@@ -231,6 +231,6 @@ Class 3
 
 ## Assessing the assignment
 
-[Assignment Name Rubric](./Assignment-02-rubric.md)
+[Assignment 2 Rubric](./Assignment-02-rubric.md)
 
 

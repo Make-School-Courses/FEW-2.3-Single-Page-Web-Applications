@@ -117,18 +117,6 @@ Use an API of your choice. This can be any API you like. Render data from the AP
 - [API List](https://apilist.fun)
 - [Any API](https://any-api.com)
 
-
-
-
-
-
-
- 
-
-
-
-
-
 ### Deliverable
 
  
@@ -139,6 +127,6 @@ Class #
 
 ## Assessing the assignment
 
-[Assignment Name Rubric](./Assignment-01-rubric.md)
+[Assignment 3 Rubric](./Assignment-01-rubric.md)
 
 
