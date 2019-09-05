@@ -116,6 +116,6 @@ Class 5
 
 ## Assessing the assignment
 
-[Assignment Name Rubric](./Assignment-04-rubric.md)
+[Assignment 4 Rubric](./Assignment-04-rubric.md)
 
 
