@@ -4,7 +4,13 @@
 
 This class you will work on improving the code base you've developed in the previous classes.
 
-## Technical Debt
+## Building your Portfolio
+
+The goal for this class is to incorporate the ideas from the previous class into the portfolio project from class 1. 
+
+See the homework [Assignment 4](../Assignments/Assignment-04.md) for details. 
+
+<!-- ## Technical Debt
 
 Often while working on software projects the solutions you create are not the best. You won't even know it until later on. This is [Technical Debt](https://www.agilealliance.org/introduction-to-the-technical-debt-concept/).
 
@@ -36,7 +42,7 @@ Seriously, using a linter is a great way to learn more about the code you are wr
 
 For our project, we will be using ESLint. This is a linter that works with all of the major code editors. 
 
-You'll need to install it in your editor _and in your project_. 
+You'll need to install it _in your editor_ and _in your project_. 
 
 **Install ESLint in your code Editor**
 
@@ -79,7 +85,7 @@ For more information, there is a button (dot or lightbulb) you can click for opt
 - Ignore this rule: 
     - Suppress this rule for the line
     - Suppress this rule the file
-    - Show documentation for this rule
+    - Show documentation for this rule -->
 
 ## After Class 
 
@@ -87,7 +93,7 @@ Apply the ideas from class to your portfolio project:
 
 [Assignment 4](../Assignments/Assignment-04.md)
 
-**Improve your Code Quality**
+<!-- **Improve your Code Quality**
 
 Using the linter review _all_ of the code you have written so far and lint!
 
@@ -106,7 +112,7 @@ Use any spare time to fix other problems and improve your previous work! Remembe
 | -            | Does not meet expectations | Meets expectations       | Exceeds expectations |
 |:-------------|:---------------------------|:-------------------------|:---------------------|
 | Completed    | Linted less than 70% of code | Linted 70% or more code | Linted 100% of code |
-| Work Ethic   | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
+| Work Ethic   | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process |  -->
 
 ## Additional Resources
 
