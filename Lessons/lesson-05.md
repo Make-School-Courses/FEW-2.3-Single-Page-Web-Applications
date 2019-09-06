@@ -22,8 +22,6 @@ This example covers using React Router a library of Components that facilitates 
 
 Setup the demo project and create simple routes.
 
-Install
-
 - Create a new React project
   - `npx create-react-app react-router-example`
 - Navigate to the project 
