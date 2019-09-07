@@ -69,10 +69,6 @@ React Router provides several different Routers.
 
 I'm using HashRouter for these examples becuase it works eith GitHub Pages. I'm going to have you publish this project to GitHub Pages so using HashRouter now will ensure compatibility. 
 
-
-
-
-
 ### `props.match`
 
 `HashRouter` supplies all child components with a prop called `match`. This prop contains information about the current route including: 
@@ -106,11 +102,24 @@ A `<Route>` is responsible for displaying a component when it's path matches the
 
 In this example we're passing a function to the `render` prop and that function is returning a component. 
 
+Alternately you can pass "state" to a Route/Component from a link using this syntax:
+
+```jsx
+<Link 
+  to={{
+    pathname:"/details",
+    state: props // Pass props through Link
+  }}
+>
+```
+
+In the example above `props` could be any JS object holding properties that you wish to pass to the component displayed at the "/details" route. 
+
 ### Nested Routes 
 
 A nested Route is a route that displays inside another Route. 
 
-Use a path that shares the parent path and don't use exact. 
+Use a path that shares the parent path and _don't use exact_. 
 
 You can guarantee that path matches by getting the current path with `match.url`. 
 
@@ -126,42 +135,13 @@ Here `/:projectName` is a param that can be accessed by the Route. Inside the Ro
 
 ## In Class 
 
-Build your personal Static Website with React and React Router! 
-
-**Why Make a static site with React?**
-
-- All of your pages are connected and share a common constantly running code base. 
-- Share variables and data/Application state across all of the content.
-- Leverage React Components.
-- It's not a Single Page Application if it's made of multiple pages!
-- Don't believe me, take a look at all of these static site generators currently available:
-    - https://blog.bitsrc.io/9-react-static-site-generators-for-2019-f54a66e519d2
-
-Imagine you need a static site quick. It's going to be a portfolio for your React work. 
-
-You'll need to navigate between "pages", better use React Router!
-
-**Challenge 1**: Set up React Router
-
-- Import `react-router`
-- Add `BrowserRouter` to your root component
-- Define some `Links` and `Routes`
-
-Follow the guide here: https://reacttraining.com/react-router/web/guides/quick-start
-
-**Challenge 2**: Add some content to the components presented by Routes you defined. 
-
-This can be anything you like for now. Make sure when we navigate to a page we know what page we're on. 
-
-**Challenge 3**: Now it's time to show your React work. Remember those components you wrote for previous projects? 
-
-You can easily share components with other projects by copying the component file into a new project. 
-
-Do that now. Get the components from one of your other projects and add them to this project. Connect it with a Link and a Route.
+Let's all mock up a quick application with React Router. 
 
 ## After Class
 
-- Start on the custom project
+After class your goal is to use the ideas from this class make your portfolio web site a "multipage" navigable site with React Router. 
+
+[Assignment 5](../Assignments/Assignment-05)
 
 ## Additional Resources
 
