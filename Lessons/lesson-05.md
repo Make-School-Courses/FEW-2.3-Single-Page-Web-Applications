@@ -18,6 +18,10 @@ This example covers using React Router a library of Components that facilitates 
 
 ## Basic Routing
 
+Single page applications are just that: a single HTML page/document. Normally you are linking to different documents using the anchor tag. In a single page application you can't leave the current document. Instead you need to change the content that is displayed by modifying the DOM. In React this is handled this by managing which components are rendered. React Router is a library made for just this purpose. 
+
+React Router is a library of components that help easily manage navigation in your apps with components. 
+
 ### Set up React Router
 
 Setup the demo project and create simple routes.
@@ -31,19 +35,47 @@ Setup the demo project and create simple routes.
 - Start the project 
   - `npm start` or `yarn start`
 
-### Using `BrowserRouter`, `Route`, and `Link`
+### Using `HashRouter`, `Route`, `NavLink`, and `Link`
 
-Use the `BrowserRouter`, `Route`, and `Link` components to "navigate" between components. Really what's happening is a _conditional rendering_ of components. 
+Use the `HashRouter`, `Route`, and `Link` components to "navigate" between components. Really what's happening is the _conditional rendering_ of components. 
 
-Use `BorwserRouter` to at the top level to manage routing. This should be at the top level parent to all router components. 
+Use `HashRouter` at the top level to manage routing. Think of this as the container within which all of your navigation happens. All of your Routes and Links must be children of your Router. Make sure HashRouter is at the top level of your App. 
 
-Use `Link` to trigger navigation. This like an anchor tag. Link uses a `to` attribute to name a path. 
+```jsx
+<HashRouter>
+  ...
+</HashRouter>
+```
 
-Use `Route` to define a route to navigate to. A route includes a `path` and `component`. A `Link` navigates to a `path`. When these match a `component` is rendered.
+Use `NavLink` to trigger navigation. This like an anchor tag. NavLink uses a `to` attribute to name a path. 
+
+`<NavLink to="/">Home</NavLink>`
+
+This link will display the text "Home". When clicked it will set the address in browser URL to "/". 
+
+Use `Route` to define a route to display component. A route includes a `path` and `component` props. When the URL in the browser matches the path the `component` is rendered.
+
+`<Route path="/" component={HomePage} />`
+
+Displays the HomePage component when the path shown in the browser url is "/".
+
+### Types of Routers
+
+React Router provides several different Routers. 
+
+- BrowserRouter
+- HashRouter
+- and more...
+
+I'm using HashRouter for these examples becuase it works eith GitHub Pages. I'm going to have you publish this project to GitHub Pages so using HashRouter now will ensure compatibility. 
+
+
+
+
 
 ### `props.match`
 
-`BrowserRouter` supplies all child components with a prop called `match`. This prop contains information about the current route including: 
+`HashRouter` supplies all child components with a prop called `match`. This prop contains information about the current route including: 
 
 - params
 - isExact
