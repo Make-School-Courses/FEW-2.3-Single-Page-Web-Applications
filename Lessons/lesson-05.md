@@ -135,7 +135,9 @@ Here `/:projectName` is a param that can be accessed by the Route. Inside the Ro
 
 ## In Class 
 
-Let's all mock up a quick application with React Router. 
+Let's all mock up a quick application with React Router. Download or clone the repo below. Follow the instructions in the README. 
+
+https://github.com/Make-School-Labs/react-router-challenge
 
 ## After Class
 
