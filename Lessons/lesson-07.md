@@ -1,126 +1,122 @@
-# FEW 2.3 - Lesson 6
+# FEW 2.3 - Lesson 5
 
-# React + Express
+The goal this week is to set up and express server to work with React. This week you will build the server and define its API. 
 
-The goal this class is to take the work from last class and connect a React front end to your Express server.
+## Introduction
 
-## Introduction 
+Single Page Applications run in the browser. You'll often want to use your Single Page Applications to communicate with a server. Servers provide data and act as a hub for client applications.
 
-Frontend applications often need to communicate with backend applications. The goal in this lesson is to connect React with Express.
+The goal of this week is creating a simple server to connect to your SPA front end. 
 
 ## Learning Objectives 
 
-- Use Proxy to connect two local servers
-- Connect front end and back end systems
-- Use your own API to excahnge JSON with server
+- Build a web server with Express JS
+- Identify what makes a good API
+- Define an API
+- Build a public API that serves JSON
 
-## Proxy
+## Express 
 
-When you're testing your projects in development mode you're running a local server. This is true for the Express project and for the React project. 
+Express is a framework that runs on a Node.js server. Express describes itself as: 
 
-To get make the two work together you'll need to have both servers running at the same time. In this case, they will both be running at a different address. The Express server [demo project](https://github.com/Product-College-Labs/react-express-server) runs on port 4000, the address: http://localhost:4000/. 
+> Fast, unopinionated, minimalist web framework for Node.js. 
 
-The [React demo project](https://github.com/Product-College-Labs/react-express-project) for this lesson runs on port 3000, at http://localhost:3000. 
+Let's take that apart. Express is leaving a lot of the work of creating the server to you, it doesn't provide premade systems for tackling big problems. Instead, it provides a set of tools you can use to solve your problems. 
 
-While both projects are running you need to get the React Front end (running on port 3000) to make networks requests to your Express backend server on port 4000. This can be accomplished with a proxy.
+The servers you create act as services for the applications that connect to them. The language of this communication is the API.
 
-Proxy is an option in package.json. 
+Your goal this week is to create a simple API. 
 
-`"proxy": "http://localhost:4000",`
+**Discussion:** 
 
-From what I can tell requests to root `/` are still sent to the default address. While requests any other address are sent to the proxy. For example in this project running on port 3000, with proxy 
+- What is an API?
+- What APIs have you worked with? 
+- What does an API look like? 
 
-- `/` -> `http://localhost:3000`
-- `/about` -> `http://localhost:4000/about`
-- `/random` -> `http://localhost:4000/random`
+## Creating APIs
 
-It doesn't mention this in the docs, that I could find, but seemed to be the case when I was testing. I did a little searching around on this and the answer I found was that this was "expected behavior". It could be specific to Create React App. 
+Your goal is to create a service with an API. 
 
-https://docs.npmjs.com/misc/config#proxy
+> In computer programming, an application programming interface (API) is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
 
-## Getting started
+A web API makes features and data from the service available to any front end application that connects with it.
 
-Download the demo project for this lesson [here](https://github.com/Product-College-Labs/react-express-project). Set up and then run the project: 
+I'm sure you've worked with APIs by now. Well written APIs help you get more done at a higher quality. Poorly written APIs can make your work more difficult and your products less capable than you envision. 
+
+**Discussion:** What makes a good API? 
+
+## Getting Started
+
+The goal this week is to create an Express server with an API that returns JSON data. Later you will connect this service to a React client.
+
+Download, fork or clone the [demo project](https://github.com/Make-School-Labs/react-express-server).
+
+### Start Express project
+
+Follow these steps to install and run the project.
 
 - `npm install`
-- `npm start`
+- `npm server.js` or `nodemon server.js`
 
-The demo project was created with Create React App and should open in a browser and be hosted at localhost:3000. You can check the address in the address bar. 
+### About the Demo project
 
-This is a simple starter project and doesn't do much. It's probably not doing anything at the moment. You should see an error in the console: 
+This demo project is very simple it provides a simple service to generate random numbers. The API is simple but incomplete at this point. Your goal is to extend the API and add features. 
 
-> Failed to load resource: the server responded with a status of 500
+### The demo project API
 
-A 500 error means something has gone wrong at the server. If the server isn't running that would explain it! 
+The API of the current project has two endpoints that return JSON. 
 
-Launch the server by opening a new terminal window and navigating to the directory that contains the Express project from the previous class. Launch the server. 
+- `/about` 
+    - returns - `{ about: 'description string' }`
+    - Example - `/about`
+- `/random` 
+    - query - n: Int
+    - returns - random number from 0 to n - 1
+    - Example - `/random/?n=6` 
 
-- `node server.js` or `nodemon server.js`
+#### Testing the API
 
-Refresh the React project in the browser. You should see the "about" message display and a random number. This data came from the server you just launched! 
+You should test the API for yourself to make sure everything is running. Follow the instructions above and launch the Express Server.
 
-### Tour the Demo Project 
+There are three endpoints and each returns JSON. Type these into the address bar of the browser or just click the links below: 
 
-Open the demo React project and look at 'package.json'. Look at line 10. 
+- [http://localhost:4000](http://localhost:4000)
+- [http://localhost:4000/about](http://localhost:4000/about)
+- [http://localhost:4000/random/?n=6](http://localhost:4000/random/?n=6)
 
-`"proxy": "http://localhost:4000",`
+Notice each of these endpoints returns JSON. The browser should display this. 
 
-Here is where the proxy server is set to 4000. 
+The last endpoint in the list above includes query params. Try changing the value here and check the results. 
 
-Open the Express Project. Look at 'server.js'. Scroll to the bottom of the file. Find these lines: 
+### Unit testing 
 
-```js
-const port = 4000
-app.listen(port, () => console.log(`LISTENING ON PORT ${port}`))
-```
+Unit testing is the idea of testing your software in units. A unit is usually a method with a single output. 
 
-Here is where the port for this application is set to 4000 and the server is launched with that port. 
+Unit testing is done with software. That is your wiring software that runs your software and tests it along the way. 
 
-From this point, when both applications are running, the React project will run at **localhost:3000** but it will make network requests to **localhost:4000**. The express project will be running at **localhost:4000** and respond to requests from there. 
+Why unit test?
 
-## Planning your custom project
+- It's professional best practice
+- All of the big companies use it
+- Makes better more reliable code
 
-The goal from here to end of the term will be to define and create a custom project using React. Your custom project should use a backend created by you. You can also use an API from another service if you like. 
+## Testing with Jest
 
-Connecting to a server and requesting data hinges on the API that is provided by the service. If you make the backend you get to define the API, if you are using a third-party service you must follow their API. 
+Jest is a test library from the FaceBook team. It's included as part of the Create-React-App boilerplate code. 
 
-A well-written API makes your job on the frontend easier. A poorly defined API makes your job more difficult. 
+## After Class
 
-### What APIs have you used in the past
+**Express API Server 3hrs**
 
-Pair and share your previous experiences with APIs. Answer these questions: 
+- Complete the challenges in the [React Expres Server](https://github.com/Product-College-Labs/react-express-server) Demo project.
 
-- What APIs have you used? 
-- Quickly describe them
-    - What did the endpoints look like? 
-    - What parameters did they take? 
-- Rate the experience of using these APIs
-    - When did it work well?
-    - Were there any problems?
-
-### What makes a good API? 
-
-Pair and share the qualities of a good API design
-
-- What makes a good API? 
-    - Naming?
-    - Parameters?
-    - Other features?
-
-## Challenges 
-
-- Define your project
-    - Provide a short description of the MVP product that you intend to create for the end of the term
-    - Create a wireframe for the project
-        - While drawing all of the boxes on the wireframe define the components you think you might need to build. 
-    - Create a GitHub Repo for the new project
-        - Use Create React App to create a new starter project
+| -        | Does not meet expectations | Meets expectations       | Exceeds expectations |
+|:---------|:---------------------------|:-------------------------|:---------------------|
+| Completed| Did not complete    | Completed tutorial     | Solved some or all challenges |
+| Functional| Is not functional   | Base tutorial functional | Challenges are functioning |
+| Code quality | Indentation is bad spacing is inconsistent | Uses consistent indentation and spacing | Well written and well commented |
+| Work Ethic | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
 
 ## Additional Resources
 
-1. https://medium.com/@RossWhitehouse/setting-up-eslint-in-react-c20015ef35f7
-1. https://blog.usejournal.com/how-not-to-design-restful-apis-fb4892d9057a
-1. https://medium.com/@rkuris/good-apis-cd861b8b70a3
-1. https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
-1. https://techburst.io/6-apis-you-should-learn-in-2018-81aca1b06465
-1. https://codeburst.io/6-interesting-apis-to-check-out-in-2018-5d6830063f29
+1. 

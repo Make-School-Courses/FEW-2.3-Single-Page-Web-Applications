@@ -1,122 +1,153 @@
 # FEW 2.3 - Lesson 5
 
-The goal this week is to set up and express server to work with React. This week you will build the server and define its API. 
+# React Router
 
-## Introduction
+Routing is the concept of navigating through pages of content and connecting the change in content to the URL in the address bar. 
 
-Single Page Applications run in the browser. You'll often want to use your Single Page Applications to communicate with a server. Servers provide data and act as a hub for client applications.
+This example covers using React Router a library of Components that facilitates routing. 
 
-The goal of this week is creating a simple server to connect to your SPA front end. 
+## Learning Objectives
 
-## Learning Objectives 
+1. Identify navigation 
+  - Components that divide a page into content elements
+  - Paths to define routes
+1. Use React Router with a React
+  - Define Component to be handled with Routes
+  - Define Links to display Routes
+1. Build projects by sharing components
 
-- Build a web server with Express JS
-- Identify what makes a good API
-- Define an API
-- Build a public API that serves JSON
+## Basic Routing
 
-## Express 
+Single page applications are just that: a single HTML page/document. Normally you are linking to different documents using the anchor tag. In a single page application you can't leave the current document. Instead you need to change the content that is displayed by modifying the DOM. In React this is handled this by managing which components are rendered. React Router is a library made for just this purpose. 
 
-Express is a framework that runs on a Node.js server. Express describes itself as: 
+React Router is a library of components that help easily manage navigation in your apps with components. 
 
-> Fast, unopinionated, minimalist web framework for Node.js. 
+### Set up React Router
 
-Let's take that apart. Express is leaving a lot of the work of creating the server to you, it doesn't provide premade systems for tackling big problems. Instead, it provides a set of tools you can use to solve your problems. 
+Setup the demo project and create simple routes.
 
-The servers you create act as services for the applications that connect to them. The language of this communication is the API.
+- Create a new React project
+  - `npx create-react-app react-router-example`
+- Navigate to the project 
+  - `cd react-router-example`
+- Install dependencies
+  - `npm install react-router-dom`
+- Start the project 
+  - `npm start` or `yarn start`
 
-Your goal this week is to create a simple API. 
+### Using `HashRouter`, `Route`, `NavLink`, and `Link`
 
-**Discussion:** 
+Use the `HashRouter`, `Route`, and `Link` components to "navigate" between components. Really what's happening is the _conditional rendering_ of components. 
 
-- What is an API?
-- What APIs have you worked with? 
-- What does an API look like? 
+Use `HashRouter` at the top level to manage routing. Think of this as the container within which all of your navigation happens. All of your Routes and Links must be children of your Router. Make sure HashRouter is at the top level of your App. 
 
-## Creating APIs
+```jsx
+<HashRouter>
+  ...
+</HashRouter>
+```
 
-Your goal is to create a service with an API. 
+Use `NavLink` to trigger navigation. This like an anchor tag. NavLink uses a `to` attribute to name a path. 
 
-> In computer programming, an application programming interface (API) is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
+`<NavLink to="/">Home</NavLink>`
 
-A web API makes features and data from the service available to any front end application that connects with it.
+This link will display the text "Home". When clicked it will set the address in browser URL to "/". 
 
-I'm sure you've worked with APIs by now. Well written APIs help you get more done at a higher quality. Poorly written APIs can make your work more difficult and your products less capable than you envision. 
+Use `Route` to define a route to display component. A route includes a `path` and `component` props. When the URL in the browser matches the path the `component` is rendered.
 
-**Discussion:** What makes a good API? 
+`<Route path="/" component={HomePage} />`
 
-## Getting Started
+Displays the HomePage component when the path shown in the browser url is "/".
 
-The goal this week is to create an Express server with an API that returns JSON data. Later you will connect this service to a React client.
+### Types of Routers
 
-Download, fork or clone the [demo project](https://github.com/Make-School-Labs/react-express-server).
+React Router provides several different Routers. 
 
-### Start Express project
+- BrowserRouter
+- HashRouter
+- and more...
 
-Follow these steps to install and run the project.
+I'm using HashRouter for these examples becuase it works eith GitHub Pages. I'm going to have you publish this project to GitHub Pages so using HashRouter now will ensure compatibility. 
 
-- `npm install`
-- `npm server.js` or `nodemon server.js`
+### `props.match`
 
-### About the Demo project
+`HashRouter` supplies all child components with a prop called `match`. This prop contains information about the current route including: 
 
-This demo project is very simple it provides a simple service to generate random numbers. The API is simple but incomplete at this point. Your goal is to extend the API and add features. 
+- params
+- isExact
+- path
+- url
 
-### The demo project API
+See the example on nested routes for examples of `match` in use. 
 
-The API of the current project has two endpoints that return JSON. 
+### Link 
 
-- `/about` 
-    - returns - `{ about: 'description string' }`
-    - Example - `/about`
-- `/random` 
-    - query - n: Int
-    - returns - random number from 0 to n - 1
-    - Example - `/random/?n=6` 
+Use `<Link>` to display a route. Use the `to` prop/attribute to define the route. A route is a relative URL that will navigate to a matching route. 
 
-#### Testing the API
+`<Link to="/">Home</Link>`
 
-You should test the API for yourself to make sure everything is running. Follow the instructions above and launch the Express Server.
+### Route 
 
-There are three endpoints and each returns JSON. Type these into the address bar of the browser or just click the links below: 
+A `<Route>` is responsible for displaying a component when it's path matches the current address. There three important props/attributes. 
 
-- [http://localhost:4000](http://localhost:4000)
-- [http://localhost:4000/about](http://localhost:4000/about)
-- [http://localhost:4000/random/?n=6](http://localhost:4000/random/?n=6)
+- `path` defines the URL that will display this route
+- `component` defines the component that will be displayed by this route
+- `exact` if included the route must be an exact match. For example "/" is a match for "/about" and "/sales" it is an exact match only for "/"
 
-Notice each of these endpoints returns JSON. The browser should display this. 
+`<Route path="/" exact component={Index} />`
 
-The last endpoint in the list above includes query params. Try changing the value here and check the results. 
+**Note**: If you need to configure a component for a route use this syntax:
 
-### Unit testing 
+`<Route path="/" exact render={() => <Index title={title} />} />`
 
-Unit testing is the idea of testing your software in units. A unit is usually a method with a single output. 
+In this example we're passing a function to the `render` prop and that function is returning a component. 
 
-Unit testing is done with software. That is your wiring software that runs your software and tests it along the way. 
+Alternately you can pass "state" to a Route/Component from a link using this syntax:
 
-Why unit test?
+```jsx
+<Link 
+  to={{
+    pathname:"/details",
+    state: props // Pass props through Link
+  }}
+>
+```
 
-- It's professional best practice
-- All of the big companies use it
-- Makes better more reliable code
+In the example above `props` could be any JS object holding properties that you wish to pass to the component displayed at the "/details" route. 
 
-## Testing with Jest
+### Nested Routes 
 
-Jest is a test library from the FaceBook team. It's included as part of the Create-React-App boilerplate code. 
+A nested Route is a route that displays inside another Route. 
+
+Use a path that shares the parent path and _don't use exact_. 
+
+You can guarantee that path matches by getting the current path with `match.url`. 
+
+The Link to a nested Route might look like: 
+
+`<Link to={`${match.url}/project-1`}>Project 1</Link>`
+
+The Route might look like: 
+
+`<Route path={`${match.url}/:projectName`} component={Project} />`
+
+Here `/:projectName` is a param that can be accessed by the Route. Inside the Route, you could access this param with: `match.params.projectName`.
+
+## In Class 
+
+Let's all mock up a quick application with React Router. Download or clone the repo below. Follow the instructions in the README. 
+
+https://github.com/Make-School-Labs/react-router-challenge
 
 ## After Class
 
-**Express API Server 3hrs**
+After class your goal is to use the ideas from this class make your portfolio web site a "multipage" navigable site with React Router. 
 
-- Complete the challenges in the [React Expres Server](https://github.com/Product-College-Labs/react-express-server) Demo project.
-
-| -        | Does not meet expectations | Meets expectations       | Exceeds expectations |
-|:---------|:---------------------------|:-------------------------|:---------------------|
-| Completed| Did not complete    | Completed tutorial     | Solved some or all challenges |
-| Functional| Is not functional   | Base tutorial functional | Challenges are functioning |
-| Code quality | Indentation is bad spacing is inconsistent | Uses consistent indentation and spacing | Well written and well commented |
-| Work Ethic | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
+[Assignment 5](../Assignments/Assignment-05)
 
 ## Additional Resources
 
-1. 
+1. https://github.com/ReactTraining/react-router
+2. https://reacttraining.com/react-router/web/guides/quick-start
+3. https://reactjs.org/docs/thinking-in-react.html
+4. https://reactjs.org/docs/design-principles.html
