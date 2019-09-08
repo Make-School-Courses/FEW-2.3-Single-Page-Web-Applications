@@ -79,7 +79,7 @@ Set up your NavLinks with the activeClassName. Style this class name with your s
 
 ### Deliverable
 
-
+Update the GitHub Repo for your portfolio project, then update the progress tracker to with a link to show that this Assignment has been completed. 
 
 ### Due date
 

@@ -1,6 +1,6 @@
-## React Product List Project
+## Assignment 2 Rubric - React Product List Project
 
-| -             | **Does not meet expectations** | **Meets expectations** | **Exceeds expectations** |
+| - | **Does not meet expectations** | **Meets expectations** | **Exceeds expectations** |
 |:--------------|:-------------------------------|:-----------------------|:-------------------------|
 | **Completed** | Did _not complete_ | Completed challenges 1-3 | Completed challenges 4-6 |
 | **Functional** | Is _not functional_ | Has _base functionality_, displays products and categories, can filter products by category | Has the All button, and highlights current category |

@@ -1,6 +1,6 @@
-# Class - Assignment 1  React Components Tutorial - Rubric 
+# Class Assignment 1 Rubric - React Components Tutorial 
 
-| -  | **Does not meet expectations** | **Meets expectations** | **Exceeds expectations** |
+| - | **Does not meet expectations** | **Meets expectations** | **Exceeds expectations** |
 |:---|:-------------------------------|:-----------------------|:-------------------------|
 | **Completed** | Did _not complete_ | _Completed_ tutorial | _Solved_ some or all challenges |
 | **Functional** | Is _not functional_, throws errors | Base tutorial _functional_ | _Challenges_ are functioning |
