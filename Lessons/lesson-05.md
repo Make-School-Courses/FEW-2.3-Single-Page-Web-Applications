@@ -14,13 +14,15 @@ This example covers using React Router a library of Components that facilitates 
 1. Use React Router with a React
   - Define Component to be handled with Routes
   - Define Links to display Routes
-1. Build projects by sharing components
+1. Identify Static and Dynamic Content
 
 ## Basic Routing
 
-Single page applications are just that: a single HTML page/document. Normally you are linking to different documents using the anchor tag. In a single page application you can't leave the current document. Instead you need to change the content that is displayed by modifying the DOM. In React this is handled this by managing which components are rendered. React Router is a library made for just this purpose. 
+Single page applications are just that: a single HTML page/document. Normally you are linking to different documents using the anchor tag `<a>`. 
 
-React Router is a library of components that help easily manage navigation in your apps with components. 
+In a single page application you can't leave the current document. Instead you need to change the content that is displayed by modifying the DOM. In React this is handled this by managing which components are rendered. React Router is a library made for just this purpose. 
+
+Reat Router is a library of React Components. You'll import and use these components to manage the components you create. 
 
 ### Set up React Router
 
