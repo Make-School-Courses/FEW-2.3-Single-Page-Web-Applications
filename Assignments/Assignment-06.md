@@ -34,9 +34,9 @@ Your goal is to choose one of the tutorials below and complete it. The tutorials
 
 ### Due date
 
-**Class 8** - 
+**Class 9** - 
 
 ## Assessing the assignment
 
-[Assignment 5 Rubric](./Assignment-06-rubric.md)
+[Assignment 6 Rubric](./Assignment-06-rubric.md)
 
