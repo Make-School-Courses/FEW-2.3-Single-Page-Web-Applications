@@ -1,122 +1,177 @@
-# FEW 2.3 - Lesson 5
+# FEW 2.3 - Lesson 9 - Redux introduction
 
-The goal this week is to set up and express server to work with React. This week you will build the server and define its API. 
+## Redux
 
-## Introduction
+Redux is a tool for managing application state. If you've ever had trouble managing data, changes to data, or handling user input Redux might solve your problems! 
 
-Single Page Applications run in the browser. You'll often want to use your Single Page Applications to communicate with a server. Servers provide data and act as a hub for client applications.
+Redux is a JS implementation of the Flux pattern which was developed at Facebook for solving problems they were having managing data on the Facebook website. 
 
-The goal of this week is creating a simple server to connect to your SPA front end. 
+## Learning Objectives/Competencies
 
-## Learning Objectives 
+1. Identify Application State 
+1. Define Actions and Action Creators 
+1. Define Reducers
 
-- Build a web server with Express JS
-- Identify what makes a good API
-- Define an API
-- Build a public API that serves JSON
+## Slides 
 
-## Express 
+https://docs.google.com/presentation/d/18rfjoYo-Ei2M9teGn0h-PctydE4m9gOlteT99C7R_TI/edit?usp=sharing
 
-Express is a framework that runs on a Node.js server. Express describes itself as: 
+## Initial Lecture: What is Application state?
 
-> Fast, unopinionated, minimalist web framework for Node.js. 
+Application state is the contents of memory used by your application. You can think about this as all the variables that define your application at any moment. 
 
-Let's take that apart. Express is leaving a lot of the work of creating the server to you, it doesn't provide premade systems for tackling big problems. Instead, it provides a set of tools you can use to solve your problems. 
+That's might seem like a lot to keep track of. For practical purposes, we don't have to think of the entire contents of memory. Instead, we need to think of only the variables that determine how your application displays itself at the moment. For this purpose, you can remove all of the boilerplate and framework code from the equation. 
 
-The servers you create act as services for the applications that connect to them. The language of this communication is the API.
+**Think of application state as the values that you would have to load to recreate the application in it's current "state".**
 
-Your goal this week is to create a simple API. 
+## Discuss Application State
 
-**Discussion:** 
+Discussion: Identify the state in your application. Think of one of your applications and identify all of the variables that would be required to reload the application into a previous state.
 
-- What is an API?
-- What APIs have you worked with? 
-- What does an API look like? 
+Identify Application State from class projects
 
-## Creating APIs
+- Product List 
+- API (weather app)
 
-Your goal is to create a service with an API. 
+Discussion: What problems have you had managing application state in previous projects? 
 
-> In computer programming, an application programming interface (API) is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
+Identify Application State in the custom project you are working on.
 
-A web API makes features and data from the service available to any front end application that connects with it.
+## The Flux Pattern? 
 
-I'm sure you've worked with APIs by now. Well written APIs help you get more done at a higher quality. Poorly written APIs can make your work more difficult and your products less capable than you envision. 
+Flux is the application architecture that Facebook uses for building client-side web applications. It complements React's composable view components by utilizing a **unidirectional data flow**. It's more of a pattern rather than a formal framework, and you can start using Flux immediately without a lot of new code.
 
-**Discussion:** What makes a good API? 
+Flux applications have three major parts: the **dispatcher**, the **stores**, and the **views** (React components). These should not be confused with Model-View-Controller. Controllers do exist in a Flux application, but they are controller-views — views often found at the top of the hierarchy that retrieves data from the stores and passes this data down to their children. Additionally, action creators — dispatcher helper methods — are used to support a semantic API that describes all changes that are possible in the application. It can be useful to think of them as a fourth part of the Flux update cycle.
 
-## Getting Started
+Flux eschews MVC in favor of a unidirectional data flow. When a user interacts with a React view, the view propagates an action through a central dispatcher, to the various stores that hold the application's data and business logic, which updates all of the views that are affected. This works especially well with React's declarative programming style, which allows the store to send updates without specifying how to transition views between states.
 
-The goal this week is to create an Express server with an API that returns JSON data. Later you will connect this service to a React client.
+- https://facebook.github.io/flux/docs/in-depth-overview.html
 
-Download, fork or clone the [demo project](https://github.com/Make-School-Labs/react-express-server).
+## Redux
 
-### Start Express project
+What is Redux? A JavaScript implementation of the Flux Pattern. Redux describes itself as:
 
-Follow these steps to install and run the project.
+> A predictable state container for JavaScript apps.
 
-- `npm install`
-- `npm server.js` or `nodemon server.js`
+Keep in mind that Application state and Redux is different from the Component state. While Components each can define and hold on to their own state. Application state in Redux is help outside of any component and can be passed into a component through props. 
 
-### About the Demo project
+In other words Redux holds state outside of components and components can register to receive updates when state changes and hooks that allow components to make changes to state.
 
-This demo project is very simple it provides a simple service to generate random numbers. The API is simple but incomplete at this point. Your goal is to extend the API and add features. 
+### Why use Redux? 
 
-### The demo project API
+**Pros**
 
-The API of the current project has two endpoints that return JSON. 
+- Easier to Debug Applications
+    - State is held in a single location
+    - Changes all happen through a single system
+- Predictable 
+    - State changes can only be initiated with an action
+    - Any change has to complete before another action is handled
+- Easier to reason about your application
+    - Actions are listed in one location
+    - Reducers handling changes to state exist in one location
+- Makes it easy to expand your applications
+    - Adding new actions and reducers is easier than building every new system from scratch
+    - Defines a pattern for working with state
+    
+**Cons** 
 
-- `/about` 
-    - returns - `{ about: 'description string' }`
-    - Example - `/about`
-- `/random` 
-    - query - n: Int
-    - returns - random number from 0 to n - 1
-    - Example - `/random/?n=6` 
+- Setup and tooling 
+    - There are a few steps required to set up Redux
+    - There is a learning curve
 
-#### Testing the API
+- https://redux.js.org
 
-You should test the API for yourself to make sure everything is running. Follow the instructions above and launch the Express Server.
+## The Flux Pattern
 
-There are three endpoints and each returns JSON. Type these into the address bar of the browser or just click the links below: 
+## The problem
 
-- [http://localhost:4000](http://localhost:4000)
-- [http://localhost:4000/about](http://localhost:4000/about)
-- [http://localhost:4000/random/?n=6](http://localhost:4000/random/?n=6)
+Typically our apps use two-way communication. This creates a complex mashup that invites problems as apps grow in complexity. 
 
-Notice each of these endpoints returns JSON. The browser should display this. 
+![image-1.png](images/image-1.png)
 
-The last endpoint in the list above includes query params. Try changing the value here and check the results. 
+## The solution
 
-### Unit testing 
+One way data flow.
 
-Unit testing is the idea of testing your software in units. A unit is usually a method with a single output. 
+Redux enforces a one-way data flow. This creates reliable and reproducible 
+results. Redux has four parts:
 
-Unit testing is done with software. That is your wiring software that runs your software and tests it along the way. 
+- action - action creators
+- dispatcher - reducers
+- store 
+- views - React Components
 
-Why unit test?
+![image-2.png](images/image-2.png)
 
-- It's professional best practice
-- All of the big companies use it
-- Makes better more reliable code
+## Views may generate actions 
 
-## Testing with Jest
+When a view issues an action it flows through the system. 
 
-Jest is a test library from the FaceBook team. It's included as part of the Create-React-App boilerplate code. 
+![image-3.png](images/image-3.png)
+
+## Actions 
+
+An action is an Object with a type. 
+
+![image-4.png](images/image-4.png)
+
+## Action creators
+
+Action creators are methods that generate actions. While these are not required, it is best practice. 
+
+![image-5.png](images/image-5.png)
+
+## Reducers 
+
+Reducers make changes to state. A reducer is a function that takes in state and an action as parameters and returns **new state**. State is never modified! 
+Instead, **when state changes new state is created**. 
+
+![image-6.png](images/image-6.png)
+
+The store holds your application state. The only way to change state is to send actions to the dispatcher. 
+
+Unlike MVC Redux uses a unidirectional data flow. A View may generate actions
+it will **never interact with a data store directly**. 
+
+Instead, actions flow into the dispatch and are passed on to reducers which make the appropriate changes to state. Updated state flows into components
+via props. 
+
+## Store 
+
+The store contains a JavaScript object with properties that represent the state of your application. These properties hold the data that your application takes as input and displays in views. 
+
+![image-7.png](images/image-7.png)
+
+
+## Views send action the store sends data to views
+
+![image-8.png](images/image-8.png)
+
+## Example: Counter with Redux
+
+Create the Counter example with Redux. 
+
+### Counter Challenges 
+
+With the counter working try these challenges 
+
+- [easy] Add a reset button - Clicking this button should reset the counter to 0
+	- You'll need to add a `RESET` action and a `reset` action creator. You'll need to modify the reducer to handle this action. 
+- [easy] Set the count amount - Allow the increment and decrement actions to increase or decrease the count by any amount. Currently these actions change the count by adding or subtracting 1. Modify these actions to control the amount of change by any amount. While you can just change the amount of the increase or decrease in the reducer the goal of this challenge is to do this from where you call the `increase` and `decrease` actions. 
+- [moderate] Handle a list of counter - Rather than storing a single counter you need to store an array of counters. This requires some retooling. 
+	- State needs to be an array
+	- To increase a counter the actions need to know the index of the counter
+	- Display a list of counters
+- [moderate] Add an add counter button - 
 
 ## After Class
 
-**Express API Server 3hrs**
-
-- Complete the challenges in the [React Expres Server](https://github.com/Product-College-Labs/react-express-server) Demo project.
-
-| -        | Does not meet expectations | Meets expectations       | Exceeds expectations |
-|:---------|:---------------------------|:-------------------------|:---------------------|
-| Completed| Did not complete    | Completed tutorial     | Solved some or all challenges |
-| Functional| Is not functional   | Base tutorial functional | Challenges are functioning |
-| Code quality | Indentation is bad spacing is inconsistent | Uses consistent indentation and spacing | Well written and well commented |
-| Work Ethic | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
+- Continue the custom project 
+- [Starter project](https://github.com/Make-School-Labs/react-redux-counter) for tutorial
+- Follow this [tutorial](https://www.youtube.com/watch?v=qeY73Ja6KLM&list=PLoN_ejT35AEjvJwYyPCo3WTpZDpdlGrRu) to review Redux
 
 ## Additional Resources
 
-1. 
+1. https://facebook.github.io/flux/docs/in-depth-overview.html
+1. https://redux.js.org

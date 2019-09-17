@@ -2,6 +2,8 @@
 
 # Present final projects 
 
+Lets see your final project. 
+
 ## Learning Objectives/Competencies
 
 1. Observe and identify what is working and what is not working 

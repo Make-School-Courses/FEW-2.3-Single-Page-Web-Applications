@@ -1,11 +1,10 @@
 # FEW 2.3 - Lesson 12
 
-# Testing
+# TBA/Lab
 
 ## Learning Objectives/Competencies
 
-1. Uses Jest
-1. Write tests 
+-  
 
 ## Initial Exercise
 

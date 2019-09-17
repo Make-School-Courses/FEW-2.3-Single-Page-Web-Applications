@@ -1,14 +1,14 @@
-# FEW 2.3 - Lesson 8
+# FEW 2.3 - Lesson 6
 
 ## Defining your custom project
 
 To really own your learning you need to build something that you are invested in. The goal for this class is to define your custom project and set a list of weekly milestones that take it from concept to completion from now to the end of the term. 
 
-#### Questions
+### Questions
 
 Q: What is required?
 
-- The project should react and be a Single Page Application
+- The project should react and be a Single Page Application using React
 - The project is due for review class 11. Why this date?
 	- This will give you time for other class projects that are due class 12 and 13
 	- It will give you a chance for review and revision before the end of the term.
