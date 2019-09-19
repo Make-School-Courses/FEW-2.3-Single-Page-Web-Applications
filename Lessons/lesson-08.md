@@ -79,9 +79,22 @@ Review Redux, take a second tour through the elements that make up the Redux sys
 	- `mapStateToProps()`
 	- `mapDispatchToProps()`
 
-## Identify questions issues with Redux in your projects
+## Tutorial Project Questions 
 
-Redux is a complex system. Let's take a look at your current project and identify the areas where it works and you're not sure why, where it doesn't work, and solve any issues. 
+- Write them on the board and discuss
+
+## In Class Challenges 
+
+Try some challenges with Redux. These build on the Counter project covered in class 7. 
+
+- Increment all button
+	- Clicking this button should increase all counters by 1
+- Decrement All button
+	- CLicking subtracts 1 from all counters
+- Add Counter button
+	- Clicking this button adds a new counter to the list with a value of 0
+- Add a delete button to each counter
+	- Clicking one of these buttons removes the counter it is associated with from the list
 
 ## After Class
 
