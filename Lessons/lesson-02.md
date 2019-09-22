@@ -244,7 +244,7 @@ Using the starter project try the following challenges with Map, Filter, and Red
 
 ## Homework
 
-- [Product List Challenges](../Assignments/Assignment-02.md)
+- [Assignment - 2 - Product List Challenges](../Assignments/Assignment-02.md)
 
 ## Additional Resources
 

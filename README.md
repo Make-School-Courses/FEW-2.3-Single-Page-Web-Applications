@@ -41,7 +41,7 @@ By the end of the course, you will be able to ...
 |  2 | Thu, Aug 29  | [map, Filter, Reduce, and Lists in React](Lessons/lesson-02.md) | [Assignment 2](Assignments/Assignment-02.md) |
 |  3 | Tue, Sept 3  | [State and APIs](Lessons/lesson-03.md) | [Assignment 3](Assignments/Assignment-03.md) |
 |  4 | Thu, Sept 5  | [Technical Debt](Lessons/lesson-04.md) | [Assignment 4](Assignments/Assignment-04.md) |
-|  5 | Tue, Sept 10 | [React Router](Lessons/lesson-05.md) | [Assignment 7](Assignments/Assignment-05.md) |
+|  5 | Tue, Sept 10 | [React Router](Lessons/lesson-05.md) | [Assignment 5](Assignments/Assignment-05.md) |
 |  6 | Thu, Sept 12 | [Thinking in Components](Lessons/lesson-06.md) | [Assignment 8](Assignments/Assignment-08.md) |
 |  7 | Tue, Sept 17 | [State Management Part 1](Lessons/lesson-07.md) | [Assignment 9](Assignments/Assignment-09.md) |
 |  8 | Thu, Sept 19 | [State Management Part 2](Lessons/lesson-08.md) | [Assignment 10](Assignments/Assignment-10.md) | 
