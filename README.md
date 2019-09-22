@@ -46,11 +46,11 @@ By the end of the course, you will be able to ...
 |  7 | Tue, Sept 17 | [State Management Part 1](Lessons/lesson-07.md) | [Assignment 6](Assignments/Assignment-06.md) |
 |  8 | Thu, Sept 19 | [State Management Part 2](Lessons/lesson-08.md) | - | 
 |  9 | Tue, Sept 24 | [State Management Part 3](Lessons/lesson-09.md) | - |
-| 10 | Thu, Sept 26 | [React and Express Part 1](Lessons/lesson-10.md) | [Assignment 5](Assignments/Assignment-05.md) |
-| 11 | Tue, Oct 1   | [React and Express Part 2](Lessons/lesson-11.md) | [Assignment 6](Assignments/Assignment-06.md) |
-| 12 | Thu, Oct 3   | [TBA](Lessons/lesson-12.md) | [Assignment 12](Assignments/Assignment-12.md) |
-| 13 | Tue, Oct 8   | [Present Final Projects](Lessons/lesson-13.md) | [Assignment 13](Assignments/Assignment-13.md) |
-| 14 | Thu, Oct 10  | [Final Assessment](Lessons/lesson-14.md) | [Assignment 14](Assignments/Assignment-14.md) |
+| 10 | Thu, Sept 26 | [React and Express Part 1](Lessons/lesson-10.md) | [Assignment 7](Assignments/Assignment-07.md) |
+| 11 | Tue, Oct 1   | [React and Express Part 2](Lessons/lesson-11.md) | [Assignment 8](Assignments/Assignment-08.md) |
+| 12 | Thu, Oct 3   | [TBA](Lessons/lesson-12.md) | - |
+| 13 | Tue, Oct 8   | [Present Final Projects](Lessons/lesson-13.md) | - |
+| 14 | Thu, Oct 10  | [Final Assessment](Lessons/lesson-14.md) | - |
 
 ## Projects 
 
@@ -77,6 +77,11 @@ During the course of the class you will build the following projects:
 1. React + Redux Tutorial - Your choice of tutorial exploring React and Redux
     - [Assignment 6](Assignments/Assignment-06.md)
     - [Assignment 6 Rubric](Assignment/Assignment-06-rubric.md)
+1. React + Express - Setup a react App that works with an Express Server
+    - [Assignment 7](Assignments/Assignment-07.md)
+    - [Assignment 7 Rubric](Assignment/Assignment-07-rubric.md)
+    - [Assignment 8](Assignments/Assignment-08.md)
+    - [Assignment 8 Rubric](Assignment/Assignment-08-rubric.md)
 
 ## Evaluation 
 
