@@ -52,7 +52,33 @@ By the end of the course, you will be able to ...
 | 13 | Tue, Oct 8   | [Present Final Projects](Lessons/lesson-13.md) | [Assignment 13](Assignments/Assignment-13.md) |
 | 14 | Thu, Oct 10  | [Final Assessment](Lessons/lesson-14.md) | [Assignment 14](Assignments/Assignment-14.md) |
 
-## Evaluation *************
+## Projects 
+
+During the course of the class you will build the following projects: 
+
+1. React Fundamentals Tutorial - The end goal of this assignment is to make a web site with React. The suggested project is a personal portfolio. 
+  - Project foundation with basic components
+    - [React Fundamentals Tutorial](https://www.makeschool.com/academy/track/react-fundamentals-vm0)
+    - [Assignment 1](Assignments/Assignment-01.md)
+    - [Assignment 1 Rubric](Assignments/Assignment-01-rubric.md)
+  - Use dynamic data and Array.map() to render components
+    - [Assignment 4](Assignments/Assignment-04.md)
+    - [Assignment 4 Rubric](Assignments/Assignment-04-rubric.md)
+  - Add React Router
+    - [Assignment 5](Assignments/Assignment-05.md)
+    - [Assignment 5 Rubric](Assignments/Assignment-05-rubric.md)
+1. React Product Lister - Use stateful React Components and keys and lists. Use map, filter, and reduce
+  - [React Product Lister](https://github.com/Make-School-Labs/react-product-list)
+  - [Assignment 2](Assignments/Assignment-02.md)
+  - [Assignment 2 Rubric](Assignments/Assignment-02-rubric.md)
+1. React State and APIs project - Weather app loads data from an online API.
+  - [Assignment 3](Assignments/Assignment-03.md)
+  - [Assignment 3 Rubric](Assignment/Assignment-01-rubric.md)
+1. React + Redux Tutorial - Your choice of tutorial exploring React and Redux
+  - [Assignment 6](Assignments/Assignment-06.md)
+  - [Assignment 6 Rubric](Assignment/Assignment-06-rubric.md)
+
+## Evaluation 
 
 To pass this course you must meet the following requirements:
 
