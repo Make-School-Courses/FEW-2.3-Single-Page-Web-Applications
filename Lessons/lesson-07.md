@@ -167,11 +167,12 @@ With the counter working try these challenges
 
 ## After Class
 
-- Continue the custom project 
-- [Starter project](https://github.com/Make-School-Labs/react-redux-counter) for tutorial
-- Follow this [tutorial](https://www.youtube.com/watch?v=qeY73Ja6KLM&list=PLoN_ejT35AEjvJwYyPCo3WTpZDpdlGrRu) to review Redux
+- [Assignment 6 Redux Tutorial](../Assignments/Assignment-06.md)
+- Continue the custom project
 
 ## Additional Resources
 
 1. https://facebook.github.io/flux/docs/in-depth-overview.html
 1. https://redux.js.org
+1. [Starter project](https://github.com/Make-School-Labs/react-redux-counter) for tutorial
+1. Follow this [tutorial](https://www.youtube.com/watch?v=qeY73Ja6KLM&list=PLoN_ejT35AEjvJwYyPCo3WTpZDpdlGrRu) to review Redux
