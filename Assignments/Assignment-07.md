@@ -2,11 +2,11 @@
 
 ## Description 
 
-Contributing to code bases is how a lot of work is done and how you might be expected to work in many jobs. Open source is also an important piece of 
+In this assignment you will find an issue in one of several projects, makes changes, or updates, possible add a new feature, or fix a bug then push your changes that will be merged into the code base. 
 
 ### Why this assignment?
 
-
+Working on open source projects is cool, and great experience. It also looks great on your resume. Working on issues and pushing changes to a code base is common practice for software engineers on the job. 
 
 ## Project requirements
 
@@ -23,18 +23,22 @@ Contributing to code bases is how a lot of work is done and how you might be exp
 
 ### Challenges 
 
+- Choose a project from the list above to work on.
+- Read the issues in the chosen repo and pick one that you want to solve. The issues range from easy: adding documentation to hard problems like adding new features and fixing bugs. 
+- Read the contributing.md in the chosen repo. Follow the instructions. 
 
+Stretch Goal - try more than one issue
 
 ### Deliverable
 
- 
+Pull Request to one of the repos is accepted and merged
 
 ### Due date
 
-Class #
+Class 10
 
-## Assessing the assignment
+<!-- ## Assessing the assignment -->
 
-[Assignment Name Rubric](./Assignment-01-rubric.md)
+<!-- [Assignment Name Rubric](./Assignment-08-rubric.md) -->
 
 
