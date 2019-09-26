@@ -106,16 +106,7 @@ Jest is a test library from the FaceBook team. It's included as part of the Crea
 
 ## After Class
 
-**Express API Server 3hrs**
-
-- Complete the challenges in the [React Expres Server](https://github.com/Product-College-Labs/react-express-server) Demo project.
-
-| -        | Does not meet expectations | Meets expectations       | Exceeds expectations |
-|:---------|:---------------------------|:-------------------------|:---------------------|
-| Completed| Did not complete    | Completed tutorial     | Solved some or all challenges |
-| Functional| Is not functional   | Base tutorial functional | Challenges are functioning |
-| Code quality | Indentation is bad spacing is inconsistent | Uses consistent indentation and spacing | Well written and well commented |
-| Work Ethic | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
+- [Assignment 8](../Assignments/Assignment-08.md)
 
 ## Additional Resources
 
