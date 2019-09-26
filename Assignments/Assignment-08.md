@@ -10,28 +10,21 @@ This is a comment setup you might as well know how to do it. By following this p
 
 ## Project requirements
 
- Find an issue and push a solution. Explore the issues in the projects below and find one that you are confortable working on. Develop a solution and submit a pull request. 
+Donwload the starter project and setup your express server. 
 
-- [Tetris Redux App](https://github.com/soggybag/tetris-redux-app)
-    - [issues](https://github.com/soggybag/tetris-redux-app/issues)
-- [Simple Journal](https://github.com/soggybag/simple-journal)
-    - [issues](https://github.com/soggybag/simple-journal/issues)
-- [Course Book React](https://github.com/soggybag/course-book-react)
-    - [issues](https://github.com/soggybag/course-book-react/issues)
-- [SF Public Spaces](https://github.com/soggybag/sf-public-spaces)
-    - [issues](https://github.com/soggybag/sf-public-spaces/issues)
+- https://github.com/Make-School-Labs/react-express-server
 
 ### Challenges 
 
-
+Solve the challenges in the Read me of the starter project. With this project setup and problems solved in the next class you will create and connect a React Front end to this express back end. 
 
 ### Deliverable
 
- 
+- 
 
 ### Due date
 
-Class #
+Class 11
 
 ## Assessing the assignment
 
