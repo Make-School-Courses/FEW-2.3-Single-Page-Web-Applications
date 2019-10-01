@@ -4,15 +4,27 @@
 
 The goal this class is to take the work from last class and connect a React front end to your Express server.
 
+
+---
+
+
 ## Introduction 
 
 Frontend applications often need to communicate with backend applications. The goal in this lesson is to connect React with Express.
+
+
+---
+
 
 ## Learning Objectives 
 
 - Use Proxy to connect two local servers
 - Connect front end and back end systems
 - Use your own API to excahnge JSON with server
+
+
+---
+
 
 ## Proxy
 
@@ -28,6 +40,10 @@ Proxy is an option in package.json.
 
 `"proxy": "http://localhost:4000",`
 
+---
+
+**Important!** Intersting details
+
 From what I can tell requests to root `/` are still sent to the default address. While requests any other address are sent to the proxy. For example in this project running on port 3000, with proxy 
 
 - `/` -> `http://localhost:3000`
@@ -38,12 +54,20 @@ It doesn't mention this in the docs, that I could find, but seemed to be the cas
 
 https://docs.npmjs.com/misc/config#proxy
 
+
+---
+
+
 ## Getting started
 
 Download the demo project for this lesson [here](https://github.com/Product-College-Labs/react-express-project). Set up and then run the project: 
 
 - `npm install`
 - `npm start`
+
+
+---
+
 
 The demo project was created with Create React App and should open in a browser and be hosted at localhost:3000. You can check the address in the address bar. 
 
@@ -58,6 +82,10 @@ Launch the server by opening a new terminal window and navigating to the directo
 - `node server.js` or `nodemon server.js`
 
 Refresh the React project in the browser. You should see the "about" message display and a random number. This data came from the server you just launched! 
+
+
+---
+
 
 ### Tour the Demo Project 
 
@@ -77,6 +105,10 @@ app.listen(port, () => console.log(`LISTENING ON PORT ${port}`))
 Here is where the port for this application is set to 4000 and the server is launched with that port. 
 
 From this point, when both applications are running, the React project will run at **localhost:3000** but it will make network requests to **localhost:4000**. The express project will be running at **localhost:4000** and respond to requests from there. 
+
+
+---
+
 
 ## Planning your custom project
 
