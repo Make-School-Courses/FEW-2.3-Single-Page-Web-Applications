@@ -4,9 +4,9 @@ Your goal is to create a React application with the components and features desc
 
 The Problems below are presented in order of complexity. Doing them in order will be easier. 
 
-Complete each step to the best of your ability. I have listed a point value for each step. Solve as much of step as you can partial credit will be awarded. 
+Complete each step to the best of your ability. I have listed a point value for each step. Solve as much of each step as you can partial credit will be awarded. 
 
-Do not post this project to GitHub! Instead you will submit your work to me by first removing the node_modules folder then copying your work to my USB drive.
+Do not post this project to GitHub! Instead you will submit your work to me by first **removing the node_modules** folder then copying your work to my USB drive.
 
 ## Getting started (10pts)
 
@@ -16,7 +16,7 @@ Create a React Project and name it with 'final' and your first and last name:
 
 `final-<first>-<last>`
 
-I should be able to run this project with `npm start`.
+I should be able to run your project with `npm start`.
 
 ## Home Components (10pts)
 
@@ -30,7 +30,7 @@ In this step you are creating two Components `Home` and `Title` and using the `T
 
 Create a 'Clicker' component. 
 
-Create a new **Clicker** Component that displays a _button_ and the _Title_ component you created earlier.  
+Create a new **Clicker** Component that displays a _button_ and an instance of the _Title_ component you created in the previous step.  
 
 This component should count the number of times the button was clicked and display the count in the Title. Use state to track the count. 
 
@@ -103,7 +103,51 @@ Create three routes to display each of the three components you created in the e
 
 Create a link for each of these routes. 
 
-I should be able to click one of the links and see one of the components. 
+I should be able to click one of the links and see one of the components.
+
+### Extra Credit - Display planets and starships
+
+The Star Wars API (SWAPI) can display information about people, planets, or starships. 
+
+- people - `https://swapi.co/api/people/1/`
+- planets - `https://swapi.co/api/planets/1/`
+- starships - `https://swapi.co/api/starships/1/`
+
+Your goal is to create a menu that offers these options. You can use: 
+
+```html
+<select>
+  <option>people</select>
+  <option>planets</select>
+  <option>starships</select>
+</select>
+```
+
+You'll need to connect this to state using the controlled component pattern. 
+
+When making a request you should get the "type" from the menu and the "id" number and put them together to make your request to SWAPI. 
+
+`https://swapi.co/api/<type>/<id>/`
+
+Note: There will be a problem with the data you return since the values returned are different for each type. For example: 
+
+- people
+  - name
+  - height 
+  - mass 
+  - hair_color
+- planets 
+  - name 
+  - diameter
+  - gravity
+  - climate
+- starships
+  - name 
+  - model 
+  - model
+  - cost_in_credits
+
+Solve the problem of displaying data for different types.
 
 ### Extra Credit - Displaying more information (10pts)
 
