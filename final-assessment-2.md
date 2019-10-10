@@ -101,9 +101,9 @@ Create three routes to display each of the three components you created in the e
 - Clicker
 - StarWars
 
-Create a link for each of these routes. 
+**Create a link for each of these routes.**
 
-I should be able to click one of the links and see one of the components.
+I should be able to click my way to each of the components.
 
 ### Extra Credit - Display planets and starships
 
