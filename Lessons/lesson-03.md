@@ -193,7 +193,7 @@ fetch('http://someurl.com').then((res) => {
 
 ## Homework
 
-[Addignment 3](../Assignments/Assignment-03.md)
+[Assignment 3](../Assignments/Assignment-03.md)
 
 ## Additional Resources
 
