@@ -6,7 +6,7 @@ The first goal for this class is to use React with a public web API.
 
 The second goal is to work with form elements and user input with React. React has a special pattern for this due to the way it handles the virtual DOM.
 
-Last, the goal will be to look conditional rendering techniques that can be implemented with React. 
+Last, the goal will be to look at conditional rendering techniques that can be implemented with React. 
 
 ## Objectives 
 
@@ -20,7 +20,7 @@ Last, the goal will be to look conditional rendering techniques that can be impl
 
 The demo project is a simple web app that displays weather data. You'll need to make an account and get a valid API key. 
 
-The project needs to accept user input for a zip code. Text input and other form elements use a special pattern in React called the _Controlled Component Pattern_. 
+The project needs to accept user input for a zipcode. Text input and other form elements use a special pattern in React called the _Controlled Component Pattern_. 
 
 ## Getting Started
 
@@ -34,9 +34,9 @@ Follow the instructions to set up and run the demo project.
 
 `REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY_HERE`
 
-**Pro tip!** 
+**Pro-tip!** 
 
-- The Create React App starter project is set up to use dotenv, you don't need to add this package. 
+- The Create React App starter project is set up to use `dotenv`, you don't need to add this package. 
 - Any environment variables you define **must** begin with `REACT_APP_`. This prevents clashes with environment variables that you may not be aware of. 
 
 Read more about [Adding Custom Environment Variables](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables)
@@ -75,7 +75,7 @@ The input should take a zip code so I set the placeholder to "enter zip" and use
 />
 ```
 
-The `value` and `onChange` attributes are used for the for the React input pattern.
+The `value` and `onChange` attributes are used for the React input pattern.
 
 ```JavaScript
 <input 
@@ -163,7 +163,7 @@ Look at Line 36 of App.js.
 
 Here you are getting a value stored in the dot env file stored in the key: `REACT_APP_OPENWEATHERMAP_API_KEY`. 
 
-**Important!** User defined keys must begin with "REACT_APP_"! 
+**Important!** User-defined keys must begin with "REACT_APP_"! 
 
 Open '.env' and define `REACT_APP_OPENWEATHERMAP_API_KEY` with your openweathermap API key. Something like: 
 
