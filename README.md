@@ -1,6 +1,8 @@
 # Single Page Applications
 
-Single Page Applications (SPAs) FTW!
+| Course Section | Instructor | Slack Channel | Course Website | Instructor 1-on-1 |
+| :---: | :---: | :---: | :---: | :---: |
+| A | **@mitchell** | `#few-2-3` | [make.sc/few2.3](https://make.sc/few2.3) | [Virtual Office](https://make.sc/mitchell-zoom) |
 
 ## Course Description
 
