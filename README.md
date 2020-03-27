@@ -23,7 +23,7 @@ If you want to build next-generation mobile experiences that reach the widest po
 
 ## Learning Outcomes
 
-By the end of the course, you will be able to ...
+By the end of the course, you will be able to:
 
 1. Design and implement Single Page Applications (SPAs)
 1. Identify and utilize Reactive Programming when building SPAs, and how it differs from other programming paradigms
@@ -33,6 +33,7 @@ By the end of the course, you will be able to ...
 1. Integrate SPAs with Express servers
 
 ## Schedule
+
 **Course Dates:** Tuesday, March 31 – Thursday, May 14, 2019 (7 weeks)
 
 **Class Times:** Tuesday and Thursday at 2:30–5:15pm (14 class sessions)
