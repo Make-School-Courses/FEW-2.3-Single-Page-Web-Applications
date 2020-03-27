@@ -40,7 +40,7 @@ By the end of the course, you will be able to:
 
 | Class | Date | Topics | Assignment |
 |:------|:-----|:-------|:----------|
-|  1 | Tue, March 31 | [Getting Started with React](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) |
+|  1 | Tue, March 31 | [Getting Started with React](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) React Tutorial |
 |  2 | Thu, April 2 | [map, Filter, Reduce, and Lists in React](Lessons/lesson-02.md) | [Assignment 2](Assignments/Assignment-02.md) |
 |  3 | Tue, April 7 | [State and APIs](Lessons/lesson-03.md) | [Assignment 3](Assignments/Assignment-03.md) |
 |  4 | Thu, April 9 | [Technical Debt](Lessons/lesson-04.md) | [Assignment 4](Assignments/Assignment-04.md) |
