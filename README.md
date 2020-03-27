@@ -31,26 +31,26 @@ By the end of the course, you will be able to ...
 1. Integrate SPAs with Express servers
 
 ## Schedule
-**Course Dates:** Tuesday, August 27 – Thursday, October 10, 2019 (7 weeks)
+**Course Dates:** Tuesday, March 31 – Thursday, May 14, 2019 (7 weeks)
 
-**Class Times:** Tuesday and Thursday at 1:30–3:20pm (14 class sessions)
+**Class Times:** Tuesday and Thursday at 2:30–5:15pm (14 class sessions)
 
 | Class | Date | Topics | Assignment |
 |:------|:------|:-------|:----------|
-|  1 | Tue, Aug 27  | [Getting Started with React](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) |
-|  2 | Thu, Aug 29  | [map, Filter, Reduce, and Lists in React](Lessons/lesson-02.md) | [Assignment 2](Assignments/Assignment-02.md) |
-|  3 | Tue, Sept 3  | [State and APIs](Lessons/lesson-03.md) | [Assignment 3](Assignments/Assignment-03.md) |
-|  4 | Thu, Sept 5  | [Technical Debt](Lessons/lesson-04.md) | [Assignment 4](Assignments/Assignment-04.md) |
-|  5 | Tue, Sept 10 | [React Router](Lessons/lesson-05.md) | [Assignment 5](Assignments/Assignment-05.md) |
-|  6 | Thu, Sept 12 | [Thinking in Components](Lessons/lesson-06.md) | - |
-|  7 | Tue, Sept 17 | [State Management Part 1](Lessons/lesson-07.md) | [Assignment 6](Assignments/Assignment-06.md) |
-|  8 | Thu, Sept 19 | [State Management Part 2](Lessons/lesson-08.md) | - | 
-|  9 | Tue, Sept 24 | [State Management Part 3](Lessons/lesson-09.md) | - |
-| 10 | Thu, Sept 26 | [React and Express Part 1](Lessons/lesson-10.md) | [Assignment 7](Assignments/Assignment-07.md) |
-| 11 | Tue, Oct 1   | [React and Express Part 2](Lessons/lesson-11.md) | [Assignment 8](Assignments/Assignment-08.md) |
-| 12 | Thu, Oct 3   | [TBA](Lessons/lesson-12.md) | - |
-| 13 | Tue, Oct 8   | [Present Final Projects](Lessons/lesson-13.md) | - |
-| 14 | Thu, Oct 10  | [Final Assessment](Lessons/lesson-14.md) | - |
+|  1 | Tue, March 31 | [Getting Started with React](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) |
+|  2 | Thu, April 2 | [map, Filter, Reduce, and Lists in React](Lessons/lesson-02.md) | [Assignment 2](Assignments/Assignment-02.md) |
+|  3 | Tue, April 7 | [State and APIs](Lessons/lesson-03.md) | [Assignment 3](Assignments/Assignment-03.md) |
+|  4 | Thu, April 9 | [Technical Debt](Lessons/lesson-04.md) | [Assignment 4](Assignments/Assignment-04.md) |
+|  5 | Tue, April 14 | [React Router](Lessons/lesson-05.md) | [Assignment 5](Assignments/Assignment-05.md) |
+|  6 | Thu, April 16 | [Thinking in Components](Lessons/lesson-06.md) | - |
+|  7 | Tue, April 21 | [State Management Part 1](Lessons/lesson-07.md) | [Assignment 6](Assignments/Assignment-06.md) |
+|  8 | Thu, April 23 | [State Management Part 2](Lessons/lesson-08.md) | - | 
+|  9 | Tue, April 28 | [State Management Part 3](Lessons/lesson-09.md) | - |
+| 10 | Thu, April 30 | [React and Express Part 1](Lessons/lesson-10.md) | [Assignment 7](Assignments/Assignment-07.md) |
+| 11 | Tue, May 5 | [React and Express Part 2](Lessons/lesson-11.md) | [Assignment 8](Assignments/Assignment-08.md) |
+| 12 | Thu, May 7 | [TBA](Lessons/lesson-12.md) | - |
+| 13 | Tue, May 12 | [Present Final Projects](Lessons/lesson-13.md) | - |
+| 14 | Thu, May 14 | [Final Assessment](Lessons/lesson-14.md) | - |
 
 ## Projects 
 
