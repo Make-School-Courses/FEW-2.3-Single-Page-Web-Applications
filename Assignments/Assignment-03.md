@@ -11,7 +11,7 @@ Your goal is to modify the demo project. This project gets the Weather data from
 
 These the controlled component is important since you'll use it every time you use form elements like input fields, check boxes, and radios buttons. All of these are essential to web applications. 
 
-Conditionally rendering components is an important front end dcevlopment, it also opens a lot of possiblities to your apps. 
+Conditionally rendering components is an important front end development, it also opens a lot of possiblities to your apps. 
 
 ## Getting Started 
 

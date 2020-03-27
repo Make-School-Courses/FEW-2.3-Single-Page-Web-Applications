@@ -2,65 +2,43 @@
 
 ## Description 
 
-The goal of this assignment is to provide an introduction to React. It should produce a single web page. 
+Getting back into React. It may have been a some time since have worked with React this first assignment will get you back up to speed with React and refresh your memory on the workflow and processes of using React. 
 
-The web page produced by this assignment while appering like the sites you may have created in the past will be be very different in execution. 
+The goal of the assignment is to complete the React Tutorial. 
 
-The tutorial covers the following things. These are important foundational React concepts that will be used throughout the class and in every react project you might create in the future. 
+https://reactjs.org/tutorial/tutorial.html
 
-- Install Create React App
-  - Following the tutorial 
-    - Get the starter code and look through it.
-- Make a component 
-- Working with JSX 
-- ES6 modules import from and export and default
-- Nesting Components 
-- Get started
-  - Make a Repo for the tutorial
-  - Post a link to the repo in the tracker
-  - This should be completed By class 2
+If you've already done this tutorial there is an alternative assignment. 
 
-### Why this assignment?
+### Why do this assignment?
 
-React has some foundational concepts and work flows that need to be mastered. This assignment give you the opportunity to dig into these topics.  
+This tutorial was created by FaceBook's React team. It covers all of the features of React and is up to date. If you were to get an internship at FaceBook they might ask you to do this tutorial. You cna think of this tutorial as coming from the source. 
 
 ## Project requirements
 
-Your goal is to follow and complete this tutorial: 
+Complete the React tutorial here: https://reactjs.org/tutorial/tutorial.html
 
-- [React Fundamentals Tutorial](https://www.makeschool.com/academy/track/react-fundamentals-vm0)
+The tutorial offers options to working over CodePen or using create-react-app **you should use create-react-app** and create a Girhub repo which you will turn in as your completed work. 
 
-You will create a single web page using React. You will break all of the elements on the page down into Components that you write. Then you will build your page from the Components you created!
+Pair with other students while you work to solve problems and clarify concepts. Also feel free to book office hours with the instructor. 
 
-The subject for this assignment is your portfolio. The project should contain a heading with your name. The body of the pages should display a list of projects you have created with an image and short description. 
-
-Post your completed tutorial to GitHub and add a link to the Progress Tracker. 
+Add a link to your completed tutorial 
 
 ### Challenges 
 
-After you complete the tutorial try these challenges. Try to complete as many of these challenges as you can.  
+You must complete this by the due date. 
 
-- Make a component that displays a copyright message with the date in the footer. 
-    - You should be able to use the component like this: `<Copyright owner="Mitchell Hudson" />`
-    - It should display something like: "Mitchell Hudson © 2019"
-    - The Year should be generated automatically. Use the Date Object to get the current year. 
-- Add a Like Count to each project. This is fixed number that you can invent for each project.
-    - Pass the number of likes to each component as a prop.
-    - Display the number of likes in the Project component. 
-    - Apply a style to likes.
-- Add more styles to the project. This is an open ended challenge. 
-    - Style the header
-    - Style the footer
-    - Style the project
-- Add a new Info section that displays information about you. 
-    - This should be a new component.
-    - It should appear below your project and above the footer.
+1. Complete the tutorial 
 
-If you're looking for even tougher challenges try this stretch challenge. 
+#### Stretch Challenges
 
-**Stretch Challenge:** Complete the React tutorial from the React Team. This tutorial includes all of the React concepts in one place. We will be covering the concepts here in class later. If you want to get ahead you can practice here. 
+This is further work you can try to test your skills and further your knowledge.
 
-- [React Tutorial](https://reactjs.org/tutorial/tutorial.html)
+1. The tutorial includes several challenges in the [wrapping up](https://reactjs.org/tutorial/tutorial.html#wrapping-up) section. 
+1. Style the game. Add your own styles. This might include: 
+    - Setting the color and font styles
+    - Laying out the game. Currently the game is in the upper left corner it could be moved to center of the screen. 
+    - Adding a header and footer.
 
 ### Deliverable
 
@@ -68,7 +46,7 @@ A link to your completed project on GitHub in the course progress tracker.
 
 ### Due date
 
-Class 2
+Class 2 - April 2 
 
 ## Assessing the assignment
 

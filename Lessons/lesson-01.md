@@ -62,7 +62,7 @@ React describes itself as:
 
 > A JavaScript library for building user interfaces
 
-React is used for building user interfaces. It's the view in any system. It's a little more but building UI is what React was made to do. 
+React is used for building user interfaces. It's the view in any system. It's a little more but building UI is what React was made to do.
 
 ### Functional Programming 
 
