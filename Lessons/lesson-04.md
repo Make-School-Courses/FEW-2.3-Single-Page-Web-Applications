@@ -4,6 +4,12 @@
 
 This class you will work on improving the code base you've developed in the previous classes.
 
+## Learning Objectives
+
+1. Apply best practices by linting
+1. Define code quality
+1. Identify techincal debt
+
 ## Technical Debt
 
 Often while working on software projects the solutions you create are not the best. You won't even know it until later on. This is [Technical Debt](https://www.agilealliance.org/introduction-to-the-technical-debt-concept/).

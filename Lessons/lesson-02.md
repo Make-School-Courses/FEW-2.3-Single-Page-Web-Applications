@@ -4,50 +4,6 @@
 
 React is built on functional programming. This class you will look at some functional programming concepts in the context of React.
 
-## React collections and Keys
-
-What's a [collection](https://en.wikipedia.org/wiki/Collection_(abstract_data_type))?
-
-> In short a collection is an Array or an Object
-
-Often you will need to render Arrays of JSX components. You'll often have arrays of raw data that need to be converted into an array of JSX. 
-
-To do this we will delve into functional programming with `map`, `filter`, and `reduce`. 
-
-React will automatically iterate over a collection of JSX elements. To avoid error these elements need to have unique keys. 
-
-**tl;dr** Anytime you have an array of JSX elements each should have a unique key prop. For example: 
-
-```JS
-const things = [1,2,3,4].map((item, index) => {
-    return <p key={`thing-${index}`}>{item}</p>
-})
-```
-
-(if you're not familiar with `Array.map()` read more below)
-
-**Q: What are keys and why do they need to be unique?**
-
-**A:** Earlier we mentioned React's virtual DOM. This is React's system for managing components. The viritual DOM looks for changes to components, finds the things that change and updates only the elements that have been changed. 
-
-The purpose is effeciency and speed. Updating the DOM is a slow process in the browser. 
-
-To do this the React DOM renderer must keep track of elements uniquely. When you have lists of elements React asks that you provide a key fro each element in a list. 
-
-**Q: What is a key? (what kinds of values can be used as keys)**
-
-**A:** Any _unique_ value can be used as a key. You can use ids that come with data. You can generate your own values. These don't need to be special they only need to be unique. 
-
-A key value should uniquely idenitfy a list item. In other words it should be the same value each time the list is generated. 
-
-**Q: How do you _set_ a key?**
-
-**A:** The key is a prop. Set it like any other prop. 
-
-`<SomeComponent key='unique-1' />`
-
-Read more about React Lists and Keys here: https://reactjs.org/docs/lists-and-keys.html
-
 ## Learning Objectives/Competencies
 
 1. Organize code with ES6 Modules 
@@ -58,51 +14,19 @@ Read more about React Lists and Keys here: https://reactjs.org/docs/lists-and-ke
     - `Array.reduce()`
 1. Transform data with `Array.map()`
 
-## The Sample project 
-
-To get started download the sample project. This project was created with the Create React App starter. 
-
-[Product List Challenge](https://github.com/Product-College-Labs/react-product-list)
-
 ## ES6 Modules 
 
-The challenge project needs to display a list of categories and a list of products for those categories. All this information is in `inventory.js`.
+ES6 modules organize code by both file and scope. Code is written in a 'physical' file and variables and functions defined in those files are scoped to their file. 
 
-Your first job is to share this information with `App.js`. You can do just this with `import`.
+Variables and functions can be shared across modules using `export` and `import`. 
 
-Take a look at `inventory.js`. At the top of the file, the variable `inventory` is declared and assigned an array of objects.
+Take a read through the docs and see what it is has to say about modules: 
 
-Scroll to the bottom of the page. Here inventory is transformed filtered and sorted. And, another variable `categories` is declared and assigned a value.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-`inventory` holds the array of products you need to display, and `categories` holds the names of the categories of those products.
-
-**Export**
-
-These variables are shared with other modules by exporting them. Look for the two lines below: 
-
-```JS
-export var categories = _.uniq(c)
-export default inventory
-```
-
-The `export` statement allows these values to be shared from this 'Module'. Notice inventory is marked with `default` keyword. A module is a js file. Any module can export only a single **default** element! 
-
-(I used the [Lodash](https://lodash.com) library to sort the list of products and categories and create a unique list of the categories in the inventory array. This is not important to the lesson. Just know that `_.sortBy(inventory, 'category')` sorts the array inventory on the field 'category', and `_.uniq(c)` removes all duplicate entries in the array c)
-
-**Import**
-
-Import an exported value using the `import` statement. Take a look at `App.js`. At the top of the file you will see: 
-
-```JS
-import inventory, { categories } from './inventory'
-```
-Here inventory is the default export (it is outside the {}), and categories is not default (it is inside the {}).
-
-Look at the export statements above. Where `inventory` is exported it includes the keyword `default`. This makes `inventory` the default export. A module may only have one default export. 
+You will use modules in the homework to organize your code. 
 
 ## Functional Programming 
-
-Take a look at the example project. Look at the file 
 
 Functional programming is a paradigm or style of programming based on functions. This is different from Object Oriented Programming which based on Objects, or procedural programming which is based on procedures.  
 
@@ -170,6 +94,50 @@ The first parameter of reduce is a function, the second parameter is the startin
 
 The first param of reduce takes in the accumulator and the current value. The accumulator is the running total, and the current value is one of the items from the Array.
 
+## React collections and Keys
+
+What's a [collection](https://en.wikipedia.org/wiki/Collection_(abstract_data_type))?
+
+> In short a collection is an Array or an Object
+
+Often you will need to render Arrays of JSX components. You'll often have arrays of raw data that need to be converted into an array of JSX. 
+
+To do this we will delve into functional programming with `map`, `filter`, and `reduce`. 
+
+React will automatically iterate over a collection of JSX elements. To avoid error these elements need to have unique keys. 
+
+**tl;dr** Anytime you have an array of JSX elements each should have a unique key prop. For example: 
+
+```JS
+const things = [1,2,3,4].map((item, index) => {
+    return <p key={`thing-${index}`}>{item}</p>
+})
+```
+
+(if you're not familiar with `Array.map()` read more below)
+
+**Q: What are keys and why do they need to be unique?**
+
+**A:** Earlier we mentioned React's virtual DOM. This is React's system for managing components. The viritual DOM looks for changes to components, finds the things that change and updates only the elements that have been changed. 
+
+The purpose is effeciency and speed. Updating the DOM is a slow process in the browser. 
+
+To do this the React DOM renderer must keep track of elements uniquely. When you have lists of elements React asks that you provide a key fro each element in a list. 
+
+**Q: What is a key? (what kinds of values can be used as keys)**
+
+**A:** Any _unique_ value can be used as a key. You can use ids that come with data. You can generate your own values. These don't need to be special they only need to be unique. 
+
+A key value should uniquely idenitfy a list item. In other words it should be the same value each time the list is generated. 
+
+**Q: How do you _set_ a key?**
+
+**A:** The key is a prop. Set it like any other prop. 
+
+`<SomeComponent key='unique-1' />`
+
+Read more about React Lists and Keys here: https://reactjs.org/docs/lists-and-keys.html
+
 ## React collections and Keys 
 
 React will automatically display a collection of JSX elements in JSX. For example: 
@@ -233,18 +201,11 @@ In your stylesheet you might style this with:
 
 ## In Class 
 
-Using the starter project try the following challenges with Map, Filter, and Reduce. 
-
-- List all of the categories
-    - Map the array of strings to an array of JSX buttons. 
-    - Make a component for the category button
-- List all of the products 
-    - Map the inventory of Objects into an array of JSX components
-    - Make a component for the inventory item
+Start on [Assignment 2](../Assignments/Assignment-02.md). You'll be using map, filter, and reduce to solve some challenges here. 
 
 ## Homework
 
-- [Assignment - 2 - Product List Challenges](../Assignments/Assignment-02.md)
+- [Assignment 2](../Assignments/Assignment-02.md)
 
 ## Additional Resources
 

@@ -2,7 +2,14 @@
 
 Getting started with Single Page Applications and React. 
 
-## Single Page Applications (SPA)
+## Learning Objectives
+
+1. Create components
+1. Use JSX 
+1. Differentiate props and state 
+1. Define the virtual DOM
+
+## Single Page Applications
 
 Single Page Applications (SPA) are web pages that act as software applications. A traditional web site is made up several pages all linked, where the current web page is removed from memory when a new page is loaded.  A Single Page Application is a single web page that loads data and displays different content by changing the content of the current page without loading a new web page.
 
@@ -44,13 +51,6 @@ It's also popular with all of the big name companies.
 If you are going to master a single framework make it this one! It's hugely popular and all of the top companies are using it. Expect to see React on job applications and in use at companies you might apply to. 
 
 Beyond this React has moved frontend web development forward and laid the groundwork for modern front end systems. Expect future front end frameworks to build and evolve on what React has done. 
-
-## Learning Objectives
-
-1. Create components
-1. Use JSX 
-1. Differentiate props and state 
-1. Define the virtual DOM
 
 ## What is React?
 
