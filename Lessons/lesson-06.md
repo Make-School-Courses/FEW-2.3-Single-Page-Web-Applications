@@ -51,6 +51,20 @@ fetch('http://someurl.com').then((res) => {
 })
 ```
 
+## Promise 
+
+A Promise is object that is used to handle asynchornous actions. A Promise can be in one of three states: 
+
+- Pending - The async operation has not completed yet
+- Resolved - The async action resolved successfuly 
+- Rejected - The Async action failed
+
+Pair up and take a look at the examples here: 
+
+https://javascript.info/promise-basics
+
+Most often you'll use a Promise to handle network requests but Promises can also be returned when an operation in the browser happens on another thread or takes times to resolve. 
+
 ## Aync & await
 
 Async and await are keywords that work worh Promise. You could say they are "syntactic sugar" on top of Promise.
@@ -63,7 +77,15 @@ pair up and read a little more about async and await here:
 
 https://javascript.info/async-await
 
-Try the code samples here with your pair. 
+Try the code samples with your pair.
+
+### Handling Errors with Async Await
+
+Error handlign with Async and await is done with a try catch block. In a nutshell a try block gives you the opportunity to handle errors with out crashing. Normally when an error is thrown it brings your application to halt. Think of of a try block as being a safe place where you can try something and if it fails isolate it from the rest of your program. With catch you an try something and if it fails catch the error. 
+
+Pair up and read and try these examples: 
+
+https://javascript.info/try-catch
 
 ## After Class 
 
@@ -71,4 +93,5 @@ Continue working on assignment 3
 
 ## ReSources 
 
-- 
+- https://javascript.info/promise-basics
+- https://javascript.info/async-await
