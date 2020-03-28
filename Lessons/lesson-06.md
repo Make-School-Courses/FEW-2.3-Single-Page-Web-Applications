@@ -53,6 +53,22 @@ fetch('http://someurl.com').then((res) => {
 
 ## Aync & await
 
+Async and await are keywords that work worh Promise. You could say they are "syntactic sugar" on top of Promise.
 
+Async marks identifies an asyncronous function. An async function always returns a Promise! 
+
+Await only works within an async function. Use await at the beginning of any expression that would return a Promise. JavaScript will wait at that line until the Promise resolves. 
+
+pair up and read a little more about async and await here: 
+
+https://javascript.info/async-await
+
+Try the code samples here with your pair. 
 
 ## After Class 
+
+Continue working on assignment 3
+
+## ReSources 
+
+- 
