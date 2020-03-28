@@ -1,95 +1,161 @@
 # Class - FEW 2.3 - Assignment 2
 
+Map, Filter, Reduce
+
 ## Description 
 
-The goal of this assignment is to create a single page web site that displays and manages a list of projects. 
+Map, Filter, and Reduce are important methods. After you learn these you will wonder how you got by without them in the past, you will also want to use them often. 
 
-Along the way you will use:
+The best way to learn about map, filter, and reduce is to put them into use! 
 
-- key prop
-- functional programming with: 
-  - `Array.map()`
-  - `Array.filter()`
-  - `Array.reduce()`
+The purpose of this assignment is to get some practice with map, and reduce. You'll practice with filter in a future assignment. 
 
-### Why this assignment?
+Another purpose of this assignment is to set up the date that will be used in the following assignment. 
 
-React has some foundational concepts and work flows that need to be mastered. This assignment give you the opportunity to dig into these topics.  
+Last, the assignment will look at using modules in JS and using `import`, `from`, `export`, and `default`. You'll usde these to control the scope of code you write while limiting code that you share with other modules. 
+
+### Background 
+
+Here is an [awesome Tweet](https://twitter.com/steveluscher/status/741089564329054208?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E741089564329054208&ref_url=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fjavascript-map-reduce-and-filter-explained-with-examples%2F) that sums up Map, Filter, and Reduce
+
+> Map/filter/reduce in a tweet:
+> map([🌽, 🐮, 🐔], cook) -> [🍿, 🍔, 🍳]
+> filter([🍿, 🍔, 🍳], isVegetarian) ->  [🍿, 🍳]
+> reduce([🍿, 🍳], eat) -> 💩
+
+All three are methods of Array. 
+
+Use Map to transform all elements of an array. For example, take an array of objects and turn them into an array of Strings. Here you'd be starting with an array of Objects and creating an array of strings. Transform Object to String. 
+
+Use Filter to create a new Array that is a subset of the source array. For example, take an array of product objects and return an array of products with the category "Books". Here you'd have started with an array of products in all categories and create a new array of products of only one category. 
+
+Use Reduce to create a new value from a source array. Usually this will be a single value but there isn't any rule that says you can't make an object from an array. For example, you might take an array of products and get a sum of of the prices for all products. Here you started with an array of products and ended with a number. 
+
+https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
+
+### Why this assignment? 
+
+Besides being a step in a larger project that you will continue with in the next assignment, learing Map, Filter, and Reduce will make you a better programmer, while also giving you more options and better solutions to the programming problems you encounter. 
+
+Map, Filter, and Reduce are not esoteric oddities that you might use once in a blue moon, these are important tools that you can use in almost any programming problem that involves Arrays. They abstract three of the most common operations that programmers perform on data collections. 
 
 ## Project requirements
 
-Your goal is to solve the challenges in the sample project. 
+Create a new React Project with 
 
-### Getting started 
+`npx create-react-app react-product-list`
 
-Download the sample project:
+Copy the `data.json` file into your src directory. 
 
-- [React Product Lister](https://github.com/Make-School-Labs/react-product-list)
+Make a new "module". A module is just a JS file. Name your file: `data.js`
 
-Read the notes below then trya nd solve each of the [challenges](#challenges) in the **Challenges** section. 
+Anything you define in this file will be scoped to this file. 
 
-Use components to your advantage for this assignment. Whenever possible make a component to simplify your work. 
+**Modules only work in the the node environment.** If you can use `import`, `from` you are using modules. 
 
-The starter project provides a `categories` array and an `inventory` array in `inventory.js`. You can import these into any module with: 
+All variables and functions you define are scoped to the Module/file where they are defined. 
 
-`import inventory, { categories } from './inventory'`
+https://javascript.info/modules-intro
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-- `categories`: `[String]` an Array of category name Strings
-- `inventory`: `[Object]` an Array of Objects with the following properties
-  - `id`: `Number` a unique number id
-  - `name`: `String` a String name of product
-  - `description`: `String` a String description of product
-  - `price`: `String` a _String_ price with two decimal places
-  - `category`: `String` a String category name
+Import your JSON data into your module: 
 
-For example, the first product in the Array looks like this: 
+`import data from './data.json'`
 
-```JS
-{
-  'id':1,
-  'name':'Duobam',
-  'description':'Implemented even-keeled info-mediaries',
-  'price':'7.77',
-  'category':'Outdoors'
-}
-```
+JSON is text format but is easily translated into a JavaScript. Importing like this will convert the JSON data into an array of objects. 
 
-### Getting functional
+What's in data? The example data is an array of 
 
-Besides using React you will also explore and practice functional programming concepts with `Array.map()`, `Array.filter()`, and `Array.reduce`. 
 
-You will use [`Array.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to transform the inventory Objects into a JSX/Components to be displayed by React. 
-
-You will use [`Array.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) to filter the list of products displayed by category.
-
-The stretch challenges use [`Array.reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce).
 
 ## Challenges 
 
-Your goal is to follow the steps below and solve the challenges. 
+**Challenge 1** - Get the array of products. 
 
-You will fork this repo and start working on your fork. 
+Results:
 
-**You must commit each time you sit down to work on this project!**
+```JS
+[
+  { ... }, 
+  { ... }
+  ...
+]
+```
 
-This challenge should take about 3 hours. Be sure to plan that amount of time to spend on the challenges here. 
+**Challenge 2** - Get a list of all categories. Results: 
 
-**Getting Started**
+Results:
 
-1. Fork this Repo.
-1. Post a link to the progress tracker for class.
-1. `npm install` to install dependencies
-1. `npm start` to run the project at [http://localhost:3000](http://localhost:3000)
+```JS
+[
+  "Movies", 
+  "Grocery", 
+  "Baby", 
+  ... 
+]
+```
 
-From here as you work you should see changes refresh in the browser as you save files. If there is an error you will see this in the browser.
+**Challenge 3** - Make the categories list a list of unique values. 
 
-This project was bootstrapped with Create React App see the notes [here](notes/create-react-app-notes.md) for more information. 
+Results: as above but **no 
+values are duplicated.**
 
-### Coding Challenges
+**Challenge 4** - Make an Object whose keys are the names of categories and whose values are 
+the number of times that category appears in the data.
+Results: 
 
-**Level 1 challenge** 
+```JS
+{ Movies: 6, Grocery: 4, Baby: 7, ... }
+```
 
-Display the categories and products.
+**Challenge 5** - Use Reduce to make an array of objects that have a name and a count. This 
+array will be similar to Challenge 4 but in a different format. For this list all of the names 
+should be unique and each should only appear once!
+
+Results: 
+
+```JS
+[
+  {name: "Movies", count: 6}, 
+  {name: "Grocery", count: 4}, 
+  {name: "Baby", count: 7},
+  ...
+]
+```
+
+**Challenge 6** - Export all of the data you have collected. 
+
+- Export the data array as the default export. This array you imported from data.json. You can 
+just export it unchanged. 
+
+- Make sure you've given each of the other arrays and objects you've created good descriptive
+names and export those. 
+
+At this step you migth have something like this: 
+
+```JS 
+// The default export
+export default data 
+
+// The other exports
+export { categories, productCount, categoriesAndCount }
+```
+
+**Challenge 7** - Import your exported data into the App component. If the exports matched 
+the example is Challenge 6 the import would look like this: 
+
+```JS
+import data, { categories, productCount, categoriesAndCount } from './data'
+```
+
+Import your data into `App.js`.
+ 
+Display some of the information here: 
+
+- Display the number of products
+- Display the number of categories
+
+**Challenge 8** - Display the categories and products.
 
 1. Challenge: List all of the categories at the top of the page. 
   - Display the categories as buttons. 
@@ -101,9 +167,7 @@ Display the categories and products.
   - You can import the inventory Array into any module with `import inventory from './inventory'`.
   - `inventory` is an Array of Objects with properties: id, name, description, price, and category. See the notes above for more details. 
 
-**Level 2 Challenge**
-
-Add some interaction and functionality. The goal here is to click on a category button to filter the list of products so only products in the chosen category are displayed. 
+**Challenge 9** - Add some interaction and functionality. The goal here is to click on a category button to filter the list of products so only products in the chosen category are displayed. 
 
 1. Challenge: Clicking a category should display only products in that category.
   - The parent component, that is the component that is parent to both the product list and the category list, should define the current category on `this.state`.
@@ -120,9 +184,7 @@ Add some interaction and functionality. The goal here is to click on a category 
   })
   ```
 
-**Level 3 Challenges** 
-
-Use components! Whenever possible you should use a component. React uses a component architecture. The component architectrure is a really good thing it makes your projects easier to manage, keeps your code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), and makes your code more portable. 
+**Challenge 10** - Use components! Whenever possible you should use a component. React uses a component architecture. The component architectrure is a really good thing it makes your projects easier to manage, keeps your code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), and makes your code more portable. 
 
 1. Make a component that is a category button. 
   - Define this in a module/JS file. Something like: `category-button.js`
@@ -162,19 +224,14 @@ class Product extends Component {
 }
 ```
 
-
-**Level 4 Challenges**
-
-Unless you went rogue, the page is probably looking pretty bland. Better add some styles! 
+**Challenges 11** - Unless you went rogue, the page is probably looking pretty bland. Better add some styles! 
 
 1. Style the category buttons. Make them look like something people will want to click on. 
   - Use Flex box to put them all in a row. It's okay if they wrap, there are many categories. 
 1. Style the products in the list. 
   - Use CSS Grid. You can just set the number of columns with: `grid-template-columns` this should be enough to get all your pro**ducks** in a row so to speak. 
 
-**Level 5 Challenges**
-
-Handling the details. If you've got the items above worked out you'll realize the interface is not very satisfying. You can make it better! 
+**Challenges 12** - Handling the details. If you've got the items above worked out you'll realize the interface is not very satisfying. You can make it better! 
 
 1. Display All categories
   - Add one more button to the list of category buttons. It's label should "All".
@@ -184,9 +241,7 @@ Handling the details. If you've got the items above worked out you'll realize th
   - When generating the category elements check the category name against `this.currentCategory` if the names match assign a class to that element, something like `selected-category` remember to use `className` not `class`!
   - You'll need to take into account that the "All" button is it's own category and this category should display all the products! 
 
-**Level 6 Challenges** 
-
-Okay so you did all of the other challenges and you need something more to do, good for you! 
+**Challenges 13** - Okay so you did all of the other challenges and you need something more to do, good for you! 
 
 1. Use `Array.reduce()` to get the sum of all of the prices for all Products. 
   - Remember the prices are stored as Strings you'll need to convert these to numbers. Something like: `Number(item.price)` should work.  
@@ -195,17 +250,13 @@ Okay so you did all of the other challenges and you need something more to do, g
 3. Use `Array.reduce()` to count the number of products in each category. 
   - Display count for each category as "badge" next to the category label in each category button. 
 
-**Level 7 Challenge**
-
-The category buttons are useful. Currently they should display all of the items with a matching category. These buttons could be even more useful if you could select more than one category at a time! 
+**Challenge 14** - The category buttons are useful. Currently they should display all of the items with a matching category. These buttons could be even more useful if you could select more than one category at a time! 
 
 1. Allow for selecting multiple categories. For example selecting Toys, Automotive, and Music should show all of the inventory items that match any of these three categories. 
 2. The category selected category buttons should display showing they are currently selected. 
 3. Selecting the All button should deselect the other category buttons and show all inventoty items. 
 
-**Level 8 Challenge** 
-
-Add a shopping cart. The cart should display a list of items that have been added to the cart. Inlcude an Add to Cart button with each inventory item. 
+**Challenge 15** - Add a shopping cart. The cart should display a list of items that have been added to the cart. Inlcude an Add to Cart button with each inventory item. 
 
 1. Add a component that will display the shopping cart. 
 2. Inventory items need an add to cart button. Clicking this button should add the item to the cart. 
