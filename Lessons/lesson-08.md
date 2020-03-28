@@ -6,7 +6,7 @@ This class will cover Redux which is an application state management tool. Appli
 
 Redux is a JS library based on the Flux pattern that 
 
-## Learning Objectives/Competencies
+## Learning Objectives
 
 1. Define Reference and value types
 2. Identify references and values in JavaScript

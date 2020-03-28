@@ -6,7 +6,14 @@ The example project uses `fetch()` to load JSON data from the OpenWeatherMap API
 
 Read the comments here to follow the process. 
 
-### .env
+## Learning Objectives
+
+1. Use fetch to load data
+1. Display data based on application state
+1. Use environment variables to handle seinsitive information
+1. Define Promise it's uses and features 
+
+## .env
 
 The .env or "dot" env file is used to store sensitive information, like API keys! The Create React Starter project has support for .env baked in. 
 
@@ -24,7 +31,7 @@ Open '.env' and define `REACT_APP_OPENWEATHERMAP_API_KEY` with your openweatherm
 
 Make sure your API key is set here. 
 
-### Fetch
+## Fetch
 
 > Fetch is a browser API for fetching resources including resources across a network. 
 
@@ -43,5 +50,9 @@ fetch('http://someurl.com').then((res) => {
     console.log(err.message)
 })
 ```
+
+## Aync & await
+
+
 
 ## After Class 

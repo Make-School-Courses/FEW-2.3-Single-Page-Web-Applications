@@ -4,7 +4,13 @@
 
 Redux has many parts the best way to own them is review! 
 
-## Learning Objectives/Competencies
+## Learning Objectives
+
+1. Describe the Flux Pattern
+1. Describe Application State
+1. Describe Actions, Actions Creators, and Reducers
+
+## Tutorial concepts Review 
 
 Quick let's review everything. Identify the following in the tutorial projects. 
 
