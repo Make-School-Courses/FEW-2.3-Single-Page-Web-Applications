@@ -1,6 +1,6 @@
 # FEW 2.3 - Lesson 3
 
-# React API app 
+# React Input Pattern
 
 The first goal for this class is to use React with a public web API. 
 
@@ -95,101 +95,6 @@ This may seem a little strange, but it's important for two reasons.
 - It stores input values on `state` where they are easy to access when you need them without having to access the input and retrieve its value. 
 
 - [Controlled Components](https://reactjs.org/docs/forms.html)
-
-## Conditionally Rendering Components
-
-Commonly in React, you will need to render different components under different conditions. Here are two patterns you can apply to your work: 
-
-**Pattern 1** - Use a function to return one JSX expression or another based on state or props. 
-
-```JavaScript
-function toggle(hasMustard) {
-    if (hasMustard) {
-        return <HotdogWithMustard />
-    }
-    return <Hotdog />
-}
-```
-
-This is nice as it removes logic from cluttering your render method.
-
-**Pattern 2** - Assign a JSX element to variables and render that. 
-
-```JavaScript
-render() {
-    const { time } = this.state
-    let element
-    if (time === 'morning') {
-        element = <Eggs />
-    } else if (time === 'lunch') {
-        element = <Burrito />
-    } else {
-        element = <Icecream />
-    }
-
-    return (
-        <div>
-            {element}
-        </div>
-    )
-}
-```
-
-This might be good when you want to see the logic at the point where something is rendered. 
-
-Read more about [Conditional Rendering in React](https://reactjs.org/docs/conditional-rendering.html)
-
-Conditional Rendering techniques
-
-- A function returns a component
-- Element Variables
-- Inline if with logical && Operator
-- Inline if-else with Conditional Operator (ternary)
-- Prevent Component from rendering
-
-## Making Network Requests
-
-The example project uses `fetch()` to load JSON data from the OpenWeatherMap API. Take a look at the `handleSubmit()` method in App.js.
-
-Read the comments here to follow the process. 
-
-### .env
-
-The .env or "dot" env file is used to store sensitive information, like API keys! The Create React Starter project has support for .env baked in. 
-
-Look at Line 36 of App.js. 
-
-`const apikey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY`
-
-Here you are getting a value stored in the dot env file stored in the key: `REACT_APP_OPENWEATHERMAP_API_KEY`. 
-
-**Important!** User-defined keys must begin with "REACT_APP_"! 
-
-Open '.env' and define `REACT_APP_OPENWEATHERMAP_API_KEY` with your openweathermap API key. Something like: 
-
-`REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY_HERE`
-
-Make sure your API key is set here. 
-
-### Fetch
-
-> Fetch is a browser API for fetching resources including resources across a network. 
-
-Load JSON with `fetch` like this: 
-
-```JS
-// Call fetch
-fetch('http://someurl.com').then((res) => {
-    // Make a connection and handle the stream as JSON
-    return res.json()
-}).then((data) => {
-    // handle JSON data here
-    // ...
-}).catch((err) => {
-    // Handle error messages 
-    console.log(err.message)
-})
-```
 
 ## Homework
 

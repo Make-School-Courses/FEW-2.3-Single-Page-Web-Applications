@@ -1,6 +1,6 @@
 # FEW 2.3 - Lesson 11
 
-# React + Express
+# Final Project workshop
 
 The goal this class is to take the work from last class and connect a React front end to your Express server.
 

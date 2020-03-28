@@ -4,13 +4,7 @@
 
 This class you will work on improving the code base you've developed in the previous classes.
 
-## Building your Portfolio
-
-The goal for this class is to incorporate the ideas from the previous class into the portfolio project from class 1. 
-
-See the homework [Assignment 4](../Assignments/Assignment-04.md) for details. 
-
-<!-- ## Technical Debt
+## Technical Debt
 
 Often while working on software projects the solutions you create are not the best. You won't even know it until later on. This is [Technical Debt](https://www.agilealliance.org/introduction-to-the-technical-debt-concept/).
 
@@ -93,7 +87,7 @@ Apply the ideas from class to your portfolio project:
 
 [Assignment 4](../Assignments/Assignment-04.md)
 
-<!-- **Improve your Code Quality**
+**Improve your Code Quality**
 
 Using the linter review _all_ of the code you have written so far and lint!
 

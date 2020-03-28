@@ -1,6 +1,6 @@
 # FEW 2.3 - Lesson 7
 
-## Redux
+## Application State
 
 Redux is a tool for managing application state. If you've ever had trouble managing data, changes to data, or handling user input Redux might solve your problems! 
 

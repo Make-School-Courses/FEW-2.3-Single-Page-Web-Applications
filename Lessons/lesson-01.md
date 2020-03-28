@@ -140,8 +140,7 @@ What you need to know:
 
 ## After Class
 
-- Challenge: [React tutorial: Components](react-tutorial-1.md)
-- Stretch Challenge: [React tutorial](https://reactjs.org/tutorial/tutorial.html)
+- Challenge: [React tutorial](https://reactjs.org/tutorial/tutorial.html)
 
 ## Additional Resources
 
