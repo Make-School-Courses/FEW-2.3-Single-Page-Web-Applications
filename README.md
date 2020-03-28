@@ -49,7 +49,7 @@ By the end of the course, you will be able to:
 |  7 | Tue, April 21 | [Application State Management Part 1](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) Tutorial |
 |  8 | Thu, April 23 | [Redux](Lessons/lesson-08.md) | - | 
 |  9 | Tue, April 28 | [React and Express](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-5.md) |
-| 10 | Thu, April 30 | [React Hooks](Lessons/lesson-10.md) |  |
+| 10 | Thu, April 30 | [React Hooks](Lessons/lesson-10.md) | - |
 | 11 | Tue, May 5 | [Final Project workshop](Lessons/lesson-11.md) | - |
 | 12 | Thu, May 7 | [Final Project workshop](Lessons/lesson-12.md) | - |
 | 13 | Tue, May 12 | [Present Final Projects](Lessons/lesson-13.md) | - |
@@ -59,21 +59,10 @@ By the end of the course, you will be able to:
 
 During the course of the class you will build the following projects: 
 
-1. React Fundamentals Tutorial - The end goal of this assignment is to make a web site with React. The suggested project is a personal portfolio. 
-    - Project foundation with basic components
-        - [React Fundamentals Tutorial](https://www.makeschool.com/academy/track/react-fundamentals-vm0)
-        - [Assignment 1](Assignments/Assignment-01.md)
-        - [Assignment 1 Rubric](Assignments/Assignment-01-rubric.md)
-    - Use dynamic data and Array.map() to render components
-        - [Assignment 4](Assignments/Assignment-04.md)
-        - [Assignment 4 Rubric](Assignments/Assignment-04-rubric.md)
-    - Add React Router
-        - [Assignment 5](Assignments/Assignment-05.md)
-        - [Assignment 5 Rubric](Assignments/Assignment-05-rubric.md)
-1. React Product Lister - Use stateful React Components and keys and lists. Use map, filter, and reduce
-    - [React Product Lister](https://github.com/Make-School-Labs/react-product-list)
-    - [Assignment 2](Assignments/Assignment-02.md)
-    - [Assignment 2 Rubric](Assignments/Assignment-02-rubric.md)
+1. [React Review - React Tutorial](Assignments/Assignment-01.md)
+    - Start
+    - Due
+1. [Map, Filter, Reduce, and React](Assignments/Assignment-01.md)
 1. React State and APIs project - Weather app loads data from an online API.
     - [Assignment 3](Assignments/Assignment-03.md)
     - [Assignment 3 Rubric](Assignment/Assignment-01-rubric.md)
