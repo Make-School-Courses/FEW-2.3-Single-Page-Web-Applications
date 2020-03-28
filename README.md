@@ -40,15 +40,15 @@ By the end of the course, you will be able to:
 
 | Class | Date | Topics | Assignment |
 |:------|:-----|:-------|:----------|
-|  1 | Tue, March 31 | [Getting Started with React](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) React Tutorial |
+|  1 | Tue, March 31 | [Getting Started with React](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) - React Tutorial |
 |  2 | Thu, April 2 | [React Review](Lessons/lesson-02.md) | -  |
-|  3 | Tue, April 7 | [Map, Filter, and Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) Map, Filter, and Reduce products |
+|  3 | Tue, April 7 | [Map, Filter, and Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
 |  4 | Thu, April 9 | [Technical Debt](Lessons/lesson-04.md) | - |
-|  5 | Tue, April 14 | [React and APIs](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) React API |
+|  5 | Tue, April 14 | [React and APIs](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
 |  6 | Thu, April 16 | [Conditional Rendering](Lessons/lesson-06.md) | - |
-|  7 | Tue, April 21 | [Application State Management Part 1](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) Tutorial |
+|  7 | Tue, April 21 | [Application State Management Part 1](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
 |  8 | Thu, April 23 | [Redux](Lessons/lesson-08.md) | - | 
-|  9 | Tue, April 28 | [React and Express](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-5.md) |
+|  9 | Tue, April 28 | [React and Express](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-5.md) - Custom Project |
 | 10 | Thu, April 30 | [React Hooks](Lessons/lesson-10.md) | - |
 | 11 | Tue, May 5 | [Final Project workshop](Lessons/lesson-11.md) | - |
 | 12 | Thu, May 7 | [Final Project workshop](Lessons/lesson-12.md) | - |
