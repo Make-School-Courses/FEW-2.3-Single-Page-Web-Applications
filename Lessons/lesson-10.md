@@ -63,8 +63,42 @@ With objects you must use the keys to assign the values. So the new variables cr
 
 In the Array example on line 2 the new variables created can have any name and they are assigned value based of their index!
 
+### Why hooks? 
 
+React is based on **functional** react programming. At it's heart it's built from functional concepts. React isn't an Object Oriented library. The idea of having important parts of the system based on OOP code goes against it's underlying concetps. 
 
+Classes take a extra syntax to generate and more complex to decipher and debug. Functions are more straighforward to troubleshoot. 
+
+If you've ever been confused by `this` if you writing code that is only functions, removing classes, you won't have to workry about `this`.
+
+Hooks don't add a ny breaking changes. Use them if like or not if you don't. 
+
+You should expect to see Hooks in code samples online so it pays to understand them even if you don't use them. 
+
+## Lifecycle methods and Hooks 
+
+```JS
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
 
 ## After Class
 
