@@ -4,27 +4,15 @@
 
 The goal this class is to take the work from last class and connect a React front end to your Express server.
 
-
----
-
-
-## Introduction 
-
-Frontend applications often need to communicate with backend applications. The goal in this lesson is to connect React with Express.
-
-
----
-
-
 ## Learning Objectives 
 
 - Use Proxy to connect two local servers
 - Connect front end and back end systems
 - Use your own API to excahnge JSON with server
 
+## Introduction 
 
----
-
+Frontend applications often need to communicate with backend applications. The goal in this lesson is to connect React with Express.
 
 ## Proxy
 
