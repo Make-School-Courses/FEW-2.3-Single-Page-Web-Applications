@@ -2,14 +2,27 @@
 
 Getting started with Single Page Applications and React. 
 
-## Learning Objectives
+| **Elapsed** | **Time** | **Activity** |
+| ----------- | --------- | ------------ |
+| 0:05 | 0:05 | [Learning Objectives](#class-learning-objectives) |
+| 0:35 | 0:15 | [Projects](#projects) |
+| 0:50 | 0:15 | [Canvas](#canvas) |
+| 1:40 | 0:50 | [Lab: Break Out Tutorial](#lab) |
+| 1:50 | 0:10 | [Break](#break) |
+| 2:20 | 0:30 | Review progress on Tutorial |
+| 2:40 | 0:10 | Review Homework |
+| 2:45 | 0:05 | Review objectives |
+
+## Overview
+
+### Learning Objectives
 
 1. Create components
 1. Use JSX 
 1. Differentiate props and state 
 1. Define the virtual DOM
 
-## Single Page Applications
+### Single Page Applications
 
 Single Page Applications (SPA) are web pages that act as software applications. A traditional web site is made up several pages all linked, where the current web page is removed from memory when a new page is loaded.  A Single Page Application is a single web page that loads data and displays different content by changing the content of the current page without loading a new web page.
 
@@ -19,7 +32,9 @@ SPAs are the way web pages of more than minimal complexity are created these day
 
 ![dilbert-killer-app.gif.png](dilbert-killer-app.gif.png)
 
-## What is React 
+## Lecture
+
+### Why Learn React
 
 React is one of the most popular web frameworks available today and with good reason. It's fast efficient and has a great workflow and developer experience. 
 
@@ -52,7 +67,7 @@ If you are going to master a single framework make it this one! It's hugely popu
 
 Beyond this React has moved frontend web development forward and laid the groundwork for modern front end systems. Expect future front end frameworks to build and evolve on what React has done. 
 
-## What is React?
+### What is React?
 
 What does the React team have to say about React? 
 
@@ -64,7 +79,7 @@ React describes itself as:
 
 React is used for building user interfaces. It's the view in any system. It's a little more but building UI is what React was made to do.
 
-### Functional Programming 
+### Functional Programming
 
 React is built on Functional Reactive programming. In a nutshell, functional programming is programming with functions. FP avoids mutable data and shared state. 
 
@@ -76,11 +91,11 @@ An Event Stream is like an Array of events. Arrays map things in space. Event st
 
 React uses Reactive Programming to create a front end architecture that updates views with streams of events as they occur in time. Changing a value will update a view in React.  
 
-## React core features
+### React core features
 
 React is built on three core features: Components, JSX, and Virtual DOM.     
 
-### Components 
+#### Components 
 
 **Components encapsulate state and view**. A component updates its view in response to changing values. 
 
@@ -94,7 +109,7 @@ What you need to know:
 - Components are objects. You can make instances of them. 
 - Components encapsulate both logic (methods and code), state (properties), and a view (components render themselves.)
 
-### JSX
+#### JSX
 
 **JSX is an extension of the JavaScript language**. It allows you to write code using an XML like syntax alongside regular JavaScript. 
 
@@ -109,7 +124,7 @@ What you need to know:
 - JSX compiles to _vanilla JavaScript_ 
 - JSX has its own _special syntax_ (More on this in the tutorial)
 
-### Virtual DOM 
+#### Virtual DOM 
 
 **Updating the DOM is a slow operation**. To speed this up React creates a virtual DOM. Manipulating the virtual DOM is much faster than manipulating the DOM directly.
 
