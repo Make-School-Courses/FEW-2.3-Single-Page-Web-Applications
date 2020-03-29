@@ -1,4 +1,4 @@
-# Single Page Applications
+# FEW 1.2 - Single Page Applications
 
 | Course Section | Instructor | Slack Channel | Course Website | Instructor 1-on-1 |
 | :---: | :---: | :---: | :---: | :---: |
