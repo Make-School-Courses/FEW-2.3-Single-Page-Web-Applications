@@ -39,10 +39,10 @@ By the end of the course, you will be able to:
 **Class Times:** Tuesday and Thursday at 2:30–5:15pm (14 class sessions)
 
 | Class | Date | Topics | Assignment |
-|:------|:-----|:-------|:----------|
+|:------|:-----|:-------|:-----------|
 |  1 | Tue, March 31 | [Single Page Applications](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) - React Tutorial |
-|  2 | Thu, April 2 | [Map, Filter, and Reduce](Lessons/lesson-02.md) | -  |
-|  3 | Tue, April 7 | [React Input Pattern](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
+|  2 | Thu, April 2 | [React Review](Lessons/lesson-02.md) | - |
+|  3 | Tue, April 7 | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
 |  4 | Thu, April 9 | [Technical Debt](Lessons/lesson-04.md) | - |
 |  5 | Tue, April 14 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
 |  6 | Thu, April 16 | [Making Network Requests](Lessons/lesson-06.md) | - |
@@ -60,20 +60,10 @@ By the end of the course, you will be able to:
 During the course of the class you will build the following projects: 
 
 1. [React Review - React Tutorial](Assignments/Assignment-01.md)
-    - Start
-    - Due
-1. [Map, Filter, Reduce, and React](Assignments/Assignment-01.md)
-1. React State and APIs project - Weather app loads data from an online API.
-    - [Assignment 3](Assignments/Assignment-03.md)
-    - [Assignment 3 Rubric](Assignment/Assignment-01-rubric.md)
-1. React + Redux Tutorial - Your choice of tutorial exploring React and Redux
-    - [Assignment 6](Assignments/Assignment-06.md)
-    - [Assignment 6 Rubric](Assignment/Assignment-06-rubric.md)
-1. React + Express - Setup a react App that works with an Express Server
-    - [Assignment 7](Assignments/Assignment-07.md)
-    - [Assignment 7 Rubric](Assignment/Assignment-07-rubric.md)
-    - [Assignment 8](Assignments/Assignment-08.md)
-    - [Assignment 8 Rubric](Assignment/Assignment-08-rubric.md)
+2. [Map, Filter, Reduce, and React](Assignments/Assignment-02.md)
+3. [API Project](Assignments/Assignment-03.md)
+4. [Application State](Assignment/Assignment-04.md)
+5. [Custom Project](Assignment/Assignment-05.md)
 
 ## Evaluation 
 
