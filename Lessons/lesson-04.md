@@ -1,121 +1,110 @@
-# FEW 2.3 - Lesson 4
+# FEW 2.3 - Lesson 3
 
-## Technical Debt, ESLint, Troubleshooting
+# React Input Pattern
 
-This class you will work on improving the code base you've developed in the previous classes.
+The first goal for this class is to use React with a public web API. 
 
-## Learning Objectives
+The second goal is to work with form elements and user input with React. React has a special pattern for this due to the way it handles the virtual DOM.
 
-1. Apply best practices by linting
-1. Define code quality
-1. Identify techincal debt
+Last, the goal will be to look at conditional rendering techniques that can be implemented with React. 
 
-## Technical Debt
+## Objectives 
 
-Often while working on software projects the solutions you create are not the best. You won't even know it until later on. This is [Technical Debt](https://www.agilealliance.org/introduction-to-the-technical-debt-concept/).
+- Implement the Controlled Component Pattern
+  - Use forms and form data in React
+- Build an app that works with a public API
+- Build a system to handle network errors gracefully
+- Use conditional rendering patterns in React
 
-The concept says that some of your solutions borrow against your future development. In other words, you'll do what you can today to keep moving forward, but the solution you're working is not the best possible or _does not take into account the needs and requirements of your future project_. 
+## Introduction 
 
-There are times when you need to pay this "debt." 
+The demo project is a simple web app that displays weather data. You'll need to make an account and get a valid API key. 
 
-## Linting
+The project needs to accept user input for a zipcode. Text input and other form elements use a special pattern in React called the _Controlled Component Pattern_. 
 
-Your goal is to write the best quality code you can. The hard part is learning what good quality code looks like. 
+## Getting Started
 
-A linter is a tool that analyzes your code and flags errors, bad style, and suspicious constructs. 
+Follow the instructions to set up and run the demo project. 
 
-Besides finding bugs the linter ensures consistency in your code. Doing things consistently creates the best quality code that runs reliably. Consistency is also important for working on teams. 
+- Download or fork the [project](https://github.com/Product-College-Labs/react-api-project)
+- Make an account with [OpenWeatherMap.org](https://home.openweathermap.org/)
+    - Go to your profile page: API Keys
+    - Generate and copy your API key
+    - Add the following to the '.env' file: 
 
-**Linting is a professional best practice.** All of the best companies use linters, you should too! 
+`REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY_HERE`
 
-Using a linter will: 
+**Pro-tip!** 
 
-- Make your code read well
-- Find Errors
-- Improve the quality of your code
-- Teach you professional best practice
-- Teach you more about code and syntax
+- The Create React App starter project is set up to use `dotenv`, you don't need to add this package. 
+- Any environment variables you define **must** begin with `REACT_APP_`. This prevents clashes with environment variables that you may not be aware of. 
 
-Seriously, using a linter is a great way to learn more about the code you are writing. 
+Read more about [Adding Custom Environment Variables](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables)
 
-### Install ESLint
+Everything in the example project happens in App.js. There are many comments explaining what is going on, read these closely.
 
-For our project, we will be using ESLint. This is a linter that works with all of the major code editors. 
+- `npm install`
+- `npm start` or `yarn start`
 
-You'll need to install it _in your editor_ and _in your project_. 
+## Input Pattern 
 
-**Install ESLint in your code Editor**
+The project has a single input field. Find it in the `render` method of App.js. 
 
-This varies with the editor. Generally speaking, ESLint is a plugin or package you will add. Follow these steps to install ESLint in Visual Studio Code and Atom. 
+```JavaScript
+<input 
+  value={this.state.inputValue} 
+  onChange={e => this.setState({ inputValue: e.target.value })}
+  type="text" 
+  pattern="(\d{5}([\-]\d{4})?)"
+  placeholder="enter zip"
+/>
+```
 
-- Atom: 
-    - Packages > Settings View > Manage Packages 
-    - + Install
-    - Search for ESLint `linter-eslint`
-    - Install 
-- Visual Studio Code: 
-    - Code > Preferences > Extensions
-    - Search for ESLint
-    - Install
+This started as a simple input element. 
 
-**Add ESLint to a project**
+`<input type="text">`
 
-In this step, you'll add and configure ESLint in a project. 
+The input should take a zip code so I set the placeholder to "enter zip" and used the pattern attribute and a little regex "magic" to limit input to zip code patterns. 
 
-ESLint is installed with NPM. You'll need to create a new NPM project _if you don't already have one_. Since we are working with  React all of the starter code uses NPM already. 
+```JavaScript
+<input 
+    ...
+  type="text" 
+  pattern="(\d{5}([\-]\d{4})?)"
+  placeholder="enter zip"
+/>
+```
 
-- `npm install eslint --save-dev`
-- `eslint --init` From here follow the guide: 
-    - 'Choose a popular style guide'
-    - 'Airbnb'
-    - 'Do you use React?' `y`
-    - Format for config choose: 'JavaScript'
-    - Install: `y`
+The `value` and `onChange` attributes are used for the React input pattern.
 
-**Using the linter**
+```JavaScript
+<input 
+  value={this.state.inputValue} 
+  onChange={e => this.setState({ inputValue: e.target.value })}
+  ...
+/>
+```
 
-The linter will show a squiggly red underline under the questionable code. 
+The controlled component pattern stores the value entered on `this.state` and displays the value in the component via its value attribute. 
 
-Hovering over these areas will show a popup with an explanation of the rule this piece of code violates. 
+Imagine you are entering a zip code into a text input field. You type the first number of the zip code which is 9. The onChange method fires and assigns the value in the text field to state with: `this.setState({zip:e.target.value})`. When the component is rendered the value displayed is the value set on state `this.state.zip`.
 
-Linters follow rules to decide what is good and what is questionable. You chose the Airbnb style guide and are using their rules. That is you are following the rules and best practices Airbnb expects from their programmers. 
+This may seem a little strange, but it's important for two reasons. 
 
-For more information, there is a button (dot or lightbulb) you can click for options. Usually, the options include: 
+- React's virtual DOM may replace the input component at any time when the DOM is redrawn. This would lose values stored in real DOM elements. 
+- It stores input values on `state` where they are easy to access when you need them without having to access the input and retrieve its value. 
 
-- Ignore this rule: 
-    - Suppress this rule for the line
-    - Suppress this rule the file
-    - Show documentation for this rule -->
+- [Controlled Components](https://reactjs.org/docs/forms.html)
 
-## After Class 
+## Homework
 
-Apply the ideas from class to your portfolio project: 
-
-[Assignment 4](../Assignments/Assignment-04.md)
-
-**Improve your Code Quality**
-
-Using the linter review _all_ of the code you have written so far and lint!
-
-You should lint all of the JS files in the following projects: 
-
-- React tutorial (This is the Tic Tac Toe game)
-- React Product List challenge
-- React API project challenge
-
-Do your best to fix all of the problems. 
-
-Use any spare time to fix other problems and improve your previous work! Remember, you should dedicate 3 hours to this! 
-
-## ESLint and Code Quality
-
-| -            | Does not meet expectations | Meets expectations       | Exceeds expectations |
-|:-------------|:---------------------------|:-------------------------|:---------------------|
-| Completed    | Linted less than 70% of code | Linted 70% or more code | Linted 100% of code |
-| Work Ethic   | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process |  -->
+[Assignment 3](../Assignments/Assignment-03.md)
 
 ## Additional Resources
 
-1. [ESLint Getting Started](https://eslint.org/docs/user-guide/getting-started)
-1. [Install ESLint for Atom](http://imtiazrayhan.com/install-a-package-in-atom/)
-
+1. [JSON Formatter](https://jsonformatter.curiousconcept.com)
+1. [React Forms](https://reactjs.org/docs/forms.html)
+1. [JSX in depth](https://reactjs.org/docs/jsx-in-depth.html#comments)
+1. [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
+1. [Conditional Rendering in React](https://blog.logrocket.com/conditional-rendering-in-react-c6b0e5af381e)
+1. [Custom environment variables](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables)
