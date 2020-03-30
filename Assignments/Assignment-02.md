@@ -72,9 +72,23 @@ What's in data? The example data is an array of
 
 **Challenge 1** - Get the array of products. 
 
+You should be able to do this by importing the JSON file. Best to make a module, soemthing like `data.js`, and import the JSON at the top of this file. You can export the array from here. 
+
+This data.js module can now be a place where you will work with data from data.json and export the things that the rest of your program needs.
+
+```JS
+import data from './data.json' // imports data.json
+
+export default data // export the native JS array
+```
+
+With this you can now import your data and work with it from any other module. 
+
 Results:
 
 ```JS
+import data from './data' // imports dats from data.js
+
 [
   { ... }, 
   { ... }
@@ -82,7 +96,11 @@ Results:
 ]
 ```
 
-**Challenge 2** - Get a list of all categories. Results: 
+**Challenge 2** - Get a list of all categories.
+
+Inside your data.js module make a list of all of the categories contained in the data. Do this with Array.map(). **Remember map returns a new array and is used to transform an array of one type into an array of another type.** In this case you have an array of Objects and you want an array strings what are the category names.
+
+To do this use map on the data. In the callback return the category. 
 
 Results:
 
@@ -97,11 +115,75 @@ Results:
 
 **Challenge 3** - Make the categories list a list of unique values. 
 
-Results: as above but **no 
-values are duplicated.**
+There are a few ways to solve this problem. While there could a lot of searching the categories array for duplicate value a better solution would be to a data structure that only allows unique values. You have two choices in JS: 
+
+- Set - It's like an array but all values must be unique
+- Object - Keys must be unique
+
+To build the Build a set or an object with category names as keys you could use Array.reduce(). **For this to work you must set the initial value!**
+
+Using a Set: Assuming you have array of all category names. 
+
+```JS
+// Make a set from an array all values of the set will be unique!
+const categorieSet = new Set(categories) 
+// Make an array from a set with Array.from()
+const categoriesUnique = Array.from(categorieSet)
+```
+
+Using an Object: Assumes you have an array of category names.
+
+```js 
+// Make an object where each key is a category name
+const categoryObjects = categories.reduce((obj, cat) => {
+  obj[cat] = 0
+  return obj
+}, {}) // !!! Be sure to define the initial value as an Object!
+// Make an arr array of the keys
+const categoriesUnique = Object.keys(categoryObjects)
+```
+
+Results: as above but **no values are duplicated.**
+
+```JS
+[
+  "Movies", 
+  "Grocery", 
+  "Baby", 
+  ... 
+]
+```
 
 **Challenge 4** - Make an Object whose keys are the names of categories and whose values are 
 the number of times that category appears in the data.
+
+To do this use Array.reduce(). Why use reduce? Think about it like this: You have an array of objects and you want to reduce it to a single object. The idea is to end up with an Object that looks like: 
+
+```JS
+{ 
+  Movies: 6, 
+  Grocery: 4, 
+  Baby: 7, ... 
+}
+```
+
+Here the key is the name of the category and the value of that key is the count of products in that category. 
+
+Start here: 
+
+```js 
+const categoriesWithCounts = data.reduce((obj, cat) => {
+  // check if cat exists as a key on obj
+  // if so add 
+    // 1 to the value of this key
+  // else 
+    // set this key with a value of 1
+  return obj
+}, {}) // !!! Be sure to define the initial value as an Object!
+```
+
+THe idea here is loop through all of the data. With each item check to see if that key exists. If not you can add that key and give it a value of 1. 
+
 Results: 
 
 ```JS
@@ -111,6 +193,16 @@ Results:
 **Challenge 5** - Use Reduce to make an array of objects that have a name and a count. This 
 array will be similar to Challenge 4 but in a different format. For this list all of the names 
 should be unique and each should only appear once!
+
+Follow the same ideas from the previous challenge. This time reduce to an array: 
+
+```js 
+categories.reduce((acc, cat) => {
+  ...
+}, []) 
+```
+
+This use the values you created in the previous challenges to make this solution. You can reduce the list of unique category names to an array. In the callback get the count with the category name from the categories object from the last challenge. 
 
 Results: 
 
@@ -123,7 +215,7 @@ Results:
 ]
 ```
 
-**Challenge 6** - Export all of the data you have collected. 
+**Challenge 6** - Export all of the data you have collected.
 
 - Export the data array as the default export. This array you imported from data.json. You can 
 just export it unchanged. 
@@ -155,34 +247,49 @@ Display some of the information here:
 - Display the number of products
 - Display the number of categories
 
-**Challenge 8** - Display the categories and products.
+**Challenge 8** - Display the categories as buttons
 
-1. Challenge: List all of the categories at the top of the page. 
-  - Display the categories as buttons. 
-  - Use `Array.map()` to transform the `category` array into an array of JSX/Components
-  - You can import categories into any module with `import { categories } from './inventory'`
-1. Challenge: List all of products below the categories. 
-  - Each Product should display with it's name, category, and price. How these are displayed is up to you. 
-    - If you add a class name to a JSX element use `className` in place of `class` for example `<div className="product">`. See the documentation for [`className`](https://reactjs.org/docs/faq-styling.html) for more information.
-  - You can import the inventory Array into any module with `import inventory from './inventory'`.
-  - `inventory` is an Array of Objects with properties: id, name, description, price, and category. See the notes above for more details. 
+Challenge: List all of the **categories** at the top of the page. 
 
-**Challenge 9** - Add some interaction and functionality. The goal here is to click on a category button to filter the list of products so only products in the chosen category are displayed. 
+- Display the categories as buttons. 
+- Use `Array.map()` to transform the `category` array into an array of JSX/Components
+- You can import categories into any module with `import { categories } from './inventory'`
 
-1. Challenge: Clicking a category should display only products in that category.
-  - The parent component, that is the component that is parent to both the product list and the category list, should define the current category on `this.state`.
-    - Define state as an object in the constructor
-    - Set a property on the state object, something like: `currentCategory`
-    - Give it a sensible default value: `this.state = { currentCategory: null }`
-  - Add an `onClick` handler for each category button. This should: 
-    - Pass the category String/name of the button to the handler.
-    - Set `currentCategory` on state with `this.setState({ currentCategory: newCategory })` or something similar. 
-  - Use `Array.filter()` to display only products in `inventory` where the category matches. Something like: 
-  ```js
-  inventory.filter((item) => {
-    return item.category === this.state.currentCategory || this.state.currentCategory === null
-  })
-  ```
+When you're done is might look like: 
+
+![ass-2-ch-8.png](ass-2-ch-8.png)
+
+**Challenge 9** Display the products
+
+Challenge: List all of **products** below the categories buttons. 
+
+- Each Product should display with it's name, category, and price. How these are displayed is up to you. 
+  - If you add a class name to a JSX element use `className` in place of `class` for example `<div className="product">`. See the documentation for [`className`](https://reactjs.org/docs/faq-styling.html) for more information.
+- You can import the inventory Array into any module with `import inventory from './inventory'`.
+- `inventory` is an Array of Objects with properties: id, name, description, price, and category. See the notes above for more details. 
+
+When you're done it might look like this: 
+
+![ass-2-ch-9.png](ass-2-ch-9.png)
+
+**Challenge 10** - Add some interaction and functionality. The goal here is to click on a category button to filter the list of products so only products in the chosen category are displayed. 
+
+Challenge: Clicking a category should display **only** products in that category.
+
+- The parent component, that is the component that is parent to both the product list and the category list, should define the current category on `this.state`.
+  - Define state as an object in the constructor
+  - Set a property on the state object, something like: `currentCategory`
+  - Give it a sensible default value: `this.state = { currentCategory: null }`
+- Add an `onClick` handler for each category button. This should: 
+  - Pass the category String/name of the button to the handler.
+  - Set `currentCategory` on state with `this.setState({ currentCategory: newCategory })` or something similar. 
+- Use `Array.filter()` to display only products in `inventory` where the category matches. Something like: 
+
+```js
+inventory.filter((item) => {
+  return item.category === this.state.currentCategory || this.state.currentCategory === null
+})
+```
 
 **Challenge 10** - Use components! Whenever possible you should use a component. React uses a component architecture. The component architectrure is a really good thing it makes your projects easier to manage, keeps your code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), and makes your code more portable. 
 

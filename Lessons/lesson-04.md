@@ -96,6 +96,10 @@ This may seem a little strange, but it's important for two reasons.
 
 - [Controlled Components](https://reactjs.org/docs/forms.html)
 
+## Challenges 
+
+Use `array.filter()` to solve some of the challenges. Filter is a method of Array that returns a new array that is a subset of the source array. Like map and reduce fitler takes a callback. The callback is passed each element from the source array and it determines if that item should be included in the output array by returning true or false if the item should not be included. 
+
 ## Homework
 
 [Assignment 3](../Assignments/Assignment-03.md)
