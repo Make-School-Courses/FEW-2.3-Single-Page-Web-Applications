@@ -1,8 +1,8 @@
 # FEW 1.2 - Single Page Applications
 
-| Course Section | Instructor | Slack Channel | Course Website | Instructor 1-on-1 |
-| :---: | :---: | :---: | :---: | :---: |
-| A | **@mitchell** | `#few-2-3` | [make.sc/few2.3](https://make.sc/few2.3) | [Virtual Office](https://make.sc/mitchell-zoom) |
+| Course Section | Instructor | Slack Channel | Course Website | Instructor 1-on-1 | Tracker |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| A | **@mitchell** | `#few-2-3` | [make.sc/few2.3](https://make.sc/few2.3) | [Virtual Office](https://make.sc/mitchell-zoom) | [Tracker](https://docs.google.com/spreadsheets/d/1L3W2zhfjSdiPUTb2IzPF-wzUgbxJD1lIi1JGJnWDj10/edit?usp=sharing) |
 
 ## Course Description
 
