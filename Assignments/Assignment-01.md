@@ -18,17 +18,15 @@ This tutorial was created by FaceBook's React team. It covers all of the feature
 
 Complete the React tutorial here: https://reactjs.org/tutorial/tutorial.html
 
-The tutorial offers options to working over CodePen or using create-react-app **you should use create-react-app** and create a Girhub repo which you will turn in as your completed work. 
+The tutorial offers options to working over CodePen or using create-react-app, **you should use create-react-app** and create a Girhub repo which you will turn in as your completed work. 
 
 Pair with other students while you work to solve problems and clarify concepts. Also feel free to book office hours with the instructor. 
 
-Add a link to your completed tutorial 
+Add a link to your completed tutorial to the progress tracker when you're done. 
 
-### Challenges 
+### Challenges
 
-You must complete this by the due date. 
-
-1. Complete the tutorial 
+1. Complete the tutorial - https://reactjs.org/tutorial/tutorial.html
 
 #### Stretch Challenges
 

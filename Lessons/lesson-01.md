@@ -5,8 +5,8 @@ Getting started with Single Page Applications and React.
 | **Elapsed** | **Time** | **Activity** |
 | ----------- | --------- | ------------ |
 | 0:05 | 0:05 | [Learning Objectives](#class-learning-objectives) |
-| 0:35 | 0:15 | [Projects](#projects) |
-| 0:50 | 0:15 | [Canvas](#canvas) |
+| 0:05 | 0:10 | [Single Page Applications](#single-page-applications) |
+| 0:05 | 0:15 | [Lecture](#lecture) |
 | 1:40 | 0:50 | [Lab: Break Out Tutorial](#lab) |
 | 1:50 | 0:10 | [Break](#break) |
 | 2:20 | 0:30 | Review progress on Tutorial |
@@ -22,19 +22,17 @@ Getting started with Single Page Applications and React.
 1. Differentiate props and state 
 1. Define the virtual DOM
 
-### Single Page Applications
+## Single Page Applications
 
 Single Page Applications (SPA) are web pages that act as software applications. A traditional web site is made up several pages all linked, where the current web page is removed from memory when a new page is loaded.  A Single Page Application is a single web page that loads data and displays different content by changing the content of the current page without loading a new web page.
 
 The [Killer App](https://en.wikipedia.org/wiki/Killer_application) for SPAs was Gmail. Gmail is a single web page that lists your email, views email, sends email and more all within a single HTML document.
 
-SPAs are the way web pages of more than minimal complexity are created these days. These days when you visit a web site you are loading a single HTML file that displays many different views that provide the experience of a fully interactive multipage site. 
-
-![dilbert-killer-app.gif.png](dilbert-killer-app.gif.png)
+SPAs are the way web pages of more than minimal complexity are created these days. These days when you visit a web site you are loading a single HTML file that displays many different views that provide the experience of a fully interactive multipage site.
 
 ## Lecture
 
-### Why Learn React
+## Why Learn React
 
 React is one of the most popular web frameworks available today and with good reason. It's fast efficient and has a great workflow and developer experience. 
 
