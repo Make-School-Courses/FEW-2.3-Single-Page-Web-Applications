@@ -6,12 +6,12 @@ Getting started with Single Page Applications and React.
 | ----------- | --------- | ------------ |
 | 0:05 | 0:05 | [Learning Objectives](#class-learning-objectives) |
 | 0:05 | 0:10 | [Single Page Applications](#single-page-applications) |
-| 0:05 | 0:15 | [Lecture](#lecture) |
-| 1:40 | 0:50 | [Lab: Break Out Tutorial](#lab) |
-| 1:50 | 0:10 | [Break](#break) |
-| 2:20 | 0:30 | Review progress on Tutorial |
-| 2:40 | 0:10 | Review Homework |
-| 2:45 | 0:05 | Review objectives |
+| 0:10 | 0:20 | [Lecture](#lecture) |
+| 1:30 | 1:50 | [Lab](#lab) |
+| 0:10 | 2:00 | [Break](#break) |
+| 0:30 | 2:30 | Review progress on Tutorial |
+| 0:10 | 0:10 | Review Homework |
+| 0:05 | 2:45 | Review objectives |
 
 ## Overview
 
