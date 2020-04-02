@@ -1,6 +1,6 @@
 # FEW 2.3 - Lesson 2
 
-## Profesional Best Practices
+## React Review
 
 React is built on functional programming. This class you will look at some functional programming concepts in the context of React.
 

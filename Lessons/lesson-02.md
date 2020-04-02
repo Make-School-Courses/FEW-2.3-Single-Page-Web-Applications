@@ -101,7 +101,53 @@ For more information, there is a button (dot or lightbulb) you can click for opt
     - Suppress this rule the file
     - Show documentation for this rule
 
+### What are Proptypes? 
 
+Soem programming languages are called strongly typed. These languages enforce the type of variables. For example, when definging a new variable x you might set the type to a Number. Later if you assigned a value that was type string the system would throw an error. 
+
+Assigning the wrong type to a variable is usually an error.
+
+JavaScript is not a typed language. PropTypes gives lets React check types passed in props. 
+
+https://reactjs.org/docs/typechecking-with-proptypes.html
+
+Use prop types by installing the library: 
+
+`npm install --save prop-types`
+
+Import prop-types in a component
+
+```JSX
+import React from 'react'
+import PropTypes from 'prop-types'
+
+function CategoryButton({ name, onClick }) {
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        onClick(name)
+      }}
+    >
+      {name}
+    </button>
+  )
+}
+
+export default CategoryButton
+
+// Define your prop types here: 
+
+CategoryButton.propTypes = {
+  name: PropTypes.string, // A string
+  onClick: PropTypes.func.isRequired, // a required function
+};
+
+// Set a default values for props
+CategoryButton.defaultProps = {
+  name: 'Click', // the default for name
+}
+```
 
 ## After Class 
 
@@ -125,8 +171,8 @@ Use any spare time to fix other problems and improve your previous work! Remembe
 
 | - | Does not meet expectations | Meets expectations | Exceeds expectations |
 |:---|:--------------------------|:-------------------|:---------------------|
-| Completed    | Linted less than 70% of code | Linted 70% or more code | Linted 100% of code |
-| Work Ethic   | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process |
+| Completed | Linted less than 70% of code | Linted 70% or more code | Linted 100% of code |
+| Work Ethic | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process |
 
 ## Additional Resources
 
