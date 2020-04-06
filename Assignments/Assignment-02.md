@@ -67,9 +67,15 @@ Import your JSON data into your module:
 
 JSON is text format but is easily translated into a JavaScript. Importing like this will convert the JSON data into an array of objects. 
 
-What's in data? The example data is an array of 
+What's in data? The example data is an array of objects describing products. Each product has the following properties: 
 
-
+- id 
+- name 
+- category
+- description
+- price
+- rating 
+- units
 
 ## Challenges 
 
@@ -354,11 +360,14 @@ class Product extends Component {
 **Challenges 13** - Okay so you did all of the other challenges and you need something more to do, good for you! 
 
 1. Use `Array.reduce()` to get the sum of all of the prices for all Products. 
-  - Remember the prices are stored as Strings you'll need to convert these to numbers. Something like: `Number(item.price)` should work.  
-  - Display this somewhere on the page. If you got this far I don't need to add too much explaination here. 
+  - Remember the prices are stored as Strings you'll need to convert these to numbers. You'll also need to remove the first character of the string which is the "$": `price = item.price.substring(1)`. Then parse the string value into a float with Something like: `parseFloat(price)` should work.  
+  - Display this somewhere on the page.
 2. Using `Array.reduce()` again, sum the total for currently selected products. In other the sum of all the prices for the products in the currently selected category. 
 3. Use `Array.reduce()` to count the number of products in each category. 
   - Display count for each category as "badge" next to the category label in each category button. 
+4. Display the number of units for each product somewhere in the product display component. 
+  - If there are 0 units make this product look displayed. 
+5. Show the rating for each product. 
 
 **Challenge 14** - The category buttons are useful. Currently they should display all of the items with a matching category. These buttons could be even more useful if you could select more than one category at a time! 
 
@@ -373,6 +382,10 @@ class Product extends Component {
 3. The cart should display items added to the cart. If the same item is added more than once it should show the count. For example: Flexidy x 3
 4. Show the price of the item in the cart. 
 5. Show the total of all items in the cart at the bottom of the cart component. 
+
+**Stretch Challenges** - These are challenges you can try to further practicw with map, filter, and reduce. 
+
+- Display the 
 
 ## Some Visuals
 
