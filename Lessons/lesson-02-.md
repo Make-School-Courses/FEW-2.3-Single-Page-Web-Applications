@@ -10,8 +10,6 @@ React is built on functional programming. This class you will look at some funct
 1. Use Events to handle interaction 
 1. Create styled Components
 
-##  
-
 Here we will review the concepts covered in the tutorial.
 
 - Components 
