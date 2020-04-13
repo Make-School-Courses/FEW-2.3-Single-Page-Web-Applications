@@ -14,7 +14,7 @@ Conditional rendering is the process of showing one component or another dependi
 
 Commonly in React, you will need to render different components under different conditions. Here are two patterns you can apply to your work: 
 
-**Patter 1**
+**Pattern 1**
 
 The idea is to render one component or another depending on some logic. One method to handle this is with a function:
 
@@ -182,7 +182,7 @@ class Clock extends React.Component {
 }
 ```
 
-### Using Condictional Rendering
+### Using Conditional Rendering
 
 This might be good when you want to see the logic at the point where something is rendered. 
 

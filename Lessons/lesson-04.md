@@ -2,7 +2,7 @@
 
 # React Input Pattern
 
-The first goal for this class is to use React with a public web API. 
+The first goal for this class is to use React with a public web API.
 
 The second goal is to work with form elements and user input with React. React has a special pattern for this due to the way it handles the virtual DOM.
 
