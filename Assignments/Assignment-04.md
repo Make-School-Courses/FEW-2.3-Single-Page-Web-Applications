@@ -1,4 +1,4 @@
-# Class - FEW 2.3 - Assignment 6
+# Class - FEW 2.3 - React + Redux Tutorial Assignment
 
 ## Description 
 
