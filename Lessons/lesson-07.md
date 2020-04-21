@@ -188,7 +188,6 @@ With the counter working try these challenges
 ## After Class
 
 - [Assignment Redux Tutorial](../Assignments/Assignment-04.md)
-- Continue the custom project
 
 ## Additional Resources
 
