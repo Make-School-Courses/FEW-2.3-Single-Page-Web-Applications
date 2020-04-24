@@ -38,5 +38,5 @@ Your goal is to choose one of the tutorials below and complete it. The tutorials
 
 ## Assessing the assignment
 
-[Assignment 6 Rubric](./Assignment-06-rubric.md)
+[Assignment Rubric](./Assignment-04-rubric.md)
 
