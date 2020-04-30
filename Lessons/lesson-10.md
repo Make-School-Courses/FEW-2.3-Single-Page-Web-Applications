@@ -43,7 +43,7 @@ To use state with hooks follow these steps
 
 It's convention to name your vairable and precede the setter with 'set'. 
 
-### `const [count, setCount] = useState(0);`
+### `const [count, setCount] = useState(0);` 🤔
 
 What is this? You should already be familiar with deconstructions with Objects. Desconstruction can also be applied to Arrays. 
 
