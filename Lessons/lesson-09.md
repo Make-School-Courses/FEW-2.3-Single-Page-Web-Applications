@@ -51,6 +51,4 @@ Find an issue and push a solution. Explore the issues in the projects below and 
     - [issues](https://github.com/soggybag/sf-public-spaces/issues)
 
 
-[Assignment 07](../Assignment/Assignment-07.md)
-
 
