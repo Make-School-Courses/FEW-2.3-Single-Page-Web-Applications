@@ -34,6 +34,35 @@ By the end of the course, you will be able to:
 
 ## Schedule
 
+**Course Dates:** Monday, June 1 – Friday, July 17, 2020 (7 weeks)
+
+**Class Times:** Monday, Wednesday, and Friday at 1:30–2:30 PM (20 class sessions)
+
+| Class | Date | Topics | Assignment |
+|:------|:-----|:-------|:-----------|
+|  1 |  Mon, June 1    | [Single Page Applications](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) - React Tutorial |
+|  2 |  Wed, June 3    | [Profesional Best Practices](Lessons/lesson-02.md) | - |
+|  3 |  Fri, June 5    | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
+|  4 |  Mon, June 8    | [Lesson 3] |
+|  5 |  Wed, June 10   | [React Input Pattern](Lessons/lesson-04.md) | - |
+|  6 |  Fri, June 12   | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
+|  7 |  Mon, June 15   | [Making Network Requests](Lessons/lesson-06.md) | - |
+|  8 |  Wed, June 17   | [Lesson 6] |
+|  9 |  Fri, June 19   | [Application State](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
+| 10 |  Mon, June 22   | [Lesson 7] |
+| 11 |  Wed, June 24   | [Redux](Lessons/lesson-08.md) | - | 
+| 12 |  Fri, June 26   | [Redux Part 2](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project |
+| 13 |  Mon, June 29   | [React Hooks](Lessons/lesson-10.md) | - |
+| 14 |  Wed, July 1    | [Lesson 10]|  
+| -  |  Fri, July 3    | **NO CLASS - INDEPENDENCE DAY OBSERVED**|
+| 15 |  Mon, July 6    | [Final Project workshop](Lessons/lesson-11.md) | - |
+| 16 |  Wed, July 8    | [Final Project workshop](Lessons/lesson-11.md) | - |
+| 17 |  Fri, July 10   | [Final Project workshop](Lessons/lesson-11.md) | - |
+| 18 |  Mon, July 13   | [Final Project workshop](Lessons/lesson-11.md) | - |
+| 19 |  Wed, July 15   | [Present Final Projects](Lessons/lesson-13.md) | - |
+| 20 |  Fri, July 17   | [Final Assessment](Lessons/lesson-14.md) | - |
+
+<!-- 
 **Course Dates:** Tuesday, March 31 – Thursday, May 14, 2019 (7 weeks)
 
 **Class Times:** Tuesday and Thursday at 2:30–5:15pm (14 class sessions)
@@ -53,7 +82,9 @@ By the end of the course, you will be able to:
 | 11 | Tue, May 5 | [Final Project workshop](Lessons/lesson-11.md) | - |
 | 12 | Thu, May 7 | [Final Project workshop](Lessons/lesson-12.md) | - |
 | 13 | Tue, May 12 | [Present Final Projects](Lessons/lesson-13.md) | - |
-| 14 | Thu, May 14 | [Final Assessment](Lessons/lesson-14.md) | - |
+| 14 | Thu, May 14 | [Final Assessment](Lessons/lesson-14.md) | - | 
+-->
+
 
 ## Projects 
 
