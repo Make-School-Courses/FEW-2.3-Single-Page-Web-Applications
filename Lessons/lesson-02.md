@@ -149,6 +149,31 @@ CategoryButton.defaultProps = {
 }
 ```
 
+PropTypes also work with function based components. This example is taken from the React Tutorial. 
+
+```JS
+import React from 'react';
+import { PropTypes } from 'prop-types';
+import './index.css';
+
+function Square({ onClick, value }) {
+  return (
+    <button className="square" onClick={onClick} type="button">
+      {value}
+    </button>
+  );
+}
+
+export default Square
+
+Square.propTypes = {
+  value: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired
+}
+```
+
+Follow this guide: https://blog.bitsrc.io/master-proptypes-in-react-a80f9fefff8
+
 ## After Class 
 
 Apply the ideas from class to your portfolio project: 
