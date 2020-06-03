@@ -2,13 +2,13 @@
 
 ## Profesional Best Practices
 
-This class you will work on improving the code base you've developed in the previous classes.
+This class you will work on improving the codebase you've developed in the previous classes.
 
 ## Learning Objectives
 
 1. Apply best practices by linting
 1. Define code quality
-1. Identify techincal debt
+1. Identify technical debt
 
 ## Technical Debt
 
@@ -49,14 +49,14 @@ You'll need to install it _in your editor_ and _in your project_.
 This varies with the editor. Generally speaking, ESLint is a plugin or package you will add. Follow these steps to install ESLint in Visual Studio Code and Atom. 
 
 - Atom: 
-    - Packages > Settings View > Manage Packages 
-    - + Install
-    - Search for ESLint `linter-eslint`
-    - Install 
+ - Packages > Settings View > Manage Packages 
+ - + Install
+ - Search for ESLint `linter-eslint`
+ - Install 
 - Visual Studio Code: 
-    - Code > Preferences > Extensions
-    - Search for ESLint
-    - Install
+ - Code > Preferences > Extensions
+ - Search for ESLint
+ - Install
 
 **Initialize ESLint**
 
@@ -80,11 +80,11 @@ Answer the questions:
 
 
 From here follow the guide: 
-    - 'Choose a popular style guide'
-    - 'Airbnb'
-    - 'Do you use React?' `y`
-    - Format for config choose: 'JavaScript'
-    - Install: `y`
+ - 'Choose a popular style guide'
+ - 'Airbnb'
+ - 'Do you use React?' `y`
+ - Format for config choose: 'JavaScript'
+ - Install: `y`
 
 **Using the linter**
 
@@ -97,17 +97,17 @@ Linters follow rules to decide what is good and what is questionable. You chose 
 For more information, there is a button (dot or lightbulb) you can click for options. Usually, the options include: 
 
 - Ignore this rule: 
-    - Suppress this rule for the line
-    - Suppress this rule the file
-    - Show documentation for this rule
+ - Suppress this rule for the line
+ - Suppress this rule the file
+ - Show documentation for this rule
 
 ### What are Proptypes? 
 
-Soem programming languages are called strongly typed. These languages enforce the type of variables. For example, when definging a new variable x you might set the type to a Number. Later if you assigned a value that was type string the system would throw an error. 
+Some programming languages are called strongly typed. These languages enforce the type of variables. For example, when defining a new variable x you might set the type to a Number. Later if you assigned a value that was type string the system would throw an error. 
 
 Assigning the wrong type to a variable is usually an error.
 
-JavaScript is not a typed language. PropTypes gives lets React check types passed in props. 
+JavaScript is not a typed language. PropTypes allow React to check types passed in props. 
 
 https://reactjs.org/docs/typechecking-with-proptypes.html
 
@@ -122,16 +122,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function CategoryButton({ name, onClick }) {
-  return (
-    <button
-      type="button"
-      onClick={() => {
-        onClick(name)
-      }}
-    >
-      {name}
-    </button>
-  )
+ return (
+ <button
+ type="button"
+ onClick={() => {
+ onClick(name)
+ }}
+ >
+ {name}
+ </button>
+ )
 }
 
 export default CategoryButton
@@ -139,13 +139,13 @@ export default CategoryButton
 // Define your prop types here: 
 
 CategoryButton.propTypes = {
-  name: PropTypes.string, // A string
-  onClick: PropTypes.func.isRequired, // a required function
+ name: PropTypes.string, // A string
+ onClick: PropTypes.func.isRequired, // a required function
 };
 
 // Set a default values for props
 CategoryButton.defaultProps = {
-  name: 'Click', // the default for name
+ name: 'Click', // the default for name
 }
 ```
 
@@ -172,9 +172,10 @@ Use any spare time to fix other problems and improve your previous work! Remembe
 | - | Does not meet expectations | Meets expectations | Exceeds expectations |
 |:---|:--------------------------|:-------------------|:---------------------|
 | Completed | Linted less than 70% of code | Linted 70% or more code | Linted 100% of code |
-| Work Ethic | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process |
+| Work Ethic | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and document process |
 
 ## Additional Resources
 
 1. [ESLint Getting Started](https://eslint.org/docs/user-guide/getting-started)
 1. [Install ESLint for Atom](http://imtiazrayhan.com/install-a-package-in-atom/)
+

@@ -13,13 +13,13 @@ React is built on functional programming. This class you will look at some funct
 Here we will review the concepts covered in the tutorial.
 
 - Components 
-    - Function based 
-    - Class based
+ - Function based 
+ - Class based
 - Props
 - State 
 - onClick
 
-Use the linter to indentify and apply coding profexional best practices to your work.
+Use the linter to identify and apply coding professional best practices to your work.
 
 ## Components
 
@@ -29,7 +29,7 @@ Why choose one function or a class when making a component?
 
 ## Organizing Components
 
-Breaking the tutorial into compomnents. 
+Breaking the tutorial into components. 
 
 ## Styling Components
 
@@ -46,3 +46,4 @@ Breaking the tutorial into compomnents.
 ## Additional Resources
 
 1. 
+
