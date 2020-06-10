@@ -262,7 +262,7 @@ Challenge: List all of the **categories** at the top of the page.
 
 - Display the categories as buttons. 
 - Use `Array.map()` to transform the `category` array into an array of JSX/Components
-- You can import categories into any module with `import { categories } from './inventory'`
+- You can import categories into any module with `import { categories } from './data'`
 
 When you're done is might look like: 
 
@@ -274,8 +274,8 @@ Challenge: List all of **products** below the categories buttons.
 
 - Each Product should display with it's name, category, and price. How these are displayed is up to you. 
   - If you add a class name to a JSX element use `className` in place of `class` for example `<div className="product">`. See the documentation for [`className`](https://reactjs.org/docs/faq-styling.html) for more information.
-- You can import the inventory Array into any module with `import inventory from './inventory'`.
-- `inventory` is an Array of Objects with properties: id, name, description, price, and category. See the notes above for more details. 
+- You can import the inventory Array into any module with `import data from './data'`.
+- `data` is an Array of Objects with properties: id, name, description, price, and category. See the notes above for more details. 
 
 When you're done it might look like this: 
 
@@ -292,10 +292,10 @@ Challenge: Clicking a category should display **only** products in that category
 - Add an `onClick` handler for each category button. This should: 
   - Pass the category String/name of the button to the handler.
   - Set `currentCategory` on state with `this.setState({ currentCategory: newCategory })` or something similar. 
-- Use `Array.filter()` to display only products in `inventory` where the category matches. Something like: 
+- Use `Array.filter()` to display only products in `data` where the category matches. Something like: 
 
 ```js
-inventory.filter((item) => {
+data.filter((item) => {
   return item.category === this.state.currentCategory || this.state.currentCategory === null
 })
 ```
@@ -371,9 +371,9 @@ class Product extends Component {
 
 **Challenge 14** - The category buttons are useful. Currently they should display all of the items with a matching category. These buttons could be even more useful if you could select more than one category at a time! 
 
-1. Allow for selecting multiple categories. For example selecting Toys, Automotive, and Music should show all of the inventory items that match any of these three categories. 
+1. Allow for selecting multiple categories. For example selecting Toys, Automotive, and Music should show all of the inventory items in the data array that match any of these three categories. 
 2. The category selected category buttons should display showing they are currently selected. 
-3. Selecting the All button should deselect the other category buttons and show all inventoty items. 
+3. Selecting the All button should deselect the other category buttons and show all inventory items. 
 
 **Challenge 15** - Add a shopping cart. The cart should display a list of items that have been added to the cart. Inlcude an Add to Cart button with each inventory item. 
 
