@@ -369,6 +369,8 @@ class Product extends Component {
   - If there are 0 units make this product look displayed. 
 5. Show the rating for each product. 
 
+**Stretch Challenges** - These are challenges you can try to further practicw with map, filter, and reduce. 
+
 **Challenge 14** - The category buttons are useful. Currently they should display all of the items with a matching category. These buttons could be even more useful if you could select more than one category at a time! 
 
 1. Allow for selecting multiple categories. For example selecting Toys, Automotive, and Music should show all of the inventory items in the data array that match any of these three categories. 
@@ -382,10 +384,6 @@ class Product extends Component {
 3. The cart should display items added to the cart. If the same item is added more than once it should show the count. For example: Flexidy x 3
 4. Show the price of the item in the cart. 
 5. Show the total of all items in the cart at the bottom of the cart component. 
-
-**Stretch Challenges** - These are challenges you can try to further practicw with map, filter, and reduce. 
-
-- Display the 
 
 ## Some Visuals
 
