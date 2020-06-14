@@ -1,6 +1,6 @@
 # Class - FEW 2.3 - Assignment 5
 
-## Description 
+## Description
 
 Your Custom project! This should be something that you want to build with React. Your project doesn't have to be complex or massive in scope. Instead make something you can finish in the time available (check the due date for final project.)
 

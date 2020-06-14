@@ -2,7 +2,7 @@
 
 ## Description 
 
-Your goal is to modify the demo project. This project gets the Weather data from the OpenWeatherMap API. You'll implement two important patterns in this project. 
+With this project you'll connect to the OpenWeatherMap API and display the weather data. You'll use the controlled component pattern to handle user input. 
 
 - Controlled Controlled Component Pattern. This pattern is used with form elements. 
 - Conditional Rendering pattern. This is a collection of coding patterns that render components or not render them based on props or state. 
@@ -85,6 +85,29 @@ Look at App.css. This file has the has CSS styles that are imported into App.js 
 
 - Bonus, create a css file for each component you create and import that set of styles into the component. 
 
+**Challenge 5** Expanding the form
+
+Currently the form has a single input for the zip. Set up a pair of radio buttons to select the units. These button will select Imperial or metric. The radio buttons will use the React controlled component pattern! 
+
+**Challenge 6**
+
+During the loading process your app is limbo, you haven't gotten a success or an error yet. In this state your app should display a message letting us know that the app is in the loading process. 
+
+To do this use keep track of the status of the app and conditionally render a component to display the status of the app. The goal of this challenge is to display a message while data is loading. 
+
+**Challenge 7** 
+
+Use an API of your choice. This can be any API you like. Render data from the API with React. Build components and sub-components to do the work and display your data. 
+
+**Challenge 8**
+
+Use an API of your choice in place of the OpenWeatherMap API. Choose anything from one of these services: 
+
+- [Rapid API](https://rapidapi.com)
+- [Programable Web](https://www.programmableweb.com/apis/directory)
+- [API List](https://apilist.fun)
+- [Any API](https://any-api.com)
+
 **Stretch Challenges** 
 
 Try any or all of these stretch challenges. 
@@ -94,25 +117,6 @@ Try any or all of these stretch challenges.
 - Display a 5 day forcast
   - This project uses the current weather forecast. The OpenWeatherMap also provides a 5 day forcast. Your goal is to display this. 
 - Find another simple API and make a component to dispaly data from your chosen API. 
-
-**Challenge 4**
-
-During the loading process your app is limbo, you haven't gotten a success or an error yet. In this state your app should display a message letting us know that the app is in the loading process. 
-
-To do this use keep track of the status of the app and conditionally render a component to display the status of the app. 
-
-**Challenge 5** 
-
-Use an API of your choice. This can be any API you like. Render data from the API with React. Build components and sub-components to do the work and display your data. 
-
-**Challenge 6**
-
-Use an API of your choice in place of the OpenWeatherMap API. Choose anything from one of these services: 
-
-- [Rapid API](https://rapidapi.com)
-- [Programable Web](https://www.programmableweb.com/apis/directory)
-- [API List](https://apilist.fun)
-- [Any API](https://any-api.com)
 
 ### Deliverable
 
@@ -124,7 +128,13 @@ Class #
 
 ## Assessing the assignment
 
-[Assignment 3 Rubric](./Assignment-01-rubric.md)
+| - | **Does not meet expectations** | **Meets expectations** | **Exceeds expectations** |
+|:-------------|:---------------------------|:-------------------------|:---------------------|
+| **Completed** | Did not complete           | Completed challenges 1-3 | Completed challenges 4+ |
+| **Functional** | Is not functional          | Displays the weather data and handles errors | Displays the temp in F and C along description and atmospheric conditions and has some CSS styles |
+| **Code quality** | Indentation and spacing is _inconsistent_ | Uses _consistent indentation and spacing_ | Well written and well commented, variable and function names are self commenting |
+| **Code Architecture and Structure** | All code is in App.js | Uses 3 components | Uses 5 or more components, components are specialized and perform formatting and display of data based on props |
+| **Work Ethic** | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly documents process | 
 
 # APP JS
 
