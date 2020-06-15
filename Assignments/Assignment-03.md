@@ -27,7 +27,7 @@ Currently the app does all of it's work in the `App.js` component. The goal of t
 
 ### Challenges 
 
-**Challenge 0** Goal create and use an OpenWeatherMap API key
+**Challenge 1** Goal create and use an OpenWeatherMap API key
 
 The OpenWeatherMap API requires an API key. You need to get your API key and add it to the project. 
 
@@ -44,7 +44,7 @@ Run the app again to make sure it is still working with your API key.
 
 The key value you add to `.env` must begin with `REACT_APP_` or they will not be used! 
 
-**Challenge 1** Goal create a Weather component. 
+**Challenge 2** Goal create a Weather component. 
 
 Currently all of the work of loading and displaying the weather data is handled by  `App.js`. You should:
 
