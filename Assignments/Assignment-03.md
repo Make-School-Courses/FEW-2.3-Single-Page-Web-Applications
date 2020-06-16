@@ -9,17 +9,17 @@ With this project you'll connect to the OpenWeatherMap API and display the weath
 
 ### Why this assignment?
 
-These the controlled component is important since you'll use it every time you use form elements like input fields, check boxes, and radios buttons. All of these are essential to web applications. 
+The controlled pattern component is important since you'll use it every time you use form elements like input fields, check boxes, and radios buttons. All of these are essential to web applications. 
 
-Conditionally rendering components is an important front end development, it also opens a lot of possiblities to your apps. 
+Conditionally rendering components is an important front end development it opens up lots of possiblities to the user interfaces you create with React.
 
-## Getting Started 
+## Getting Started
 
 Make a new react project with: 
 
 `npx create-react-app weather-api`
 
-Repalce the `App.js` contents with the App Component code at the [bottom of this page](#app-js). 
+Replace the `App.js` contents with the App Component code at the [bottom of this page](#app-js).
 
 ## Project requirements
 
@@ -27,7 +27,7 @@ Currently the app does all of it's work in the `App.js` component. The goal of t
 
 ### Challenges 
 
-**Challenge 1** Goal create and use an OpenWeatherMap API key
+**Challenge 1** - Goal create and use an OpenWeatherMap API key.
 
 The OpenWeatherMap API requires an API key. You need to get your API key and add it to the project. 
 
@@ -40,9 +40,13 @@ The OpenWeatherMap API requires an API key. You need to get your API key and add
 
 Run the app again to make sure it is still working with your API key. 
 
-**What happened here?** Create-React-App uses .env to manage secret information. This is included with the boilerplate project. 
+**What happened here?** `.env` is a place to store environment variables. The environment variables used with Create React App projects must follow special naming convention. Values are stored in key value pairs, for example:
 
-The key value you add to `.env` must begin with `REACT_APP_` or they will not be used! 
+`REACT_APP_MY_VAR=some_value_123`
+
+Each variable goes on it's own line in the form NAME=value. 
+
+**Important!** The key value you add to `.env` must begin with `REACT_APP_` or they will not be used! This is a requirement of Create React App. 
 
 **Challenge 2** Goal create a Weather component. 
 
@@ -51,7 +55,8 @@ Currently all of the work of loading and displaying the weather data is handled 
 - Make a new component `Weather`. This component should load and display the weather data. 
 - Import the Weather component into `App.js` 
 - Display the new Weather component in `App.js`.
-- You're done when all of the work of loading and displaying weather data is removed from App.js, and the Weather component does all the work. 
+
+You're done when all of the work of loading and displaying weather data is removed from App.js, and the Weather component does all the work. 
 
 **Important!** App uses two values on state to accomplish what it does. Your new Component will need to support these two values on state. 
 
@@ -59,7 +64,7 @@ The first `this.state.inputValue` holds the zip code entered into the input fiel
 
 Second, `this.state.weatherData` holds the weather data from OpenWeatherMap. This variable is used to conditionally render the weather data. Read the comments in the sample code for more details. 
 
-**Challenge 3** Sub Components
+**Challenge 3** Make sub Components
 
 The Weather Component is a little monolithic. It does a little too much. In many cases it's better to have smaller components that handle specific tasks. 
 
@@ -73,7 +78,7 @@ Goal build components that display various elements of the weather data.
 
 The tasks above as you to build three new components. These should all be children of the Weather component you created in the first challenge. 
 
-**Challenge 4** Style the component! 
+**Challenge 4** Style the components! 
 
 Currently there a minimal set of styles. Your goal is to expand on these. 
 
@@ -83,21 +88,69 @@ Look at App.css. This file has the has CSS styles that are imported into App.js 
 
 **Note!** Importing CSS in this way works with Create React App starter projects because it is part of the build system. 
 
-- Bonus, create a css file for each component you create and import that set of styles into the component. 
+- Stretch goal, create a css file for each component you create and import that set of styles into the component. 
 
 **Challenge 5** Expanding the form
 
-Currently the form has a single input for the zip. Set up a pair of radio buttons to select the units. These button will select Imperial or metric. The radio buttons will use the React controlled component pattern! 
+Currently the form has a single input for the zip. Set up a pair of radio buttons to select the units. These buttons will select Imperial or metric. The radio buttons will use the React controlled component pattern!
 
-**Challenge 6**
+**Challenge 6** Show app status
 
-During the loading process your app is limbo, you haven't gotten a success or an error yet. In this state your app should display a message letting us know that the app is in the loading process. 
+The app can be one of three states. 
 
-To do this use keep track of the status of the app and conditionally render a component to display the status of the app. The goal of this challenge is to display a message while data is loading. 
+Idle, nothing is happeing. This is the state app begins in when you load the page initially. 
 
-**Challenge 7** 
+Loading, this is the state the app is in when you have submitted your zip code but before you've gotten a reply from the server. In this state you want your users to know that the app is doing something and they should wait. Think of all of the times you've clicked a button and nothing happened. It's not a good experience. 
 
-Use an API of your choice. This can be any API you like. Render data from the API with React. Build components and sub-components to do the work and display your data. 
+Success, this is state where weather data is loaded and we can display it. 
+
+You can display a component or null for each of these states. Imagine the area below the input shows: 
+
+- Idle - "enter your zip code" - A prompt before when enter a zip code. 
+- Loading - "Loading..." - A message to say that the app is working, this could be an animation...
+- Success - "Temperature 70˚ ..." - Shows the weather data.
+
+**Challenge 7** Handling Errors 
+
+It's possible an error might occur. A user could enter an invalid zip code or the OpenWeatheMap server might be down. Your app should handle these situations gracefully. 
+
+There are two places where errors can occur:
+
+- `fetch()` fails. This means something happened at the server, or your internet connection is broken. This would be something like a 500 error. You would handle this error in the catch block: `fetch().then().then().catch( ... handle here ... )`
+- OpenWeatherMap supplies an error. The OpenWeatherMap API includes a property `code` on the JSON object it returns. THe value of this property is an error code. if code === 200 everything is good. If code === 404 the zip code was not found. The JSON might look like this in those two scenarios: 
+
+On a success JSON has code:200
+```JSON
+{
+    coord: {…}, weather: Array(1), base: "stations", main: {…}, visibility: 16093, …}
+  base: "stations"
+  clouds: {all: 75}
+  cod: 200 <== Success! 
+  ...
+}
+```
+
+An error from OpenWeatherMap might look like this: 
+```JSON
+{
+  cod: "404"
+  message: "city not found"
+}
+```
+
+It's important to understand that this would be all the data you get. None of the other properties are present. Checking for temperature `weather.main.temp` would fail: Can't read property temp of undefined.
+
+Your job is to check the `cod` property before looking for the other weather information and display an error message if cod is not 200.
+
+A good strategy here is to handle the errors where they occur and set a value on state. 
+
+**Q:** Where will errors occur? 
+
+**A:** At `fetch()`. Server errors will happen in the catch block. If the network call was successful check the cod property. If the value is 200 show the weather data. If not 200 you have an error. Read the message property for a description. 
+
+**Challenge 8** 
+
+Use an API of your choice. This can be any API you like. Render data from the API with React. Build components and sub-components to do the work and display your data.
 
 **Challenge 8**
 
@@ -124,14 +177,14 @@ Try any or all of these stretch challenges.
 
 ### Due date
 
-Class #
+Class 10 - Jun 22 2020 10:00 PM
 
 ## Assessing the assignment
 
 | - | **Does not meet expectations** | **Meets expectations** | **Exceeds expectations** |
 |:-------------|:---------------------------|:-------------------------|:---------------------|
-| **Completed** | Did not complete           | Completed challenges 1-3 | Completed challenges 4+ |
-| **Functional** | Is not functional          | Displays the weather data and handles errors | Displays the temp in F and C along description and atmospheric conditions and has some CSS styles |
+| **Completed** | Did not complete | Completed challenges 1-3 | Completed challenges 4+ |
+| **Functional** | Is not functional | Displays the weather data and handles errors | Displays the temp in F and C along description and atmospheric conditions and has some CSS styles |
 | **Code quality** | Indentation and spacing is _inconsistent_ | Uses _consistent indentation and spacing_ | Well written and well commented, variable and function names are self commenting |
 | **Code Architecture and Structure** | All code is in App.js | Uses 3 components | Uses 5 or more components, components are specialized and perform formatting and display of data based on props |
 | **Work Ethic** | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly documents process | 
