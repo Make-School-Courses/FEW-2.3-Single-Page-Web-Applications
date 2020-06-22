@@ -49,8 +49,8 @@ By the end of the course, you will be able to:
 |  7 |  Mon, June 15   | [Making Network Requests](Lessons/lesson-06.md) | - |
 |  8 |  Wed, June 17   | [Lesson 6] |
 |  9 |  Fri, June 19   | [Application State](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
-| 10 |  Mon, June 22   | [Lesson 7] |
-| 11 |  Wed, June 24   | [Redux](Lessons/lesson-08.md) | - | 
+| 10 |  Mon, June 22   | [Redux](Lessons/lesson-08.md) |
+| 11 |  Wed, June 24   | - | - | 
 | 12 |  Fri, June 26   | [Redux Part 2](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project |
 | 13 |  Mon, June 29   | [React Hooks](Lessons/lesson-10.md) | - |
 | 14 |  Wed, July 1    | [Lesson 10]|  
