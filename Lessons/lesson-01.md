@@ -113,9 +113,32 @@ What you need to know:
 
 JSX is compiled into vanilla JavaScript.
 
-> Pair up and copy the code in the Simple Component example. Go to [Babel](https://babeljs.io/repl/#?presets=react&code_lz=MYewdgzgLgBApgGzgWzmWBeGAeAFgRgD4AJRBEAGhgHcQAnBAEwEJsB6AwgbgChRJY_KAEMAlmDh0YWRiGABXVOgB0AczhQAokiVQAQgE8AkowAUAcjogQUcwEpeAJTjDgUACIB5ALLK6aRklTRBQ0KCohMQk6Bx4gA) and paste the code into the left panel of the editor. Look at and discuss what appears in the right side of the editor. 
+> Pair and discuss - https://reactjs.org/docs/introducing-jsx.html
 
-What you need to know: 
+Here is a sample block of JSX: 
+
+```JSX
+import React from 'react';
+// Need this to add middleware
+
+function App() {
+  return (
+  
+      <div className="App">
+        <header className="App-header">
+          <h1>Hello World</h1>
+        </header>
+      </div>
+    
+  );
+}
+
+export default App;
+```
+
+> Pair up and copy the code in the Simple Component example. Go to [Babel](https://babeljs.io/repl/#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&spec=false&loose=false&code_lz=JYWwDg9gTgLgBAJQKYEMDG8BmUIjgcilQ3wG4AoAekrgDkkkATOGAC2AGcWI4VHmQwfgBskAdxRFy5TAFcAdhmAR5cAIJgwACgCUcAN7k4cIjFlRVWo3GvHjAHkbAAbnDTCUHDrRQgkAXgAiDTBAgD5bOwdWVEYkKDcPLx8_IJCAWhi-ePDIqOiARjCACSRhYR4AdWhhRntKViK8u3qsuKgI_Lh6p2dOu2sdCgBfaSQAD0hYODjMFFlheBDSIA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=react&prettier=false&targets=&version=7.11.1&externalPlugins=) and paste the code into the left panel of the editor. Look at and discuss what appears in the right side of the editor. 
+
+### What you need to know: 
 
 - The _view_ of a component is written in JSX
 - JSX is an _extension_ of the JavaScript language 
