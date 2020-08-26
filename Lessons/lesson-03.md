@@ -14,7 +14,7 @@ React is built on functional programming. This class you will look at some funct
     - `Array.reduce()`
 1. Transform data with `Array.map()`
 
-## ES6 Modules 
+## ES6 Modules
 
 ES6 modules organize code by both file and scope. Code is written in a 'physical' file and variables and functions defined in those files are scoped to their file. 
 
@@ -28,15 +28,23 @@ You will use modules in the homework to organize your code.
 
 ## Functional Programming 
 
-Functional programming is a paradigm or style of programming based on functions. This is different from Object Oriented Programming which based on Objects, or procedural programming which is based on procedures.  
+Functional programming is a paradigm or style of programming based on functions. This is different from Object Oriented Programming which based on Objects, or procedural programming which is based on procedures.
 
-It's hard to put functional programming into a nutshell explanation other than to say it's all about making programs built from functions and avoids shared state and mutable data. 
+It's hard to put functional programming into a nutshell explanation other than to say it's all about making programs built from functions and avoids shared state and mutable data.
 
-The entry point for most to the world of functional programming is the Array methods: `map`, `filter`, and `reduce`. 
+The entry point for most to the world of functional programming is the Array methods: `map`, `filter`, and `reduce`.
 
 ### Array `map`, `filter`, `reduce`
 
-The functions map, filter, and reduce are a gateway into functional programming concepts. Functional programming uses [Pure Functions](https://www.sitepoint.com/functional-programming-pure-functions/). These functions have no side effects, in other words calling a pure function doesn't make changes to a shared or global state. For the same input, a pure function will always return the same output. 
+The functions map, filter, and reduce are a gateway into functional programming concepts. Functional programming uses [Pure Functions](https://www.sitepoint.com/functional-programming-pure-functions/). These functions have no side effects, in other words calling a pure function doesn't make changes to a shared or global state. For the same input, a pure function will always return the same output.
+
+> Map/filter/reduce in a tweet:
+>
+> `[🌽, 🐮, 🐔].map(cook)` -> `[🍿, 🍔, 🍳]`
+>
+> `[🍿, 🍔, 🍳].filter(isVegetarian)` -> `[🍿, 🍳]`
+>
+> `[🍿, 🍳].reduce(eat)` -> `💩`
 
 [`Array.map()`]() transforms an array of data and **returns a new array**. With map you should have a one to one relationship with the source array. Use it to convert an array of one type into an array of another type. 
 
@@ -199,7 +207,7 @@ In your stylesheet you might style this with:
 
 `.category-button { color: red }`
 
-## In Class 
+## In Class
 
 Start on [Assignment 2](../Assignments/Assignment-02.md). You'll be using map, filter, and reduce to solve some challenges here. 
 
