@@ -38,6 +38,8 @@ The entry point for most to the world of functional programming is the Array met
 
 The functions map, filter, and reduce are a gateway into functional programming concepts. Functional programming uses [Pure Functions](https://www.sitepoint.com/functional-programming-pure-functions/). These functions have no side effects, in other words calling a pure function doesn't make changes to a shared or global state. For the same input, a pure function will always return the same output.
 
+<!--  -->
+
 > Map/filter/reduce in a tweet:
 >
 > `[🌽, 🐮, 🐔].map(cook)` -> `[🍿, 🍔, 🍳]`
@@ -45,6 +47,8 @@ The functions map, filter, and reduce are a gateway into functional programming 
 > `[🍿, 🍔, 🍳].filter(isVegetarian)` -> `[🍿, 🍳]`
 >
 > `[🍿, 🍳].reduce(eat)` -> `💩`
+
+<!--  -->
 
 [`Array.map()`]() transforms an array of data and **returns a new array**. With map you should have a one to one relationship with the source array. Use it to convert an array of one type into an array of another type. 
 
