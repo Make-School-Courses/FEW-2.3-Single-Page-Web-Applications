@@ -26,11 +26,56 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 You will use modules in the homework to organize your code. 
 
+**tl;dr**
+
+Here is the short version of import and export. The first concept is to understand that all variables and functions are scoped to the file where they are declared. 
+
+To share a value a file can export that value. 
+
+```JS
+// constants.js
+const name = 'Foo'
+const id = 'Bar'
+
+export { name, id } // export name and id
+```
+
+Another file can import values like this: 
+
+```js
+import { name, id } from './constants.js'
+
+console.log(name, id) // prints Foo Bar
+```
+
+A file may declare a single export as the default export. There can only be one default export and it is imported and exported a little differently. 
+
+```JS
+// constants.js
+const name = 'Foo'
+const id = 'Bar'
+
+function hello() {
+    console.log(name, id)
+}
+
+export default hello // the default export
+export { name, id } // export name and id
+```
+
+Another file can import values like this: 
+
+```js
+import hello, { name, id } from './constants.js' // hello is the default export! 
+
+hello() // prints Foo Bar
+```
+
 ## Functional Programming 
 
-Functional programming is a paradigm or style of programming based on functions. This is different from Object Oriented Programming which based on Objects, or procedural programming which is based on procedures.
+Functional programming is a style of programming based on functions. This is different from Object Oriented Programming which based on Objects, or procedural programming which is based on procedures.
 
-It's hard to put functional programming into a nutshell explanation other than to say it's all about making programs built from functions and avoids shared state and mutable data.
+Functional programming relies on functions and avoids shared mutable state. 
 
 The entry point for most to the world of functional programming is the Array methods: `map`, `filter`, and `reduce`.
 
