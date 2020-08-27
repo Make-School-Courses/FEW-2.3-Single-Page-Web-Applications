@@ -79,6 +79,8 @@ Functional programming relies on functions and avoids shared mutable state.
 
 The entry point for most to the world of functional programming is the Array methods: `map`, `filter`, and `reduce`.
 
+Why are these methods functional? They are functions for a start. Second, these methods do not modify/mutate the array 
+
 ### Array `map`, `filter`, `reduce`
 
 The functions map, filter, and reduce are a gateway into functional programming concepts. Functional programming uses [Pure Functions](https://www.sitepoint.com/functional-programming-pure-functions/). These functions have no side effects, in other words calling a pure function doesn't make changes to a shared or global state. For the same input, a pure function will always return the same output.
@@ -92,6 +94,15 @@ The functions map, filter, and reduce are a gateway into functional programming 
 > `[🍿, 🍔, 🍳].filter(isVegetarian)` -> `[🍿, 🍳]`
 >
 > `[🍿, 🍳].reduce(eat)` -> `💩`
+
+```js
+const prices = [0.55, 1.99, 23.67, 1.00001] // '$1.00'
+const formattedPrices = prices.map((price) => {
+    return `$${price.toFixed(2)}` // $x.xx
+})
+
+// formattedPrices ['$0.55', '$1.99', '$23.67', '$1.00']
+```
 
 <!--  -->
 
@@ -128,8 +139,24 @@ Use `Array.filter()` to create a new Array that contains none, some, or all of t
 For example, to get a list of only items in a category. 
 
 ```JavaScript
+const prices = [0.55, 1.99, 23.67, 1.00001] // '$1.00'
+const cheapest = prices.filter((price) => {
+    return price < 2
+}) // cheapest [0.55, 1.99, 1.00001]
+
+const formattedPrices = cheapest.map((price) => {
+    return `$${price.toFixed(2)}` // $x.xx
+})
+
+// formattedPrices ['$0.55', '$1.99', '$1.00']
+
+
+array.filter((item) => {
+    return // return true or false 
+})
+
 const allToys = inventory.filter((item) => {
-    return item.category = 'Toys'
+    return item.category === 'Toys'
 })
 ```
 
@@ -142,9 +169,20 @@ Use `Array.reduce()` to reduce a collection of values to a single value.
 For example, you get the total cost of the inventory by adding all of the prices. 
 
 ```JavaScript
-const allToys = inventory.reduce((total, item) => {
+const prices = [0.55, 1.99, 23.67, 1.00001] // '$1.00'
+const totalPrices = prices.reduce((acc, price) => {
+    return acc += price
+}, 0) // 27.21001
+
+const priceStr = prices.reduce((acc, price) => {
+    return acc += price // 
+}, '') // '0.551.9923.671.00001'
+
+const allInventory = inventory.reduce((total, item) => {
     return total += item.price
 }, 0)
+
+[...].reduce(sum, 0)
 ```
 
 The first parameter of reduce is a function, the second parameter is the starting value of the accumulator. Here the starting value is 0. 
