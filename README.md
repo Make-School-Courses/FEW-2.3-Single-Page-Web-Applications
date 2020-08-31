@@ -40,27 +40,21 @@ By the end of the course, you will be able to:
 
 | Class | Date | Topics | Assignment |
 |:------|:-----|:-------|:-----------|
-|  1 |  Mon, June 1    | [Single Page Applications](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) - React Tutorial |
-|  2 |  Wed, June 3    | [Profesional Best Practices](Lessons/lesson-02.md) | - |
-|  3 |  Fri, June 5    | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
-|  4 |  Mon, June 8    | [Lesson 3] |
-|  5 |  Wed, June 10   | [React Input Pattern](Lessons/lesson-04.md) | - |
-|  6 |  Fri, June 12   | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
-|  7 |  Mon, June 15   | [Making Network Requests](Lessons/lesson-06.md) | - |
-|  8 |  Wed, June 17   | [Lesson 6] |
-|  9 |  Fri, June 19   | [Application State](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
-| 10 |  Mon, June 22   | [Redux](Lessons/lesson-08.md) |
-| 11 |  Wed, June 24   | - | - | 
-| 12 |  Fri, June 26   | [Redux Part 2](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project |
-| 13 |  Mon, June 29   | [React Hooks](Lessons/lesson-10.md) | - |
-| 14 |  Wed, July 1    | [Lesson 10]|  
-| -  |  Fri, July 3    | **NO CLASS - INDEPENDENCE DAY OBSERVED**|
-| 15 |  Mon, July 6    | [Final Project workshop](Lessons/lesson-11.md) | - |
-| 16 |  Wed, July 8    | [Final Project workshop](Lessons/lesson-11.md) | - |
-| 17 |  Fri, July 10   | [Final Project workshop](Lessons/lesson-11.md) | - |
-| 18 |  Mon, July 13   | [Final Project workshop](Lessons/lesson-11.md) | - |
-| 19 |  Wed, July 15   | [Present Final Projects](Lessons/lesson-13.md) | - |
-| 20 |  Fri, July 17   | [Final Assessment](Lessons/lesson-14.md) | - |
+|  1 | Wed, August 19 | [Single Page Applications](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) - React Tutorial |
+|  2 | Mon, August 24 | [Profesional Best Practices](Lessons/lesson-02.md) | - |
+|  3 | Wed, August 26 | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
+|  4 | Mon, August 31 | [React Input Pattern](Lessons/lesson-04.md) | - |
+|  5 | Wed, September 2 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
+|  6 | Mon, September 5 | [Making Network Requests](Lessons/lesson-06.md) | - |
+|  7 | Wed, September 9 | [Application State](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
+|  8 | Mon, September 14 | [Redux](Lessons/lesson-08.md) |
+|  9 | Wed, September 16 | [Redux Part 2](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project |
+| 10 | Mon, September 21 | [React Hooks](Lessons/lesson-10.md) | - | 
+| 11 | Web, September 23 | [Final Project workshop](Lessons/lesson-11.md) | - |
+| 12 | Mon, September 28 | [Final Project workshop](Lessons/lesson-11.md) | - |
+| 13 | Wed, September 30 | [Final Project workshop](Lessons/lesson-11.md) | - |
+| 14 | Mon, October 5 | [Present Final Projects](Lessons/lesson-13.md) | - |
+| 15 | Wed, October 7 | [Final Assessment](Lessons/lesson-14.md) | - |
 
 <!-- 
 **Course Dates:** Tuesday, March 31 – Thursday, May 14, 2019 (7 weeks)
