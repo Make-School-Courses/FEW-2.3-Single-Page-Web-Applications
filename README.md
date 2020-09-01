@@ -45,12 +45,12 @@ By the end of the course, you will be able to:
 |  3 | Wed, August 26 | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
 |  4 | Mon, August 31 | [React Input Pattern](Lessons/lesson-04.md) | - |
 |  5 | Wed, September 2 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
-|  6 | Mon, September 5 | [Making Network Requests](Lessons/lesson-06.md) | - |
-|  7 | Wed, September 9 | [Application State](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
-|  8 | Mon, September 14 | [Redux](Lessons/lesson-08.md) |
-|  9 | Wed, September 16 | [Redux Part 2](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project |
-| 10 | Mon, September 21 | [React Hooks](Lessons/lesson-10.md) | - | 
-| 11 | Web, September 23 | [Final Project workshop](Lessons/lesson-11.md) | - |
+|  6 | Mon, September 7 | Labor Day - No Class |- |
+|  7 | Wed, September 9 | [Making Network Requests](Lessons/lesson-06.md) | - |
+|  8 | Mon, September 14 | [Application State](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
+|  9 | Wed, September 16 | [Redux](Lessons/lesson-08.md) | - |
+| 10 | Mon, September 21 | [Redux Part 2](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project | 
+| 11 | Web, September 23 | [React Hooks](Lessons/lesson-10.md) | - |
 | 12 | Mon, September 28 | [Final Project workshop](Lessons/lesson-11.md) | - |
 | 13 | Wed, September 30 | [Final Project workshop](Lessons/lesson-11.md) | - |
 | 14 | Mon, October 5 | [Present Final Projects](Lessons/lesson-13.md) | - |
