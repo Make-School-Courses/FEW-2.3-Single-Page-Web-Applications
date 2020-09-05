@@ -14,7 +14,7 @@
   "price": "$185.21",
   "rating": 3.0,
   "units": 241
-}, {
+  }, {
   "id": 3,
   "name": "Fintone",
   "category": "Electronics",
@@ -22,7 +22,7 @@
   "price": "$190.79",
   "rating": 3.1,
   "units": 962
-}, {
+  }, {
   "id": 4,
   "name": "Rank",
   "category": "Games",

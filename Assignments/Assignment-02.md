@@ -412,3 +412,75 @@ Class 3
 | **Work Ethic** | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
 
 
+## Map Filter Reduce Practive problems
+
+Try these practice problems. 
+
+```JS 
+
+
+// Transform objects to categories 
+const allCategories = data.map((obj) => {
+  return obj.category
+})
+console.log(allCategories) // Should display ["Toys", "Kids", "Electronics", ...]
+
+// Transform objects to prices 
+const allPrices = data.map((obj) => {
+  // What goes here? 
+
+})
+
+console.log(allPrices) // should display ["$12.07", "$185.21", "$190.79", ... ]
+
+// Transform objects to names 
+const allNames = data.map(/* What goes here? */)
+
+console.log(allNames) // Should display ["Zoolab", "Lotstring", "Fintone", ... ]
+
+// Transform Objects to ratings
+const allRatings // Map data to a list of ratings
+
+console.log(allRatings) // [3.0, 3.0, 3.1, ... ]
+
+// Transform objects to units
+// You do it all
+
+// -------------------------------------------------
+
+// Now combine two or more properties to getnerate new values 
+
+// Transform objects into names and prices
+const namesAndPrices = data.map((obj) => {
+  return `${obj.name} ${obj.price}`
+})
+
+console.log(namesAndPrices) // ["Zoolab $12.07", "Lotstring $185.21", "Fintone $190.79", ... ]
+
+// Teansform objects into names and categories
+const namesAndCategories = data.map((obj) => {
+  // what goes here?
+})
+
+console.log(namesAndCategories) // ["Zoolab Toys", "Lotstring Kids", "Fintone Electronics", ... ]
+
+// Transform data into Names and ratings
+const namesAndRatings = data.map(/* what goes here?  */)
+
+console.log(namesAndRatings) // // ["Zoolab 3.0", "Lotstring 3.0", "Fintone 3.1", ... ]
+
+// Transform data into an array of strings that show: 
+// Name price and rating
+// Zoolab $12.07 Rating: 3.0
+const namePriceRating = data.map((obj) => {
+  return `${obj.name} ${obj.price} Rating: ${obj.rating}`
+})
+
+console.log(namePriceRating) // ["Zoolab $12.07 Rating: 3.0", ... ]
+
+// Transform data to an array of 
+// Name category Units
+// Zoolab Toys Units: 632
+const nameCategoryUnits = data.mal(/* What goes here? */)
+
+```
