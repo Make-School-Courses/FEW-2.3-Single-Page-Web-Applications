@@ -498,6 +498,150 @@ const idNameCategory // you do the rest
 
 console.log(idNameCategory)
 
+// Map also includes the index of each item. 
+
+// ...
+
+// ------------------------------------------------
+
+// Filter problems 
+
+// The function provided to filter must return 
+// tru if the item is to be included or false if not
+
+const allToys = data.filter((obj) => {
+  return obj.category === "Toys"
+})
+
+console.log(allToys)
+
+
+
+const allKids = data.filter((obj) => {
+  // Return only items where the category is Kids
+})
+
+console.log(allKids)
+
+
+// Filter for category Games
+const allGames = data.filter()
+
+console.log(allGames)
+
+
+// Filter for all objects in category Music
+const allMusic // 
+
+console.log(allMusic)
+
+
+
+// Find all of the objects with a rating 
+// greater than 3.0
+const ratingOverThree = data.filter((obj) => {
+  // ??? 
+})
+
+console.log(ratingOverThree)
+
+
+// Find all of the object with a rating 
+// equal to or less than 3
+
+const ratingThreeOrLess = data.filter()
+
+console.log(ratingThreeOrLess)
+
+
+// Find all of the Sports with a rating 
+// 3 or greater
+
+const greatSports = data.filter((obj) => {
+  return obj.category === "Sports" && obj.rating >= 3
+})
+
+console.log(greatSports)
+
+
+// Find everything with a category of Home and 
+// a rating less than 3
+
+const badHome = data.filter()
+
+console.log(badHome)
+
+
+
+// We need to restock! We should find all of the 
+// objects where the rating is over 3 and number 
+// of units is less than 100
+
+
+
+// ------------------------------------------------
+
+// Reduce problems
+
+// What's our total inventory? 
+
+const totalUnits = data.reduce((acc, obj) => {
+  return acc += obj.units
+})
+
+console.log(totalUnits)
+
+
+
+// Add up the total ratings 
+const totalRating = data.reduce((acc, obj) => {
+  // Return the accumulator plus the objects rating
+})
+
+console.log(totalRating)
+
+// Find the average rating by dividing the rating by the length of data
+// log the answer with console.log()
+
+
+// Find the total number of units in stock by adding 
+// up the unit value for each product
+const totalUnits = data.reduce(/* ??? */)
+
+console.log(totalUnits)
+
+
+
+// Reduce will use the first element to determine 
+// the value type returned. In the examples above
+// rating and units are number and the totals are
+// also numbers. 
+
+// You may want to return a type that is different 
+// from the type in the source. For example you might 
+// want to return an object created from strings. 
+
+// Do this by adding the starting value as the second 
+// parameter to reduce. 
+
+// data.reduce(() => {}, {}) // The second param is {}
+
+// Make an object with properties that match the 
+// names of each product and have values equal to 
+// the rating. 
+
+const nameRating = data.reduce((acc, obj) => {
+  return acc[obj.name] = obj.rating
+}, {}) 
+
+console.log(nameRating)
+
+const nameUnits = data.reduce((acc, obj) => {
+  // Get the name and unit sould look like:
+  // { Zoolab: 632, Lotstring: 241, ... }
+}, {}) 
+
+console.log(nameRating)
 
 
 ```
