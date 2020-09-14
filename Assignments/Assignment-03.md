@@ -131,7 +131,7 @@ On a success JSON has code:200
 ```
 
 An error from OpenWeatherMap might look like this: 
-```JSON
+```JS
 {
   cod: "404"
   message: "city not found"
