@@ -120,7 +120,7 @@ There are two places where errors can occur:
 - OpenWeatherMap supplies an error. The OpenWeatherMap API includes a property `code` on the JSON object it returns. THe value of this property is an error code. if code === 200 everything is good. If code === 404 the zip code was not found. The JSON might look like this in those two scenarios: 
 
 On a success JSON has code:200
-```JSON
+```js
 {
     coord: {...}, weather: Array(1), base: "stations", main: {...}, visibility: 16093, ...}
   base: "stations"
