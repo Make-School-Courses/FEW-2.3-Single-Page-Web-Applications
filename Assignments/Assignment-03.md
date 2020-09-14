@@ -122,7 +122,7 @@ There are two places where errors can occur:
 On a success JSON has code:200
 ```JSON
 {
-    coord: {…}, weather: Array(1), base: "stations", main: {…}, visibility: 16093, …}
+    coord: {...}, weather: Array(1), base: "stations", main: {...}, visibility: 16093, ...}
   base: "stations"
   clouds: {all: 75}
   cod: 200 <== Success! 
@@ -148,6 +148,8 @@ A good strategy here is to handle the errors where they occur and set a value on
 
 **A:** At `fetch()`. Server errors will happen in the catch block. If the network call was successful check the cod property. If the value is 200 show the weather data. If not 200 you have an error. Read the message property for a description. 
 
+**Stretch Challenges**
+
 **Challenge 8** 
 
 Use an API of your choice. This can be any API you like. Render data from the API with React. Build components and sub-components to do the work and display your data.
@@ -160,8 +162,6 @@ Use an API of your choice in place of the OpenWeatherMap API. Choose anything fr
 - [Programable Web](https://www.programmableweb.com/apis/directory)
 - [API List](https://apilist.fun)
 - [Any API](https://any-api.com)
-
-**Stretch Challenges** 
 
 Try any or all of these stretch challenges. 
 
