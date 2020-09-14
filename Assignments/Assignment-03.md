@@ -122,7 +122,11 @@ There are two places where errors can occur:
 On a success JSON has code:200
 ```js
 {
-    coord: {...}, weather: Array(1), base: "stations", main: {...}, visibility: 16093, ...}
+  coord: {...}, 
+  weather: Array(1), 
+  base: "stations", 
+  main: {...}, 
+  visibility: 16093, ...}
   base: "stations"
   clouds: {all: 75}
   cod: 200 <== Success! 
