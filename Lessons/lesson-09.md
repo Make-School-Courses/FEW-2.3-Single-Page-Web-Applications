@@ -33,6 +33,15 @@ Quick let's review everything. Identify the following in the tutorial projects.
   - connected components
 4. Identify and described Application State
 
+## Challenges 
+
+Using the sample Redux project try these challenges: 
+
+- Create a component that resets all counters
+- Create a component that increments all timers
+- Create a component that displays an average of all counters
+- Create a component that display the min and max counter values
+
 ## Redux Review 
 
 Discuss issues and questions with tutorial projects. Write any questions you have abput the tutorial project down on the board. 

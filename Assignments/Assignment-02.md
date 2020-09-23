@@ -642,6 +642,4 @@ const nameUnits = data.reduce((acc, obj) => {
 }, {}) 
 
 console.log(nameRating)
-
-
 ```
