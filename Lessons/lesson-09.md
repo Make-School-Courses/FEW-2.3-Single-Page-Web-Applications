@@ -42,6 +42,8 @@ Using the sample Redux project try these challenges:
 - Create a component that displays an average of all counters
 - Create a component that display the min and max counter values
 
+Sample Redux Project: https://github.com/Make-School-Labs/react-redux-counter
+
 ## Redux Review 
 
 Discuss issues and questions with tutorial projects. Write any questions you have abput the tutorial project down on the board. 
