@@ -56,7 +56,7 @@ Currently all of the work of loading and displaying the weather data is handled 
 - Import the Weather component into `App.js` 
 - Display the new Weather component in `App.js`.
 
-You're done when all of the work of loading and displaying weather data is removed from App.js, and the Weather component does all the work. 
+You're done when all of the work of loading and displaying weather data is removed from App.js, and the Weather component does all the work. You can use the example component at the [bottom of this page](#sample-component)
 
 **Important!** App uses two values on state to accomplish what it does. Your new Component will need to support these two values on state. 
 
@@ -318,7 +318,7 @@ class App extends Component {
 export default App;
 ```
 
-### Sample Component
+### Sample Component {#sample-component}
 
 ```JSX
 import React, { Component } from 'react';
@@ -335,16 +335,17 @@ import React, { Component } from 'react';
   constructor(props) {
     super(props);
     
-    // usually default the state object to a reasonable value
-    // initialising the state object 
-
+    // initialising the state object
+    // usually default the state object to a reasonable value 
+    // lat property for the latitude and errorMessage for any errorMessage
     this.state = { lat: null, errorMessage: '' };
 
   }
 
-  /* // Alternate State initialisation method
+  /* // Alternate state initialisation method without declaring a constructor function
   state = { lat:null, errorMessage: ''} */
 
+  // lifecycle method ComponentDidMount() is used to load the data from the geo location API
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
       position => this.setState({lat: position.coords.latitude}),
@@ -376,6 +377,15 @@ import React, { Component } from 'react';
    
   }
 }
+
+export default App;
+
+
+
+
+
+
+
 
 // Display.js Component
 // the Display component is styled by a css file Display.css
