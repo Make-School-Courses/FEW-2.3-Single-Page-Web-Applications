@@ -27,7 +27,7 @@ Currently the app does all of it's work in the `App.js` component. The goal of t
 
 ### Challenges 
 
-**Challenge 1** - Goal create and use an OpenWeatherMap API key.
+#### Challenge 1 - Goal create and use an OpenWeatherMap API key.
 
 The OpenWeatherMap API requires an API key. You need to get your API key and add it to the project. 
 
@@ -48,7 +48,7 @@ Each variable goes on it's own line in the form NAME=value.
 
 **Important!** The key value you add to `.env` must begin with `REACT_APP_` or they will not be used! This is a requirement of Create React App. 
 
-**Challenge 2** Goal create a Weather component. 
+#### Challenge 2 - Goal create a Weather component. 
 
 Currently all of the work of loading and displaying the weather data is handled by  `App.js`. You should:
 
@@ -64,7 +64,7 @@ The first `this.state.inputValue` holds the zip code entered into the input fiel
 
 Second, `this.state.weatherData` holds the weather data from OpenWeatherMap. This variable is used to conditionally render the weather data. Read the comments in the sample code for more details. 
 
-**Challenge 3** Make sub Components
+#### Challenge 3 - Make sub Components
 
 The Weather Component is a little monolithic. It does a little too much. In many cases it's better to have smaller components that handle specific tasks. 
 
@@ -78,7 +78,7 @@ Goal build components that display various elements of the weather data.
 
 The tasks above as you to build three new components. These should all be children of the Weather component you created in the first challenge. 
 
-**Challenge 4** Style the components! 
+#### Challenge 4 - Style the components! 
 
 Currently there a minimal set of styles. Your goal is to expand on these. 
 
@@ -90,11 +90,11 @@ Look at App.css. This file has the has CSS styles that are imported into App.js 
 
 - Stretch goal, create a css file for each component you create and import that set of styles into the component. 
 
-**Challenge 5** Expanding the form
+#### Challenge 5 - Expanding the form
 
 Currently the form has a single input for the zip. Set up a pair of radio buttons to select the units. These buttons will select Imperial or metric. The radio buttons will use the React controlled component pattern!
 
-**Challenge 6** Show app status
+#### Challenge 6 - Show app status
 
 The app can be one of three states. 
 
@@ -110,7 +110,7 @@ You can display a component or null for each of these states. Imagine the area b
 - Loading - "Loading..." - A message to say that the app is working, this could be an animation...
 - Success - "Temperature 70˚ ..." - Shows the weather data.
 
-**Challenge 7** Handling Errors 
+#### Challenge 7 - Handling Errors 
 
 It's possible an error might occur. A user could enter an invalid zip code or the OpenWeatheMap server might be down. Your app should handle these situations gracefully. 
 
@@ -120,6 +120,7 @@ There are two places where errors can occur:
 - OpenWeatherMap supplies an error. The OpenWeatherMap API includes a property `code` on the JSON object it returns. THe value of this property is an error code. if code === 200 everything is good. If code === 404 the zip code was not found. The JSON might look like this in those two scenarios: 
 
 On a success JSON has code:200
+
 ```js
 {
   coord: { ... }, 
@@ -134,7 +135,8 @@ On a success JSON has code:200
 }
 ```
 
-An error from OpenWeatherMap might look like this: 
+An error from OpenWeatherMap might look like this:
+
 ```JS
 {
   cod: "404"
@@ -152,15 +154,11 @@ A good strategy here is to handle the errors where they occur and set a value on
 
 **A:** At `fetch()`. Server errors will happen in the catch block. If the network call was successful check the cod property. If the value is 200 show the weather data. If not 200 you have an error. Read the message property for a description. 
 
-**Stretch Challenges**
+### Stretch Challenges
 
-**Challenge 8** 
+#### Challenge 8
 
-Use an API of your choice. This can be any API you like. Render data from the API with React. Build components and sub-components to do the work and display your data.
-
-**Challenge 8**
-
-Use an API of your choice in place of the OpenWeatherMap API. Choose anything from one of these services: 
+Use an API of your choice in place of the OpenWeatherMap API. Build components and sub-components to do the work and display your data. Choose anything from one of these services: 
 
 - [Rapid API](https://rapidapi.com)
 - [Programable Web](https://www.programmableweb.com/apis/directory)
@@ -318,4 +316,151 @@ class App extends Component {
 }
 
 export default App;
+```
+
+### Sample Component
+
+```JSX
+import React, { Component } from 'react';
+
+/* 
+  This illustrates a simple component that gathers location data(latitude) from geoloaction API
+  and tells if it is a an expected cold or warm weather
+  It is divided into two files - App.js file and the Display component
+
+ */
+ // App.js
+  class App extends Component {
+  // Initialize state object
+  constructor(props) {
+    super(props);
+    
+    // usually default the state object to a reasonable value
+    // initialising the state object 
+
+    this.state = { lat: null, errorMessage: '' };
+
+  }
+
+  /* // Alternate State initialisation method
+  state = { lat:null, errorMessage: ''} */
+
+  componentDidMount() {
+    window.navigator.geolocation.getCurrentPosition(
+      position => this.setState({lat: position.coords.latitude}),
+      err => this.setState({ errorMessage: err.message })
+
+    );
+  }
+  
+
+  // helper function to render content
+  renderContent(){
+    if (this.state.errorMessage && !this.state.lat) {
+      return <div>Error: {this.state.errorMessage}</div>
+    }
+
+    if (!this.state.errorMessage && this.state.lat) {
+      return <SeasonDisplay lat={this.state.lat}/>
+    }
+
+    return <Spinner message= "Please aaccept location request"/>
+  }
+  render() {
+    return (
+      <div className="border red">
+        {this.renderContent()}
+      </div>
+    )
+
+   
+  }
+}
+
+// Display.js Component
+// the Display component is styled by a css file Display.css
+import React, { Component } from 'react';
+import './Display.css';
+
+const seasonConfig = {
+    summer: {
+        text: 'Let\'s hit the beach',
+        iconName: 'sun'
+    },
+    winter: {
+        text: 'Burr, it is chilly',
+        iconName: 'snowflake'
+    }
+}
+
+// create a class based component Display that inherits from Component parent class
+class Display extends Component {
+    constructor(props){
+      super(props)
+      props = props
+    }
+  
+    getSeason(lat, month) {
+      if (month > 2  && month < 9) {
+          return lat > 0 ? 'summer': 'winter';
+      } else {
+          return lat > 0 ? 'winter' : 'summer';
+      }
+  }
+  
+    render(){
+      const season = this.getSeason(this.props.lat, new Date().getMonth())
+      const {text, iconName}= seasonConfig[season]
+  
+      return(
+          <div className={`season-display ${season}`}>
+          <i className= {`icon-left massive ${iconName} icon`}></i>
+          <h1>
+          { text }
+          </h1>
+          <i className= {`icon-right massive ${iconName} icon`}></i>
+          </div>
+      );
+    }
+  }
+
+export default Display;
+```
+
+```css
+/* Display.css file styles the display component */
+.icon-left{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.icon-right{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.season-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.season-display.winter i {
+    color: blue;
+}
+
+.season-display.summer i {
+    color: red;
+}
+
+.winter {
+    background-color: aliceblue;
+}
+
+.summer{
+ background-color: orange;
+}
 ```
