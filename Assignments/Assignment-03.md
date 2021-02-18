@@ -56,7 +56,7 @@ Currently all of the work of loading and displaying the weather data is handled 
 - Import the Weather component into `App.js` 
 - Display the new Weather component in `App.js`.
 
-You're done when all of the work of loading and displaying weather data is removed from App.js, and the Weather component does all the work. You can use the example component at the [bottom of this page](#sample-component)
+You're done when all of the work of loading and displaying weather data is removed from App.js, and the Weather component does all the work. You can use the example component at the [bottom of this page](#sample-component).
 
 **Important!** App uses two values on state to accomplish what it does. Your new Component will need to support these two values on state. 
 
@@ -84,7 +84,7 @@ Currently there a minimal set of styles. Your goal is to expand on these.
 
 - Your goal is to add some styles to the components you have created. 
 
-Look at App.css. This file has the has CSS styles that are imported into App.js on line 4 of that file. 
+Look at App.css. This file has the has CSS styles that are imported into App.js on line 4 of that file. You can use the example component at the [bottom of this page](#sample-component).
 
 **Note!** Importing CSS in this way works with Create React App starter projects because it is part of the build system. 
 
@@ -390,6 +390,7 @@ export default App;
 // Display.js Component
 // the Display component is styled by a css file Display.css
 import React, { Component } from 'react';
+// import the css file that styles the specific component
 import './Display.css';
 
 const seasonConfig = {
