@@ -321,157 +321,72 @@ export default App;
 ### Sample Component {#sample-component}
 
 ```JSX
-import React, { Component } from 'react';
-
 /* 
-  This illustrates a simple component that gathers location data(latitude) from geoloaction API
-  and tells if it is a an expected cold or warm weather
-  It is divided into two files - App.js file and the Display component
-
+  This example illustrates a simple component
+  that validates input(password) from a user
  */
- // App.js
-  class App extends Component {
-  // Initialize state object
-  constructor(props) {
-    super(props);
-    
-    // initialising the state object
-    // usually default the state object to a reasonable value 
-    // lat property for the latitude and errorMessage for any errorMessage
-    this.state = { lat: null, errorMessage: '' };
 
-  }
-
-  /* // Alternate state initialisation method without declaring a constructor function
-  state = { lat:null, errorMessage: ''} */
-
-  // lifecycle method ComponentDidMount() is used to load the data from the geo location API
-  componentDidMount() {
-    window.navigator.geolocation.getCurrentPosition(
-      position => this.setState({lat: position.coords.latitude}),
-      err => this.setState({ errorMessage: err.message })
-
-    );
-  }
-  
-
-  // helper function to render content
-  renderContent(){
-    if (this.state.errorMessage && !this.state.lat) {
-      return <div>Error: {this.state.errorMessage}</div>
-    }
-
-    if (!this.state.errorMessage && this.state.lat) {
-      return <SeasonDisplay lat={this.state.lat}/>
-    }
-
-    return <Spinner message= "Please aaccept location request"/>
-  }
-  render() {
-    return (
-      <div className="border red">
-        {this.renderContent()}
-      </div>
-    )
-
-   
-  }
-}
-
-export default App;
-
-
-
-
-
-
-
-
-// Display.js Component
-// the Display component is styled by a css file Display.css
 import React, { Component } from 'react';
-// import the css file that styles the specific component
-import './Display.css';
+// import specific css file that styles componet
+import './Validator.css';
 
-const seasonConfig = {
-    summer: {
-        text: 'Let\'s hit the beach',
-        iconName: 'sun'
-    },
-    winter: {
-        text: 'Burr, it is chilly',
-        iconName: 'snowflake'
+class Validator extends Component {
+ 
+    constructor(props) {
+        super(props);
+
+        // initialise state to a default value
+        this.state = { password: '' };
+    }
+
+      onFormSubmit (event) {
+        // stop the form from automatically submitting itself
+        event.preventDefault();
+
+        // make network fetch request to external API here
+    }
+
+    
+    render() {
+        return (
+            <div className="segment">
+                <form className="form" onSubmit={(e) => this.onFormSubmit(e)}>
+                    <div className="field">
+                        <label>Enter Password</label>
+              {/*This input uses the controlled component pattern*/}
+                        <input 
+                            type="password"
+                            value={this.state.password}
+                            onChange= {(e) => this.setState({password: e.target.value})}
+                        />
+                    </div>
+                    {this.state.password.length < 4 ? 'Password must be at least 8 characters' : ''}
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        );
     }
 }
 
-// create a class based component Display that inherits from Component parent class
-class Display extends Component {
-    constructor(props){
-      super(props)
-      props = props
-    }
-  
-    getSeason(lat, month) {
-      if (month > 2  && month < 9) {
-          return lat > 0 ? 'summer': 'winter';
-      } else {
-          return lat > 0 ? 'winter' : 'summer';
-      }
-  }
-  
-    render(){
-      const season = this.getSeason(this.props.lat, new Date().getMonth())
-      const {text, iconName}= seasonConfig[season]
-  
-      return(
-          <div className={`season-display ${season}`}>
-          <i className= {`icon-left massive ${iconName} icon`}></i>
-          <h1>
-          { text }
-          </h1>
-          <i className= {`icon-right massive ${iconName} icon`}></i>
-          </div>
-      );
-    }
-  }
+export default Validator;
 
-export default Display;
 ```
 
-```css
-/* Display.css file styles the display component */
-.icon-left{
-    position: absolute;
-    top: 10px;
-    left: 10px;
+```JSX
+// App.js file 
+// import the new component and render it.
+import React, { Component } from 'react';
+import Validator from './Validator';
+
+export default class App extends Component {
+  render() {
+    return (
+        <div>
+            {/*  Render the Validator component*/}
+            <Validator />
+        </div>
+    );
+  }
 }
 
-.icon-right{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-}
-
-.season-display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.season-display.winter i {
-    color: blue;
-}
-
-.season-display.summer i {
-    color: red;
-}
-
-.winter {
-    background-color: aliceblue;
-}
-
-.summer{
- background-color: orange;
-}
 ```
