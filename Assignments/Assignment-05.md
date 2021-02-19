@@ -10,9 +10,13 @@ It's important to revisit the concepts from class to solidify your learning. Pra
 
 ## Project requirements
 
-Your project deos have to meet these criteria: 
+Your project does have to meet these criteria: 
 
 - Built with react as a single page application
+  - Make use of class based react components
+  - Form elememts should implememt Controlled Component Pattern
+- Integrates or makes network request to an external API
+  - Fetch amd Render data with React from external libraries
 - Manages Application state with Redux
 
 ### Deliverable

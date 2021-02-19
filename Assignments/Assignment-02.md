@@ -199,6 +199,8 @@ Results:
 { Movies: 6, Grocery: 4, Baby: 7, ... }
 ```
 
+_review your work with another student. Explain your code, get feedback on your work._
+
 **Challenge 5** - Use Reduce to make an array of objects that have a name and a count. This 
 array will be similar to Challenge 4 but in a different format. For this list all of the names 
 should be unique and each should only appear once!
