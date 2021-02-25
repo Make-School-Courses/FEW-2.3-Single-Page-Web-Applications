@@ -56,7 +56,7 @@ Currently all of the work of loading and displaying the weather data is handled 
 - Import the Weather component into `App.js` 
 - Display the new Weather component in `App.js`.
 
-You're done when all of the work of loading and displaying weather data is removed from App.js, and the Weather component does all the work. You can use the example component at the [bottom of this page](#sample-component).
+You're done when all of the work of loading and displaying weather data is removed from App.js, and the Weather component does all the work. Sample component at the [bottom of this page](#sample-component) shows a simple validator component and its App file as a guide on this outcome.
 
 **Important!** App uses two values on state to accomplish what it does. Your new Component will need to support these two values on state. 
 
@@ -84,7 +84,7 @@ Currently there a minimal set of styles. Your goal is to expand on these.
 
 - Your goal is to add some styles to the components you have created. 
 
-Look at App.css. This file has the has CSS styles that are imported into App.js on line 4 of that file. You can use the example component at the [bottom of this page](#sample-component).
+Look at App.css. This file has the has CSS styles that are imported into App.js on line 4 of that file.
 
 **Note!** Importing CSS in this way works with Create React App starter projects because it is part of the build system. 
 
@@ -318,12 +318,12 @@ class App extends Component {
 export default App;
 ```
 
-### Sample Component {#sample-component}
+### Sample Component - Validator.js {#sample-component}
 
 ```JSX
 /* 
-  This example illustrates a simple component
-  that validates input(password) from a user
+* This sammple illustrates a simple component
+* that validates input(password) from a user
  */
 
 import React, { Component } from 'react';
@@ -370,10 +370,12 @@ class Validator extends Component {
 
 export default Validator;
 
-```
 
-```JSX
-// App.js file 
+
+
+
+
+// App.js file for the validator js component
 // import the new component and render it.
 import React, { Component } from 'react';
 import Validator from './Validator';
