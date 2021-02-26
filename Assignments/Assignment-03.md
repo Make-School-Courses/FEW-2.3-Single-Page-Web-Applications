@@ -27,7 +27,7 @@ Currently the app does all of it's work in the `App.js` component. The goal of t
 
 ### Challenges 
 
-**Challenge 1** - Goal create and use an OpenWeatherMap API key.
+#### Challenge 1 - Goal create and use an OpenWeatherMap API key.
 
 The OpenWeatherMap API requires an API key. You need to get your API key and add it to the project. 
 
@@ -48,7 +48,7 @@ Each variable goes on it's own line in the form NAME=value.
 
 **Important!** The key value you add to `.env` must begin with `REACT_APP_` or they will not be used! This is a requirement of Create React App. 
 
-**Challenge 2** Goal create a Weather component. 
+#### Challenge 2 - Goal create a Weather component. 
 
 Currently all of the work of loading and displaying the weather data is handled by  `App.js`. You should:
 
@@ -56,7 +56,7 @@ Currently all of the work of loading and displaying the weather data is handled 
 - Import the Weather component into `App.js` 
 - Display the new Weather component in `App.js`.
 
-You're done when all of the work of loading and displaying weather data is removed from App.js, and the Weather component does all the work. 
+You're done when all of the work of loading and displaying weather data is removed from App.js, and the Weather component does all the work. Sample component at the [bottom of this page](#sample-component) shows a simple validator component and its App file as a guide on this outcome.
 
 **Important!** App uses two values on state to accomplish what it does. Your new Component will need to support these two values on state. 
 
@@ -64,7 +64,7 @@ The first `this.state.inputValue` holds the zip code entered into the input fiel
 
 Second, `this.state.weatherData` holds the weather data from OpenWeatherMap. This variable is used to conditionally render the weather data. Read the comments in the sample code for more details. 
 
-**Challenge 3** Make sub Components
+#### Challenge 3 - Make sub Components
 
 The Weather Component is a little monolithic. It does a little too much. In many cases it's better to have smaller components that handle specific tasks. 
 
@@ -78,23 +78,23 @@ Goal build components that display various elements of the weather data.
 
 The tasks above as you to build three new components. These should all be children of the Weather component you created in the first challenge. 
 
-**Challenge 4** Style the components! 
+#### Challenge 4 - Style the components! 
 
 Currently there a minimal set of styles. Your goal is to expand on these. 
 
 - Your goal is to add some styles to the components you have created. 
 
-Look at App.css. This file has the has CSS styles that are imported into App.js on line 4 of that file. 
+Look at App.css. This file has the has CSS styles that are imported into App.js on line 4 of that file.
 
 **Note!** Importing CSS in this way works with Create React App starter projects because it is part of the build system. 
 
 - Stretch goal, create a css file for each component you create and import that set of styles into the component. 
 
-**Challenge 5** Expanding the form
+#### Challenge 5 - Expanding the form
 
 Currently the form has a single input for the zip. Set up a pair of radio buttons to select the units. These buttons will select Imperial or metric. The radio buttons will use the React controlled component pattern!
 
-**Challenge 6** Show app status
+#### Challenge 6 - Show app status
 
 The app can be one of three states. 
 
@@ -110,7 +110,7 @@ You can display a component or null for each of these states. Imagine the area b
 - Loading - "Loading..." - A message to say that the app is working, this could be an animation...
 - Success - "Temperature 70˚ ..." - Shows the weather data.
 
-**Challenge 7** Handling Errors 
+#### Challenge 7 - Handling Errors 
 
 It's possible an error might occur. A user could enter an invalid zip code or the OpenWeatheMap server might be down. Your app should handle these situations gracefully. 
 
@@ -120,6 +120,7 @@ There are two places where errors can occur:
 - OpenWeatherMap supplies an error. The OpenWeatherMap API includes a property `code` on the JSON object it returns. THe value of this property is an error code. if code === 200 everything is good. If code === 404 the zip code was not found. The JSON might look like this in those two scenarios: 
 
 On a success JSON has code:200
+
 ```js
 {
   coord: { ... }, 
@@ -134,7 +135,8 @@ On a success JSON has code:200
 }
 ```
 
-An error from OpenWeatherMap might look like this: 
+An error from OpenWeatherMap might look like this:
+
 ```JS
 {
   cod: "404"
@@ -152,15 +154,11 @@ A good strategy here is to handle the errors where they occur and set a value on
 
 **A:** At `fetch()`. Server errors will happen in the catch block. If the network call was successful check the cod property. If the value is 200 show the weather data. If not 200 you have an error. Read the message property for a description. 
 
-**Stretch Challenges**
+### Stretch Challenges
 
-**Challenge 8** 
+#### Challenge 8
 
-Use an API of your choice. This can be any API you like. Render data from the API with React. Build components and sub-components to do the work and display your data.
-
-**Challenge 8**
-
-Use an API of your choice in place of the OpenWeatherMap API. Choose anything from one of these services: 
+Use an API of your choice in place of the OpenWeatherMap API. Build components and sub-components to do the work and display your data. Choose anything from one of these services: 
 
 - [Rapid API](https://rapidapi.com)
 - [Programable Web](https://www.programmableweb.com/apis/directory)
@@ -318,4 +316,79 @@ class App extends Component {
 }
 
 export default App;
+```
+
+### Sample Component - Validator.js {#sample-component}
+
+```JSX
+/* 
+* This sammple illustrates a simple component
+* that validates input(password) from a user
+ */
+
+import React, { Component } from 'react';
+// import specific css file that styles componet
+import './Validator.css';
+
+class Validator extends Component {
+ 
+    constructor(props) {
+        super(props);
+
+        // initialise state to a default value
+        this.state = { password: '' };
+    }
+
+      onFormSubmit (event) {
+        // stop the form from automatically submitting itself
+        event.preventDefault();
+
+        // make network fetch request to external API here
+    }
+
+    
+    render() {
+        return (
+            <div className="segment">
+                <form className="form" onSubmit={(e) => this.onFormSubmit(e)}>
+                    <div className="field">
+                        <label>Enter Password</label>
+              {/*This input uses the controlled component pattern*/}
+                        <input 
+                            type="password"
+                            value={this.state.password}
+                            onChange= {(e) => this.setState({password: e.target.value})}
+                        />
+                    </div>
+                    {this.state.password.length < 4 ? 'Password must be at least 8 characters' : ''}
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        );
+    }
+}
+
+export default Validator;
+
+
+
+
+
+
+// App.js file for the validator js component
+// import the new component and render it.
+import React, { Component } from 'react';
+import Validator from './Validator';
+
+export default class App extends Component {
+  render() {
+    return (
+        <div>
+            {/*  Render the Validator component*/}
+            <Validator />
+        </div>
+    );
+  }
+}
+
 ```
