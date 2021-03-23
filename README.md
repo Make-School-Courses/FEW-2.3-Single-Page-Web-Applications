@@ -95,14 +95,12 @@ During the course of the class you will build the following projects:
 4. [Application State](Assignment/Assignment-04.md)
 5. [Custom Project](Assignment/Assignment-05.md)
 
-## Evaluation 
-
+## Evaluation
 To pass this course you must meet the following requirements:
 
-- Complete all required assignments 
-- Pass all projects according to the associated project rubric
+- Pass 70% projects according to the associated project rubric
 - Pass the final summative assessment according to the rubric as specified in this class
-  - This will be further explained in the [study guide](ADD_STUDY_GUIDE_LNK)
+    - This will be further explained in the [study guide](study-guide.md)
 - Actively participate in class and abide by the attendance policy
 - Make up all classwork from all absences
 
