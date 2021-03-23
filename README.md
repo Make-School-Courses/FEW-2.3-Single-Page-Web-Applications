@@ -40,27 +40,26 @@ By the end of the course, you will be able to:
 
 ## Schedule
 
-**Course Dates:** Monday, June 1 – Friday, July 17, 2020 (7 weeks)
+**Course Dates:** Monday, March 29 – Wednesday, May 12, 2021 (7 weeks)
 
-**Class Times:** Monday, Wednesday, and Friday at 1:30–2:30 PM (20 class sessions)
+**Class Times:** Monday, Wednesday at 9:30 AM - 12:15 PM (13 class sessions)
 
 | Class | Date | Topics | Assignment |
 |:------|:-----|:-------|:-----------|
-|  1 | Wed, August 19 | [Single Page Applications](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) - React Tutorial |
-|  2 | Mon, August 24 | [Profesional Best Practices](Lessons/lesson-02.md) | - |
-|  3 | Wed, August 26 | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
-|  4 | Mon, August 31 | [React Input Pattern](Lessons/lesson-04.md) | - |
-|  5 | Wed, September 2 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
-|  6 | Mon, September 7 | Labor Day - No Class |- |
-|  7 | Wed, September 9 | [Making Network Requests](Lessons/lesson-06.md) | - |
-|  8 | Mon, September 14 | [Application State](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
-|  9 | Wed, September 16 | [Redux](Lessons/lesson-08.md) | - |
-| 10 | Mon, September 21 | [Redux Part 2](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project | 
-| 11 | Web, September 23 | [React Hooks](Lessons/lesson-10.md) | - |
-| 12 | Mon, September 28 | [Final Project workshop](Lessons/lesson-11.md) | - |
-| 13 | Wed, September 30 | [Final Project workshop](Lessons/lesson-11.md) | - |
-| 14 | Mon, October 5 | [Present Final Projects](Lessons/lesson-13.md) | - |
-| 15 | Wed, October 7 | [Final Assessment](Lessons/lesson-14.md) | - |
+|  1 | Mon, Mar 29 | [Single Page Applications](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) - React Tutorial |
+|  - | Wed, Mar 31 | **No Class - Cesar Chavez** | - |
+|  2 | Mon, Apr 5  | [Profesional Best Practices](Lessons/lesson-02.md) | - |
+|  3 | Mon, Apr 7  | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
+|  4 | Mon, Apr 12 | [React Input Pattern](Lessons/lesson-04.md) | - |
+|  5 | Wed, Apr 14 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
+|  6 | Mon, Apr 19 | Labor Day - No Class | - |
+|  7 | Wed, Apr 21 | [Making Network Requests](Lessons/lesson-06.md) | - |
+|  8 | Mon, Apr 26 | [Application State](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
+|  9 | Wed, Apr 28 | [Redux](Lessons/lesson-08.md) | - |
+| 10 | Mon, May 3  | [Redux Part 2](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project | 
+| 11 | Wed, May 5  | [React Hooks](Lessons/lesson-10.md) | - |
+| 14 | Mon, May 10 | [Present Final Projects](Lessons/lesson-13.md) | - |
+| 15 | Wed, May 12 | [Final Assessment](Lessons/lesson-14.md) | - |
 
 <!-- 
 **Course Dates:** Tuesday, March 31 – Thursday, May 14, 2019 (7 weeks)

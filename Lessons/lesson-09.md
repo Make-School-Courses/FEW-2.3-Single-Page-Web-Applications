@@ -39,6 +39,7 @@ Using the sample Redux project try these challenges:
 
 - Create a component that resets all counters
 - Create a component that increments all timers
+- Create a component that decrements all timers
 - Create a component that displays an average of all counters
 - Create a component that display the min and max counter values
 

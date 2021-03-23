@@ -248,8 +248,9 @@ Set up as much of Redux as you can. Use this to handle the Cookie Clicker. I'll 
 - Provider (5pts)
 	- Define the Provider (react-redux)
 - Connect a component (5pts)
-	- Map State to Props
-	- Map Dispatch to props
-	- connect (react-redux)
+	- useDispatch
+  - useSelector
 
-## Total 155pts
+## Thanks!
+
+https://make.sc/few_2.3_survey
