@@ -98,7 +98,7 @@ During the course of the class you will build the following projects:
 ## Evaluation
 To pass this course you must meet the following requirements:
 
-- Pass 70% projects according to the associated project rubric
+- Score an average of at least 2 on the Rubric overall for each assignment. 
 - Pass the final summative assessment according to the rubric as specified in this class
     - This will be further explained in the [study guide](study-guide.md)
 - Actively participate in class and abide by the attendance policy
