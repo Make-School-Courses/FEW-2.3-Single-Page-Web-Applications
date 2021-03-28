@@ -27,6 +27,7 @@ Add a link to your completed tutorial to the progress tracker when you're done.
 ### Challenges
 
 1. Complete the tutorial - https://reactjs.org/tutorial/tutorial.html
+1. Use `npx create-react-app` to create the project (don't use code pen)
 
 #### Stretch Challenges
 
@@ -37,6 +38,7 @@ This is further work you can try to test your skills and further your knowledge.
     - Setting the color and font styles
     - Laying out the game. Currently the game is in the upper left corner it could be moved to center of the screen. 
     - Adding a header and footer.
+1. The tutorial uses class based components and `this.state` switch up the tutorial using hooks and `useState`
 
 ### Deliverable
 
@@ -44,7 +46,7 @@ A link to your completed project on GitHub in the course progress tracker.
 
 ### Due date
 
-Class 2 - April 2 
+Class 2 - April 5 
 
 ## Assessing the assignment
 
