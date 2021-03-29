@@ -37,13 +37,21 @@ SPAs are the way web pages of more than minimal complexity are created these day
 
 <!-- > -->
 
-[Read about Singel Page Applications](https://huspi.com/blog-open/definitive-guide-to-spa-why-do-we-need-single-page-applications)
+[Read about Singel Page Applications](https://www.bloomreach.com/en/blog/2018/07/what-is-a-single-page-application.html]
 
 Discuss...
 
 <!-- > -->
 
-## Lecture
+## State of JS
+
+<!-- > -->
+
+You've been learning JavaScript and you're going to learn more this term! What is happening in the world of JS? 
+
+Take a quick tour of this site and see what you find: 
+
+https://2020.stateofjs.com/en-US/technologies/
 
 <!-- > -->
 
@@ -51,7 +59,9 @@ Discuss...
 
 <!-- > -->
 
-React is one of the most popular web frameworks available today and with good reason. It's fast efficient and has a great workflow and developer experience. 
+React is one of the most popular web frameworks available today and with good reason. It's fast efficient and has a great workflow and developer experience.
+
+https://www.npmtrends.com/angular-vs-react-vs-vue
 
 <!-- > -->
 
@@ -88,7 +98,7 @@ If you are going to master a single framework make it this one! It's hugely popu
 
 <!-- > -->
 
-Beyond this React has moved frontend web development forward and laid the groundwork for modern front end systems. Expect future front end frameworks to build and evolve on what React has done. 
+Beyond this React has moved frontend web development forward and laid the groundwork for modern front end systems. Expect future front end frameworks to build and evolve on what React has done.
 
 <!-- > -->
 
@@ -122,9 +132,7 @@ React is built on Functional Reactive programming. In a nutshell, functional pro
 
 <!-- > -->
 
-In a nutshell, Reactive programming is programming with Event Streams. 
-
-An Event Stream is like an Array of events. Arrays map things in space. Event streams map things in time. 
+In a nutshell, Reactive programming is programming with Event Streams.
 
 React uses Reactive Programming to create a front end architecture that updates views with streams of events as they occur in time. Changing a value will update a view in React.  
 
@@ -134,7 +142,7 @@ React uses Reactive Programming to create a front end architecture that updates 
 
 <!-- > -->
 
-React is built on three core features: 
+React is built on three core features:
 
 - Components
 - JSX
@@ -152,7 +160,7 @@ React is built on three core features:
 
 <!-- > -->
 
-What you need to know: 
+What you need to know:
 
 - React Projects are built from components
 - Most of your work with React will be writing components. 
