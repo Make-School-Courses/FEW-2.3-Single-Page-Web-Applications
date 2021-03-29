@@ -123,14 +123,14 @@ import PropTypes from 'prop-types'
 
 function CategoryButton({ name, onClick }) {
  return (
- <button
- type="button"
- onClick={() => {
- onClick(name)
- }}
- >
- {name}
- </button>
+  <button
+    type="button"
+    onClick={() => {
+    onClick(name)
+    }}
+  >
+  {name}
+  </button>
  )
 }
 

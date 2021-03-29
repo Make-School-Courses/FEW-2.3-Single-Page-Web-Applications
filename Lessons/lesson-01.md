@@ -1,6 +1,8 @@
 # FEW 2.3 - Lesson 1
 
-Getting started with Single Page Applications and React. 
+Getting started with Single Page Applications and React.
+
+<!-- > -->
 
 ## Overview
 
@@ -25,11 +27,19 @@ Single Page Applications (SPA) are web pages that act as software applications. 
 
 <!-- > -->
 
-The [Killer App](https://en.wikipedia.org/wiki/Killer_application) for SPAs was Gmail. Gmail is a single web page that lists your email, views email, sends email and more all within a single HTML document.
+The [Killer App](https://en.wikipedia.org/wiki/Killer_application) for SPAs the killer app was Gmail. 
+
+Gmail is a single web page that lists your email, views email, sends email and more all within a single HTML document.
 
 <!-- > -->
 
 SPAs are the way web pages of more than minimal complexity are created these days. These days when you visit a web site you are loading a single HTML file that displays many different views that provide the experience of a fully interactive multipage site.
+
+<!-- > -->
+
+[Read about Singel Page Applications](https://huspi.com/blog-open/definitive-guide-to-spa-why-do-we-need-single-page-applications)
+
+Discuss...
 
 <!-- > -->
 
