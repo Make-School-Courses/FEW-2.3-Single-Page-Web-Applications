@@ -2,11 +2,31 @@
 
 Map, Filter, Reduce
 
-## Description 
+<!-- > -->
 
-Map, Filter, and Reduce are important methods. After you learn these you will wonder how you got by without them in the past, you will also want to use them often. 
+## Learning Objectives
 
-The best way to learn about map, filter, and reduce is to put them into use! 
+- Use map, filter, and reduce
+- Describe map, filter, and reduce
+- Use map to render collections of React components
+
+<!-- > -->
+
+## Review
+
+- What is React? 
+- How do you create a default react app? 
+- Write a component that displays your name
+
+<!-- > -->
+
+## Map, Filter, and Reduce
+
+<!-- > -->
+
+Map, Filter, and Reduce are important methods. After you learn these you will wonder how you got by without them in the past, you will also want to use them often.
+
+<!-- > -->
 
 The purpose of this assignment is to get some practice with map, and reduce. You'll practice with filter in a future assignment. 
 

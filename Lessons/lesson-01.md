@@ -37,7 +37,7 @@ SPAs are the way web pages of more than minimal complexity are created these day
 
 <!-- > -->
 
-[Read about Singel Page Applications](https://www.bloomreach.com/en/blog/2018/07/what-is-a-single-page-application.html]
+[Read about Single Page Applications](https://www.bloomreach.com/en/blog/2018/07/what-is-a-single-page-application.html)
 
 Discuss...
 

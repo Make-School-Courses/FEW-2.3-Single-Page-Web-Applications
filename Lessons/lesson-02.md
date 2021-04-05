@@ -1,30 +1,314 @@
-# FEW 2.3 - Lesson 4
+# FEW 2.3 - Lesson 2
 
-## Profesional Best Practices
+<!-- > -->
+
+## Props, State, and Profesional Best Practice
 
 This class you will work on improving the codebase you've developed in the previous classes.
 
+<!-- > -->
+
 ## Learning Objectives
 
-1. Apply best practices by linting
-1. Define code quality
-1. Identify technical debt
+1. Describe Props and State
+1. Compare Props and State
+1. Use Props and State
+1. Apply Profesional best practice with ESLint
+
+<!-- > -->
+
+## Review
+
+1. Create a new react project
+1. Where were props used in the tutorial?
+1. What are props? Descibe in as much detail as you can
+1. Where is state used in the tutorial?
+1. What is state? Describe in as much detail as you can
+
+<!-- > -->
+
+## Props and State
+
+Props are values passed to a component from outside. State is values stored internally by a component. 
+
+<!-- > -->
+
+A component renders when it receives props or state changes.
+
+<!-- > -->
+
+### Counter Component
+
+Consider this component: 
+
+```JS
+import { Component } from 'react'
+
+class Counter extends Component {
+	constructor(props) {
+		super(props)
+
+		this.state = { count: 0 }
+	}
+
+	render() {
+		return (
+			<div className="Counter">
+				<small>{this.props.title}</small>
+				<h1>{this.state.count}</h1>
+				<button
+					onClick={() => this.setState({ count: this.state.count + 1})}
+				>+</button>
+				<button
+					onClick={() => this.setState({ count: this.state.count - 1})}
+				>-</button>
+			</div>
+		)
+	}
+}
+
+export default Counter
+```
+
+<!-- > -->
+
+What happens in the Counter component?
+
+- What is state for this component?
+  - How many properties does it have?
+  - What type is it? 
+- What is props for this component?
+  - How are props used here? 
+- What does this component do?
+
+<!-- > -->
+
+Impplement this component in your App: 
+
+```JS
+import Counter from './Counter'
+
+function App() {
+  return (
+    <div className="App">
+      <Counter title="Apples" />
+      <Counter title="Oranges" />
+      <Counter title="Limes" />
+    </div>
+  );
+}
+```
+
+<!-- > -->
+
+## Props, State, and rendering components
+
+<!-- > -->
+
+In Reactive programming changing a value cause the program to react to these changes by rendering (redrawing). 
+
+For example, changing props on a component means you called the function that is the component and passed new props. 
+
+<!-- > -->
+
+In the Counter component the title changes when you pass a new prop value. 
+
+The component also updates the value displayed when the count changes on state. 
+
+The component is able to render again when you change because you are calling a method/function.
+
+<!-- > -->
+
+When state changes you aren't changing state directly: 
+
+```JS
+// Always change state with setState()
+this.setState({ count: this.state.count + 1 })
+```
+
+Here you're calling the setState method. When you do this the component know that it should render again.
+
+<!-- > -->
+
+Why doesn't this work?
+
+```JS
+this.state.count += 1 // Doesn't work!
+```
+
+Here the component is unware that render itself when you change a value on state.
+
+<!-- > -->
+
+You can change multiple values on state at the same time: 
+
+```JS
+this.setState({ a: 1, b 22, : 333 })
+```
+
+<!-- > -->
+
+Communication between components is best handled by passing values down from parent to child. 
+
+Sometimes you'll want to Pass a value from a child to a parent. The best strategy here is to use a function. Pass a function from the parent and have the child execute that function and pass values as arguments. 
+
+<!-- > -->
+
+## Lifting State
+
+What is lifting state? THis is the process of moving values from a child component to a parent component.
+
+<!-- > -->
+
+Consider the counter example. What if you needed to show the total of all Counters? How would you do that?
+
+The easiest way to handle this will be to pass the count down to the counter. The parent component would own and track state. While child component simply displays the value.
+
+<!-- > -->
+
+The solution is to "lift" state from each of the Counters and store the state in the parent. You can then pass the value of each counter down as a prop to be displayed. 
+
+<!-- > -->
+
+State in your parent component should be an array of integers: 
+
+```JS
+this.state = { count: [0,0,0] }
+```
+
+<!-- > -->
+
+For each value in the array make a counter: 
+
+```JS
+this.state.count.map((value, index) => <Counter value={value} index={index} />)
+```
+
+Be sure to include the index since each button will need the index to set it's value.
+
+<!-- > -->
+
+Next you need a method to increment and decrement the count. This will live in the parent component where state is defined. 
+
+```JS
+increment(index) {
+  // copy state since its a reference
+  const newCount = [...this.state.count]
+  // Increment the value at index
+  newCount[index] += 1
+  // Update state 
+  this.setState({ count: newCount })
+}
+```
+
+<!-- > -->
+
+You write a decrement method in your parent component: 
+
+```JS 
+decrement(index) {
+  ???
+}
+```
+
+This method should subtract 1 from the value of count at the index. 
+
+<!-- > -->
+
+The last step is to pass the increment and decrement methods to your Counter component and call the methods when the buttons are clicked. 
+
+<!-- > -->
+
+## Break
+
+Take a 10 minute break! 
+
+<!-- > -->
+
+## Progress Check in
+
+You should be working the React tutorial. What is your progress? 
+
+1. Haven't started
+2. Less than half complete
+3. More than half complete (You're in the section "Completing the Game")
+4. More than 3/4 complete (You're in the section "Adding Time Travel")
+5. 100% Complete
+6. 100% complete and the stretch challenges!
+
+<!-- > -->
+
+**If you're in category 1 - Haven't started**
+
+Get started now! 
+
+https://reactjs.org/tutorial/tutorial.html
+
+<!-- > -->
+
+**If you're in category 2 - Less that 50% complete**
+
+Continue working on the tutorial.
+
+<!-- > -->
+
+**If you're in category 3 - more than 50% complete**
+
+Continue working on the tutorial. Look at the code you've written so far for these things: 
+
+- Move each component to it's own folder export and import these where they are needed.
+- Install ESLint and check your code for linter suggestions
+
+<!-- > -->
+
+**If you're in category 4 - 75% complete**
+
+Continue working, try these ideas: 
+
+- Move components to their own files. 
+- Install ESLint follow up any linter suggestions. 
+- Move your CSS code to .css files for each component. 
+
+<!-- > -->
+
+**If you're in category 5 - 100% complete**
+
+Try these: 
+
+- Move components to their own files. 
+- Install ESLint follow up any linter suggestions. 
+- Move your CSS code to .css files for each component.
+- Start working on the stretch challenges. 
+
+<!-- > -->
+
+**If you're in category 6 - stretch challenges complete**
+
+- Move components to their own files. 
+- Install ESLint follow up any linter suggestions. 
+- Move your CSS code to .css files for each component.
+- Try these extra stretch goals: 
+  - Convert the existing code to Hooks
+  - Expand the Game component to work with any board size. 
+  - Extend the existing CSS to customize the appearance of the game
+
+<!-- > -->
 
 ## Technical Debt
 
 Often while working on software projects the solutions you create are not the best. You won't even know it until later on. This is [Technical Debt](https://www.agilealliance.org/introduction-to-the-technical-debt-concept/).
 
-The concept says that some of your solutions borrow against your future development. In other words, you'll do what you can today to keep moving forward, but the solution you're working is not the best possible or _does not take into account the needs and requirements of your future project_.
+You've probably incurred some technical debt on this project, let's pay it back. 
 
-There are times when you need to pay this "debt."
+<!-- > -->
 
 ## Linting
-
-Your goal is to write the best quality code you can. The hard part is learning what good quality code looks like. 
 
 A linter is a tool that analyzes your code and flags errors, bad style, and suspicious constructs. 
 
 Besides finding bugs the linter ensures consistency in your code. Doing things consistently creates the best quality code that runs reliably. Consistency is also important for working on teams. 
+
+<!-- > -->
 
 **Linting is a professional best practice.** All of the best companies use linters, you should too! 
 
@@ -36,7 +320,11 @@ Using a linter will:
 - Teach you professional best practice
 - Teach you more about code and syntax
 
+<!-- > -->
+
 Seriously, using a linter is a great way to learn more about the code you are writing. 
+
+<!-- > -->
 
 ### Install ESLint
 
@@ -44,9 +332,13 @@ For our project, we will be using ESLint. This is a linter that works with all o
 
 You'll need to install it _in your editor_ and _in your project_. 
 
+<!-- > -->
+
 **Install ESLint in your code Editor**
 
 This varies with the editor. Generally speaking, ESLint is a plugin or package you will add. Follow these steps to install ESLint in Visual Studio Code and Atom. 
+
+<!-- > -->
 
 - Atom: 
  - Packages > Settings View > Manage Packages 
@@ -58,6 +350,8 @@ This varies with the editor. Generally speaking, ESLint is a plugin or package y
  - Search for ESLint
  - Install
 
+<!-- > -->
+
 **Initialize ESLint**
 
 ESLint is installed as part of the create react app project. You can use it by initializing it. 
@@ -66,131 +360,19 @@ Initialize ESLint:
 
 `eslint --init` 
 
-Answer the questions: 
+Answer with these: 
 
-- How would you like to use eslint? **To check syntax, find problems, and enforce code style**
-- What type of modules does your project use? **JavaScript modules (import/export)**
-- Which framework does your project use? **React**
-- Does your project use TypeScript? **N**
-- Where does your code run? **Browser**
-- How would you like to define a style for your project? **Use a popular style guide**
-- Which style guide do you want to follow? **Airbnb (https://github.com/airbnb/javascript)**
-- What format do you want your config file to be in? **JavaScript**
-- Would you like to install them now with npm? **Y**
+- To check syntax, find problems, and enforce code style
+- JavaScript modules (import/export)
+- React
+- TypeScript: No
+- Browser
+- Use a popular style guide
+- Airbnb: https://github.com/airbnb/javascript
+- JavaScript
+- Would you like to install them now with npm? Yes
 
-
-From here follow the guide: 
- - 'Choose a popular style guide'
- - 'Airbnb'
- - 'Do you use React?' `y`
- - Format for config choose: 'JavaScript'
- - Install: `y`
-
-**Using the linter**
-
-The linter will show a squiggly red underline under the questionable code. 
-
-Hovering over these areas will show a popup with an explanation of the rule this piece of code violates. 
-
-Linters follow rules to decide what is good and what is questionable. You chose the Airbnb style guide and are using their rules. That is you are following the rules and best practices Airbnb expects from their programmers. 
-
-For more information, there is a button (dot or lightbulb) you can click for options. Usually, the options include: 
-
-- Ignore this rule: 
- - Suppress this rule for the line
- - Suppress this rule the file
- - Show documentation for this rule
-
-### What are Proptypes? 
-
-Some programming languages are called strongly typed. These languages enforce the type of variables. For example, when defining a new variable x you might set the type to a Number. Later if you assigned a value that was type string the system would throw an error. 
-
-Assigning the wrong type to a variable is usually an error.
-
-JavaScript is not a typed language. PropTypes allow React to check types passed in props. 
-
-https://reactjs.org/docs/typechecking-with-proptypes.html
-
-Use prop types by installing the library: 
-
-`npm install --save prop-types`
-
-Import prop-types in a component
-
-```JSX
-import React from 'react'
-import PropTypes from 'prop-types'
-
-function CategoryButton({ name, onClick }) {
- return (
-  <button
-    type="button"
-    onClick={() => {
-    onClick(name)
-    }}
-  >
-  {name}
-  </button>
- )
-}
-
-export default CategoryButton
-
-// Define your prop types here: 
-
-CategoryButton.propTypes = {
- name: PropTypes.string, // A string
- onClick: PropTypes.func.isRequired, // a required function
-};
-
-// Set a default values for props
-CategoryButton.defaultProps = {
- name: 'Click', // the default for name
-}
-```
-
-PropTypes also work with function based components. This example is taken from the React Tutorial. 
-
-```JS
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import './index.css';
-
-function Square({ onClick, value }) {
-  return (
-    <button className="square" onClick={onClick} type="button">
-      {value}
-    </button>
-  );
-}
-
-export default Square
-
-Square.propTypes = {
-  value: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired
-}
-```
-
-Follow this guide: https://blog.bitsrc.io/master-proptypes-in-react-a80f9fefff8
-
-## After Class 
-
-Apply the ideas from class to your portfolio project: 
-
-[Assignment 4](../Assignments/Assignment-04.md)
-
-**Improve your Code Quality**
-
-Using the linter review _all_ of the code you have written so far and lint!
-
-You should lint all of the JS files in the following projects: 
-
-- React tutorial 
-
-Do your best to fix all of the problems. 
-
-Use any spare time to fix other problems and improve your previous work! Remember, you should dedicate 3 hours to this! 
+<!-- > -->
 
 ## ESLint and Code Quality
 
@@ -204,3 +386,24 @@ Use any spare time to fix other problems and improve your previous work! Remembe
 1. [ESLint Getting Started](https://eslint.org/docs/user-guide/getting-started)
 1. [Install ESLint for Atom](http://imtiazrayhan.com/install-a-package-in-atom/)
 
+
+
+
+<!-- 
+
+Classs Schedule 
+- Attendance check in
+- Components Review
+  - Props vs state
+  - props set title 
+  - state track count
+- Lifting State 
+  - Show count total
+    - Move state to parent
+    - State becomes an array
+    - Counters become functions 
+    - Count is passed down as a prop
+    - Increment count in parent child buttons must use an index to target count in array
+
+
+-->

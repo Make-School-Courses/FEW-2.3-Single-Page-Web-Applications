@@ -39,11 +39,11 @@ npm install -g reveal-md
 This starts a local server and opens any Markdown file as a reveal.js presentation in the default browser.
 
 ```bash
-$ reveal-md Lessons/
+reveal-md Lessons/
 
-$ reveal-md Lessons/ --theme solarized
+reveal-md Lessons/ --theme solarized
 
-$ reveal-md Lessons/ --css makeschool.css
+reveal-md Lessons/ --css makeschool.css
 ```
 
 ### Generate Slides
