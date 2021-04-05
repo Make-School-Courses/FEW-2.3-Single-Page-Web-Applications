@@ -19,6 +19,8 @@ This class you will work on improving the codebase you've developed in the previ
 
 ## Review
 
+1. What is a Single Page Application?
+1. Name some pros and cons of Single Page Applications?
 1. Create a new react project
 1. Where were props used in the tutorial?
 1. What are props? Descibe in as much detail as you can
@@ -216,6 +218,49 @@ This method should subtract 1 from the value of count at the index.
 <!-- > -->
 
 The last step is to pass the increment and decrement methods to your Counter component and call the methods when the buttons are clicked. 
+
+<!-- > -->
+
+Methods called from another object will lose their reference to `this`. 
+
+The same is true when you use arrow functions.
+
+<!-- > -->
+
+This happens when you pass a function to a component through props: 
+
+
+
+```JS
+class Counter extends Component {
+
+  increment(index) {
+    ...
+  }
+
+  render() {
+    return <Counter increment={this.increment} />
+  }
+}
+```
+
+This has a problem! `TypeError: undefined is not an object (evaluating 'this.state')`
+
+<!-- > -->
+
+Solution 1: bind this with 
+
+```js
+<Counter increment={ this.increment.bind(this) } />
+```
+
+<!-- > -->
+
+Solution 2: Wrap the function call in a function: 
+
+```JS
+<Counter increment={ index => this.decrement(index) } />
+```
 
 <!-- > -->
 
