@@ -51,9 +51,11 @@ reveal-md Lessons/ --css makeschool.css
 Generate static HTML (for GitHub Pages):
 
 ```bash
-$ reveal-md Lessons/ --static Slides
+reveal-md Lessons/ --static Slides
 
-$ reveal-md Lessons/ --static Slides --theme solarized
+reveal-md Lessons/ --static Slides --theme solarized
+
+reveal-md Lessons/ --static Slides --css makeschool.css
 ```
 
 ## Resources
