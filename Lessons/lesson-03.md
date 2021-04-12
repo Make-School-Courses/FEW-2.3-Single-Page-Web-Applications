@@ -1,12 +1,22 @@
 # FEW 2.3 - Lesson 2
 
+<!-- > -->
+
 ## Map, Filter, and Reduce 
+
+If you understand Arrays and loops the next step to leveling up your code craft is map, filter, and reduce.
+
+<!-- > -->
 
 React is built on functional programming. This class you will look at some functional programming concepts in the context of React.
 
+Map, filter, and reduce shed light on the field of functional programming. 
+
+<!-- > -->
+
 ## Learning Objectives/Competencies
 
-1. Organize code with ES6 Modules 
+1. Organize code with ES Modules 
 1. Identify functional programming concepts
 1. Use functional programming 
     - `Array.map()`
@@ -14,11 +24,67 @@ React is built on functional programming. This class you will look at some funct
     - `Array.reduce()`
 1. Transform data with `Array.map()`
 
-## ES6 Modules
+<!-- > -->
 
-ES6 modules organize code by both file and scope. Code is written in a 'physical' file and variables and functions defined in those files are scoped to their file. 
+## ES Modules
+
+ES modules organize code by both file and scope. Code is written in a 'physical' file and variables and functions defined in those files are scoped to their file.
+
+<!-- > -->
+
+Scope det3ermines where a value is visible to the code you write. 
+
+```JS
+const bird = 'flapping'
+function zoo() {
+    const tiger = 'sleepy'
+    
+    console.log(bird)  // flapping
+    console.log(tiger) // sleepy
+}
+zoo();
+console.log(bird)  // flapping
+console.log(tiger) // undefined
+```
+
+<small>Here the variables are visible inside the function but only one is visible outside!</small>
+
+<!-- > -->
+
+Variables declared in a module are only visible in that module.
+
+```js
+// zoo.js
+const monkey = 'what?'
+const meerkat = 'look out!'
+```
+
+```js
+// visitor.js
+console.log(monkey) // ReferenceError: Can't find variable: monkey
+console.log(meerkat) // ReferenceError: Can't find variable: meerkat
+```
+
+<small>The variables monkey and meerkat are only available in zoo.js</small>
+
+<!-- > -->
 
 Variables and functions can be shared across modules using `export` and `import`. 
+
+```js
+// zoo.js
+export const monkey = 'what?'
+export const meerkat = 'look out!'
+```
+
+```js
+// visitor.js
+import { monkey, meerkat } from './zoo.js'
+console.log(monkey) // what?
+console.log(meerkat) // look out!
+```
+
+<!-- > -->
 
 Take a read through the docs and see what it is has to say about modules: 
 
@@ -26,9 +92,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 You will use modules in the homework to organize your code. 
 
-**tl;dr**
+<!-- > -->
 
-Here is the short version of import and export. The first concept is to understand that all variables and functions are scoped to the file where they are declared. 
+## import, export, and default
+
+<!-- > -->
 
 To share a value a file can export that value. 
 
@@ -40,6 +108,8 @@ const id = 'Bar'
 export { name, id } // export name and id
 ```
 
+<!-- > -->
+
 Another file can import values like this: 
 
 ```js
@@ -47,6 +117,8 @@ import { name, id } from './constants.js'
 
 console.log(name, id) // prints Foo Bar
 ```
+
+<!-- > -->
 
 A file may declare a single export as the default export. There can only be one default export and it is imported and exported a little differently. 
 
@@ -63,6 +135,8 @@ export default hello // the default export
 export { name, id } // export name and id
 ```
 
+<!-- > -->
+
 Another file can import values like this: 
 
 ```js
@@ -71,29 +145,27 @@ import hello, { name, id } from './constants.js' // hello is the default export!
 hello() // prints Foo Bar
 ```
 
-## Functional Programming 
+<small>Notice the default export goes outside the {}.</small>
 
-Functional programming is a style of programming based on functions. This is different from Object Oriented Programming which based on Objects, or procedural programming which is based on procedures.
-
-Functional programming relies on functions and avoids shared mutable state. 
-
-The entry point for most to the world of functional programming is the Array methods: `map`, `filter`, and `reduce`.
-
-Why are these methods functional? They are functions for a start. Second, these methods do not modify/mutate the array 
+<!-- > -->
 
 ### Array `map`, `filter`, `reduce`
 
-The functions map, filter, and reduce are a gateway into functional programming concepts. Functional programming uses [Pure Functions](https://www.sitepoint.com/functional-programming-pure-functions/). These functions have no side effects, in other words calling a pure function doesn't make changes to a shared or global state. For the same input, a pure function will always return the same output.
+The functions map, filter, and reduce are a gateway into functional programming concepts.
 
-<!--  -->
+<!-- > -->
 
 > Map/filter/reduce in a tweet:
+```
+[🌽, 🐮, 🐔].map(cook)            // -> [🍿, 🍔, 🍳]
+[🍿, 🍔, 🍳].filter(isVegetarian) // -> [🍿, 🍳]
+[🍿, 🍳].reduce(eat)              // -> 💩
+```
 >
-> `[🌽, 🐮, 🐔].map(cook)` -> `[🍿, 🍔, 🍳]`
->
-> `[🍿, 🍔, 🍳].filter(isVegetarian)` -> `[🍿, 🍳]`
->
-> `[🍿, 🍳].reduce(eat)` -> `💩`
+
+<small>`cook`, `isVegitarian`, and `eat` are functions.</small>
+
+<!-- > -->
 
 ```js
 const prices = [0.55, 1.99, 23.67, 1.00001] // '$1.00'
@@ -104,23 +176,43 @@ const formattedPrices = prices.map((price) => {
 // formattedPrices ['$0.55', '$1.99', '$23.67', '$1.00']
 ```
 
-<!--  -->
+<!-- > -->
 
-[`Array.map()`]() transforms an array of data and **returns a new array**. With map you should have a one to one relationship with the source array. Use it to convert an array of one type into an array of another type. 
+[`Array.map()`]() transforms an array of data and **returns a new array**. Use it to convert an array of one type into an array of another type.
 
-For example, you might transform an array of numbers into an array of strings. 
+For example, you might transform an array of numbers into an array of strings. Or raw ingredients into lunch!
+
+```JS
+[🌽, 🐮, 🐔].map(cook)            // -> [🍿, 🍔, 🍳]
+```
+
+<!-- > -->
 
 `Array.filter` returns an array containing none, some, or all of the elements from the source array. Filter returns a new Array.  
 
-For example, you might filter an array of products to create an array of products with prices less than $10. 
+For example, you might filter an array of products to create an array of products with prices less than $10, or choose your snacks!
+
+```js
+[🍿, 🍔, 🍳].filter(isVegetarian) // -> [🍿, 🍳]
+```
+
+<!-- > -->
 
 `Array.reduce` converts an array of values into a single value. It takes many values and returns a single aggregate value. 
 
-For example, you might use reduce to get the total cost of all products in a shopping cart array. 
+For example, you might use reduce to get the total cost of all products in a shopping cart array, or process your food.
 
-## Using Array.map 
+```JS
+[🍿, 🍳].reduce(eat)              // -> 💩
+```
 
-Use `Array.map()` to transform an Array of elements into an array of different elements. When working with React you will often want to transform an array of data into an Array of JSX elements to display. 
+<!-- > -->
+
+## Using Array.map
+
+Map transforms all of the elements in a array and returns a new array.
+
+<!-- > -->
 
 Imagine you have an array of category names that are strings, and you want to make them JSX buttons. 
 
@@ -130,11 +222,15 @@ const catButtons = categories.map((catName) => {
 })
 ```
 
-Important! `catButtons` is a new Array! The source array `categories` is unmodified! 
+Important! `catButtons` is a new Array! The source array `categories` is unmodified!
+
+<!-- > -->
 
 ## Using Array.filter
 
-Use `Array.filter()` to create a new Array that contains none, some, or all of the contents of the source Array. 
+Use filter to create a new arry with a subset of the element in the source array.
+
+<!-- > -->
 
 For example, to get a list of only items in a category. 
 
@@ -162,9 +258,13 @@ const allToys = inventory.filter((item) => {
 
 The sample returns a new array containing items from inventory where the category is Toys. 
 
+<!-- > -->
+
 ## Using Array.reduce
 
 Use `Array.reduce()` to reduce a collection of values to a single value. 
+
+<!-- > -->
 
 For example, you get the total cost of the inventory by adding all of the prices. 
 
@@ -181,13 +281,15 @@ const priceStr = prices.reduce((acc, price) => {
 const allInventory = inventory.reduce((total, item) => {
     return total += item.price
 }, 0)
-
-[...].reduce(sum, 0)
 ```
 
-The first parameter of reduce is a function, the second parameter is the starting value of the accumulator. Here the starting value is 0. 
+The first parameter of reduce is a function, the second parameter is the starting value of the accumulator. Here the starting value is 0.
+
+<!-- > -->
 
 The first param of reduce takes in the accumulator and the current value. The accumulator is the running total, and the current value is one of the items from the Array.
+
+<!-- > -->
 
 ## React collections and Keys
 
@@ -195,11 +297,15 @@ What's a [collection](https://en.wikipedia.org/wiki/Collection_(abstract_data_ty
 
 > In short a collection is an Array or an Object
 
+<!-- > -->
+
 Often you will need to render Arrays of JSX components. You'll often have arrays of raw data that need to be converted into an array of JSX. 
 
 To do this we will delve into functional programming with `map`, `filter`, and `reduce`. 
 
 React will automatically iterate over a collection of JSX elements. To avoid error these elements need to have unique keys. 
+
+<!-- > -->
 
 **tl;dr** Anytime you have an array of JSX elements each should have a unique key prop. For example: 
 
@@ -209,29 +315,39 @@ const things = [1,2,3,4].map((item, index) => {
 })
 ```
 
-(if you're not familiar with `Array.map()` read more below)
+<!-- > -->
 
 **Q: What are keys and why do they need to be unique?**
 
-**A:** Earlier we mentioned React's virtual DOM. This is React's system for managing components. The viritual DOM looks for changes to components, finds the things that change and updates only the elements that have been changed. 
+<!-- > -->
 
-The purpose is effeciency and speed. Updating the DOM is a slow process in the browser. 
+**A:** The viritual DOM looks for changes to components, finds the things that change and updates only the elements that have been changed. 
 
-To do this the React DOM renderer must keep track of elements uniquely. When you have lists of elements React asks that you provide a key fro each element in a list. 
+To track the contents of a list each list item must have a unique identifier. The key prop serves this purpose. 
+
+<!-- > -->
 
 **Q: What is a key? (what kinds of values can be used as keys)**
 
-**A:** Any _unique_ value can be used as a key. You can use ids that come with data. You can generate your own values. These don't need to be special they only need to be unique. 
+<!-- > -->
 
-A key value should uniquely idenitfy a list item. In other words it should be the same value each time the list is generated. 
+**A:** Any _unique_ value can be used as a key. You can use ids that come with data. You can generate your own values.
+
+The value only has to be unique to this list and should be the same each time the list is generated. 
+
+<!-- > -->
 
 **Q: How do you _set_ a key?**
+
+<!-- > -->
 
 **A:** The key is a prop. Set it like any other prop. 
 
 `<SomeComponent key='unique-1' />`
 
 Read more about React Lists and Keys here: https://reactjs.org/docs/lists-and-keys.html
+
+<!-- > -->
 
 ## React collections and Keys 
 
@@ -250,7 +366,9 @@ const ListOfButtons = (props) => {
 
 React automatically renders the array of JSX elements, no need to iterate. 
 
-More often than not you will be receiving an Array of one type and converting it to an Array of JSX. So the example above is more likely to look like this: 
+<!-- > -->
+
+More often than not you will be receiving an Array of one type and converting it to an Array of JSX.
 
 ```JavaScript 
 const ListOfButtons = ({ items }) => {
@@ -265,7 +383,11 @@ const ListOfButtons = ({ items }) => {
 
 Here you can imagine the `items` as an array of objects with a label property. 
 
-React needs to be able to keep track of elements with a stable identity. To do this you'll get elements in a list a `key`. The value for the key can be any value that is **unique among siblings**. While you can use an index, save this as a last resort. Use a unique id or other unique string that describes your data. 
+<!-- > -->
+
+React needs to be able to keep track of elements with a stable identity. To do this you'll get elements in a list a `key`. The value for the key can be any value that is **unique among siblings**.
+
+<!-- > -->
 
 In the example above, if we knew that the label was unique it could be used as the key. 
 
@@ -279,6 +401,8 @@ const ListOfButtons = ({ items }) => {
     )
 }    
 ```
+
+<!-- > -->
 
 ## Add Styles 
 

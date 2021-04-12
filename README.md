@@ -52,14 +52,14 @@ By the end of the course, you will be able to:
 |  3 | Mon, Apr 7  | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
 |  4 | Mon, Apr 12 | [React Input Pattern](Lessons/lesson-04.md) | - |
 |  5 | Wed, Apr 14 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
-|  6 | Mon, Apr 19 | Labor Day - No Class | - |
+|  6 | Mon, Apr 19 | TBD | - |
 |  7 | Wed, Apr 21 | [Making Network Requests](Lessons/lesson-06.md) | - |
 |  8 | Mon, Apr 26 | [Application State](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
 |  9 | Wed, Apr 28 | [Redux](Lessons/lesson-08.md) | - |
 | 10 | Mon, May 3  | [Redux Part 2](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project | 
 | 11 | Wed, May 5  | [React Hooks](Lessons/lesson-10.md) | - |
-| 14 | Mon, May 10 | [Present Final Projects](Lessons/lesson-13.md) | - |
-| 15 | Wed, May 12 | [Final Assessment](Lessons/lesson-14.md) | - |
+| 12 | Mon, May 10 | [Present Final Projects](Lessons/lesson-13.md) | - |
+| 13 | Wed, May 12 | [Final Assessment](Lessons/lesson-14.md) | - |
 
 <!-- 
 **Course Dates:** Tuesday, March 31 – Thursday, May 14, 2019 (7 weeks)

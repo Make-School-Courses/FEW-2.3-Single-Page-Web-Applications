@@ -1,12 +1,18 @@
 # FEW 2.3 - Lesson 3
 
+<!-- > -->
+
 # React Input Pattern
+
+<!-- > -->
 
 The first goal for this class is to use React with a public web API.
 
 The second goal is to work with form elements and user input with React. React has a special pattern for this due to the way it handles the virtual DOM.
 
 Last, the goal will be to look at conditional rendering techniques that can be implemented with React. 
+
+<!-- > -->
 
 ## Objectives 
 
@@ -16,15 +22,204 @@ Last, the goal will be to look at conditional rendering techniques that can be i
 - Build a system to handle network errors gracefully
 - Use conditional rendering patterns in React
 
+<!-- > -->
+
+## Review
+
+<!-- > -->
+
+**Pop Quiz**
+
+- What is map used for? 
+- What does map return?
+- What parameters does map take?
+
+<!-- > -->
+
+**Checking progress**
+
+- Where are you at on product list?
+- What do you need to do to wrap up this project?
+- What are your blockers?
+
+<!-- > -->
+
+## React Hooks
+
+<!-- > -->
+
+Hooks are a new feature to React. Hooks allow you to use state with a function based component. 
+
+Before Hooks state was only available to class based components. 
+
+<!-- > -->
+
+## Use useState 
+
+<!-- > -->
+
+Import `useState` from react
+
+```JS
+import { useState } from 'react'
+```
+
+<!-- > -->
+
+Use `useState` to generate a state variable and setter function that that variable. 
+
+```JS
+function MyComponent() {
+  const [count, setCount] = useState(0)
+  ...
+}
+```
+
+<small>`count` is the variable, and `setCount` is the setter. The initial value of `count` is 0. </small>
+
+<!-- > -->
+
+```JS
+import React, { useState } from 'react';
+
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+<!-- > -->
+
+### Controlled Component Pattern
+
+<!-- > -->
+
+The controlled component pattern is used to handle form input in React projects. 
+
+<!-- > -->
+
+```JS
+function MyComponent() {
+  const [name, setName] = useState('')
+  return (
+    <input 
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+    />
+  )
+}
+```
+
+<small>Here name stores the value displayed in the input.</small>
+
+<!-- > -->
+
+Here the component was creacted from a function but has access to state (`count`). 
+
+To use state with hooks follow these steps
+
+1. When using `useState` you'll need to import it first. 
+1. Call `useState(initialValue)` with the initial value. 
+1. Deconstruct with the array syntax to get the value, and setter function. 
+    - In the axample above the value is `count`
+    - The setter us `useCount`
+1. To change the value of state call your setter with a new value: `setCount(99)`
+
+It's convention to name your vairable and precede the setter with 'set'. 
+
+### `const [count, setCount] = useState(0);` 🤔
+
+What is this? You should already be familiar with deconstructions with Objects. Desconstruction can also be applied to Arrays. 
+
+```JS 
+const numbers = [1, 2, 3]
+const [ one, two, three ] = numbers
+```
+
+With an object similar code might look like this: 
+
+```JS 
+const numbers = { one: 1, two: 2, three: 3 }
+const { one, two, three } = numbers
+```
+
+With objects you must use the keys to assign the values. So the new variables created on line 2 number have the names `one`, `two`, and `three`. 
+
+In the Array example on line 2 the new variables created can have any name and they are assigned value based of their index!
+
+### Why hooks? 
+
+React is based on **functional** react programming. At it's heart it's built from functional concepts. React isn't an Object Oriented library. The idea of having important parts of the system based on OOP code goes against it's underlying concetps. 
+
+Classes take a extra syntax to generate and more complex to decipher and debug. Functions are more straighforward to troubleshoot. 
+
+If you've ever been confused by `this` if you writing code that is only functions, removing classes, you won't have to workry about `this`.
+
+Hooks don't add a ny breaking changes. Use them if like or not if you don't. 
+
+You should expect to see Hooks in code samples online so it pays to understand them even if you don't use them. 
+
+## Lifecycle methods and Hooks 
+
+```JS
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+<!-- > -->
+
 ## Introduction 
+
+<!-- > -->
 
 The demo project is a simple web app that displays weather data. You'll need to make an account and get a valid API key. 
 
 The project needs to accept user input for a zipcode. Text input and other form elements use a special pattern in React called the _Controlled Component Pattern_. 
 
+<!-- > -->
+
+## React State 
+
+<!-- > -->
+
+State represents a value a component stores internally.
+
+<!-- > -->
+
+When state changes a component renders 
+
+<!-- > -->
+
 ## Getting Started
 
-Follow the instructions to set up and run the demo project. 
+Follow the instructions to set up and run the demo project.
 
 - Download or fork the [project](https://github.com/Product-College-Labs/react-api-project)
 - Make an account with [OpenWeatherMap.org](https://home.openweathermap.org/)

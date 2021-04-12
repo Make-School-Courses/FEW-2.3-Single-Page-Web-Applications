@@ -11,7 +11,7 @@ Getting started with Single Page Applications and React.
 ### Learning Objectives
 
 1. Create components
-1. Use JSX 
+1. Use JSX
 1. Differentiate props and state 
 1. Define the virtual DOM
 1. Define Single Page Applications
