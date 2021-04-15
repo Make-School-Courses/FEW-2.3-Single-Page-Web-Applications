@@ -1,8 +1,12 @@
 # FEW 2.3 - Lesson 5
 
+<!-- > -->
+
 ## Conditional Rendering
 
 Conditional rendering is the process of showing one component or another depending on data or possibly showing or not showing a component at all. 
+
+<!-- > -->
 
 ## Learning Objectives
 
@@ -10,9 +14,24 @@ Conditional rendering is the process of showing one component or another dependi
 1. Define patterns used for conditional rendering
 1. Use conditional rendering
 
+<!-- > -->
+
+##  Review 
+
+- Use the controlled component pattern to create a form
+  - Create a new component
+  - Use useState to define variables and setters for: 
+    - name
+    - password 
+  - Create a form with two inputs: name and password
+
+<!-- > -->
+
 ## Conditional Rendering
 
 Commonly in React, you will need to render different components under different conditions. Here are two patterns you can apply to your work: 
+
+<!-- > -->
 
 **Pattern 1**
 
@@ -28,7 +47,11 @@ function WeatherData(isLoaded) {
 }
 ```
 
-Here is a function that returns either the Weather component or the Loading Component. 
+<small>Here is a function that returns either the Weather component or the Loading Component.</small>
+
+<!-- > -->
+
+You might use the example above like this: 
 
 ```JS
 function App() {
@@ -40,7 +63,9 @@ function App() {
 }
 ```
 
-You can take the idea above one step further. Since a Component is a function you treat it like a component. **Note! parameters are passed via props!**
+<small>You can take the idea above one step further. Since a Component is a function you treat it like a component. **Note! parameters are passed via props!**</small>
+
+<!-- > -->
 
 ```JS 
 function WeatherData({ isLoaded }) { // Notice the change here!
@@ -54,6 +79,10 @@ function WeatherData({ isLoaded }) { // Notice the change here!
 
 Here is a function that returns either the Weather component or the Loading Component. 
 
+<!-- > -->
+
+You might use this in an other component like this: 
+
 ```JS
 function App() {
   return (
@@ -63,6 +92,8 @@ function App() {
   )
 }
 ```
+
+<!-- > -->
 
 **Pattern 2** - Assign a JSX element to variables and render that. This works for situations where a list of components might be used. 
 
@@ -86,6 +117,8 @@ function WhatToEat(props) {
 }
 ```
 
+<!-- > -->
+
 **Pattern 3** Use the && operator. Here you'd render a component or render nothing. 
 
 ```JS 
@@ -99,7 +132,9 @@ function WhatToEat(props) {
 </div>
 ```
 
-Here `false && 99` evaluates to false, and `true && 99` evaluates to 99. 
+<small>Here `false && 99` evaluates to false, and `true && 99` evaluates to 99.</small>
+
+<!-- > -->
 
 **Pattern 4** The ternary operator is like a single line if else. 
 
@@ -118,6 +153,8 @@ function LoginButton(props) {
 ```
 
 The ternary operator `condition ? truthy expression : falsey expression` works with three elements: a condition, a truthy expression, and a falsey experssion. 
+
+<!-- > -->
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 
