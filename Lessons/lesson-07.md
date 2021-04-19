@@ -1,197 +1,97 @@
-<!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
-
 # FEW 2.3 - Lesson 7
 
-➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
+## Making Network Requests
 
-## Application State
+The example project uses `fetch()` to load JSON data from the OpenWeatherMap API. Take a look at the `handleSubmit()` method in App.js.
 
-<!-- > -->
+Read the comments here to follow the process. 
 
-Redux is a tool for managing application state. If you've ever had trouble managing data, changes to data, or handling user input Redux might solve your problems! 
+## Learning Objectives
 
-<!-- > -->
+1. Use fetch to load data
+1. Display data based on application state
+1. Use environment variables to handle seinsitive information
+1. Define Promise it's uses and features 
 
-Redux is a JS implementation of the Flux pattern which was developed at Facebook for solving problems they were having managing data on the Facebook website. 
+## .env
 
-<!-- > -->
+The .env or "dot" env file is used to store sensitive information, like API keys! The Create React Starter project has support for .env baked in. 
 
-## Learning Objectives/Competencies
+Look at Line 36 of App.js. 
 
-1. Identify Application State 
-1. Define Actions and Action Creators 
-1. Define Reducers
+`const apikey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY`
 
-<!-- > -->
+Here you are getting a value stored in the dot env file stored in the key: `REACT_APP_OPENWEATHERMAP_API_KEY`. 
 
-## Slides 
+**Important!** User-defined keys must begin with "REACT_APP_"! 
 
-https://docs.google.com/presentation/d/18rfjoYo-Ei2M9teGn0h-PctydE4m9gOlteT99C7R_TI/edit?usp=sharing
+Open '.env' and define `REACT_APP_OPENWEATHERMAP_API_KEY` with your openweathermap API key. Something like: 
 
-<!-- > -->
+`REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY_HERE`
 
-## What is Application state?
+Make sure your API key is set here. 
 
-<!-- > -->
+## Fetch
 
-Application state is the contents of memory used by your application. You can think about this as all the variables that define your application at any moment. 
+> Fetch is a browser API for fetching resources including resources across a network. 
 
-<!-- > -->
+Load JSON with `fetch` like this: 
 
-That might seem like a lot to keep track of. For practical purposes, we don't have to think of the entire contents of memory. Instead, we need to think of only the variables that determine how your application displays itself at the moment. For this purpose, you can remove all of the boilerplate and framework code from the equation. 
+```JS
+// Call fetch
+fetch('http://someurl.com').then((res) => {
+    // Make a connection and handle the stream as JSON
+    return res.json()
+}).then((data) => {
+    // handle JSON data here
+    // ...
+}).catch((err) => {
+    // Handle error messages 
+    console.log(err.message)
+})
+```
 
-**Think of application state as the values that you would have to load to recreate the application in it's current "state".**
+## Promise 
 
-<!-- > -->
+A Promise is object that is used to handle asynchornous actions. A Promise can be in one of three states: 
 
-## Discuss Application State
+- Pending - The async operation has not completed yet
+- Resolved - The async action resolved successfuly 
+- Rejected - The Async action failed
 
-Discussion: Identify the state in your application. Think of one of your applications and identify all of the variables that would be required to reload the application into a previous state.
+Pair up and take a look at the examples here: 
 
-Identify Application State from class projects
+https://javascript.info/promise-basics
 
-- Product List 
-- API (weather app)
+Most often you'll use a Promise to handle network requests but Promises can also be returned when an operation in the browser happens on another thread or takes times to resolve. 
 
-Discussion: What problems have you had managing application state in previous projects? 
+## Aync & await
 
-Identify Application State in the custom project you are working on.
+Async and await are keywords that work worh Promise. You could say they are "syntactic sugar" on top of Promise.
 
-## The Flux Pattern? 
+Async marks identifies an asyncronous function. An async function always returns a Promise! 
 
-Flux is the application architecture that Facebook uses for building client-side web applications. It complements React's composable view components by utilizing a **unidirectional data flow**. It's more of a pattern rather than a formal framework, and you can start using Flux immediately without a lot of new code.
+Await only works within an async function. Use await at the beginning of any expression that would return a Promise. JavaScript will wait at that line until the Promise resolves. 
 
-Flux applications have three major parts: the **dispatcher**, the **stores**, and the **views** (React components). These should not be confused with Model-View-Controller. Controllers do exist in a Flux application, but they are controller-views — views often found at the top of the hierarchy that retrieves data from the stores and passes this data down to their children. Additionally, action creators — dispatcher helper methods — are used to support a semantic API that describes all changes that are possible in the application. It can be useful to think of them as a fourth part of the Flux update cycle.
+pair up and read a little more about async and await here: 
 
-Flux eschews MVC in favor of a unidirectional data flow. When a user interacts with a React view, the view propagates an action through a central dispatcher, to the various stores that hold the application's data and business logic, which updates all of the views that are affected. This works especially well with React's declarative programming style, which allows the store to send updates without specifying how to transition views between states.
+https://javascript.info/async-await
 
-- https://facebook.github.io/flux/docs/in-depth-overview.html
+Try the code samples with your pair.
 
-## Redux
+### Handling Errors with Async Await
 
-What is Redux? A JavaScript implementation of the Flux Pattern. Redux describes itself as:
+Error handlign with Async and await is done with a try catch block. In a nutshell a try block gives you the opportunity to handle errors with out crashing. Normally when an error is thrown it brings your application to halt. Think of of a try block as being a safe place where you can try something and if it fails isolate it from the rest of your program. With catch you an try something and if it fails catch the error. 
 
-> A predictable state container for JavaScript apps.
+Pair up and read and try these examples: 
 
-Keep in mind that Application state and Redux is different from the Component state. While Components each can define and hold on to their own state. Application state in Redux is help outside of any component and can be passed into a component through props. 
+https://javascript.info/try-catch
 
-In other words Redux holds state outside of components and components can register to receive updates when state changes and hooks that allow components to make changes to state.
+## After Class 
 
-### Why use Redux? 
+Continue working on assignment 3
 
-**Pros**
+## ReSources 
 
-- Easier to Debug Applications
-    - State is held in a single location
-    - Changes all happen through a single system
-- Predictable 
-    - State changes can only be initiated with an action
-    - Any change has to complete before another action is handled
-- Easier to reason about your application
-    - Actions are listed in one location
-    - Reducers handling changes to state exist in one location
-- Makes it easy to expand your applications
-    - Adding new actions and reducers is easier than building every new system from scratch
-    - Defines a pattern for working with state
-    
-**Cons** 
-
-- Setup and tooling 
-    - There are a few steps required to set up Redux
-    - There is a learning curve
-
-- https://redux.js.org
-
-## The Flux Pattern
-
-## The problem
-
-Typically our apps use two-way communication. This creates a complex mashup that invites problems as apps grow in complexity. 
-
-![image-1.png](images/image-1.png)
-
-## The solution
-
-One way data flow.
-
-Redux enforces a one-way data flow. This creates reliable and reproducible 
-results. Redux has four parts:
-
-- action - action creators
-- dispatcher - reducers
-- store 
-- views - React Components
-
-![image-2.png](images/image-2.png)
-
-## Views may generate actions 
-
-When a view issues an action it flows through the system. 
-
-![image-3.png](images/image-3.png)
-
-## Actions 
-
-An action is an Object with a type. 
-
-![image-4.png](images/image-4.png)
-
-## Action creators
-
-Action creators are methods that generate actions. While these are not required, it is best practice. 
-
-![image-5.png](images/image-5.png)
-
-## Reducers 
-
-Reducers make changes to state. A reducer is a function that takes in state and an action as parameters and returns **new state**. State is never modified! 
-Instead, **when state changes new state is created**. 
-
-![image-6.png](images/image-6.png)
-
-The store holds your application state. The only way to change state is to send actions to the dispatcher. 
-
-Unlike MVC Redux uses a unidirectional data flow. A View may generate actions
-it will **never interact with a data store directly**. 
-
-Instead, actions flow into the dispatch and are passed on to reducers which make the appropriate changes to state. Updated state flows into components
-via props. 
-
-## Store 
-
-The store contains a JavaScript object with properties that represent the state of your application. These properties hold the data that your application takes as input and displays in views. 
-
-![image-7.png](images/image-7.png)
-
-
-## Views send action the store sends data to views
-
-![image-8.png](images/image-8.png)
-
-## Example: Counter with Redux
-
-Create the Counter example with Redux. 
-
-### Counter Challenges 
-
-With the counter working try these challenges 
-
-- [easy] Add a reset button - Clicking this button should reset the counter to 0
-	- You'll need to add a `RESET` action and a `reset` action creator. You'll need to modify the reducer to handle this action. 
-- [easy] Set the count amount - Allow the increment and decrement actions to increase or decrease the count by any amount. Currently these actions change the count by adding or subtracting 1. Modify these actions to control the amount of change by any amount. While you can just change the amount of the increase or decrease in the reducer the goal of this challenge is to do this from where you call the `increase` and `decrease` actions. 
-- [moderate] Handle a list of counter - Rather than storing a single counter you need to store an array of counters. This requires some retooling. 
-	- State needs to be an array
-	- To increase a counter the actions need to know the index of the counter
-	- Display a list of counters
-- [moderate] Add an add counter button - 
-
-## After Class
-
-- [Assignment Redux Tutorial](../Assignments/Assignment-04.md)
-
-## Additional Resources
-
-1. https://facebook.github.io/flux/docs/in-depth-overview.html
-1. https://redux.js.org
-1. [Starter project](https://github.com/Make-School-Labs/react-redux-counter) for tutorial
-1. Follow this [tutorial](https://www.youtube.com/watch?v=qeY73Ja6KLM&list=PLoN_ejT35AEjvJwYyPCo3WTpZDpdlGrRu) to review Redux
+- https://javascript.info/promise-basics
+- https://javascript.info/async-await

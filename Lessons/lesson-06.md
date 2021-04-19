@@ -1,95 +1,206 @@
 # FEW 2.3 - Lesson 6
 
-## Making Network Requests
-
-The example project uses `fetch()` to load JSON data from the OpenWeatherMap API. Take a look at the `handleSubmit()` method in App.js.
-
-Read the comments here to follow the process. 
 
 ## Learning Objectives
 
-1. Use fetch to load data
-1. Display data based on application state
-1. Use environment variables to handle seinsitive information
-1. Define Promise it's uses and features 
+1. Describe function and callbacks
+1. Differentiate parameters and arguments
+1. Use callbacks to solve problems
+1. 
 
-## .env
+# Functions 
 
-The .env or "dot" env file is used to store sensitive information, like API keys! The Create React Starter project has support for .env baked in. 
-
-Look at Line 36 of App.js. 
-
-`const apikey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY`
-
-Here you are getting a value stored in the dot env file stored in the key: `REACT_APP_OPENWEATHERMAP_API_KEY`. 
-
-**Important!** User-defined keys must begin with "REACT_APP_"! 
-
-Open '.env' and define `REACT_APP_OPENWEATHERMAP_API_KEY` with your openweathermap API key. Something like: 
-
-`REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY_HERE`
-
-Make sure your API key is set here. 
-
-## Fetch
-
-> Fetch is a browser API for fetching resources including resources across a network. 
-
-Load JSON with `fetch` like this: 
+A function is a block of code that your program can use as often as needed. In JavaScript we can write a function in one of a three ways: 
 
 ```JS
-// Call fetch
-fetch('http://someurl.com').then((res) => {
-    // Make a connection and handle the stream as JSON
-    return res.json()
-}).then((data) => {
-    // handle JSON data here
-    // ...
-}).catch((err) => {
-    // Handle error messages 
-    console.log(err.message)
-})
+function double() {
+    // ... code block
+}
+
+const flip = function() {
+    // ... code block
+}
+
+const split = () => {
+    // ... code block
+}
 ```
 
-## Promise 
+Call or invoke a function to run the code stored in it's block. To call a function write it's name followed by the `()`: 
 
-A Promise is object that is used to handle asynchornous actions. A Promise can be in one of three states: 
+```JS
+double() // doubles
+flip()   // flips
+split()  // splits
+```
 
-- Pending - The async operation has not completed yet
-- Resolved - The async action resolved successfuly 
-- Rejected - The Async action failed
+In JavaScript a function is also a value. You can assign a function to a variable and invoke it by putting the `()` after the variable name: 
 
-Pair up and take a look at the examples here: 
+```JS
+let storesAFunction = double // no () here!
+storesAFunction() // doubles!
 
-https://javascript.info/promise-basics
+storesAFunction = flip
+storesAFunction() // flips
 
-Most often you'll use a Promise to handle network requests but Promises can also be returned when an operation in the browser happens on another thread or takes times to resolve. 
+storesAFunction = split
+storesAFunction() // splits
+```
 
-## Aync & await
+Important! when assigning a function you won't add the `()` after it's name! 
 
-Async and await are keywords that work worh Promise. You could say they are "syntactic sugar" on top of Promise.
+Functions take input as arguments, which are stored in parameters.
 
-Async marks identifies an asyncronous function. An async function always returns a Promise! 
+```JS
+function double(n) {
+    return n * 2
+}
 
-Await only works within an async function. Use await at the beginning of any expression that would return a Promise. JavaScript will wait at that line until the Promise resolves. 
+double(7) 
+```
 
-pair up and read a little more about async and await here: 
+About the double function defines a parameter `n`. When the function is invoked it provides an argument of `7`. 
 
-https://javascript.info/async-await
+Note! **parameter** is the variable that holds the **argument**.
 
-Try the code samples with your pair.
+```JS
+function double(n) {
+    return n * 2
+}
+```
 
-### Handling Errors with Async Await
+# Callbacks are used everywhere in JavaScript. 
 
-Error handlign with Async and await is done with a try catch block. In a nutshell a try block gives you the opportunity to handle errors with out crashing. Normally when an error is thrown it brings your application to halt. Think of of a try block as being a safe place where you can try something and if it fails isolate it from the rest of your program. With catch you an try something and if it fails catch the error. 
+A callback is a *function* that you pass to another function as an *argument*. One example of this is `Array.forEach()`. 
 
-Pair up and read and try these examples: 
+```JS
+const arr = [1,2,3,4]
 
-https://javascript.info/try-catch
+// Define a function to double your numbers and...
+function double(n) {
+    console.log(n * 2)
+}
+// ... use it as the argument to forEach
+arr.forEach(double)
+
+// Or, use an anonymous inline function
+arr.forEach(function (n) {
+    console.log(n * 2)
+})
+
+// You could use an arrow function
+arr.forEach((n) => {
+    console.log(n * 2)
+})
+
+// The arrow function could be shortened
+arr.forEach(n => console.log(n * 2))
+
+```
+
+When you use `theArray.forEach( callback )` it runs the `callback` function once for each item in `theArray` and passes that item as an argument to the `callback`. In the examples above `n` is the parameter and values in `arr` would be the arguments. 
+
+# setTimeout and callbacks
+
+`setTimeOut(callback, ms)` is a function that takes two parameters. The first is a callback, the second is a number in milliseconds. When the number of milliseconds has elapsed after calling `setTimeout` the callback is executed. 
+
+# Promise 
+
+A Promise is an Object that represents work that will done in the future.
+
+A Promise can be in one of three states: 
+
+- **Pending** - in process
+- **Resolved** - work completed successfully
+- **Rejected** - work failed
+
+Here is an example of a Promise: 
+
+```JS
+const p = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('>>> Success! <<<');
+    // reject("--- Oops ---");
+  }, 4000);
+});
+```
+
+When defining a Promise you provide one function as an argument. **See line 1**. This function takes two parameters: `resolve`, and `reject`.
+
+The body of the Promise does some work, this is the timeout lines 2 to 5. 
+
+When the work is completed successfully call `resolve`. If the work failed call `reject`. Doing either of these completes the Promise. 
+
+**On line 8**, you see `then()` being called with a callback function. This callback is executed when the Promise resolves. 
+
+**On line 11**, you see `catch()` being called with a callback function. This callback is executed if the Promise is rejected. 
+
+Here's what lines 8 to 11 would look like this without the callback. 
+
+```
+`p.then().catch()`
+```
+
+Try this out: https://replit.com/join/yjjdcwzk-mitchellhudson
+
+Run the sample code and wait for the message to appear in the console. Then try the problems below. 
+
+**Problems to solve**
+
+**1)** What happens when a promise is rejected? Test it by calling `reject()`
+
+**2)** What happens when you call both `resolve` and `reject`? Test this.
+
+**3)** Does the order matter you call resolve and reject matter? Test this. 
+
+**4)** What happens if you call `resolve` or `reject` more than once? Test this out for yourself.
+
+**Challenge problem:** https://replit.com/join/ifntjrpw-mitchellhudson
+
+# Chaining Promises
+
+Promises can be chained. 
+
+When a function returns a Promise you handle it like this: 
+
+`promise.then().catch()`
+
+In some cases a Promise will return another Promise. In this case you can call `then()` on the return value.
+
+`method(a => p).then(b => p).then(c => p).then()`
+
+Here the `method()` returns a Promise. The callback to this Promise returns another Promise. That Promise also returns a Promise.  
+
+If any promise in the chain is rejected it will call `catch()` at the end of the chain. It might look like this: 
+
+`p.then().then().then().catch()`
+
+Remeber you provide a callback for each promise that resolves to a value. You use the callback argument in `then()` to handle these values.
+
+`method(a => a.then(b => b.then(c => c).then()`
+
+Here imagine a, b, and c were promises. Since your're returning these you can call `.then()` on each.
+
+**Challenge Problems:** https://replit.com/join/xkshtdaq-mitchellhudson
+
+# Promise All
+
+In some cases you will want to make multiple Async calls and need to wait for them all to resolve before you can handle the results. `Promise.all()` does this. 
+
+`Promise.all()` takes an array of Promises. It resolves to a single `then()` and `catch()`. It resolves all of the values an array to callback argumen to `then()`. 
+
+```JS 
+const arr = [promise1, promise, promise3]
+Promise.all(arr).then((values) => values)
+// [value1, value2, value3]
+```
+
+**Challenge Problems:** https://replit.com/join/ixzvheyv-mitchellhudson
+
 
 ## After Class 
 
-Continue working on assignment 3
+
 
 ## ReSources 
 

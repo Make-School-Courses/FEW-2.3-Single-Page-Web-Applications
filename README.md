@@ -53,12 +53,12 @@ By the end of the course, you will be able to:
 |  4 | Mon, Apr 12 | [React Input Pattern](Lessons/lesson-04.md) | - |
 |  5 | Wed, Apr 14 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
 |  6 | Mon, Apr 19 | TBD | - |
-|  7 | Wed, Apr 21 | [Making Network Requests](Lessons/lesson-06.md) | - |
-|  8 | Mon, Apr 26 | [Application State](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
-|  9 | Wed, Apr 28 | [Redux](Lessons/lesson-08.md) | - |
-| 10 | Mon, May 3  | [Redux Part 2](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project | 
-| 11 | Wed, May 5  | [React Hooks](Lessons/lesson-10.md) | - |
-| 12 | Mon, May 10 | [Present Final Projects](Lessons/lesson-13.md) | - |
+|  7 | Wed, Apr 21 | [Making Network Requests](Lessons/lesson-07.md) | - |
+|  8 | Mon, Apr 26 | [Application State](Lessons/lesson-08.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
+|  9 | Wed, Apr 28 | [Redux](Lessons/lesson-09.md) | - |
+| 10 | Mon, May 3  | [Redux Part 2](Lessons/lesson-10.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project | 
+| 11 | Wed, May 5  | [React Hooks](Lessons/lesson-11.md) | - |
+| 12 | Mon, May 10 | [Present Final Projects](Lessons/lesson-12.md) | - |
 | 13 | Wed, May 12 | [Final Assessment](Lessons/lesson-14.md) | - |
 
 <!-- 
