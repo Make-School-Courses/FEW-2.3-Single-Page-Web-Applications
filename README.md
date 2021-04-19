@@ -52,7 +52,7 @@ By the end of the course, you will be able to:
 |  3 | Mon, Apr 7  | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
 |  4 | Mon, Apr 12 | [React Input Pattern](Lessons/lesson-04.md) | - |
 |  5 | Wed, Apr 14 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
-|  6 | Mon, Apr 19 | TBD | - |
+|  6 | Mon, Apr 19 | [Callbacks and Promises](Lessons/lesson-06.md) | - |
 |  7 | Wed, Apr 21 | [Making Network Requests](Lessons/lesson-07.md) | - |
 |  8 | Mon, Apr 26 | [Application State](Lessons/lesson-08.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
 |  9 | Wed, Apr 28 | [Redux](Lessons/lesson-09.md) | - |

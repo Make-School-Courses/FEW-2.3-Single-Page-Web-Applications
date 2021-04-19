@@ -154,28 +154,28 @@ p.then().catch()
 Adding the callback functions the code looks liek this: 
 
 ```JS
-p.then(() => {}).catch(() => {})
+p.then( () => {} ).catch( () => {} )
+```
+
+Adding some lines make this easier to read: 
+
+```JS
+p.then( () => {
+    // 
+} ).catch( () => {
+    // 
+} )
 ```
 
 **Challenges:** https://replit.com/join/yjjdcwzk-mitchellhudson
 
-Run the sample code and wait for the message to appear in the console. Then try the problems below. 
-
-**Problems to solve**
-
-**1)** What happens when a promise is rejected? Test it by calling `reject()`
-
-**2)** What happens when you call both `resolve` and `reject`? Test this.
-
-**3)** Does the order matter you call resolve and reject matter? Test this. 
-
-**4)** What happens if you call `resolve` or `reject` more than once? Test this out for yourself.
+Try this challenge problem: 
 
 **Challenge problem:** https://replit.com/join/ifntjrpw-mitchellhudson
 
 # Chaining Promises
 
-Promises can be chained. 
+Promises can be chained. Chaining happens when a promise resolves to another promise. 
 
 When a function returns a Promise you handle it like this: 
 
@@ -183,27 +183,36 @@ When a function returns a Promise you handle it like this:
 
 In some cases a Promise will return another Promise. In this case you can call `then()` on the return value.
 
-`method(a => p).then(b => p).then(c => p).then()`
+```JS
+method(a => a).then(b => b).then(c => c).then()
+```
 
 Here the `method()` returns a Promise. The callback to this Promise returns another Promise. That Promise also returns a Promise.  
 
+You could store each return value in a variable: 
+
+```JS
+const p1 = method(a => a)
+const p2 = p1.then(b => b)
+const p3 = p2.then(c => c)
+const p4 = p3.then()
+```
+
 If any promise in the chain is rejected it will call `catch()` at the end of the chain. It might look like this: 
 
-`p.then().then().then().catch()`
+```JS
+p.then(...).then(...).then(...).catch()
+```
 
-Remeber you provide a callback for each promise that resolves to a value. You use the callback argument in `then()` to handle these values.
-
-`method(a => a.then(b => b.then(c => c).then()`
-
-Here imagine a, b, and c were promises. Since your're returning these you can call `.then()` on each.
+(the callbacks have been omitted)
 
 **Challenge Problems:** https://replit.com/join/xkshtdaq-mitchellhudson
 
 # Promise All
 
-In some cases you will want to make multiple Async calls and need to wait for them all to resolve before you can handle the results. `Promise.all()` does this. 
+In some cases you will want to make multiple Async calls and need to wait for them **all** to resolve before you can handle the results. `Promise.all()` does this!
 
-`Promise.all()` takes an array of Promises. It resolves to a single `then()` and `catch()`. It resolves all of the values an array to callback argumen to `then()`. 
+`Promise.all()` takes an array of Promises. It resolves to a single `then()` and `catch()`. It resolves all of the values as an array to the callback argument supplied to `then()`. 
 
 ```JS 
 const arr = [promise1, promise, promise3]
@@ -216,7 +225,7 @@ Promise.all(arr).then((values) => values)
 
 ## After Class 
 
-
+Continue working on the React Weather API project. 
 
 ## ReSources 
 
