@@ -6,7 +6,7 @@
 1. Describe function and callbacks
 1. Differentiate parameters and arguments
 1. Use callbacks to solve problems
-1. 
+1. Describge promise in JS 
 
 # Functions 
 
@@ -59,15 +59,9 @@ function double(n) {
 double(7) 
 ```
 
-About the double function defines a parameter `n`. When the function is invoked it provides an argument of `7`. 
+Above the double function defines a parameter `n`. When the function is invoked an argument of `7` is supplied.
 
-Note! **parameter** is the variable that holds the **argument**.
-
-```JS
-function double(n) {
-    return n * 2
-}
-```
+Note! **parameter** is the variable that holds the **argument** which is the value.
 
 # Callbacks are used everywhere in JavaScript. 
 
@@ -100,9 +94,13 @@ arr.forEach(n => console.log(n * 2))
 
 When you use `theArray.forEach( callback )` it runs the `callback` function once for each item in `theArray` and passes that item as an argument to the `callback`. In the examples above `n` is the parameter and values in `arr` would be the arguments. 
 
+**Challenge:** https://replit.com/join/uwwawdef-mitchellhudson
+
 # setTimeout and callbacks
 
 `setTimeOut(callback, ms)` is a function that takes two parameters. The first is a callback, the second is a number in milliseconds. When the number of milliseconds has elapsed after calling `setTimeout` the callback is executed. 
+
+**Challenge:** https://replit.com/join/tuudswte-mitchellhudson
 
 # Promise 
 
@@ -110,9 +108,9 @@ A Promise is an Object that represents work that will done in the future.
 
 A Promise can be in one of three states: 
 
-- **Pending** - in process
-- **Resolved** - work completed successfully
-- **Rejected** - work failed
+- **Pending** - work is in process 
+- **Resolved** - work is completed successfully
+- **Rejected** - work has failed
 
 Here is an example of a Promise: 
 
@@ -123,25 +121,43 @@ const p = new Promise((resolve, reject) => {
     // reject("--- Oops ---");
   }, 4000);
 });
+
+p.then((message) => {
+  console.log('Promise resolved successfully!');
+  console.log(message);
+}).catch((err) => {
+  console.log('Promise rejected');
+  console.log(err);
+});
 ```
 
 When defining a Promise you provide one function as an argument. **See line 1**. This function takes two parameters: `resolve`, and `reject`.
 
 The body of the Promise does some work, this is the timeout lines 2 to 5. 
 
-When the work is completed successfully call `resolve`. If the work failed call `reject`. Doing either of these completes the Promise. 
+When the work is completed successfully call `resolve`. If the work failed call `reject`. Doing either of these completes the Promise.
 
 **On line 8**, you see `then()` being called with a callback function. This callback is executed when the Promise resolves. 
 
+The `message` parameter holds the value returned from the promise. It was passed to `resolve()` as the argument.
+
 **On line 11**, you see `catch()` being called with a callback function. This callback is executed if the Promise is rejected. 
+
+The `err` parameter holds the value passed as the argument to `reject`.
 
 Here's what lines 8 to 11 would look like this without the callback. 
 
-```
-`p.then().catch()`
+```js
+p.then().catch()
 ```
 
-Try this out: https://replit.com/join/yjjdcwzk-mitchellhudson
+Adding the callback functions the code looks liek this: 
+
+```JS
+p.then(() => {}).catch(() => {})
+```
+
+**Challenges:** https://replit.com/join/yjjdcwzk-mitchellhudson
 
 Run the sample code and wait for the message to appear in the console. Then try the problems below. 
 
