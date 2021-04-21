@@ -158,9 +158,17 @@ A good strategy here is to handle the errors where they occur and set a value on
 
 #### Challenge 8
 
-Use `navigator.geolocation` to get the weather by geographic cooordinates. 
+Add an option to display the temperature as F or C. 
+
+To do this you need a UI element that allows us to make the choice. This can be radio button or a menu. 
+
+You'll also need to set the units in your request, or use the standard unit and convert to F or C. 
 
 #### Challenge 9
+
+Use `navigator.geolocation` to get the weather by geographic cooordinates. 
+
+#### Challenge 10
 
 Use an API of your choice in place of the OpenWeatherMap API. Build components and sub-components to do the work and display your data. Choose anything from one of these services: 
 
