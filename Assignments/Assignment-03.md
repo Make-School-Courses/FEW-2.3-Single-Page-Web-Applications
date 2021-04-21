@@ -158,6 +158,10 @@ A good strategy here is to handle the errors where they occur and set a value on
 
 #### Challenge 8
 
+Use `navigator.geolocation` to get the weather by geographic cooordinates. 
+
+#### Challenge 9
+
 Use an API of your choice in place of the OpenWeatherMap API. Build components and sub-components to do the work and display your data. Choose anything from one of these services: 
 
 - [Rapid API](https://rapidapi.com)
