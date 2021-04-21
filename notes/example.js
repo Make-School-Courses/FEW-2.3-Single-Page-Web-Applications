@@ -1,53 +1,16 @@
 
 
 
-// class Promise {
-// 	then() {}
-// }
+// const x = 99
 
-// const p1 = { then: function() {} }
-// const p2 = new Promise()
-// const p3 = new Promise()
+function iffy() {
+  try {
+    console.log(x)
+  } catch(err) {
+    console.log(err.message)
+  }
+}
 
-// p1.then()
-// p2.then()
-// p3.then()
-
-
-
-
-
-
-
-
-
-const p = new Promise((resolve, reject) => {
-
-  setTimeout(() => {
-    resolve('>>> Success! <<<');
-    // reject('--- Oops ---');
-  }, 4000);
-
-});
-
-p.then( (message) => {
-  console.log('Promise resolved successfully!');
-  console.log(message);
-} ).catch( (err) => {
-  console.log('Promise rejected');
-  console.log(err);
-} );
-
-
-
-
-
-
-
-
-
-
-
-
+iffy()
 
 

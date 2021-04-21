@@ -79,6 +79,37 @@ https://javascript.info/async-await
 
 Try the code samples with your pair.
 
+### Looking at a fetch request with async and await
+
+The `await` key word only works in a function that marked with the `async` keyword. Imagine the code block above now in a function. The `await` keyword is used to resolve any promises you might have in your code. 
+
+```JS
+async function getWeather() {
+    // Call fetch
+    const res = await fetch('http://someurl.com')
+    const data = await res.json()
+    // handle JSON data here
+    // ...
+}
+```
+
+This is a lot shorter! 
+
+Remember an `async` function always returns a promise! We didn't return a promise in the code above but this function will return a promise anyway! That means we might call this function and handle it's return value in this way:
+
+```JS
+async function getWeather() {
+    // Call fetch
+    const res = await fetch('http://someurl.com')
+    const data = await res.json()
+    return data
+}
+
+getWeather().then((data) => {
+    // do something with data here!
+})
+```
+
 ### Handling Errors with Async Await
 
 Error handlign with Async and await is done with a try catch block. In a nutshell a try block gives you the opportunity to handle errors with out crashing. Normally when an error is thrown it brings your application to halt. Think of of a try block as being a safe place where you can try something and if it fails isolate it from the rest of your program. With catch you an try something and if it fails catch the error. 
@@ -86,6 +117,22 @@ Error handlign with Async and await is done with a try catch block. In a nutshel
 Pair up and read and try these examples: 
 
 https://javascript.info/try-catch
+
+```JS
+async function getWeather() {
+  try {
+    // Let's try this
+    const res = await fetch('http://someurl.com')
+    const data = await res.json()
+    return data
+  } catch(err) {
+    // If there is an error we end up here!
+    console.log(err)
+  }
+}
+```
+
+If the code in the try block throws an error we end up in the catch block!
 
 ## After Class 
 
