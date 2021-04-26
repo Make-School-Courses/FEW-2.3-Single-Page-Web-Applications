@@ -8,7 +8,7 @@
 
 <!-- > -->
 
-Redux is a tool for managing application state. If you've ever had trouble managing data, changes to data, or handling user input Redux might solve your problems! 
+Redux is a tool for managing the application state. If you've ever had trouble managing data, changes to data, or handling user input Redux might solve your problems! 
 
 <!-- > -->
 
@@ -40,7 +40,7 @@ Application state is the contents of memory used by your application. You can th
 
 That might seem like a lot to keep track of. For practical purposes, we don't have to think of the entire contents of memory. Instead, we need to think of only the variables that determine how your application displays itself at the moment. For this purpose, you can remove all of the boilerplate and framework code from the equation. 
 
-**Think of application state as the values that you would have to load to recreate the application in it's current "state".**
+**Think of application state as the values that you would have to load to recreate the application in its current "state".**
 
 <!-- > -->
 
@@ -73,7 +73,7 @@ What is Redux? A JavaScript implementation of the Flux Pattern. Redux describes 
 
 > A predictable state container for JavaScript apps.
 
-Keep in mind that Application state and Redux is different from the Component state. While Components each can define and hold on to their own state. Application state in Redux is help outside of any component and can be passed into a component through props. 
+Keep in mind that Application State and Redux are different from  Component State. While Components each can define and hold on to their own state. Application state in Redux is help outside of any component and can be passed into a component through props. 
 
 In other words Redux holds state outside of components and components can register to receive updates when state changes and hooks that allow components to make changes to state.
 
@@ -82,25 +82,25 @@ In other words Redux holds state outside of components and components can regist
 **Pros**
 
 - Easier to Debug Applications
-    - State is held in a single location
-    - Changes all happen through a single system
+  - State is held in a single location
+  - Changes all happen through a single system
 - Predictable 
-    - State changes can only be initiated with an action
-    - Any change has to complete before another action is handled
+  - State changes can only be initiated with an action
+  - Any change has to complete before another action is handled
 - Easier to reason about your application
-    - Actions are listed in one location
-    - Reducers handling changes to state exist in one location
+  - Actions are listed in one location
+  - Reducers handling changes to state exist in one location
 - Makes it easy to expand your applications
-    - Adding new actions and reducers is easier than building every new system from scratch
-    - Defines a pattern for working with state
-    
+  - Adding new actions and reducers is easier than building every new system from scratch
+ - Defines a pattern for working with state
+ 
 **Cons** 
 
 - Setup and tooling 
-    - There are a few steps required to set up Redux
-    - There is a learning curve
+  - There are a few steps required to set up Redux
+  - There is a learning curve
 
-- https://redux.js.org
+https://redux.js.org
 
 ## The Flux Pattern
 
@@ -112,7 +112,7 @@ Typically our apps use two-way communication. This creates a complex mashup that
 
 ## The solution
 
-One way data flow.
+One-way data flow.
 
 Redux enforces a one-way data flow. This creates reliable and reproducible 
 results. Redux has four parts:
@@ -132,7 +132,7 @@ When a view issues an action it flows through the system.
 
 ## Actions 
 
-An action is an Object with a type. 
+An action is an object with a type. 
 
 ![image-4.png](images/image-4.png)
 
@@ -144,17 +144,17 @@ Action creators are methods that generate actions. While these are not required,
 
 ## Reducers 
 
-Reducers make changes to state. A reducer is a function that takes in state and an action as parameters and returns **new state**. State is never modified! 
-Instead, **when state changes new state is created**. 
+Reducers make changes to State. A reducer is a function that takes in state and an action as parameters and returns **new state**. State is never modified! 
+Instead, **when State changes new state is created**. 
 
 ![image-6.png](images/image-6.png)
 
-The store holds your application state. The only way to change state is to send actions to the dispatcher. 
+The store holds your application state. The only way to change State is to send actions to the dispatcher. 
 
 Unlike MVC Redux uses a unidirectional data flow. A View may generate actions
 it will **never interact with a data store directly**. 
 
-Instead, actions flow into the dispatch and are passed on to reducers which make the appropriate changes to state. Updated state flows into components
+Instead, actions flow into the dispatch and are passed on to reducers which make the appropriate changes to State. Updated state flows into components
 via props. 
 
 ## Store 
@@ -166,9 +166,7 @@ The store contains a JavaScript object with properties that represent the state 
 
 ## Views send action the store sends data to views
 
-![image-8.png](images/image-8.png)
-
----------------------
+![image-8.png](images/image-8.png
 
 ## Products with Redux
 
@@ -188,20 +186,20 @@ Copy the data files from your Product list project into the src directory of thi
 
 ### Displaying a Product
 
-Create a component to display a single product. To make this easy this component will take the index of the product as prop and look up it's information from your data array. 
+Create a component to display a single product. To make this easy this component will take the index of the product as a prop and look up its information from your data array. 
 
 ```JS
 import data from './data'
 
 function Product({ id }) {
-	const { name, category, price } = data[id]
+  const { name, category, price } = data[id]
 
-	return (
-		<div>
-			<h1>{name}</h1>
-			<button>Add to Cart</button>
-		</div>
-	)
+  return (
+    <div>
+    <h1>{name}</h1>
+    <button>Add to Cart</button>
+    </div>
+  )
 }
 
 export default Product
@@ -221,12 +219,12 @@ Create a new component to display a list of products. The goal is to use the Pro
 import data from './data'
 import Product from './Product'
 
-function  ProductList() {
-	return (
-		<div className="Products">
-			{data.map((item, i) => <Product id={i} />)}
-		</div>
-	)
+function ProductList() {
+  return (
+    <div className="Products">
+      {data.map((item, i) => <Product id={i} />)}
+    </div>
+  )
 }
 
 export default ProductList
@@ -242,7 +240,7 @@ This should display a list of all of the Products in your data.
 
 ### Add a Shopping Cart Component
 
-This component will display a list of products that are in your shopping cart. At the moment it will only display a the label: "Shopping Cart". 
+This component will display a list of products that are in your shopping cart. At the moment it will only display the label: "Shopping Cart". 
 
 Create new file: `ShoppingCart.js`: 
 
@@ -250,14 +248,14 @@ Create new file: `ShoppingCart.js`:
 import data from './data'
 
 function ShoppingCart() {
-	return (
-		<div className="ShoppingCart">
-			<h1>Your Cart</h1>
-			<ul>
-				{/* Items here! */}
-			</ul>
-		</div>
-	)
+  return (
+    <div className="ShoppingCart">
+      <h1>Your Cart</h1>
+      <ul>
+        {/* Items here! */}
+      </ul>
+    </div>
+  )
 }
 
 export default ShoppingCart
@@ -278,9 +276,9 @@ There are some potential problems you can anticipate.
 
 You need to receive click events from the "Add to Cart button" in each product. These are nested in the `ProductList` component. These events need to manifest as a list of products in your cart which can be displayed in the `ShoppingCart` component. 
 
-With only state you could store state in the parent component `App` and pass the information down the child components `ProductList` and `ShoppingCart`. 
+With only State, you could store state in the parent component `App` and pass the information down the child components `ProductList` and `ShoppingCart`. 
 
-To get the clicks from your "Add to Cart" buttons you'll need to pass a function defiend in App down to this button: 
+To get the clicks from your "Add to Cart" buttons you'll need to pass a function defined in App down to this button: 
 
 ```
 App 
@@ -297,9 +295,9 @@ Storing all of this data in the `App` component can also be hard to manage.
 
 Redux is a tool that stores your Application State outside of the component structure and allows access to this state directly from anywhere. 
 
-What is Application State? Application State is the data your component stores, updates and displays. In this example it will start as an array of products in your shopping cart.
+What is Application State? Application State is the data your component stores, updates, and displays. In this example, it will start as an array of products in your shopping cart.
 
-Redux requires a little bit of setup. This is work you put in up front for a better developer experience as your app grows. 
+Redux requires a little bit of setup. This is work you put in upfront for a better developer experience as your app grows. 
 
 Follow these steps:
 
@@ -311,22 +309,22 @@ Add an `index.js` file here. Add an action to this file:
 export const ADD_TO_CART = 'ADD_TO_CART'
 
 export const addToCart = (id) => {
-	return {
-		type: ADD_TO_CART,
-		payload: { id }
-	}
+  return {
+    type: ADD_TO_CART,
+    payload: { id }
+  }
 }
 ```
 
-An action is made up two things an action name, `ADD_TO_CART`, which is a string, and an action creator function `addToCart`. 
+An action is made up of two things an action name, `ADD_TO_CART`, which is a string, and an action creator function `addToCart`. 
 
-What does an action do? It makes a change to your application state. The name lets us identify what action is being sent. The action creator returns an object with type: which is the action name, and a payload which contains information we might need to make the change. 
+What does an action do? It makes a change to your application state. The name lets us identify what action is being sent. The action creator returns an object with type: which is the action name, and a payload that contains information we might need to make the change. 
 
-Here the `addToCart` action needs to add the id of the product we are adding to our shopping cart ot the list of products that are in the cart. The id is in the payload, notice we pass it to this function as the id parameter. 
+Here the `addToCart` action needs to add the id of the product we are adding to our shopping cart to the list of products that are in the cart. The id is in the payload, notice we pass it to this function as the id parameter. 
 
-Where is the shopping cart list? The actual data that is stored for applcation state is managed by a reducer. We'll make that next. 
+Where is the shopping cart list? The actual data that is stored for the application state is managed by a reducer. We'll make that next. 
 
-Create a new folder `reducers` in your `src` dorectory. 
+Create a new folder `reducers` in your `src` directory. 
 
 Add a file `index.js` and `shoppingCartreducer.js` to the `reducers` folder.
 
@@ -336,29 +334,27 @@ In `shoppingCartReducers.js` add the following:
 import { ADD_TO_CART } from '../actions'
 
 const shoppingCartReducer = (state = [], action) => {
-	switch(action.type) {
-		case ADD_TO_CART: 
-			return [...state, action.payload.id] 
-
-		default: 
-			return state
-			
-	}
+  switch(action.type) {
+    case ADD_TO_CART: 
+      return [...state, action.payload.id] 
+    default: 
+      return state
+  }
 }
 
 export default shoppingCartReducer
 ```
 
-Here you are importing your action at the top. The reducer can use this to decide how to change Application state. 
+Here you are importing your action at the top. The reducer can use this to decide how to change the Application state. 
 
-The `shoppingCartReducer` function is responsible for the initial value of state and managing changes to state. 
+The `shoppingCartReducer` function is responsible for the initial value of the state and managing changes to the state. 
 
 Look at the parameters: 
 
 - `state` - notice the default value is `[]`
 - `action` - will be the object returned by your `addToCart` function in your actions. 
 
-This function must return a new copy of state. In this case if the action is `ADD_TO_CART` we make a new array and add an id to the list. If not we return state unchanged. 
+This function must return a new copy of the state. In this case, if the action is `ADD_TO_CART` we make a new array and add an id to the list. If not we return the state unchanged. 
 
 In `reducers/index.js` add the following: 
 
@@ -367,11 +363,11 @@ import { combineReducers } from 'redux'
 import shoppingCartReducer from './shoppingCartReducer'
 
 export default combineReducers({
-	shoppingCart: shoppingCartReducer
+  shoppingCart: shoppingCartReducer
 })
 ```
 
-Here you are defining your root reducer. Giving shape to your application state. In this case the array of product ids in the array will stored on `shoppingCart` property of the store.
+Here you are defining your root reducer. Giving shape to your application state. In this case, the array of product ids in the array will be stored on `shoppingCart` property of the store.
 
 Connecting your react app to Redux. Go to your root component `src/index.js` and add the following: 
 
@@ -392,7 +388,7 @@ To share the store with rest of your application we use the `Provider component`
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-        <App />
+      <App />
     </React.StrictMode>
   </Provider>,
   document.getElementById('root')
@@ -424,23 +420,23 @@ const dispatcher = useDispatch()
 dipatcher(addToCart(id))
 ```
 
-Try these out in your code! Open `ShoppingCart.js`. This component needs to display a list items in the cart. Since the items will be stored by the id of the item you will import the data also. 
+Try these out in your code! Open `ShoppingCart.js`. This component needs to display list items in the cart. Since the items will be stored by the id of the item you will import the data also. 
 
 ```js
 import { useSelector } from 'react-redux'
 import data from './data'
 
 function ShoppingCart() {
-	const shoppingCart = useSelector(state => state.shoppingCart)
+  const shoppingCart = useSelector(state => state.shoppingCart)
 
-	return (
-		<div className="ShoppingCart">
-			<h1>Your Cart</h1>
-			<ul>
-				{shoppingCart.map(item => <li>{data[item].name}</li>)}
-			</ul>
-		</div>
-	)
+  return (
+    <div className="ShoppingCart">
+      <h1>Your Cart</h1>
+        <ul>
+          {shoppingCart.map(item => <li>{data[item].name}</li>)}
+        </ul>
+      </div>
+  )
 }
 
 export default ShoppingCart
@@ -452,7 +448,7 @@ Take a look at `reducers/shopingCartReducer.js`. Notice that the default value f
 
 ```JS
 const shoppingCartReducer = (state = [], action) => {
-	...
+ ...
 }
 ```
 
@@ -460,13 +456,13 @@ Try adding a few items to the default value for the array.
 
 ```JS
 const shoppingCartReducer = (state = [1,2,3], action) => {
-	...
+  ...
 }
 ```
 
 Refresh your page in the browser and you should see three items appear in the shopping cart list. 
 
-Note! A reducer is responsible for the default value of state!
+Note! A reducer is responsible for the default value of the state!
 
 Let's make the "Add to Cart" button work. Open `Product.js`. This component displays the listing for a single product. The listing includes the name, price, category, and the "Add to Cart" button. 
 
@@ -479,17 +475,17 @@ import { useDispatch } from 'react-redux'
 import { addToCart } from './actions'
 
 function Product({ id }) {
-	const dispatcher = useDispatch()
-	const { name, category, price } = data[id]
+ const dispatcher = useDispatch()
+ const { name, category, price } = data[id]
 
-	return (
-		<div>
-			<h1>{name}</h1>
-			<button
-				onClick={() => dispatcher(addToCart(id))}
-			>Add to Cart</button>
-		</div>
-	)
+ return (
+  <div>
+    <h1>{name}</h1>
+      <button
+        onClick={() => dispatcher(addToCart(id))}
+      >Add to Cart</button>
+  </div>
+ )
 }
 
 export default Product
