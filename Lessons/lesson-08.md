@@ -21,6 +21,7 @@ Redux is a JS implementation of the Flux pattern which was developed at Facebook
 1. Identify Application State 
 1. Define Actions and Action Creators 
 1. Define Reducers
+1. Implement Redux  and React Redux
 
 <!-- > -->
 
@@ -496,6 +497,89 @@ The store contains a JavaScript object with properties that represent the state 
 ## Views send action the store sends data to views
 
 ![image-8.png](images/image-8.png
+
+## Challenges 
+
+Using the Product List with Redux try these challenges: 
+
+**Challenge 1 - Cart Total**
+
+Create a component that display the total cost of the cart. To do this follow these steps: 
+
+1. Make a new component. 
+1. In this component use `useSelector` to get `shoppingCart` list. You'll need to look up each item and gets its price from the data. 
+1. Use Array reduce to calculate the total.
+
+Stretch challenge: Display the count and the total. Something like
+
+> You have 3 items in your cart, total:$12.97
+
+Note! You could make two components one for the count and one for the total. 
+
+**Challenge 2 - Make a Clear cart button**
+
+This button will remove all items from the cart. To do this you'll need to: 
+
+1. Define a new action in your `actions/index.js`, name it: `CLEAR_CART`
+1. Add a new action creator function: `clearCart`
+1. Handle this action in your `reducers/shoppingCartReducer.js`. Add a new switch case for `CLEAR_CART` that returns an empty array
+
+**Challenge 3 - Make a Component for a cart item**
+
+Currently each item in the cart is displayed with inline JSX a `<li>`. The goal of this challenge is to turn this into a component. 
+
+1. Create a new file: `CartItem.js`
+1. This should be similar to the `Product` component. It should take the id of a product on props and display the product's name and price. 
+1. Use this component in the `ShoppingCart` component. 
+
+**Challenge 4 - Remove from Cart button**
+
+The goal here is to add a "Remove from Cart" button to the `CartItem` component you created in the last challenge. This button's job is to remove an item from the cart. 
+
+1. Add a remove from cart action to your `actions/index.js`
+1. Add a remove from cart function that defines an id parameter and returns an object with a type, and payload. 
+1. Import the action in your `reducers/shoppingCartReducer.js`. Define a switch case in your reducer that finds the item in the array and removes it. Be sure to make a new array (with one less item)!
+1. Import the remove from cart action creator from `actions/index.js` and `useDispatch` from 'react-redux'. 
+1. At the top of your component function get the dispatcher using `useDispatch`
+1. Add a "Remove from Cart" button. On a click this button should call dispatch with the remove from cart action and pass the id of the item as an argument.
+
+**Challenge 5 - Track count of items in Cart**
+
+Currently the cart shows an item for each item added to the cart. It would be better if it showed the item and the number of times it was added to the cart. 
+
+Currently the cart shows something like: 
+
+- Hatity
+- Y-Solowarm
+- Hatity
+- Bytecard
+- Bytecard
+
+The goal of this challenge is to display the above situation like this: 
+
+- Hatity (2)
+- Y-Solowarm
+- Bytecard (2)
+
+You could also show the price
+
+To do this you will have to change what is stored in your `shoppingCart` state. Currently this is an array of numbers. It will now have to be an array of objects with propsrties of `id` and `count`. For the list above it might look like this: 
+
+```JS
+[
+  { id: 0, count: 2 },
+  { id: 1, count: 1 },
+  { id: 2, count: 2 }
+]
+```
+
+When adding an item to the cart in your `reducers/shoppingCartReducer.js` you should check if an item already exists with id on the action. If so increase the count by 1. If not add a new object with the id and a count of 1. 
+
+**Note!** Be sure to make a new array! You must return new state! You can not just change the count and return the same array. An easy way to do this is to use `map()` since map will return a new array!
+
+The remove from cart action should decrease count of an item by 1, if the count is 0 remove this object. Remember to copy state! 
+
+In your `CartItem` make the adjustment to use the id and count. 
 
 ## After Class
 
