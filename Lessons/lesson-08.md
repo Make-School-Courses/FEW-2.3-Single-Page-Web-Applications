@@ -168,22 +168,338 @@ The store contains a JavaScript object with properties that represent the state 
 
 ![image-8.png](images/image-8.png)
 
-## Example: Counter with Redux
+---------------------
 
-Create the Counter example with Redux. 
+## Products with Redux
 
-### Counter Challenges 
+In this example what you will do is use Redux to remake the product list project. You'll use Redux to manage a list of items in a shopping cart. 
 
-With the counter working try these challenges 
+### Getting Started
 
-- [easy] Add a reset button - Clicking this button should reset the counter to 0
-	- You'll need to add a `RESET` action and a `reset` action creator. You'll need to modify the reducer to handle this action. 
-- [easy] Set the count amount - Allow the increment and decrement actions to increase or decrease the count by any amount. Currently these actions change the count by adding or subtracting 1. Modify these actions to control the amount of change by any amount. While you can just change the amount of the increase or decrease in the reducer the goal of this challenge is to do this from where you call the `increase` and `decrease` actions. 
-- [moderate] Handle a list of counter - Rather than storing a single counter you need to store an array of counters. This requires some retooling. 
-	- State needs to be an array
-	- To increase a counter the actions need to know the index of the counter
-	- Display a list of counters
-- [moderate] Add an add counter button - 
+Create a new react project and import your dependencies: 
+
+```
+npx create-react-app products-redux
+cd products-redux
+npm install redux react-redux
+```
+
+Copy the data files from your Product list project into the src directory of this project. Include both: `data.json` and `data.js`
+
+### Displaying a Product
+
+Create a component to display a single product. To make this easy this component will take the index of the product as prop and look up it's information from your data array. 
+
+```JS
+import data from './data'
+
+function Product({ id }) {
+	const { name, category, price } = data[id]
+
+	return (
+		<div>
+			<h1>{name}</h1>
+			<button>Add to Cart</button>
+		</div>
+	)
+}
+
+export default Product
+```
+
+Test this out in your App component import the `Product` component and add the following inside your App. This should display the first product in the list. 
+
+```js
+<Product id={0} />
+```
+
+### Display a list of Products
+
+Create a new component to display a list of products. The goal is to use the Product Component above and the data to make a list of Products. 
+
+```JS
+import data from './data'
+import Product from './Product'
+
+function  ProductList() {
+	return (
+		<div className="Products">
+			{data.map((item, i) => <Product id={i} />)}
+		</div>
+	)
+}
+
+export default ProductList
+```
+
+Test your work. In App remove `Product` and replace it with `ProductList`. 
+
+```JS
+<ProductList />
+```
+
+This should display a list of all of the Products in your data. 
+
+### Add a Shopping Cart Component
+
+This component will display a list of products that are in your shopping cart. At the moment it will only display a the label: "Shopping Cart". 
+
+Create new file: `ShoppingCart.js`: 
+
+```JS
+import data from './data'
+
+function ShoppingCart() {
+	return (
+		<div className="ShoppingCart">
+			<h1>Your Cart</h1>
+			<ul>
+				{/* Items here! */}
+			</ul>
+		</div>
+	)
+}
+
+export default ShoppingCart
+```
+
+Test your work. Add the `ShoppingCart` component to `App`. Your App should look something like this: 
+
+```JS
+<div className="App">
+  <ShoppingCart />
+  <ProductList />
+</div>
+```
+
+### Getting Started with Redux
+
+There are some potential problems you can anticipate. 
+
+You need to receive click events from the "Add to Cart button" in each product. These are nested in the `ProductList` component. These events need to manifest as a list of products in your cart which can be displayed in the `ShoppingCart` component. 
+
+With only state you could store state in the parent component `App` and pass the information down the child components `ProductList` and `ShoppingCart`. 
+
+To get the clicks from your "Add to Cart" buttons you'll need to pass a function defiend in App down to this button: 
+
+```
+App 
+  ProductList
+    Product
+      Button onClick
+```
+
+Which can be awkward. 
+
+This could get even more awkward as our app grows. We run into the same problem when we want to add a "Remove From Cart button". This button might live in the `ShoppingCart component`.
+
+Storing all of this data in the `App` component can also be hard to manage.
+
+Redux is a tool that stores your Application State outside of the component structure and allows access to this state directly from anywhere. 
+
+What is Application State? Application State is the data your component stores, updates and displays. In this example it will start as an array of products in your shopping cart.
+
+Redux requires a little bit of setup. This is work you put in up front for a better developer experience as your app grows. 
+
+Follow these steps:
+
+Create an `actions` folder. 
+
+Add an `index.js` file here. Add an action to this file: 
+
+```JS
+export const ADD_TO_CART = 'ADD_TO_CART'
+
+export const addToCart = (id) => {
+	return {
+		type: ADD_TO_CART,
+		payload: { id }
+	}
+}
+```
+
+An action is made up two things an action name, `ADD_TO_CART`, which is a string, and an action creator function `addToCart`. 
+
+What does an action do? It makes a change to your application state. The name lets us identify what action is being sent. The action creator returns an object with type: which is the action name, and a payload which contains information we might need to make the change. 
+
+Here the `addToCart` action needs to add the id of the product we are adding to our shopping cart ot the list of products that are in the cart. The id is in the payload, notice we pass it to this function as the id parameter. 
+
+Where is the shopping cart list? The actual data that is stored for applcation state is managed by a reducer. We'll make that next. 
+
+Create a new folder `reducers` in your `src` dorectory. 
+
+Add a file `index.js` and `shoppingCartreducer.js` to the `reducers` folder.
+
+In `shoppingCartReducers.js` add the following: 
+
+```JS
+import { ADD_TO_CART } from '../actions'
+
+const shoppingCartReducer = (state = [], action) => {
+	switch(action.type) {
+		case ADD_TO_CART: 
+			return [...state, action.payload.id] 
+
+		default: 
+			return state
+			
+	}
+}
+
+export default shoppingCartReducer
+```
+
+Here you are importing your action at the top. The reducer can use this to decide how to change Application state. 
+
+The `shoppingCartReducer` function is responsible for the initial value of state and managing changes to state. 
+
+Look at the parameters: 
+
+- `state` - notice the default value is `[]`
+- `action` - will be the object returned by your `addToCart` function in your actions. 
+
+This function must return a new copy of state. In this case if the action is `ADD_TO_CART` we make a new array and add an id to the list. If not we return state unchanged. 
+
+In `reducers/index.js` add the following: 
+
+```JS
+import { combineReducers } from 'redux'
+import shoppingCartReducer from './shoppingCartReducer'
+
+export default combineReducers({
+	shoppingCart: shoppingCartReducer
+})
+```
+
+Here you are defining your root reducer. Giving shape to your application state. In this case the array of product ids in the array will stored on `shoppingCart` property of the store.
+
+Connecting your react app to Redux. Go to your root component `src/index.js` and add the following: 
+
+```JS
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+
+import rootReducer from './reducers'
+
+const store = createStore(rootReducer)
+```
+
+This imports `createStore` from redux, and `Provider` from `react-redux`. Next import your root reducer from `reducers/index.js`. Then make your application store. 
+
+To share the store with rest of your application we use the `Provider component`. This component needs be a parent to all of your other components. use it like this: 
+
+```JS
+ReactDOM.render(
+  <Provider store={store}>
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+  </Provider>,
+  document.getElementById('root')
+);
+```
+
+Here we wrapped the entire App in the provider and added the `store` as a prop. 
+
+### Using Redux in components
+
+React Redux provides several hooks that make accessing your Redux store and sending actions that will update and make changes to the store. 
+
+- `useSelector()` - Takes a callback that returns the store. Use this to access anything set on the store by a reducer. 
+- `useDispatch()` - Returns a reference to the dispatch. Send actions through the dispatcher to update your store. 
+
+Here are two examples of `useSelector()` and `useDispatch()` in action. 
+
+Get the array of products with: 
+
+```JS
+const shoppingCart = useSelector(state => state.shoppingCart)
+```
+
+Add an item to the shopping cart with: 
+
+```JS
+import { addToCart } from './actions'
+const dispatcher = useDispatch()
+dipatcher(addToCart(id))
+```
+
+Try these out in your code! Open `ShoppingCart.js`. This component needs to display a list items in the cart. Since the items will be stored by the id of the item you will import the data also. 
+
+```js
+import { useSelector } from 'react-redux'
+import data from './data'
+
+function ShoppingCart() {
+	const shoppingCart = useSelector(state => state.shoppingCart)
+
+	return (
+		<div className="ShoppingCart">
+			<h1>Your Cart</h1>
+			<ul>
+				{shoppingCart.map(item => <li>{data[item].name}</li>)}
+			</ul>
+		</div>
+	)
+}
+
+export default ShoppingCart
+```
+
+If everything is correct you won't see any changes since there isn't anything in your cart. 
+
+Take a look at `reducers/shopingCartReducer.js`. Notice that the default value for the array of shopping cart items, called `state` here, is an empty array. 
+
+```JS
+const shoppingCartReducer = (state = [], action) => {
+	...
+}
+```
+
+Try adding a few items to the default value for the array. 
+
+```JS
+const shoppingCartReducer = (state = [1,2,3], action) => {
+	...
+}
+```
+
+Refresh your page in the browser and you should see three items appear in the shopping cart list. 
+
+Note! A reducer is responsible for the default value of state!
+
+Let's make the "Add to Cart" button work. Open `Product.js`. This component displays the listing for a single product. The listing includes the name, price, category, and the "Add to Cart" button. 
+
+Make the following changes: 
+
+```JS
+import data from './data'
+
+import { useDispatch } from 'react-redux'
+import { addToCart } from './actions'
+
+function Product({ id }) {
+	const dispatcher = useDispatch()
+	const { name, category, price } = data[id]
+
+	return (
+		<div>
+			<h1>{name}</h1>
+			<button
+				onClick={() => dispatcher(addToCart(id))}
+			>Add to Cart</button>
+		</div>
+	)
+}
+
+export default Product
+```
+
+Here get the `dispatch` with `useDispatch()` and the `addToCart` action, when you click the button we call the dispatcher with the `addToCart` action. 
+
+Remember `addToCart` is a function that takes the id of a product as an argument. Take a look at it in `actions.js`
+
+Test your work. Now we should be able to items to the shopping cart by clicking the "Add to Cart" button.
 
 ## After Class
 
