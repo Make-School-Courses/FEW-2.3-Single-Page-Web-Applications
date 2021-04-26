@@ -2,7 +2,7 @@
 
 # FEW 2.3 - Lesson 8
 
-➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
+<!-- ➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore') -->
 
 ## Application State
 
@@ -101,72 +101,6 @@ In other words Redux holds state outside of components and components can regist
   - There is a learning curve
 
 https://redux.js.org
-
-## The Flux Pattern
-
-## The problem
-
-Typically our apps use two-way communication. This creates a complex mashup that invites problems as apps grow in complexity. 
-
-![image-1.png](images/image-1.png)
-
-## The solution
-
-One-way data flow.
-
-Redux enforces a one-way data flow. This creates reliable and reproducible 
-results. Redux has four parts:
-
-- action - action creators
-- dispatcher - reducers
-- store 
-- views - React Components
-
-![image-2.png](images/image-2.png)
-
-## Views may generate actions 
-
-When a view issues an action it flows through the system. 
-
-![image-3.png](images/image-3.png)
-
-## Actions 
-
-An action is an object with a type. 
-
-![image-4.png](images/image-4.png)
-
-## Action creators
-
-Action creators are methods that generate actions. While these are not required, it is best practice. 
-
-![image-5.png](images/image-5.png)
-
-## Reducers 
-
-Reducers make changes to State. A reducer is a function that takes in state and an action as parameters and returns **new state**. State is never modified! 
-Instead, **when State changes new state is created**. 
-
-![image-6.png](images/image-6.png)
-
-The store holds your application state. The only way to change State is to send actions to the dispatcher. 
-
-Unlike MVC Redux uses a unidirectional data flow. A View may generate actions
-it will **never interact with a data store directly**. 
-
-Instead, actions flow into the dispatch and are passed on to reducers which make the appropriate changes to State. Updated state flows into components
-via props. 
-
-## Store 
-
-The store contains a JavaScript object with properties that represent the state of your application. These properties hold the data that your application takes as input and displays in views. 
-
-![image-7.png](images/image-7.png)
-
-
-## Views send action the store sends data to views
-
-![image-8.png](images/image-8.png
 
 ## Products with Redux
 
@@ -496,6 +430,72 @@ Here get the `dispatch` with `useDispatch()` and the `addToCart` action, when yo
 Remember `addToCart` is a function that takes the id of a product as an argument. Take a look at it in `actions.js`
 
 Test your work. Now we should be able to items to the shopping cart by clicking the "Add to Cart" button.
+
+## The Flux Pattern
+
+## The problem
+
+Typically our apps use two-way communication. This creates a complex mashup that invites problems as apps grow in complexity. 
+
+![image-1.png](images/image-1.png)
+
+## The solution
+
+One-way data flow.
+
+Redux enforces a one-way data flow. This creates reliable and reproducible 
+results. Redux has four parts:
+
+- action - action creators
+- dispatcher - reducers
+- store 
+- views - React Components
+
+![image-2.png](images/image-2.png)
+
+## Views may generate actions 
+
+When a view issues an action it flows through the system. 
+
+![image-3.png](images/image-3.png)
+
+## Actions 
+
+An action is an object with a type. 
+
+![image-4.png](images/image-4.png)
+
+## Action creators
+
+Action creators are methods that generate actions. While these are not required, it is best practice. 
+
+![image-5.png](images/image-5.png)
+
+## Reducers 
+
+Reducers make changes to State. A reducer is a function that takes in state and an action as parameters and returns **new state**. State is never modified! 
+Instead, **when State changes new state is created**. 
+
+![image-6.png](images/image-6.png)
+
+The store holds your application state. The only way to change State is to send actions to the dispatcher. 
+
+Unlike MVC Redux uses a unidirectional data flow. A View may generate actions
+it will **never interact with a data store directly**. 
+
+Instead, actions flow into the dispatch and are passed on to reducers which make the appropriate changes to State. Updated state flows into components
+via props. 
+
+## Store 
+
+The store contains a JavaScript object with properties that represent the state of your application. These properties hold the data that your application takes as input and displays in views. 
+
+![image-7.png](images/image-7.png)
+
+
+## Views send action the store sends data to views
+
+![image-8.png](images/image-8.png
 
 ## After Class
 
