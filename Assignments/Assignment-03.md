@@ -193,6 +193,10 @@ Try any or all of these stretch challenges.
 
 Class 10 - Jun 22 2020 10:00 PM
 
+### Resources
+
+Follow this assignment in these video tutorials: https://www.youtube.com/playlist?list=PLoN_ejT35AEhIPdYsm3jLA-rdMW1wrfHy
+
 ## Assessing the assignment
 
 | - | **Does not meet expectations** | **Meets expectations** | **Exceeds expectations** |
