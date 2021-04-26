@@ -131,8 +131,8 @@ function Product({ id }) {
 
   return (
     <div>
-    <h1>{name}</h1>
-    <button>Add to Cart</button>
+      <h1>{name}</h1>
+      <button>Add to Cart</button>
     </div>
   )
 }
