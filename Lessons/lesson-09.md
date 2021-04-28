@@ -6,17 +6,65 @@ This class will cover Redux which is an application state management tool. Appli
 
 Redux is a JS library based on the Flux pattern that 
 
+<!-- > -->
+
+## Review: Redux
+
+<!-- > -->
+
+What do you remember about the first discussion of redux? 
+
+<!-- > -->
+
+What is an action? 
+
+<!-- > -->
+
+What is a reducer?
+
+<!-- > -->
+
+What is a the store?
+
+<!-- > -->
+
+```JS
+const export NEW_TODO = 'NEW_TODO'
+
+export const newTodo = (item) => {
+	// What goes here?
+}
+```
+
+<!-- > -->
+
+```JS
+import  { NEW_TODO } from '../actions'
+
+function todoReducer(state = [], action) {
+	// What goes here? 
+}
+```
+
+<!-- > -->
+
 ## Learning Objectives
 
 1. Define Reference and value types
 2. Identify references and values in JavaScript
 3. Use destructuring to create shallow copy of objects and arrays
 
+<!-- > -->
+
 ## Redux Part 2
 
-Redux requires some set up. YOu need to make a store and the store needs access to reducers that are used by the store to update state. 
+<!-- > -->
 
-Make a store with: 
+redux requires some setup and an understanding of how it operates. The best to develop an understanding is practice!
+
+<!-- > -->
+
+Make a store with:
 
 ```JS
 import { createStore } from 'redux'
@@ -65,36 +113,21 @@ function App() {
 
 Notice `<Provider>` takes store as a prop!
 
-## Initial Exercise
-
-Review Redux, take a second tour through the elements that make up the Redux system. Review and answer questions. 
-
-- Actions 
-	- Actions and Actions Creators 
-- Reducers 
-	- `combineReducers()` 
-- Defining the store 
-- `Provider` Component 
-- Containers (components connected to the Redux store)
-	- `mapStateToProps()`
-	- `mapDispatchToProps()`
-
-## Tutorial Project Questions 
-
-- Write them on the board and discuss
-
 ## In Class Challenges 
 
-Try some challenges with Redux. These build on the Counter project covered in class 7. 
+Continue the challenges from class 8. 
 
-- Increment all button
-	- Clicking this button should increase all counters by 1
-- Decrement All button
-	- CLicking subtracts 1 from all counters
-- Add Counter button
-	- Clicking this button adds a new counter to the list with a value of 0
-- Add a delete button to each counter
-	- Clicking one of these buttons removes the counter it is associated with from the list
+- Challenge 1 - Cart total
+- Challenge 2 - Clear Cart button
+- Challenge 3 - cart Item Component
+- Challenge 4 - Remove from Cart Button
+- Challenge 5 - Track count of items in cart
+
+Invent some challenges? 
+
+- Challenge 6 - Display a single item 
+- Challenge 7 - Track most recently viewed
+- Challenge 8 - ?
 
 ## After Class
 
