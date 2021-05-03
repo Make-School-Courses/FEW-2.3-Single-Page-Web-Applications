@@ -10,6 +10,12 @@ Redux has many parts the best way to own them is review!
 1. Describe Application State
 1. Describe Actions, Actions Creators, and Reducers
 
+## React Redux Review 
+
+Read the first part of this article it is a very nice and succinct explanation of React and Redux. 
+
+https://medium.com/weekly-webtips/2020-redux-tutorial-with-hooks-and-thunk-8a6a4be6f9de
+
 ## Tutorial concepts Review 
 
 Quick let's review everything. Identify the following in the tutorial projects. 
@@ -35,7 +41,7 @@ Quick let's review everything. Identify the following in the tutorial projects.
 
 ## Challenges 
 
-Using the sample Redux project try these challenges: 
+Using the sample Redux project try these challenges:
 
 - Create a component that resets all counters
 - Create a component that increments all timers
