@@ -16,6 +16,50 @@ Read the first part of this article it is a very nice and succinct explanation o
 
 https://medium.com/weekly-webtips/2020-redux-tutorial-with-hooks-and-thunk-8a6a4be6f9de
 
+## React Router Review 
+
+Import your dependencies: 
+
+```
+npm install react-router-dom
+```
+
+In App.js import: 
+
+```JS
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+```
+
+Wrap your components with a Router: 
+
+```js
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        ... other components here ...
+      </Router>
+    </div>
+  );
+}
+```
+
+Define a page and add that to your Router. Use a Link to navigate to a Route. Be careful not to confuse Router and Route!
+
+Notice the Link uses to to indicate which path it should navigate to. 
+
+The component property in a Route is the Component that should be displayed when we navigate to that Route:
+
+```JS
+<Router>
+  <Link to="/">Shop</Link>
+  <Link to="/cart">Cart</Link>
+  
+  <Route path="/cart" component={ShoppingCartPage} />
+  <Route path="/" exact component={ShoppingPage} />
+</Router>
+```
+
 ## Tutorial concepts Review 
 
 Quick let's review everything. Identify the following in the tutorial projects. 
