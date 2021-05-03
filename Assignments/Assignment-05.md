@@ -13,10 +13,9 @@ It's important to revisit the concepts from class to solidify your learning. Pra
 Your project does have to meet these criteria: 
 
 - Built with react as a single page application
-  - Make use of class based react components
   - Form elememts should implememt Controlled Component Pattern
 - Integrates or makes network request to an external API
-  - Fetch amd Render data with React from external libraries
+  - Fetch and Render data with React from external libraries
 - Manages Application state with Redux
 
 ### Deliverable
@@ -29,11 +28,13 @@ Class 13 - May 12
 
 ## Assessing the assignment
 
-| -        | Does not meet expectations | Meets expectations       | Exceeds expectations |
-|:---------|:---------------------------|:-------------------------|:---------------------|
-| Completed| Did not complete    | Completed tutorial     | Solved some or all challenges |
-| Functional| Is not functional   | Base tutorial functional | Challenges are functioning |
+| -          | Does not meet expectations | Meets expectations       | Exceeds expectations |
+|:-----------|:---------------------------|:-------------------------|:---------------------|
+| Completed  | Did not complete    | Completed tutorial     | Solved some or all challenges |
+| Functional | Is not functional   | Base tutorial functional | Challenges are functioning |
+| Uses Redux | Does not use Redux | Makes use of redux, actions, and reducers | - |
+| Uses loads network data | Doesn't load network data | Loads network data | - |
 | Code quality | Indentation is bad spacing is inconsistent | Uses consistent indentation and spacing | Well written and well commented |
-| Work Ethic | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
+
 
 
