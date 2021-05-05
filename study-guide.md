@@ -10,7 +10,7 @@ This document outlines what you should study to be prepared for the final assess
 
 ## Map, Filter, Reduce
 
-You should be able to use map filter and reduce to perform basic operations like the following examples: 
+You should be able to use map filter and reduce to perform basic operations like the following examples:
 
 - convert an array of numbers into an array formatted prices
 - create an array containing only the prices over 5.00
@@ -67,48 +67,37 @@ Changes to props or state cause a component to render.
 The controlled component pattern refers to the pattern used in React to handle form elements and form input. You should be able to set up a component that accepts user input in an `<input />` element and display the value in the element and stores the value on the state. 
 
 ```JSX
-import React, { Component } from 'react'
+import { useState } from 'react'
 
-class DogNameInput extends Component {
-	constructor(props) {
-		super(props)
-
-		this.state = {
-			dogName: '',
-			dogCount: 0,
-			dogArray: []
-		}
-	}
-
-	render() {
-		return (
+function DogNameInput() {
+	const [dogName, setDogName] = useState('')
+	const [dogCount, setDogCount] = useState(0)
+	const [dogArray, setDogArray] = useState([])
+	
+	return (
 		<div>
-			<h1>{`Dog Name: ${this.state.dogName} Count: ${this.state.dogCount}`}</h1>
-			<h1>{'Dog Name:' + this.state.dogName + ' Count: ' + this.state.dogCount}</h1>
-			<h1>Dog Name: {this.state.dogName} Count: {this.state.dogCount}</h1>
+			<h1>{`Dog Name: ${dogName} Count: ${dogCount}`}</h1>
+			<h1>{`Dog Name:${dogName} Count: ${dogCount}`}</h1>
 
-		<h1>{this.state.dogArray.map((dog, i) => {
+		<h1>{dogArray.map((dog, i) => {
 			return <span key={`${dog}-${i}`}>{dog}</span>
 		})}</h1>
 		<input 
 			type="text"
-			value={this.state.dogName}
+			value={dogName}
 			onChange={(e) => {
-				this.setState({ dogName: e.target.value })
+				setDogName(e.target.value)
  		}}
  		/>
  		<button
  			onClick={(e) => {
- 				const tempDogArray = [ ...this.state.dogArray, this.state.dogName ]
-				this.setState({ 
-				dogCount: this.state.dogCount + 1,
-				dogArray: tempDogArray
-				})
-				}}
-				>Submit</button>
+ 				const tempDogArray = [ ...dogArray, dogName ]
+				setDogArray(tempDogArray)
+				]setDogCount(dogCount + 1)
+			}}
+		>Submit</button>
  		</div>
 		)
-	}
 }
 ```
 
