@@ -118,7 +118,7 @@ function DogNameInput() {
  			onClick={(e) => {
  				const tempDogArray = [ ...dogArray, dogName ]
 				setDogArray(tempDogArray)
-				]setDogCount(dogCount + 1)
+				setDogCount(dogCount + 1)
 			}}
 		>Submit</button>
  		</div>
