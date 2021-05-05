@@ -10,7 +10,9 @@ This document outlines what you should study to be prepared for the final assess
 
 ### Reference vs value
 
-Can you expalin the code below? 
+You should be able to copy an object. Know when you are making a copy and when you are working with a reference. 
+
+Can you explain the code below? 
 
 ```js
 const a = [] // define an array. a is a reference
