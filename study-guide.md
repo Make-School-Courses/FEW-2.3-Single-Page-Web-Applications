@@ -8,6 +8,28 @@ This document outlines what you should study to be prepared for the final assess
 
 ## What you should know
 
+### Reference vs value
+
+Can you expalin the code below? 
+
+```js
+const a = [] // define an array. a is a reference
+const b = a // b is a reference to the same array
+
+a === b true // a and b are equivalent because they point to the same reference
+
+b.push(1) // adding an element to b 
+
+a === b // a and b are still equivalent. 
+// The line above modifies the array a and b point to 
+// a [1] | b [1]
+
+// Define an object
+const obj = { a: 1, b: 2, c: 3 }
+// Use the spread operator to copy the object
+const obj2 = { ...obj, a:11 } // { a: 11, b: 2, c: 3 } 
+```
+
 ## Map, Filter, Reduce
 
 You should be able to use map filter and reduce to perform basic operations like the following examples:
@@ -66,6 +88,8 @@ Changes to props or state cause a component to render.
 
 The controlled component pattern refers to the pattern used in React to handle form elements and form input. You should be able to set up a component that accepts user input in an `<input />` element and display the value in the element and stores the value on the state. 
 
+Can you understand the code below? 
+
 ```JSX
 import { useState } from 'react'
 
@@ -97,13 +121,29 @@ function DogNameInput() {
 			}}
 		>Submit</button>
  		</div>
-		)
+	)
 }
 ```
 
 ## Conditional Rendering components
 
 You should be able to render different components based on state or props using any of the conditional rendering methods covered in class. You don't have to have all of the different methods memorized you just need to be able to render one component or another based on props or state using one method or another. 
+
+Can you explain the code below? 
+
+```JS
+function showData({ data }) {
+	if (!data) {
+		return <div>Loading...</div>
+	}
+
+	return (
+		<div>
+			{data.map(item => <p>{item.name}</p>)}
+		</div>
+	)
+}
+```
 
 ## React Router
 
@@ -130,23 +170,4 @@ You should be able to implement redux in basic form.
 	- connect()
 	- mapStateToProps
 	- mapDispatchToProps
- 
- 
 
-```js
-const a = [] // define an array. a is a reference
-const b = a // b is a reference to the same array
-
-a === b true // a and b are equivalent because they point to the same reference
-
-b.push(1) // adding an element to b 
-
-a === b // a and b are still equivalent. 
-// The line above modifies the array a and b point to 
-// a [1] | b [1]
-
-// Define an object
-const obj = { a: 1, b: 2, c: 3 }
-// Use the spread operator to copy the object
-const obj2 = { ...obj, a:11 } // { a: 11, b: 2, c: 3 } 
-```
