@@ -168,7 +168,6 @@ You should be able to implement redux in basic form.
 	- createStore()
 - React and Redux
 	- Provider
-	- connect()
-	- mapStateToProps
-	- mapDispatchToProps
+	- useSelector
+	- useDispatch
 
