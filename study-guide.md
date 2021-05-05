@@ -16,7 +16,7 @@ Can you explain the code below?
 
 ```js
 const a = [] // define an array. a is a reference
-const b = a // b is a reference to the same array
+const b = a  // b is a reference to the same array
 
 a === b true // a and b are equivalent because they point to the same reference
 
@@ -32,7 +32,7 @@ const obj = { a: 1, b: 2, c: 3 }
 const obj2 = { ...obj, a:11 } // { a: 11, b: 2, c: 3 } 
 ```
 
-## Map, Filter, Reduce
+### Map, Filter, Reduce
 
 You should be able to use map filter and reduce to perform basic operations like the following examples:
 
@@ -42,7 +42,7 @@ You should be able to use map filter and reduce to perform basic operations like
 
 You should know that map, filter, and reduce are Array methods, and that they return a new array rather than modify the existing source array.
 
-## JS Modules: import, export, and default 
+### JS Modules: import, export, and default 
 
 You should be able to use export to share functions, variables, and classes with other modules in your program. 
 
@@ -50,13 +50,13 @@ You should know how to import elements into a module from npm or from a file you
 
 You should know the difference between `export` and `export default` and how to import an exported element or a default export. 
 
-## Bootstrapping a React Project
+### Bootstrapping a React Project
 
 You should be able to get a boilerplate React project up and running. 
 
 The easiest way to do this is with: `npx create-react-app <name-of-app>`
 
-## Write JSX 
+### Write JSX 
 
 JSX is an extension of the JavaScript language that allows us to write code using an XML syntax. It looks a lot like HTML. 
 
@@ -68,7 +68,7 @@ You should be able to do the following things with JSX:
 - Set props on an element: `<DateButton label="Wednesday" />`
 - Use a variable or expression in a JSX block: `<Title key={post.id}>{post.title}</Title>`
 
-## Components 
+### Components 
 
 You should be able to write components and get them to display without error in your React Projects. 
 
@@ -76,7 +76,7 @@ Components are written as Class objects that extend React.Component or as functi
 
 A Class-based component can define state. Class-based components must define a render method that returns JSX.
 
-### Props and State 
+#### Props and State 
 
 Props and state are features of components. 
 
@@ -86,7 +86,7 @@ State is defined within a component and a component changes its state.
 
 Changes to props or state cause a component to render.
 
-## Controlled Component (form input pattern)
+### Controlled Component (form input pattern)
 
 The controlled component pattern refers to the pattern used in React to handle form elements and form input. You should be able to set up a component that accepts user input in an `<input />` element and display the value in the element and stores the value on the state. 
 
@@ -103,7 +103,6 @@ function DogNameInput() {
 	return (
 		<div>
 			<h1>{`Dog Name: ${dogName} Count: ${dogCount}`}</h1>
-			<h1>{`Dog Name:${dogName} Count: ${dogCount}`}</h1>
 
 		<h1>{dogArray.map((dog, i) => {
 			return <span key={`${dog}-${i}`}>{dog}</span>
@@ -127,7 +126,7 @@ function DogNameInput() {
 }
 ```
 
-## Conditional Rendering components
+### Conditional Rendering components
 
 You should be able to render different components based on state or props using any of the conditional rendering methods covered in class. You don't have to have all of the different methods memorized you just need to be able to render one component or another based on props or state using one method or another. 
 
@@ -147,14 +146,14 @@ function showData({ data }) {
 }
 ```
 
-## React Router
+### React Router
 
 You should be able to implement React Router in basic form with BrowserRouter. This would be: 
 
 - defining Routes that render components
 - using Link to display a Route
 
-## Redux 
+### Redux 
 
 You should be able to implement redux in basic form. 
 
