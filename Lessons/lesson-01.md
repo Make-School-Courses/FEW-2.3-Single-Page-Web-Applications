@@ -12,9 +12,8 @@ This lesson will be a review of React and an introduction to functional programm
 
 1. Create components
 1. Use JSX
-1. Differentiate props and state 
-1. Define the virtual DOM
-1. Create Single Page Application
+1. Use functional programming ideas
+  - map, filter, and reduce
 
 <!-- > -->
 
@@ -191,13 +190,11 @@ import React from 'react';
 
 function App() {
   return (
-  
       <div className="App">
         <header className="App-header">
           <h1>Hello World</h1>
         </header>
       </div>
-    
   );
 }
 
