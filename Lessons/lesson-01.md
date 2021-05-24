@@ -1,14 +1,14 @@
 # FEW 2.3 - Lesson 1
 
-Getting started with Single Page Applications and React.
-
 <!-- > -->
 
 ## Overview
 
+This lesson will be a review of React and an introduction to functional programming. You can follow the lesson here or view it in slide form here: [Slides](https://make-school-courses.github.io/FEW-2.3-Single-Page-Web-Applications/slides/lesson-01.html#/)
+
 <!-- > -->
 
-### Learning Objectives
+## Learning Objectives
 
 1. Create components
 1. Use JSX
