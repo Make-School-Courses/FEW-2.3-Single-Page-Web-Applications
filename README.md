@@ -2,7 +2,7 @@
 
 | Course Section | Instructor | Slack Channel | Course Website | Instructor 1-on-1 | Tracker |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| A | **@mitchell** | `#few-2-3` | [make.sc/few2.3](https://make.sc/few2.3) | [Virtual Office](https://make.sc/mitchell-zoom) | [Tracker](https://docs.google.com/spreadsheets/d/1L3W2zhfjSdiPUTb2IzPF-wzUgbxJD1lIi1JGJnWDj10/edit?usp=sharing) |
+| A | **@mitchell** | `#few-2-3` | [make.sc/few2.3](https://make.sc/few2.3) | [Virtual Office](https://make.sc/mitchell-zoom) | [GradeScope](https://www.gradescope.com) |
 
 ## Course Description
 
@@ -48,7 +48,7 @@ Hybrid sections are a mixture of online and in person components.  In person ses
 
 | Class | Date | Topics | Assignment |
 |:------|:-----|:-------|:-----------|
-|  1 | Tue, June 1  | [Single Page Applications](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) - React Tutorial |
+|  1 | Tue, June 1  | [React and functional Programming](Lessons/lesson-01.md) | [React Product List](Assignments/Assignment-01.md) - React Tutorial |
 |  2 | Thu, June 3  | [Profesional Best Practices](Lessons/lesson-02.md) | - |
 |  3 | Tue, June 8  | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
 |  4 | Thu, June 10 | [React Input Pattern](Lessons/lesson-04.md) | - |
@@ -63,33 +63,17 @@ Hybrid sections are a mixture of online and in person components.  In person ses
 | 13 | Tue, July 13 | [Lesson 13] | - |
 | 13 | Thu, July 15 | [Final Assessment](Lessons/lesson-14.md) | - |
 
-<!-- 
-**Course Dates:** Tuesday, March 31 – Thursday, May 14, 2019 (7 weeks)
-
-**Class Times:** Tuesday and Thursday at 2:30–5:15pm (14 class sessions)
-
-| Class | Date | Topics | Assignment |
-|:------|:-----|:-------|:-----------|
-|  1 | Tue, March 31 | [Single Page Applications](Lessons/lesson-01.md) | [Assignment 1](Assignments/Assignment-01.md) - React Tutorial |
-|  2 | Thu, April 2 | [Profesional Best Practices](Lessons/lesson-02.md) | - |
-|  3 | Tue, April 7 | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
-|  4 | Thu, April 9 | [React Input Pattern](Lessons/lesson-04.md) | - |
-|  5 | Tue, April 14 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
-|  6 | Thu, April 16 | [Making Network Requests](Lessons/lesson-06.md) | - |
-|  7 | Tue, April 21 | [Application State](Lessons/lesson-07.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
-|  8 | Thu, April 23 | [Redux](Lessons/lesson-08.md) | - | 
-|  9 | Tue, April 28 | [Redux Part 2](Lessons/lesson-09.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project |
-| 10 | Thu, April 30 | [React Hooks](Lessons/lesson-10.md) | - |
-| 11 | Tue, May 5 | [Final Project workshop](Lessons/lesson-11.md) | - |
-| 12 | Thu, May 7 | [Final Project workshop](Lessons/lesson-12.md) | - |
-| 13 | Tue, May 12 | [Present Final Projects](Lessons/lesson-13.md) | - |
-| 14 | Thu, May 14 | [Final Assessment](Lessons/lesson-14.md) | - | 
--->
-
-
 ## Projects 
 
 During the course of the class you will build the following projects: 
+
+1. Map Filter and Reduce Problems - 
+2. React Product list -
+3. Shopping Cart - 
+4. Weather API - 
+5. Redux Tutorial - 
+6. Custom project - 
+7. Final Assessment - 
 
 1. [React Review - React Tutorial](Assignments/Assignment-01.md)
 2. [Map, Filter, Reduce, and React](Assignments/Assignment-02.md)

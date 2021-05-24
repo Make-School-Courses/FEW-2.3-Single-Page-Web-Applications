@@ -14,8 +14,7 @@ Getting started with Single Page Applications and React.
 1. Use JSX
 1. Differentiate props and state 
 1. Define the virtual DOM
-1. Define Single Page Applications
-1. Define React
+1. Create Single Page Application
 
 <!-- > -->
 
@@ -38,8 +37,6 @@ SPAs are the way web pages of more than minimal complexity are created these day
 <!-- > -->
 
 [Read about Single Page Applications](https://www.bloomreach.com/en/blog/2018/07/what-is-a-single-page-application.html)
-
-Discuss...
 
 <!-- > -->
 
@@ -124,7 +121,9 @@ React is used for building user interfaces. It's the view in any system. It's a 
 
 <!-- > -->
 
-React is built on Functional Reactive programming. In a nutshell, functional programming is programming with functions. FP avoids mutable data and shared state. 
+React is built on Functional Reactive programming. In a nutshell, functional programming is programming with functions where the core building block of a program are functions. FP avoids mutable data and shared state.
+
+Compare this to Object Oriented Programming where the core building blocks are objects. 
 
 <!-- > -->
 
@@ -135,6 +134,8 @@ React is built on Functional Reactive programming. In a nutshell, functional pro
 In a nutshell, Reactive programming is programming with Event Streams.
 
 React uses Reactive Programming to create a front end architecture that updates views with streams of events as they occur in time. Changing a value will update a view in React.  
+
+Compare this to event based programming where events trigger code that explicitly updates elements. 
 
 <!-- > -->
 
@@ -174,7 +175,7 @@ What you need to know:
 
 <!-- > -->
 
-**JSX is an extension of the JavaScript language**. It allows you to write code using an XML like syntax alongside regular JavaScript. 
+**JSX is an extension of the JavaScript language**. It allows you to write code using an XML like syntax alongside regular JavaScript.
 
 JSX is compiled into vanilla JavaScript.
 
@@ -247,21 +248,13 @@ What you need to know:
 
 ## Activity
 
-- `npx create-react-app ...`
-- Creating Components
-- Adding Styles
-
-<!-- > -->
-
-## Homework
-
-- [Assignment 1](../Assignments/Assignment-01.md)
+Start the first assignment: [React Product List](../Assignments/Assignment-01.md)
 
 <!-- > -->
 
 ## After Class
 
-- Challenge: [React tutorial](https://reactjs.org/tutorial/tutorial.html)
+Complete the challenges here: [React Product List](../Assignments/Assignment-01.md)
 
 <!-- > -->
 
