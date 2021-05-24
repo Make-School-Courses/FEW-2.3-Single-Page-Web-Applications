@@ -36,7 +36,6 @@ By the end of the course, you will be able to:
 1. Use conditional rendering to programmatically manage the user interface
 1. Build SPAs using a component-based architecture
 1. Use Public and custom APIs
-1. Integrate SPAs with Express servers
 
 ## Schedule
 
