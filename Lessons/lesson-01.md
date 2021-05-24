@@ -245,13 +245,13 @@ What you need to know:
 
 ## Activity
 
-Start the first assignment: [React Product List](../Assignments/Assignment-01.md)
+Start the first assignment: [React Product List](Assignments/Assignment-01.md)
 
 <!-- > -->
 
 ## After Class
 
-Complete the challenges here: [React Product List](../Assignments/Assignment-01.md)
+Complete the challenges here: [React Product List](Assignments/Assignment-01.md)
 
 <!-- > -->
 
