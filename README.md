@@ -41,7 +41,7 @@ By the end of the course, you will be able to:
 
 **Course Dates:** Tuesday, June 1 – Thursday, July 15, 2021 (7 weeks)
 
-**Class Times:** Tuesday, Thursday at 4:00pm–5:30pm (14 class sessions)
+**Class Times:** Tuesday, Thursday at 2:30pm–4:00pm (14 class sessions)
 
 Hybrid sections are a mixture of online and in person components.  In person sessions include labs and group work as noted on your schedule.  These sections will run according to the Hybrid Delivery Policy: [make.sc/hybrid-delivery-policy](make.sc/hybrid-delivery-policy)
 
