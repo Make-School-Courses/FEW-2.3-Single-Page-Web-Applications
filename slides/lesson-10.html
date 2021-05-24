@@ -4,129 +4,145 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>reveal-md</title>
-    <link rel="stylesheet" href="./css/reveal.css" />
-    <link rel="stylesheet" href="./css/theme/black.css" id="theme" />
+    <title>Syllabus Template Slides</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/white.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="./assets/Reveal/makeschool.css" />
 
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
+    </script>
   </head>
   <body>
     <div class="reveal">
       <div class="slides"><section  data-markdown><script type="text/template"># FEW 2.3 - Lesson 10
 
-## React Hooks
+# Redux Part 2
 
-Hooks are a new feature to React. Hooks allow you to use the features available to Class based components in Function based components. 
+Redux has many parts the best way to own them is review! 
 
 ## Learning Objectives
 
-1. Define React Hooks 
-1. Use Hooks to handle state in a Functional components
-1. Describe the use cases for hooks
+1. Describe the Flux Pattern
+1. Describe Application State
+1. Describe Actions, Actions Creators, and Reducers
 
-## useState 
+## React Redux Review 
+
+Read the first part of this article it is a very nice and succinct explanation of React and Redux. 
+
+https://medium.com/weekly-webtips/2020-redux-tutorial-with-hooks-and-thunk-8a6a4be6f9de
+
+## React Router Review 
+
+Import your dependencies: 
+
+```
+npm install react-router-dom
+```
+
+In App.js import: 
 
 ```JS
-import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+```
 
-function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
+Wrap your components with a Router: 
 
+```js
+function App() {
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+    <div className="App">
+      <Router>
+        ... other components here ...
+      </Router>
     </div>
   );
 }
 ```
 
-Here the component was creacted from a function but has access to state (`count`). 
+Define a page and add that to your Router. Use a Link to navigate to a Route. Be careful not to confuse Router and Route!
 
-To use state with hooks follow these steps
+Notice the Link uses to to indicate which path it should navigate to. 
 
-1. When using `useState` you'll need to import it first. 
-1. Call `useState(initialValue)` with the initial value. 
-1. Deconstruct with the array syntax to get the value, and setter function. 
-    - In the axample above the value is `count`
-    - The setter us `useCount`
-1. To change the value of state call your setter with a new value: `setCount(99)`
-
-It's convention to name your vairable and precede the setter with 'set'. 
-
-### `const [count, setCount] = useState(0);`
-
-What is this? You should already be familiar with deconstructions with Objects. Desconstruction can also be applied to Arrays. 
-
-```JS 
-const numbers = [1, 2, 3]
-const [ one, two, three ] = numbers
-```
-
-With an object similar code might look like this: 
-
-```JS 
-const numbers = { one: 1, two: 2, three: 3 }
-const { one, two, three } = numbers
-```
-
-With objects you must use the keys to assign the values. So the new variables created on line 2 number have the names `one`, `two`, and `three`. 
-
-In the Array example on line 2 the new variables created can have any name and they are assigned value based of their index!
-
-### Why hooks? 
-
-React is based on **functional** react programming. At it's heart it's built from functional concepts. React isn't an Object Oriented library. The idea of having important parts of the system based on OOP code goes against it's underlying concetps. 
-
-Classes take a extra syntax to generate and more complex to decipher and debug. Functions are more straighforward to troubleshoot. 
-
-If you've ever been confused by `this` if you writing code that is only functions, removing classes, you won't have to workry about `this`.
-
-Hooks don't add a ny breaking changes. Use them if like or not if you don't. 
-
-You should expect to see Hooks in code samples online so it pays to understand them even if you don't use them. 
-
-## Lifecycle methods and Hooks 
+The component property in a Route is the Component that should be displayed when we navigate to that Route:
 
 ```JS
-import React, { useState, useEffect } from 'react';
-
-function Example() {
-  const [count, setCount] = useState(0);
-
-  // Similar to componentDidMount and componentDidUpdate:
-  useEffect(() => {
-    // Update the document title using the browser API
-    document.title = `You clicked ${count} times`;
-  });
-
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
+<Router>
+  <Link to="/">Shop</Link>
+  <Link to="/cart">Cart</Link>
+  
+  <Route path="/cart" component={ShoppingCartPage} />
+  <Route path="/" exact component={ShoppingPage} />
+</Router>
 ```
 
-## After Class
+## Tutorial concepts Review 
 
-- [Assignment 8](../Assignments/Assignment-08.md)
+Quick let's review everything. Identify the following in the tutorial projects. 
 
-## Additional Resources
+1. Review and identify all of the parts of Redux
+  - Actions 
+  - Action Creators 
+  - Reducers 
+  - Combined Reducers 
+  - The Store
+2. Review and identify all of the parts used by React Redux
+  - Provider component 
+  - connect()
+    - mapStateToProps()
+    - mapDispatchToProps()
+3. Identify and describe the parts of Redux and React Redux
+  - Actions 
+  - Store 
+  - Reducers
+  - Immutable State 
+  - connected components
+4. Identify and described Application State
 
-1. https://reactjs.org/docs/hooks-intro.html
+## Challenges 
+
+Using the sample Redux project try these challenges:
+
+- Create a component that resets all counters
+- Create a component that increments all timers
+- Create a component that decrements all timers
+- Create a component that displays an average of all counters
+- Create a component that display the min and max counter values
+
+Sample Redux Project: https://github.com/Make-School-Labs/react-redux-counter
+
+## Redux Review 
+
+Discuss issues and questions with tutorial projects. Write any questions you have abput the tutorial project down on the board. 
+
+## After Class 
+
+Find an issue and push a solution. Explore the issues in the projects below and find one that you are confortable working on. Develop a solution and submit a pull request. 
+
+- [Tetris Redux App](https://github.com/soggybag/tetris-redux-app)
+    - [issues](https://github.com/soggybag/tetris-redux-app/issues)
+- [Simple Journal](https://github.com/soggybag/simple-journal)
+    - [issues](https://github.com/soggybag/simple-journal/issues)
+- [Course Book React](https://github.com/soggybag/course-book-react)
+    - [issues](https://github.com/soggybag/course-book-react/issues)
+- [SF Public Spaces](https://github.com/soggybag/sf-public-spaces)
+    - [issues](https://github.com/soggybag/sf-public-spaces/issues)
+
+
+
 </script></section></div>
     </div>
 
-    <script src="./js/reveal.js"></script>
+    <script src="./dist/reveal.js"></script>
 
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
     <script>
       function extend() {
         var target = {};
@@ -141,16 +157,6 @@ function Example() {
         return target;
       }
 
-      // Optional libraries used to extend on reveal.js
-      var deps = [
-        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: './plugin/zoom-js/zoom.js', async: true },
-        { src: './plugin/notes/notes.js', async: true },
-        { src: './plugin/math/math.js', async: true }
-      ];
-
       // default options to init reveal.js
       var defaultOptions = {
         controls: true,
@@ -158,13 +164,19 @@ function Example() {
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
-        dependencies: deps
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
       };
 
       // options from URL query string
-      var queryOptions = Reveal.getQueryHash() || {};
+      var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3}, queryOptions);
     </script>
 
 

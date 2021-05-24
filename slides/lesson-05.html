@@ -4,31 +4,44 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>reveal-md</title>
-    <link rel="stylesheet" href="./css/reveal.css" />
-    <link rel="stylesheet" href="./css/theme/black.css" id="theme" />
+    <title>Syllabus Template Slides</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/white.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="./assets/Reveal/makeschool.css" />
 
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
+    </script>
   </head>
   <body>
     <div class="reveal">
       <div class="slides"><section  data-markdown><script type="text/template"># FEW 2.3 - Lesson 5
-
+</script></section><section  data-markdown><script type="text/template">
 ## Conditional Rendering
 
 Conditional rendering is the process of showing one component or another depending on data or possibly showing or not showing a component at all. 
-
+</script></section><section  data-markdown><script type="text/template">
 ## Learning Objectives
 
 1. Identify use cases for conditional rendering
 1. Define patterns used for conditional rendering
 1. Use conditional rendering
+</script></section><section  data-markdown><script type="text/template">
+##  Review 
 
+- Use the controlled component pattern to create a form
+  - Create a new component
+  - Use useState to define variables and setters for: 
+    - name
+    - password 
+  - Create a form with two inputs: name and password
+</script></section><section  data-markdown><script type="text/template">
 ## Conditional Rendering
 
 Commonly in React, you will need to render different components under different conditions. Here are two patterns you can apply to your work: 
-
+</script></section><section  data-markdown><script type="text/template">
 **Pattern 1**
 
 The idea is to render one component or another depending on some logic. One method to handle this is with a function:
@@ -43,7 +56,9 @@ function WeatherData(isLoaded) {
 }
 ```
 
-Here is a function that returns either the Weather component or the Loading Component. 
+<small>Here is a function that returns either the Weather component or the Loading Component.</small>
+</script></section><section  data-markdown><script type="text/template">
+You might use the example above like this: 
 
 ```JS
 function App() {
@@ -55,8 +70,8 @@ function App() {
 }
 ```
 
-You can take the idea above one step further. Since a Component is a function you treat it like a component. **Note! parameters are passed via props!**
-
+<small>You can take the idea above one step further. Since a Component is a function you treat it like a component. **Note! parameters are passed via props!**</small>
+</script></section><section  data-markdown><script type="text/template">
 ```JS 
 function WeatherData({ isLoaded }) { // Notice the change here!
   if (isLoaded) {
@@ -68,6 +83,8 @@ function WeatherData({ isLoaded }) { // Notice the change here!
 ```
 
 Here is a function that returns either the Weather component or the Loading Component. 
+</script></section><section  data-markdown><script type="text/template">
+You might use this in an other component like this: 
 
 ```JS
 function App() {
@@ -78,7 +95,7 @@ function App() {
   )
 }
 ```
-
+</script></section><section  data-markdown><script type="text/template">
 **Pattern 2** - Assign a JSX element to variables and render that. This works for situations where a list of components might be used. 
 
 ```JavaScript
@@ -100,7 +117,7 @@ function WhatToEat(props) {
   )
 }
 ```
-
+</script></section><section  data-markdown><script type="text/template">
 **Pattern 3** Use the && operator. Here you'd render a component or render nothing. 
 
 ```JS 
@@ -114,8 +131,8 @@ function WhatToEat(props) {
 </div>
 ```
 
-Here `false && 99` evaluates to false, and `true && 99` evaluates to 99. 
-
+<small>Here `false && 99` evaluates to false, and `true && 99` evaluates to 99.</small>
+</script></section><section  data-markdown><script type="text/template">
 **Pattern 4** The ternary operator is like a single line if else. 
 
 ```JSX
@@ -133,7 +150,7 @@ function LoginButton(props) {
 ```
 
 The ternary operator `condition ? truthy expression : falsey expression` works with three elements: a condition, a truthy expression, and a falsey experssion. 
-
+</script></section><section  data-markdown><script type="text/template">
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 
 **Pattern 5** In some cases you'll want to show a component or nothing at all. React won't render `null` if it appears in a component. 
@@ -234,8 +251,13 @@ After class your goal is to use the ideas from this class make your portfolio we
 </script></section></div>
     </div>
 
-    <script src="./js/reveal.js"></script>
+    <script src="./dist/reveal.js"></script>
 
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
     <script>
       function extend() {
         var target = {};
@@ -250,16 +272,6 @@ After class your goal is to use the ideas from this class make your portfolio we
         return target;
       }
 
-      // Optional libraries used to extend on reveal.js
-      var deps = [
-        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: './plugin/zoom-js/zoom.js', async: true },
-        { src: './plugin/notes/notes.js', async: true },
-        { src: './plugin/math/math.js', async: true }
-      ];
-
       // default options to init reveal.js
       var defaultOptions = {
         controls: true,
@@ -267,13 +279,19 @@ After class your goal is to use the ideas from this class make your portfolio we
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
-        dependencies: deps
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
       };
 
       // options from URL query string
-      var queryOptions = Reveal.getQueryHash() || {};
+      var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3}, queryOptions);
     </script>
 
 
