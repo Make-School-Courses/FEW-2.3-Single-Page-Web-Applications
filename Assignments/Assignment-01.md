@@ -8,7 +8,7 @@ React, Map, Filter, and Reduce
 
 - Use map, filter, and reduce
 - Aggregate Date with Map, Filter, and Reduce
-- Use map to render collections of React components
+- Use `map` to render collections of React components
 - Use Props to make more flexible components
 - Use state to manage interactive UI
 - Use import and export with modules to manage code
@@ -31,17 +31,17 @@ Map, Filter, and Reduce are important methods. After you learn these you will wo
 
 <!-- > -->
 
-The purpose of this assignment is to get some practice with map, and reduce. You'll practice with filter in a future assignment. 
+The purpose of this assignment is to get some practice with `map` and reduce. You'll practice with filter in a future assignment. 
 
-Another purpose of this assignment is to organize data that will be used in later in the assignment. 
+Another purpose of this assignment is to organize data that will be used later in the assignment. 
 
-Last, the assignment will look at using modules in JS and using `import`, `from`, `export`, and `default`. You'll usde these to control the scope of code you write while limiting code that you share with other modules. 
+Last, the assignment will look at using modules in JS and using `import`, `from`, `export`, and `default`. You'll use these to control the scope of code you write while limiting the code that you share with other modules. 
 
 ### Background 
 
 Here is an [awesome Tweet](https://twitter.com/steveluscher/status/741089564329054208?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E741089564329054208&ref_url=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fjavascript-map-reduce-and-filter-explained-with-examples%2F) that sums up Map, Filter, and Reduce
 
-> Map/filter/reduce in a tweet:
+> map/filter/reduce in a tweet:
 >
 > `[🌽, 🐮, 🐔].map(cook)` -> `[🍿, 🍔, 🍳]`
 >
@@ -59,7 +59,7 @@ arr.reduce()
 ['A','B'].map()
 ```
 
-Each the methods map, filter, and reduce take a callback function as the first argument. They each use this callback in different ways. Here is an example:
+Each method: map, filter, and reduce take a callback function as the first argument. They each use this callback in different ways. Here is an example:
 
 ```JS
 arr.map((a) => {...}) // Use an anonymous function as callback
@@ -70,7 +70,7 @@ arr.filter(isAmazing) // Or a named function as callback
 
 **array.map()**
 
-Use Map to transform all elements of an array. For example, take an array of objects and turn them into an array of Strings. The transform here would be: Object -> String.
+Use Map to transform all elements of an array. For example, take an array of objects and turn them into an array of Strings. The transform here would be Object -> String.
 
 Map always returns a new array. The callback receives an element from the array and is expected to transform and return transformed value. For example: 
 
@@ -84,7 +84,7 @@ The callback receives a number `n` and returns a string with two decimals.
 
 **array.filter()**
 
-Use Filter to create a new Array that is a subset of the source array. For example, take an array of product objects and return an array of products where the category is "Books".  
+Use Filter to create a new Array that is a subset of the source array. For example, take an array of product objects and return an array of products where the category is "Books". 
 
 ```JS
 const numbers = [1,2,3,4] 
@@ -96,7 +96,7 @@ The callback here returns the result of the expression `n > 2` which is true whe
 
 **array.reduce()**
 
-Use Reduce to create a new value from a source array. Usually this will be a single value but there isn't any rule that says you can't make an object from an array. For example, you might take an array of products and get a sum of of the prices for all products. Here you started with an array of products and ended with a number. 
+Use Reduce to create a new value from a source array. Usually, this will be a single value but there isn't any rule that says you can't make an object from an array. For example, you might take an array of products and get a sum of the prices for all products. Here you started with an array of products and ended with a number. 
 
 The callback for reduce receives two arguments, the accumulator and an element from the array. It's important to remember to set the initial accumulator value! 
 
@@ -139,7 +139,7 @@ Import your JSON data into your module:
 
 `import data from './data.json'`
 
-JSON is text format but is easily translated into a JavaScript. Importing like this will convert the JSON data into an array of objects. 
+JSON is text format but is easily translated into JavaScript. Importing like this will convert the JSON data into an array of objects. 
 
 What's in data? The example data is an array of objects describing products. Each product has the following properties: 
 
@@ -155,7 +155,7 @@ What's in data? The example data is an array of objects describing products. Eac
 
 **Challenge 1** - Get the array of products. 
 
-You should be able to do this by importing the JSON file. Best to make a module, soemthing like `data.js`, and import the JSON at the top of this file. You can export the array from here. 
+You should be able to do this by importing the JSON file. Best to make a module, something like `data.js`, and import the JSON at the top of this file. You can export the array from here. 
 
 This data.js module can now be a place where you will work with data from data.json and export the things that the rest of your program needs.
 
@@ -165,7 +165,7 @@ import data from './data.json' // imports data.json
 export default data // export the native JS array
 ```
 
-With this you can now import your data and work with it from any other module. 
+With this, you can now import your data and work with it from any other module. 
 
 Results:
 
@@ -181,7 +181,7 @@ import data from './data' // imports dats from data.js
 
 **Challenge 2** - Get a list of all categories.
 
-Inside your data.js module make a list of all of the categories contained in the data. Do this with `Array.map()`. **Remember map returns a new array and is used to transform an array of one type into an array of another type.** In this case you have an array of Objects and you want an array strings.
+Inside your data.js module make a list of all of the categories contained in the data. Do this with `Array.map()`. **Remember map returns a new array and is used to transform an array of one type into an array of another type.** In this case you have an array of Objects and you want an array of strings.
 
 ```JS
 const allCategories = data.map(obj => obj.category)
@@ -208,7 +208,7 @@ There are a few ways to solve this problem. While there could a lot of searching
 - Set - It's like an array but all values must be unique
 - Object - Keys must be unique
 
-**Option 1 Using a Set:** Assuming you have array of all category names. 
+**Option 1 Using a Set:** Assuming you have an array of all category names. 
 
 ```JS
 // Make a set from an array all values of the set will be unique!
@@ -240,10 +240,9 @@ Results: as above but **no values are duplicated.**
 ]
 ```
 
-**Challenge 4** - Make an Object whose keys are the names of categories and whose values are 
-the number of times that category appears in the data. This is called a histogram. 
+**Challenge 4** - Make an Object whose keys are the names of categories and whose values are the number of times that category appears in the data. This is called a histogram. 
 
-To do this use `Array.reduce()`. Why use reduce? Think about it like this: You have an array of objects and you want to reduce it to a single object. The idea is to end up with an Object that looks like: 
+To do this use `Array.reduce()`. Why use reduce? Think about it like this: You have an array of objects and you want to reduce it to a single object. The idea is to end up with an object that looks like: 
 
 ```JS
 { 
@@ -261,9 +260,9 @@ Start here:
 const categoriesWithCounts = data.reduce((obj, cat) => {
   // check if cat exists as a key on obj
   // if category key does not exist
-    // add that key with a value of 1
+  // add that key with a value of 1
   // else 
-    // add 1 to the current value of that key
+  // add 1 to the current value of that key
   return obj
 }, {}) // !!! Be sure to define the initial value as an Object!
 ``` 
@@ -280,16 +279,16 @@ Results:
 
 _review your work with another student. Explain your code, get feedback on your work._
 
-**Challenge 5** - Use Reduce to make an array of objects that have a name and a count. This will similar to the previous challenge but will be an array objects instead of a single Object. 
+**Challenge 5** - Use Reduce to make an array of objects that have a name and a count. This will similar to the previous challenge but will be an array of objects instead of a single Object. 
 
 All of the names should be unique and each should only appear once! 
 
 Start by mapping the `categoriesUnique`. This will give you the names, you can get the counts from the histogram!
 
 ```js 
- const namesAndCategories = categoriesUnique.map(name => {
-   // return an object here with the name and count
- })
+const namesAndCategories = categoriesUnique.map(name => {
+  // return an object here with the name and count
+})
 ```
 
 Results: 
@@ -321,8 +320,7 @@ export default data
 export { categories, categoriesUnique, categoriesAndCount }
 ```
 
-**Challenge 7** - Import your exported data into the App component. If the exports matched 
-the example is Challenge 6 the import would look like this: 
+**Challenge 7** - Import your exported data into the App component. If the exports matched the example in Challenge 6 the import would look like this: 
 
 ```JS
 import data, { allCategories, productCount, namesAndCategories } from './data'
@@ -336,7 +334,7 @@ Display some of the information here:
 
 Use `Array.map()` to transform the `category` array into an array of JSX/Components You can import categories into any module with `import { namesAndCategories } from './data'`
 
-When you're done is might look like: 
+When you're done it might look like this: 
 
 ![ass-2-ch-8.png](ass-2-ch-8.png)
 
@@ -344,8 +342,8 @@ When you're done is might look like:
 
 List all of **products** below the categories buttons. 
 
-- Each Product should display with it's name, category, and price. How these are displayed is up to you. 
-  - If you add a class name to a JSX element use `className` in place of `class` for example `<div className="product">`. See the documentation for [`className`](https://reactjs.org/docs/faq-styling.html) for more information.
+- Each Product should display its name, category, and price. How these are displayed is up to you. 
+ - If you add a class name to a JSX element use `className` in place of `class` for example `<div className="product">`. See the documentation for [`className`](https://reactjs.org/docs/faq-styling.html) for more information.
 - You can import the inventory Array into any module with `import data from './data'`.
 - `data` is an Array of Objects with properties: id, name, description, price, and category. See the notes above for more details. 
 
@@ -385,94 +383,148 @@ data.filter((item) => {
 }).map(item => { ... })
 ```
 
-**Challenge 10** - Use components! Whenever possible you should use a component. React uses a component architecture. The component architectrure is a really good thing it makes your projects easier to manage, keeps your code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), and makes your code more portable. 
-
-1. Make a component that is a category button. 
-  - Define this in a module/JS file. Something like: `category-button.js`
-  - Be sure to export this. Something like: `export default CategoryButton`
-  - Set the label and click function as props, something like: `<CategoryButton label={cat} onClick={() => clickCategory(name) } />`
-1. Define a component that is a product.
-  - The product component should take in it's id, name, description, and price as props. Alternately it could take an object with these properties. 
-  - The product component should display these bits of information in a reasonable way. 
-
-The category button component might look like this. These are inclomplete! You'll need to retool these to fit your project. 
+If you took out the other code it might look like: 
 
 ```JS
-import { Component } from 'react'
+data.filter().map()
+```
 
-class CategoryButton extends Component {
-  render() {
-    return <button onClick={this.props.onClick}>{this.props.label}</button>
-  }
+**Challenge 10** - Use components Whenever possible. The component architecture is a really good thing it makes your projects easier to manage, keeps your code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), and makes your code more [portable](https://en.wikipedia.org/wiki/Software_portability). 
+
+Note the code below is an approximation, your code may vary from this. This is provided to give you some direction rather than use as presented. 
+
+**Make a component that is a category button.** 
+
+- Define this in a module/JS file. Something like: `CategoryButton.js`
+- Be sure to export this. Something like: `export default CategoryButton`
+- Set the label and click function as props, something like: `<CategoryButton label={cat} onClick={() => clickCategory(name) } />`
+
+The category button component might look like this. These are incomplete! You'll need to retool these to fit your project. 
+
+```JS
+function CategoryButton(props) {
+  return (
+    <button onClick={props.onClick}>{props.label}</button>
+  )
 }
 ```
+
+**Define a component to display the Product.**
+
+- The product component should take in its id, name, description, and price as props. Alternately it could take an object with these properties or deconstruct an object with these properties! 
+- The product component should reasonably display these bits of information.
 
 The product component might look like this:
 
 ```JS
-import { Component } from 'react'
-
-class Product extends Component {
-  render() {
-    return (
-      <div>
-        <h1>{this.props.name}</h1>
-        <p>{this.props.name}</p>
-        <p>${this.props.price}</p>
-      </div>
-    )
-  }
+function Product(props) {
+  return (
+    <div>
+      <h1>{props.name}</h1>
+      <p>{props.name}</p>
+      <p>${props.price}</p>
+    </div>
+  )
 }
 ```
 
-**Challenges 11** - Unless you went rogue, the page is probably looking pretty bland. Better add some styles! 
+**Challenges 11** - Unless you went rogue, the page is probably looking pretty bland, better add some styles! 
 
-1. Style the category buttons. Make them look like something people will want to click on. 
-  - Use Flex box to put them all in a row. It's okay if they wrap, there are many categories. 
-1. Style the products in the list. 
-  - Use CSS Grid. You can just set the number of columns with: `grid-template-columns` this should be enough to get all your pro**ducks** in a row so to speak. 
+Try these: 
+
+**Style the category buttons.** Make them look like something people will want to click on. Use Flexbox to put them all in a row. It's okay if they wrap, there are many categories.
+
+Make the container element display flex and set it to wrap. 
+
+```CSS
+.CategoryList {
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+
+**Style the products in the list.** Use CSS Grid. You can just set the number of columns with: `grid-template-columns` this should be enough to get all your pro**ducks** in a row so to speak. 
+
+Set the container of all products to display grid, define some grid columns, and a gap.
+
+```CSS
+.ProductList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+```
 
 **Challenges 12** - Handling the details. If you've got the items above worked out you'll realize the interface is not very satisfying. You can make it better! 
 
-1. Display All categories
-  - Add one more button to the list of category buttons. It's label should "All".
-  - Clicking this button should display all products.
-2. We need to know which category is currently selected. The buttons should reflect. 
-  - Define a style to make the currently selected category stand apart from the other buttons.
-  - When generating the category elements check the category name against `this.currentCategory` if the names match assign a class to that element, something like `selected-category` remember to use `className` not `class`!
-  - You'll need to take into account that the "All" button is it's own category and this category should display all the products! 
+**Display All categories**
+
+- Add one more button to the list of category buttons. Its label should "All".
+- Clicking this button should display all products.
+
+**Display the selected category.** 
+
+- Define a style to make the currently selected category stand apart from the other buttons.
+- When generating the category elements check the category name against "current category" if the names match assign a class to that element, something like `selected-category`. Remembers to use `className` not `class`!
+
+You could use a [ternary](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) operator to define the class name:
+
+```JS
+const className = name === category ? 'selected' : ''
+```
+
+Then use the class name in the button:
+
+```JS
+<button 
+  className={className}
+  onClick={() => onClick(name)}
+>
+```
+
+- You'll need to take into account that the "All" button is it's own category and this category should display all the products! The code that lists and filters the products can check this: 
+
+```JS
+data.filter(obj => obj.category === category || category === 'All').map(...)
+```
+
+Here the filter includes this product **if** the category name matches **or** if the category is 'All'.
+
+**Stretch Challenges** - These are challenges you can try to further practice with React, map, filter, and reduce. 
 
 **Challenges 13** - Okay so you did all of the other challenges and you need something more to do, good for you! 
 
-1. Use `Array.reduce()` to get the sum of all of the prices for all Products. 
-  - Remember the prices are stored as Strings you'll need to convert these to numbers. You'll also need to remove the first character of the string which is the "$": `price = item.price.substring(1)`. Then parse the string value into a float with Something like: `parseFloat(price)` should work.  
-  - Display this somewhere on the page.
-2. Using `Array.reduce()` again, sum the total for currently selected products. In other the sum of all the prices for the products in the currently selected category. 
-3. Use `Array.reduce()` to count the number of products in each category. 
-  - Display count for each category as "badge" next to the category label in each category button. 
-4. Display the number of units for each product somewhere in the product display component. 
-  - If there are 0 units make this product look displayed. 
-5. Show the rating for each product. 
+Use `Array.reduce()` to get the sum of all of the prices for all Products. 
 
-**Stretch Challenges** - These are challenges you can try to further practicw with map, filter, and reduce. 
+- Remember the prices are stored as Strings you'll need to convert these to numbers. You'll also need to remove the first character of the string which is the "$": `price = item.price.slice(1)`. Then parse the string value into a float with Something like: `parseFloat(price)` should work. 
+- Display this somewhere on the page.
 
-**Challenge 14** - The category buttons are useful. Currently they should display all of the items with a matching category. These buttons could be even more useful if you could select more than one category at a time! 
+Using `Array.reduce()` again, sum the total for _currently selected products_. 
 
-1. Allow for selecting multiple categories. For example selecting Toys, Automotive, and Music should show all of the inventory items in the data array that match any of these three categories. 
-2. The category selected category buttons should display showing they are currently selected. 
-3. Selecting the All button should deselect the other category buttons and show all inventory items. 
+Use `Array.reduce()` to count the number of products in each category. 
 
-**Challenge 15** - Add a shopping cart. The cart should display a list of items that have been added to the cart. Inlcude an Add to Cart button with each inventory item. 
+- Display count for each category as "badge" next to the category label in each category button. 
 
-1. Add a component that will display the shopping cart. 
-2. Inventory items need an add to cart button. Clicking this button should add the item to the cart. 
-3. The cart should display items added to the cart. If the same item is added more than once it should show the count. For example: Flexidy x 3
-4. Show the price of the item in the cart. 
-5. Show the total of all items in the cart at the bottom of the cart component. 
+Display the number of units for each product somewhere in the product display component.
+
+- If there are 0 units make this product.
+- Make this more interesting by styling the product so that it looks disabled if the number of units is 0. 
+
+Show the rating for each product.
+
+- Round the number off the nearest decimal
+- Make this more interesting by displaying stars instead of the number! 
+
+**Challenge 14** - The category buttons are useful. Currently, they should display all of the items with a matching category. These buttons could be even more useful if you could select more than one category at a time! 
+
+- Allow for selecting multiple categories. For example selecting Toys, Automotive, and Music should show all of the inventory items in the data array that match any of these three categories. 
+- Selecting the All button should deselect the other category buttons and show all inventory items.
+
+To do this you'll need to use an array to hold the selected category in place of a string! When using reference type: Array/Object as state you must copy the object when calling the setter function! 
 
 ## Some Visuals
 
-Some people like pictures. Here are a few images showing what the project might look like when you are finished, with some notes. 
+Some people like pictures. Here are a few images showing what the project might look like when you are finished, with some notes.
 
 ![picture-1](../notes/picture-1.png)
 
@@ -480,45 +532,44 @@ Some people like pictures. Here are a few images showing what the project might 
 
 ### Deliverable
 
-A link to your completed project on GitHub in the course progress tracker.  
+A link to your completed project on GitHub in the course progress tracker. 
 
 ### Due date
 
-Class 3
+Class 3 - Jun 8
 
 ## Assessing the assignment
 
 | - | **Does not meet expectations** | **Meets expectations** | **Exceeds expectations** |
 |:--------------|:-------------------------------|:-----------------------|:-------------------------|
-| **Completed** | Did _not complete_ | Completed challenges 1-3 | Completed challenges 4-6 |
+| **Completed** | Did _not complete_ | Completed challenges 1-10 | Completed some or all of the stretch challenges |
 | **Functional** | Is _not functional_ | Has _base functionality_, displays products and categories, can filter products by category | Has the All button, and highlights current category |
 | **Code quality** | Indentation is bad spacing is _inconsistent_ | Uses _consistent_ indentation and spacing | _Well written_ and well commented |
 | **Structure and Architecture** | All code is in App.js | Uses App.js and two other components | Uses App.js, 3 or more components, and makes use of presentational and stateful components to best advantage |
-| **Work Ethic** | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly document process | 
+| **Work Ethic** | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and document process | 
+| **Map Filter and Reduce** | Can't use map, filter, and reduce, or would have a hard time using these outside the context of this project | Can use map, filter, and Reduce | Could explain map, filter, and reduce to someone else! |
+| **Props** | Not sure what props are, can not identify them in this project | Can explain props, can identify props in this project where they are used | Could implement props in future React projects! | 
+| **State** | Not sure what component state is, can not identify state in this project | Can explain state, can identify state in this project where it is used | Could implement state in future React projects! |
+| **Modules** | Not sure what a module is | Can use modules, import, and export | Could explain modules to someone else! |
 
+## Map Filter Reduce Practice problems
 
-## Map Filter Reduce Practive problems
-
-Try these practice problems. 
+After working through all this project give yourself a a review on your knowledge of map, filter, and reduce. Try to solve the problems below:
 
 ```JS 
-
-
 // Transform objects to categories 
 const allCategories = data.map((obj) => {
   return obj.category
 })
 console.log(allCategories) // Should display ["Toys", "Kids", "Electronics", ...]
 
-
 // Transform objects to prices 
 const allPrices = data.map((obj) => {
-  // What goes here? 
+ // What goes here? 
 
 })
 
 console.log(allPrices) // should display ["$12.07", "$185.21", "$190.79", ... ]
-
 
 // Transform objects to names 
 const allNames = data.map(/* What goes here? */)
@@ -536,7 +587,7 @@ console.log(allRatings) // [3.0, 3.0, 3.1, ... ]
 
 // -------------------------------------------------
 
-// Now combine two or more properties to getnerate new values 
+// Now combine two or more properties to generate new values 
 
 // Transform objects into names and prices
 const namesAndPrices = data.map((obj) => {
@@ -555,7 +606,7 @@ console.log(namesAndCategories) // ["Zoolab Toys", "Lotstring Kids", "Fintone El
 
 
 // Transform data into Names and ratings
-const namesAndRatings = data.map(/* what goes here?  */)
+const namesAndRatings = data.map(/* what goes here? */)
 
 console.log(namesAndRatings) // // ["Zoolab 3.0", "Lotstring 3.0", "Fintone 3.1", ... ]
 
@@ -592,7 +643,7 @@ console.log(idNameCategory)
 // Filter problems 
 
 // The function provided to filter must return 
-// tru if the item is to be included or false if not
+// true if the item is to be included or false if not
 
 const allToys = data.filter((obj) => {
   return obj.category === "Toys"
@@ -600,27 +651,21 @@ const allToys = data.filter((obj) => {
 
 console.log(allToys)
 
-
-
 const allKids = data.filter((obj) => {
-  // Return only items where the category is Kids
+ // Return only items where the category is Kids
 })
 
 console.log(allKids)
-
 
 // Filter for category Games
 const allGames = data.filter()
 
 console.log(allGames)
 
-
 // Filter for all objects in category Music
 const allMusic // 
 
 console.log(allMusic)
-
-
 
 // Find all of the objects with a rating 
 // greater than 3.0
@@ -631,13 +676,12 @@ const ratingOverThree = data.filter((obj) => {
 console.log(ratingOverThree)
 
 
-// Find all of the object with a rating 
+// Find all of the objects with a rating 
 // equal to or less than 3
 
 const ratingThreeOrLess = data.filter()
 
 console.log(ratingThreeOrLess)
-
 
 // Find all of the Sports with a rating 
 // 3 or greater
@@ -656,13 +700,9 @@ const badHome = data.filter()
 
 console.log(badHome)
 
-
-
 // We need to restock! We should find all of the 
-// objects where the rating is over 3 and number 
+// objects where the rating is over 3 and the number 
 // of units is less than 100
-
-
 
 // ------------------------------------------------
 
@@ -676,8 +716,6 @@ const totalUnits = data.reduce((acc, obj) => {
 
 console.log(totalUnits)
 
-
-
 // Add up the total ratings 
 const totalRating = data.reduce((acc, obj) => {
   // Return the accumulator plus the objects rating
@@ -688,22 +726,19 @@ console.log(totalRating)
 // Find the average rating by dividing the rating by the length of data
 // log the answer with console.log()
 
-
 // Find the total number of units in stock by adding 
 // up the unit value for each product
 const totalUnits = data.reduce(/* ??? */)
 
 console.log(totalUnits)
 
-
-
 // Reduce will use the first element to determine 
 // the value type returned. In the examples above
 // rating and units are number and the totals are
 // also numbers. 
 
-// You may want to return a type that is different 
-// from the type in the source. For example you might 
+// You may want to return a different type 
+// from the type in the source. For example, you might 
 // want to return an object created from strings. 
 
 // Do this by adding the starting value as the second 
