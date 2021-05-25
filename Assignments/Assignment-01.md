@@ -1,14 +1,17 @@
 # Class - FEW 2.3 - Assignment 1
 
-Map, Filter, Reduce
+React, Map, Filter, and Reduce
 
 <!-- > -->
 
 ## Learning Objectives
 
 - Use map, filter, and reduce
-- Describe map, filter, and reduce
+- Aggregate Date with Map, Filter, and Reduce
 - Use map to render collections of React components
+- Use Props to make more flexible components
+- Use state to manage interactive UI
+- Use import and export with modules to manage code
 
 <!-- > -->
 
@@ -30,7 +33,7 @@ Map, Filter, and Reduce are important methods. After you learn these you will wo
 
 The purpose of this assignment is to get some practice with map, and reduce. You'll practice with filter in a future assignment. 
 
-Another purpose of this assignment is to set up the date that will be used in the following assignment. 
+Another purpose of this assignment is to organize data that will be used in later in the assignment. 
 
 Last, the assignment will look at using modules in JS and using `import`, `from`, `export`, and `default`. You'll usde these to control the scope of code you write while limiting code that you share with other modules. 
 
@@ -46,25 +49,76 @@ Here is an [awesome Tweet](https://twitter.com/steveluscher/status/7410895643290
 >
 > `[🍿, 🍳].reduce(eat)` -> `💩`
 
-All three are methods of Array. 
+All three are methods of Array. That is you will always call map, filter and reduce on an array. For example: 
 
-Use Map to transform all elements of an array. For example, take an array of objects and turn them into an array of Strings. Here you'd be starting with an array of Objects and creating an array of strings. Transform Object to String. 
+```JS
+const arr = [1,2,3,4]
+arr.map()
+arr.filter()
+arr.reduce()
+['A','B'].map()
+```
 
-Use Filter to create a new Array that is a subset of the source array. For example, take an array of product objects and return an array of products with the category "Books". Here you'd have started with an array of products in all categories and create a new array of products of only one category. 
+Each the methods map, filter, and reduce take a callback function as the first argument. They each use this callback in different ways. Here is an example:
+
+```JS
+arr.map((a) => {...}) // Use an anonymous function as callback
+
+const isAmazing = (a) => { ... }
+arr.filter(isAmazing) // Or a named function as callback
+```
+
+**array.map()**
+
+Use Map to transform all elements of an array. For example, take an array of objects and turn them into an array of Strings. The transform here would be: Object -> String.
+
+Map always returns a new array. The callback receives an element from the array and is expected to transform and return transformed value. For example: 
+
+```JS
+const numbers = [1,2,3,4]
+const prices = numbers.map(n => n.toFixed(2))
+console.log(prices) // ['1.00', '2.00', '3.00', '4.00']
+```
+
+The callback receives a number `n` and returns a string with two decimals.
+
+**array.filter()**
+
+Use Filter to create a new Array that is a subset of the source array. For example, take an array of product objects and return an array of products where the category is "Books".  
+
+```JS
+const numbers = [1,2,3,4] 
+const greaterThan2 = numbers.filter(n => n > 2)
+console.log(greaterThan2) // [3,4]
+```
+
+The callback here returns the result of the expression `n > 2` which is true when `n` is greater than 2.
+
+**array.reduce()**
 
 Use Reduce to create a new value from a source array. Usually this will be a single value but there isn't any rule that says you can't make an object from an array. For example, you might take an array of products and get a sum of of the prices for all products. Here you started with an array of products and ended with a number. 
+
+The callback for reduce receives two arguments, the accumulator and an element from the array. It's important to remember to set the initial accumulator value! 
+
+```JS
+const numbers = [1,2,3,4] 
+const total = numbers.reduce((acc, n) => acc + n, 0)
+console.log(total) // 10 
+```
+
+Notice that reduce takes two parameters! The second parameter in the example above is 0. 
 
 https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
 
 ### Why this assignment? 
 
-Besides being a step in a larger project that you will continue with in the next assignment, learing Map, Filter, and Reduce will make you a better programmer, while also giving you more options and better solutions to the programming problems you encounter. 
+This project will give you a good starting place to practice React by creating components, using props and state. It will also give you a chance to level up your programming skills by adding map, filter, and reduce to your toolset. 
 
-Map, Filter, and Reduce are not esoteric oddities that you might use once in a blue moon, these are important tools that you can use in almost any programming problem that involves Arrays. They abstract three of the most common operations that programmers perform on data collections. 
+Map, Filter, and Reduce are not esoteric oddities that you might use once in a blue moon, these are important tools that you can use in almost any programming problem that involves Arrays. They abstract three of the most common operations that programmers perform on all collections. 
 
 ## Project requirements
 
-Create a new React Project with 
+Create a new React Project with:
 
 `npx create-react-app react-product-list`
 
@@ -74,7 +128,7 @@ Make a new "module". A module is just a JS file. Name your file: `data.js`
 
 Anything you define in this file will be scoped to this file. 
 
-**Modules only work in the the node environment.** If you can use `import`, `from` you are using modules. 
+If you can use `import` and `from` you are using modules. 
 
 All variables and functions you define are scoped to the Module/file where they are defined. 
 
@@ -119,17 +173,21 @@ Results:
 import data from './data' // imports dats from data.js
 
 [
-  { ... }, 
-  { ... }
+  { id: 1, ... }, 
+  { id: 2, ... }
   ...
 ]
 ```
 
 **Challenge 2** - Get a list of all categories.
 
-Inside your data.js module make a list of all of the categories contained in the data. Do this with Array.map(). **Remember map returns a new array and is used to transform an array of one type into an array of another type.** In this case you have an array of Objects and you want an array strings what are the category names.
+Inside your data.js module make a list of all of the categories contained in the data. Do this with `Array.map()`. **Remember map returns a new array and is used to transform an array of one type into an array of another type.** In this case you have an array of Objects and you want an array strings.
 
-To do this use map on the data. In the callback return the category. 
+```JS
+const allCategories = data.map(obj => obj.category)
+```
+
+Notice the callback takes the `obj` and returns the category.
 
 Results:
 
@@ -145,27 +203,25 @@ Results:
 
 **Challenge 3** - Make the categories list a list of unique values. 
 
-There are a few ways to solve this problem. While there could a lot of searching the categories array for duplicate value a better solution would be to a data structure that only allows unique values. You have two choices in JS:
+There are a few ways to solve this problem. While there could a lot of searching the categories array for duplicate values a better solution would be to create a data structure that only allows unique values. You have two choices in JS:
 
 - Set - It's like an array but all values must be unique
 - Object - Keys must be unique
 
-To build the Build a set or an object with category names as keys you could use Array.reduce(). **For this to work you must set the initial value!**
-
-Using a Set: Assuming you have array of all category names. 
+**Option 1 Using a Set:** Assuming you have array of all category names. 
 
 ```JS
 // Make a set from an array all values of the set will be unique!
-const categorieSet = new Set(categories) 
+const categorieSet = new Set(allCategories) 
 // Make an array from a set with Array.from()
 const categoriesUnique = Array.from(categorieSet)
 ```
 
-Using an Object: Assumes you have an array of category names.
+**Option 2 Using an Object:** Assumes you have an array of category names.
 
 ```js 
 // Make an object where each key is a category name
-const categoryObjects = categories.reduce((obj, cat) => {
+const categoryObjects = allCategories.reduce((obj, cat) => {
   obj[cat] = 0
   return obj
 }, {}) // !!! Be sure to define the initial value as an Object!
@@ -185,9 +241,9 @@ Results: as above but **no values are duplicated.**
 ```
 
 **Challenge 4** - Make an Object whose keys are the names of categories and whose values are 
-the number of times that category appears in the data.
+the number of times that category appears in the data. This is called a histogram. 
 
-To do this use Array.reduce(). Why use reduce? Think about it like this: You have an array of objects and you want to reduce it to a single object. The idea is to end up with an Object that looks like: 
+To do this use `Array.reduce()`. Why use reduce? Think about it like this: You have an array of objects and you want to reduce it to a single object. The idea is to end up with an Object that looks like: 
 
 ```JS
 { 
@@ -204,37 +260,37 @@ Start here:
 ```js 
 const categoriesWithCounts = data.reduce((obj, cat) => {
   // check if cat exists as a key on obj
-  // if so add 
-    // 1 to the value of this key
+  // if category key does not exist
+    // add that key with a value of 1
   // else 
-    // set this key with a value of 1
+    // add 1 to the current value of that key
   return obj
 }, {}) // !!! Be sure to define the initial value as an Object!
-```
-
-THe idea here is loop through all of the data. With each item check to see if that key exists. If not you can add that key and give it a value of 1. 
+``` 
 
 Results: 
 
 ```JS
-{ Movies: 6, Grocery: 4, Baby: 7, ... }
+{ 
+  Movies: 6, 
+  Grocery: 4, 
+  Baby: 7, ... 
+}
 ```
 
 _review your work with another student. Explain your code, get feedback on your work._
 
-**Challenge 5** - Use Reduce to make an array of objects that have a name and a count. This 
-array will be similar to Challenge 4 but in a different format. For this list all of the names 
-should be unique and each should only appear once!
+**Challenge 5** - Use Reduce to make an array of objects that have a name and a count. This will similar to the previous challenge but will be an array objects instead of a single Object. 
 
-Follow the same ideas from the previous challenge. This time reduce to an array: 
+All of the names should be unique and each should only appear once! 
+
+Start by mapping the `categoriesUnique`. This will give you the names, you can get the counts from the histogram!
 
 ```js 
-categories.reduce((acc, cat) => {
-  ...
-}, []) 
+ const namesAndCategories = categoriesUnique.map(name => {
+   // return an object here with the name and count
+ })
 ```
-
-This use the values you created in the previous challenges to make this solution. You can reduce the list of unique category names to an array. In the callback get the count with the category name from the categories object from the last challenge. 
 
 Results: 
 
@@ -249,51 +305,44 @@ Results:
 
 **Challenge 6** - Export all of the data you have collected.
 
-- Export the data array as the default export. This array you imported from data.json. You can 
+Export the data array as the default export. This array you imported from `data.json`. You can 
 just export it unchanged. 
 
-- Make sure you've given each of the other arrays and objects you've created good descriptive
-names and export those. 
+Make sure you've given each of the other arrays and objects you've created good descriptive
+names and export those.
 
-At this step you migth have something like this: 
+At this step you might have something like this: 
 
 ```JS 
 // The default export
 export default data 
 
 // The other exports
-export { categories, productCount, categoriesAndCount }
+export { categories, categoriesUnique, categoriesAndCount }
 ```
 
 **Challenge 7** - Import your exported data into the App component. If the exports matched 
 the example is Challenge 6 the import would look like this: 
 
 ```JS
-import data, { categories, productCount, categoriesAndCount } from './data'
+import data, { allCategories, productCount, namesAndCategories } from './data'
 ```
 
 Import your data into `App.js`.
  
-Display some of the information here: 
+Display some of the information here:
 
-- Display the number of products
-- Display the number of categories
+**Challenge 8** - Display the categories as buttons. 
 
-**Challenge 8** - Display the categories as buttons
-
-Challenge: List all of the **categories** at the top of the page. 
-
-- Display the categories as buttons. 
-- Use `Array.map()` to transform the `category` array into an array of JSX/Components
-- You can import categories into any module with `import { categories } from './data'`
+Use `Array.map()` to transform the `category` array into an array of JSX/Components You can import categories into any module with `import { namesAndCategories } from './data'`
 
 When you're done is might look like: 
 
 ![ass-2-ch-8.png](ass-2-ch-8.png)
 
-**Challenge 9** Display the products
+**Challenge 9** Display the products.
 
-Challenge: List all of **products** below the categories buttons. 
+List all of **products** below the categories buttons. 
 
 - Each Product should display with it's name, category, and price. How these are displayed is up to you. 
   - If you add a class name to a JSX element use `className` in place of `class` for example `<div className="product">`. See the documentation for [`className`](https://reactjs.org/docs/faq-styling.html) for more information.
@@ -306,21 +355,34 @@ When you're done it might look like this:
 
 **Challenge 10** - Add some interaction and functionality. The goal here is to click on a category button to filter the list of products so only products in the chosen category are displayed. 
 
-Challenge: Clicking a category should display **only** products in that category.
+To do this you'll need to define a state variable in your parent component (probably App.js). Clicking a button should set this variable to category name for that button.
 
-- The parent component, that is the component that is parent to both the product list and the category list, should define the current category on `this.state`.
-  - Define state as an object in the constructor
-  - Set a property on the state object, something like: `currentCategory`
-  - Give it a sensible default value: `this.state = { currentCategory: null }`
-- Add an `onClick` handler for each category button. This should: 
-  - Pass the category String/name of the button to the handler.
-  - Set `currentCategory` on state with `this.setState({ currentCategory: newCategory })` or something similar. 
-- Use `Array.filter()` to display only products in `data` where the category matches. Something like: 
+Import `useState` at the top of your component: 
+
+```JS
+import { useState } from 'react'
+```
+
+At the top of your component define your state variable and setter function:
+
+```JS
+function App() {
+  const [category, setCategory] = useState('All')
+
+  return (
+    ...
+  )
+}
+```
+
+Each of your buttons needs to call `setCategory` with their category name.
+
+Filter the list of products using the category name. This will happen before you map the products into JSX. 
 
 ```js
 data.filter((item) => {
-  return item.category === this.state.currentCategory || this.state.currentCategory === null
-})
+  return item.category === category || category === 'All'
+}).map(item => { ... })
 ```
 
 **Challenge 10** - Use components! Whenever possible you should use a component. React uses a component architecture. The component architectrure is a really good thing it makes your projects easier to manage, keeps your code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), and makes your code more portable. 
