@@ -1,225 +1,48 @@
-# FEW 2.3 Assignment 3
+# Class - FEW 2.3 - React + Redux Tutorial Assignment
 
-Solve the challenges below to assess your knowledge of map, filter, and reduce. 
+## Description 
 
-## Challenges!
+Application state is a big subject. You need to practice. A good place to start is with a tutorial.  
 
-After working through all this project give yourself a a review on your knowledge of map, filter, and reduce. Try to solve the problems below:
+### Why this assignment?
 
-### Map Challenges
+Application state is at the core of every app. Using a modern update pattern and understanding that pattern will make you a stronger developer. 
 
-```JS  
-// Transform objects to categories 
-const allCategories = data.map((obj) => {
-	return obj.category
-})
-console.log(allCategories) // Should display ["Toys", "Kids", "Electronics", ...]
+## Project requirements
 
-// Transform objects to prices 
-const allPrices = data.map((obj) => {
-	// Your code here...
-})
+Your goal is to choose one of the tutorials below and complete it. The tutorials are ranked in level of difficulty. 
 
-console.log(allPrices) // should display ["$12.07", "$185.21", "$190.79", ... ]
+1. [React+Redux Password List](https://github.com/MakeSchool-Tutorials/web-7-react-redux-passwords-app) - This is an alternate take on the Todo List. The app keeps track of a list of user names and passwords, and generates random passwords. It uses React for views, Redux to manage application state, and resists data in local storage. 
+2. [React+Redux Timers App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-timers-app) - An advanced alternative to the Todo list. The app stores a list of timers, timers can be stoped and started. You could use this app to keep track of time spent working projects or billing clients. This project is like the seed for: https://toggl.com. It uses React for views, Redux for application state management, and persists data with local storage. 
+3. [React+Redux Tetris](https://github.com/MakeSchool-Tutorials/web-7-react-redux-tetris-app) - This is the classic arcade game [Tetris](https://en.wikipedia.org/wiki/Tetris) implemented with JavaScript. This app uses React for views and Redux for application state management. 
 
-// Transform objects to names 
-const allNames = data.map(/* What goes here? */)
+### Challenges 
 
-console.log(allNames) // Should display ["Zoolab", "Lotstring", "Fintone", ... ]
+**Challenge 1** Read the descriptions of the tutorials above. Choose the tutorial that would be the best fit for your abilities. 
 
+**Challenge 2** put a system in place to complete this tutorial. Do this by scheduling 6 hours time to work. Find someone to work with. 
 
-// Transform Objects to ratings
-const allRatings // Map data to a list of ratings here...
+**Challenge 3** complete the tutorial! If you have a question at any point while working on the tutorial post these to the class Slack channel. 
 
-console.log(allRatings) // [3.0, 3.0, 3.1, ... ]
+**Stretch Challenge** review your work with another student. Explain your code, get feedback on your work. 
 
-// Transform objects to units
-// You do it all. Create an array of the unit values from the data
+**Stretch Challenge** try any of the stretch challenges in the tutorial (if the tutorial has stretch challenges)
 
-// -------------------------------------------------
+**Stretch Challenge** ask the instructor for challenges you can try. 
 
-// Now combine two or more properties to generate new values 
+**Stretch Challenge** make up your own stretch goals! Invent yout own new features and additions to the tutorial. This can be CSS 
 
-// Transform objects into names and prices
-const namesAndPrices = data.map((obj) => {
-  return `${obj.name} ${obj.price}`
-})
+### Due date
 
-console.log(namesAndPrices) // ["Zoolab $12.07", "Lotstring $185.21", "Fintone $190.79", ... ]
+**Class 9** - 
 
+## Assessing the assignment
 
-// Transform objects into names and categories
-const namesAndCategories = data.map((obj) => {
-  // what goes here?
-})
+| - | **Does not meet expectations** | **Meets expectations** | **Exceeds expectations** |
+|:-------------|:---------------------------|:-------------------------|:---------------------|
+| **Completed** | **Did not complete** the tutorial **by class 9** | **Completed** the tutorial **by class 9** | **Completed** the tutorial and reviewed work with another student. |
+| **Functional** | Is not functional or _throws errors_ | Project fucntions _without errors or wanrings_ | - |
+| **Code quality** | Indentation and spacing is _inconsistent_ | Uses _consistent indentation and spacing_ | Well written and well commented, variable and function names are self commenting |
+| **Code Architecture and Structure** | Built from well designed and well named components | Components are well organized easy to navigate for the developer |
+| **Work Ethic** | Did not commit when working on project | Initial commit at class and commit while working | Commits show 3 hours and clearly documents process | 
 
-console.log(namesAndCategories) // ["Zoolab Toys", "Lotstring Kids", "Fintone Electronics", ... ]
-
-
-// Transform data into Names and ratings
-const namesAndRatings = data.map(/* what goes here? */)
-
-console.log(namesAndRatings) // // ["Zoolab 3.0", "Lotstring 3.0", "Fintone 3.1", ... ]
-
-
-// Transform data into an array of strings that show: 
-// Name price and rating
-// Zoolab $12.07 Rating: 3.0
-const namePriceRating = data.map((obj) => {
-  return `${obj.name} ${obj.price} Rating: ${obj.rating}`
-})
-
-console.log(namePriceRating) // ["Zoolab $12.07 Rating: 3.0", ... ]
-
-
-// Transform data to an array of 
-// Name category Units
-// Zoolab Toys Units: 632
-const nameCategoryUnits = data.map(/* What goes here? */)
-
-
-// Transform data into 
-// id Name Category 
-// 1 Zoolab Toys
-const idNameCategory // you do the rest...
-
-console.log(idNameCategory)
-
-// Map also includes the index of each item. 
-
-// ...you do all the work...
-
-```
-
-### Filter Challenges
-
-```JS
-// ------------------------------------------------
-
-// Filter problems 
-
-// The function provided to filter must return 
-// true if the item is to be included or false if not
-
-const allToys = data.filter((obj) => {
-  return obj.category === "Toys"
-})
-
-console.log(allToys)
-
-const allKids = data.filter((obj) => {
- // Return only items where the category is Kids
-})
-
-console.log(allKids)
-
-// Filter for category Games
-const allGames = data.filter(/* Your code here... */)
-
-console.log(allGames)
-
-// Filter for all objects in category Music
-const allMusic // Your code here...
-
-console.log(allMusic)
-
-// Find all of the objects with a rating 
-// greater than 3.0
-const ratingOverThree = data.filter((obj) => {
-  // ??? 
-})
-
-console.log(ratingOverThree)
-
-
-// Find all of the objects with a rating 
-// equal to or less than 3
-
-const ratingThreeOrLess = data.filter(/* Your code here */)
-
-console.log(ratingThreeOrLess)
-
-// Find all of the Sports with a rating 
-// 3 or greater
-
-const greatSports = data.filter((obj) => {
-  return obj.category === "Sports" && obj.rating >= 3
-})
-
-console.log(greatSports)
-
-
-// Find everything with a category of Home and 
-// a rating less than 3
-
-const badHome = data.filter(/* Your code here... */)
-
-console.log(badHome)
-
-// We need to restock! We should find all of the 
-// objects where the rating is over 3 and the number 
-// of units is less than 100
-
-// ------------------------------------------------
-```
-
-### Reduce Challenges 
-
-```JS
-// Reduce problems
-
-// What's our total inventory? 
-
-const totalUnits = data.reduce((acc, obj) => {
-  return acc += obj.units
-})
-
-console.log(totalUnits)
-
-// Add up the total ratings
-const totalRating = data.reduce((acc, obj) => {
-  // Return the accumulator plus the objects rating
-})
-
-console.log(totalRating)
-
-// Find the average rating by dividing the rating by the length of data
-// log the answer with console.log()
-
-// Find the total number of units in stock by adding 
-// up the unit value for each product
-const totalUnits = data.reduce(/* ??? */)
-
-console.log(totalUnits)
-
-// Reduce will use the first element to determine 
-// the value type returned. In the examples above
-// rating and units are number and the totals are
-// also numbers. 
-
-// You may want to return a different type 
-// from the type in the source. For example, you might 
-// want to return an object created from strings. 
-
-// Do this by adding the starting value as the second 
-// parameter to reduce. 
-
-// data.reduce(() => {}, {}) // The second param is {}
-
-// Make an object with properties that match the 
-// names of each product and have values equal to 
-// the rating. 
-
-const nameRating = data.reduce((acc, obj) => {
-  return acc[obj.name] = obj.rating
-}, {}) 
-
-console.log(nameRating)
-
-const nameUnits = data.reduce((acc, obj) => {
-  // Get the name and unit sould look like:
-  // { Zoolab: 632, Lotstring: 241, ... }
-}, {}) 
-
-console.log(nameRating)
-```

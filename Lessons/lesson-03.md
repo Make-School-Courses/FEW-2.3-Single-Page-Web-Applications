@@ -1,435 +1,309 @@
-# FEW 2.3 - Lesson 2
+# FEW 2.3 - Lesson 3
 
 <!-- > -->
 
-## Map, Filter, and Reduce 
-
-If you understand Arrays and loops the next step to leveling up your code craft is map, filter, and reduce.
+# React and Forms
 
 <!-- > -->
 
-React is built on functional programming. This class you will look at some functional programming concepts in the context of React.
+The first goal for this class is to use React with a public web API.
 
-Map, filter, and reduce shed light on the field of functional programming. 
+The second goal is to work with form elements and user input with React. React has a special pattern for this due to the way it handles the virtual DOM.
 
-<!-- > -->
-
-## Learning Objectives/Competencies
-
-1. Organize code with ES Modules 
-1. Identify functional programming concepts
-1. Use functional programming 
-    - `Array.map()`
-    - `Array.filter()`
-    - `Array.reduce()`
-1. Transform data with `Array.map()`
+Last, the goal will be to look at conditional rendering techniques that can be implemented with React. 
 
 <!-- > -->
 
-## ES Modules
+## Objectives 
 
-ES modules organize code by both file and scope. Code is written in a 'physical' file and variables and functions defined in those files are scoped to their file.
+- Implement the Controlled Component Pattern
+  - Use forms and form data in React
+- Build an app that works with a public API
+- Build a system to handle network errors gracefully
+- Use conditional rendering patterns in React
 
 <!-- > -->
 
-Scope det3ermines where a value is visible to the code you write. 
+## Review
+
+<!-- > -->
+
+**Pop Quiz**
+
+- What is map used for? 
+- What does map return?
+- What parameters does map take?
+
+<!-- > -->
+
+**Checking progress**
+
+- Where are you at on product list?
+- What do you need to do to wrap up this project?
+- What are your blockers?
+
+<!-- > -->
+
+## React Hooks
+
+<!-- > -->
+
+Hooks are a new feature to React. Hooks allow you to use state with a function based component. 
+
+Before Hooks state was only available to class based components. 
+
+<!-- > -->
+
+## Use useState 
+
+<!-- > -->
+
+Import `useState` from react
 
 ```JS
-const bird = 'flapping'
-function zoo() {
-    const tiger = 'sleepy'
-    
-    console.log(bird)  // flapping
-    console.log(tiger) // sleepy
+import { useState } from 'react'
+```
+
+<!-- > -->
+
+Use `useState` to generate a state variable and setter function that that variable. 
+
+```JS
+function MyComponent() {
+  const [count, setCount] = useState(0)
+  ...
 }
-zoo();
-console.log(bird)  // flapping
-console.log(tiger) // undefined
 ```
 
-<small>Here the variables are visible inside the function but only one is visible outside!</small>
+<small>`count` is the variable, and `setCount` is the setter. The initial value of `count` is 0. </small>
 
 <!-- > -->
-
-Variables declared in a module are only visible in that module.
-
-```js
-// zoo.js
-const monkey = 'what?'
-const meerkat = 'look out!'
-```
-
-```js
-// visitor.js
-console.log(monkey) // ReferenceError: Can't find variable: monkey
-console.log(meerkat) // ReferenceError: Can't find variable: meerkat
-```
-
-<small>The variables monkey and meerkat are only available in zoo.js</small>
-
-<!-- > -->
-
-Variables and functions can be shared across modules using `export` and `import`. 
-
-```js
-// zoo.js
-export const monkey = 'what?'
-export const meerkat = 'look out!'
-```
-
-```js
-// visitor.js
-import { monkey, meerkat } from './zoo.js'
-console.log(monkey) // what?
-console.log(meerkat) // look out!
-```
-
-<!-- > -->
-
-Take a read through the docs and see what it is has to say about modules: 
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-You will use modules in the homework to organize your code. 
-
-<!-- > -->
-
-## import, export, and default
-
-<!-- > -->
-
-To share a value a file can export that value. 
 
 ```JS
-// constants.js
-const name = 'Foo'
-const id = 'Bar'
+import React, { useState } from 'react';
 
-export { name, id } // export name and id
-```
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
 
-<!-- > -->
-
-Another file can import values like this: 
-
-```js
-import { name, id } from './constants.js'
-
-console.log(name, id) // prints Foo Bar
-```
-
-<!-- > -->
-
-A file may declare a single export as the default export. There can only be one default export and it is imported and exported a little differently. 
-
-```JS
-// constants.js
-const name = 'Foo'
-const id = 'Bar'
-
-function hello() {
-    console.log(name, id)
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
 }
-
-export default hello // the default export
-export { name, id } // export name and id
 ```
 
 <!-- > -->
 
-Another file can import values like this: 
-
-```js
-import hello, { name, id } from './constants.js' // hello is the default export! 
-
-hello() // prints Foo Bar
-```
-
-<small>Notice the default export goes outside the {}.</small>
+### Controlled Component Pattern
 
 <!-- > -->
 
-### Array `map`, `filter`, `reduce`
-
-The functions map, filter, and reduce are a gateway into functional programming concepts.
+The controlled component pattern is used to handle form input in React projects. 
 
 <!-- > -->
-
-> Map/filter/reduce in a tweet:
-```
-[🌽, 🐮, 🐔].map(cook)            // -> [🍿, 🍔, 🍳]
-[🍿, 🍔, 🍳].filter(isVegetarian) // -> [🍿, 🍳]
-[🍿, 🍳].reduce(eat)              // -> 💩
-```
->
-
-<small>`cook`, `isVegitarian`, and `eat` are functions.</small>
-
-<!-- > -->
-
-```js
-const prices = [0.55, 1.99, 23.67, 1.00001] // '$1.00'
-const formattedPrices = prices.map((price) => {
-    return `$${price.toFixed(2)}` // $x.xx
-})
-
-// formattedPrices ['$0.55', '$1.99', '$23.67', '$1.00']
-```
-
-<!-- > -->
-
-[`Array.map()`]() transforms an array of data and **returns a new array**. Use it to convert an array of one type into an array of another type.
-
-For example, you might transform an array of numbers into an array of strings. Or raw ingredients into lunch!
 
 ```JS
-[🌽, 🐮, 🐔].map(cook)            // -> [🍿, 🍔, 🍳]
+function MyComponent() {
+  const [name, setName] = useState('')
+  return (
+    <input 
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+    />
+  )
+}
 ```
+
+<small>Here name stores the value displayed in the input.</small>
 
 <!-- > -->
 
-`Array.filter` returns an array containing none, some, or all of the elements from the source array. Filter returns a new Array.  
+Here the component was creacted from a function but has access to state (`count`). 
 
-For example, you might filter an array of products to create an array of products with prices less than $10, or choose your snacks!
+To use state with hooks follow these steps
 
-```js
-[🍿, 🍔, 🍳].filter(isVegetarian) // -> [🍿, 🍳]
+1. When using `useState` you'll need to import it first. 
+1. Call `useState(initialValue)` with the initial value. 
+1. Deconstruct with the array syntax to get the value, and setter function. 
+    - In the axample above the value is `count`
+    - The setter us `useCount`
+1. To change the value of state call your setter with a new value: `setCount(99)`
+
+It's convention to name your vairable and precede the setter with 'set'. 
+
+### `const [count, setCount] = useState(0);` 🤔
+
+What is this? You should already be familiar with deconstructions with Objects. Desconstruction can also be applied to Arrays. 
+
+```JS 
+const numbers = [1, 2, 3]
+const [ one, two, three ] = numbers
 ```
 
-<!-- > -->
+With an object similar code might look like this: 
 
-`Array.reduce` converts an array of values into a single value. It takes many values and returns a single aggregate value. 
+```JS 
+const numbers = { one: 1, two: 2, three: 3 }
+const { one, two, three } = numbers
+```
 
-For example, you might use reduce to get the total cost of all products in a shopping cart array, or process your food.
+With objects you must use the keys to assign the values. So the new variables created on line 2 number have the names `one`, `two`, and `three`. 
+
+In the Array example on line 2 the new variables created can have any name and they are assigned value based of their index!
+
+### Why hooks? 
+
+React is based on **functional** react programming. At it's heart it's built from functional concepts. React isn't an Object Oriented library. The idea of having important parts of the system based on OOP code goes against it's underlying concetps. 
+
+Classes take a extra syntax to generate and more complex to decipher and debug. Functions are more straighforward to troubleshoot. 
+
+If you've ever been confused by `this` if you writing code that is only functions, removing classes, you won't have to workry about `this`.
+
+Hooks don't add a ny breaking changes. Use them if like or not if you don't. 
+
+You should expect to see Hooks in code samples online so it pays to understand them even if you don't use them. 
+
+## Lifecycle methods and Hooks 
 
 ```JS
-[🍿, 🍳].reduce(eat)              // -> 💩
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
 ```
 
 <!-- > -->
 
-## Using Array.map
-
-Map transforms all of the elements in a array and returns a new array.
+## Introduction 
 
 <!-- > -->
 
-Imagine you have an array of category names that are strings, and you want to make them JSX buttons. 
+The demo project is a simple web app that displays weather data. You'll need to make an account and get a valid API key. 
+
+The project needs to accept user input for a zipcode. Text input and other form elements use a special pattern in React called the _Controlled Component Pattern_. 
+
+<!-- > -->
+
+## React State 
+
+<!-- > -->
+
+State represents a value a component stores internally.
+
+<!-- > -->
+
+When state changes a component renders 
+
+<!-- > -->
+
+## Getting Started
+
+Follow the instructions to set up and run the demo project.
+
+- Download or fork the [project](https://github.com/Product-College-Labs/react-api-project)
+- Make an account with [OpenWeatherMap.org](https://home.openweathermap.org/)
+    - Go to your profile page: API Keys
+    - Generate and copy your API key
+    - Add the following to the '.env' file: 
+
+`REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY_HERE`
+
+**Pro-tip!** 
+
+- The Create React App starter project is set up to use `dotenv`, you don't need to add this package. 
+- Any environment variables you define **must** begin with `REACT_APP_`. This prevents clashes with environment variables that you may not be aware of. 
+
+Read more about [Adding Custom Environment Variables](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables)
+
+Everything in the example project happens in App.js. There are many comments explaining what is going on, read these closely.
+
+- `npm install`
+- `npm start` or `yarn start`
+
+## Input Pattern 
+
+The project has a single input field. Find it in the `render` method of App.js. 
 
 ```JavaScript
-const catButtons = categories.map((catName) => {
-    return <button>{catName}</button>
-})
+<input 
+  value={this.state.inputValue} 
+  onChange={e => this.setState({ inputValue: e.target.value })}
+  type="text" 
+  pattern="(\d{5}([\-]\d{4})?)"
+  placeholder="enter zip"
+/>
 ```
 
-Important! `catButtons` is a new Array! The source array `categories` is unmodified!
+This started as a simple input element. 
 
-<!-- > -->
+`<input type="text">`
 
-## Using Array.filter
-
-Use filter to create a new arry with a subset of the element in the source array.
-
-<!-- > -->
-
-For example, to get a list of only items in a category. 
+The input should take a zip code so I set the placeholder to "enter zip" and used the pattern attribute and a little regex "magic" to limit input to zip code patterns. 
 
 ```JavaScript
-const prices = [0.55, 1.99, 23.67, 1.00001] // '$1.00'
-const cheapest = prices.filter((price) => {
-    return price < 2
-}) // cheapest [0.55, 1.99, 1.00001]
-
-const formattedPrices = cheapest.map((price) => {
-    return `$${price.toFixed(2)}` // $x.xx
-})
-
-// formattedPrices ['$0.55', '$1.99', '$1.00']
-
-
-array.filter((item) => {
-    return // return true or false 
-})
-
-const allToys = inventory.filter((item) => {
-    return item.category === 'Toys'
-})
+<input 
+    ...
+  type="text" 
+  pattern="(\d{5}([\-]\d{4})?)"
+  placeholder="enter zip"
+/>
 ```
 
-The sample returns a new array containing items from inventory where the category is Toys. 
-
-<!-- > -->
-
-## Using Array.reduce
-
-Use `Array.reduce()` to reduce a collection of values to a single value. 
-
-<!-- > -->
-
-For example, you get the total cost of the inventory by adding all of the prices. 
+The `value` and `onChange` attributes are used for the React input pattern.
 
 ```JavaScript
-const prices = [0.55, 1.99, 23.67, 1.00001] // '$1.00'
-const totalPrices = prices.reduce((acc, price) => {
-    return acc += price
-}, 0) // 27.21001
-
-const priceStr = prices.reduce((acc, price) => {
-    return acc += price // 
-}, '') // '0.551.9923.671.00001'
-
-const allInventory = inventory.reduce((total, item) => {
-    return total += item.price
-}, 0)
+<input 
+  value={this.state.inputValue} 
+  onChange={e => this.setState({ inputValue: e.target.value })}
+  ...
+/>
 ```
 
-The first parameter of reduce is a function, the second parameter is the starting value of the accumulator. Here the starting value is 0.
+The controlled component pattern stores the value entered on `this.state` and displays the value in the component via its value attribute. 
 
-<!-- > -->
+Imagine you are entering a zip code into a text input field. You type the first number of the zip code which is 9. The onChange method fires and assigns the value in the text field to state with: `this.setState({zip:e.target.value})`. When the component is rendered the value displayed is the value set on state `this.state.zip`.
 
-The first param of reduce takes in the accumulator and the current value. The accumulator is the running total, and the current value is one of the items from the Array.
+This may seem a little strange, but it's important for two reasons. 
 
-<!-- > -->
+- React's virtual DOM may replace the input component at any time when the DOM is redrawn. This would lose values stored in real DOM elements. 
+- It stores input values on `state` where they are easy to access when you need them without having to access the input and retrieve its value. 
 
-## React collections and Keys
+- [Controlled Components](https://reactjs.org/docs/forms.html)
 
-What's a [collection](https://en.wikipedia.org/wiki/Collection_(abstract_data_type))?
+## Challenges 
 
-> In short a collection is an Array or an Object
-
-<!-- > -->
-
-Often you will need to render Arrays of JSX components. You'll often have arrays of raw data that need to be converted into an array of JSX. 
-
-To do this we will delve into functional programming with `map`, `filter`, and `reduce`. 
-
-React will automatically iterate over a collection of JSX elements. To avoid error these elements need to have unique keys. 
-
-<!-- > -->
-
-**tl;dr** Anytime you have an array of JSX elements each should have a unique key prop. For example: 
-
-```JS
-const things = [1,2,3,4].map((item, index) => {
-    return <p key={`thing-${index}`}>{item}</p>
-})
-```
-
-<!-- > -->
-
-**Q: What are keys and why do they need to be unique?**
-
-<!-- > -->
-
-**A:** The viritual DOM looks for changes to components, finds the things that change and updates only the elements that have been changed. 
-
-To track the contents of a list each list item must have a unique identifier. The key prop serves this purpose. 
-
-<!-- > -->
-
-**Q: What is a key? (what kinds of values can be used as keys)**
-
-<!-- > -->
-
-**A:** Any _unique_ value can be used as a key. You can use ids that come with data. You can generate your own values.
-
-The value only has to be unique to this list and should be the same each time the list is generated. 
-
-<!-- > -->
-
-**Q: How do you _set_ a key?**
-
-<!-- > -->
-
-**A:** The key is a prop. Set it like any other prop. 
-
-`<SomeComponent key='unique-1' />`
-
-Read more about React Lists and Keys here: https://reactjs.org/docs/lists-and-keys.html
-
-<!-- > -->
-
-## React collections and Keys 
-
-React will automatically display a collection of JSX elements in JSX. For example: 
-
-```JavaScript 
-const ListOfButtons = (props) => {
-    const buttons = [<button />, <button />, <button />]
-    return (
-        <div>
-            {buttons}
-        </div>
-    )
-}    
-```
-
-React automatically renders the array of JSX elements, no need to iterate. 
-
-<!-- > -->
-
-More often than not you will be receiving an Array of one type and converting it to an Array of JSX.
-
-```JavaScript 
-const ListOfButtons = ({ items }) => {
-    const buttons = items.map( item => <button label={item.label} />)
-    return (
-        <div>
-            {buttons}
-        </div>
-    )
-}    
-```
-
-Here you can imagine the `items` as an array of objects with a label property. 
-
-<!-- > -->
-
-React needs to be able to keep track of elements with a stable identity. To do this you'll get elements in a list a `key`. The value for the key can be any value that is **unique among siblings**.
-
-<!-- > -->
-
-In the example above, if we knew that the label was unique it could be used as the key. 
-
-```JavaScript 
-const ListOfButtons = ({ items }) => {
-    const buttons = items.map( item => <button key={item.label} label={item.label} />)
-    return (
-        <div>
-            {buttons}
-        </div>
-    )
-}    
-```
-
-<!-- > -->
-
-## Add Styles 
-
-There are a few different techniques that can be used to style React projects. We will cover different techniques in class. For this project, you can use a traditional approach of class names and stylesheet. 
-
-Put your styles in index.css. Use class names to assign styles to JSX elements. 
-
-For any component asssign a class name by using the `className` attribute. For example: 
-
-`<button className="category-button" ... />`
-
-In your stylesheet you might style this with:
-
-`.category-button { color: red }`
-
-## In Class
-
-Start on [Assignment 2](../Assignments/Assignment-02.md). You'll be using map, filter, and reduce to solve some challenges here. 
+Use `array.filter()` to solve some of the challenges. Filter is a method of Array that returns a new array that is a subset of the source array. Like map and reduce fitler takes a callback. The callback is passed each element from the source array and it determines if that item should be included in the output array by returning true or false if the item should not be included. 
 
 ## Homework
 
-- [Assignment 2](../Assignments/Assignment-02.md)
+[Assignment 3](../Assignments/Assignment-02.md)
 
 ## Additional Resources
 
-1. [Array Map, Filter, Reduce](https://medium.com/jsguru/javascript-functional-programming-map-filter-and-reduce-846ff9ba492d)
-1. [ES6 Module Practical Guide](https://medium.freecodecamp.org/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773)
-1. [ES6 Modules reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-1. [React Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
-
+1. [JSON Formatter](https://jsonformatter.curiousconcept.com)
+1. [React Forms](https://reactjs.org/docs/forms.html)
+1. [JSX in depth](https://reactjs.org/docs/jsx-in-depth.html#comments)
+1. [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
+1. [Conditional Rendering in React](https://blog.logrocket.com/conditional-rendering-in-react-c6b0e5af381e)
+1. [Custom environment variables](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables)

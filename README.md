@@ -48,8 +48,8 @@ Hybrid sections are a mixture of online and in person components.  In person ses
 | Class | Date | Topics | Assignment |
 |:------|:-----|:-------|:-----------|
 |  1 | Tue, June 1  | [React and functional Programming](Lessons/lesson-01.md) | [React Product List](Assignments/Assignment-01.md) - React Tutorial |
-|  2 | Thu, June 3  | [Profesional Best Practices](Lessons/lesson-02.md) | - |
-|  3 | Tue, June 8  | [Map, Filter, Reduce](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Map, Filter, and Reduce products |
+|  2 | Thu, June 3  | [React, Props, and State](Lessons/lesson-02.md) | - |
+|  3 | Tue, June 8  | [React and Forms](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Weather API |
 |  4 | Thu, June 10 | [React Input Pattern](Lessons/lesson-04.md) | - |
 |  5 | Tue, June 15 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
 |  6 | Thu, June 17 | [Callbacks and Promises](Lessons/lesson-06.md) | - |
