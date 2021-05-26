@@ -47,20 +47,20 @@ Hybrid sections are a mixture of online and in person components.  In person ses
 
 | Class | Date | Topics | Assignment |
 |:------|:-----|:-------|:-----------|
-|  1 | Tue, June 1  | [React and functional Programming](Lessons/lesson-01.md) | [React Product List](Assignments/Assignment-01.md) - React Tutorial |
+|  1 | Tue, June 1  | [React and functional Programming](Lessons/lesson-01.md) | [Assignment 1 - React Product List](Assignments/Assignment-01.md) - React Tutorial |
 |  2 | Thu, June 3  | [React, Props, and State](Lessons/lesson-02.md) | - |
-|  3 | Tue, June 8  | [React and Forms](Lessons/lesson-03.md) | [Assignment 2](Assignments/Assignment-02.md) - Weather API |
+|  3 | Tue, June 8  | [React and Forms](Lessons/lesson-03.md) | - |
 |  4 | Thu, June 10 | [React Input Pattern](Lessons/lesson-04.md) | - |
-|  5 | Tue, June 15 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 3](Assignments/Assignment-03.md) - React API |
+|  5 | Tue, June 15 | [Conditional Rendering](Lessons/lesson-05.md) | [Assignment 2 - Weather API](Assignments/Assignment-02.md) - Weather API |
 |  6 | Thu, June 17 | [Callbacks and Promises](Lessons/lesson-06.md) | - |
-|  7 | Tue, June 22 | [Making Network Requests](Lessons/lesson-07.md) | - |
-|  8 | Thu, June 24 | [Application State](Lessons/lesson-08.md) | [Assignment 4](Assignments/Assignment-04.md) - Tutorial |
-|  9 | Tue, June 29 | [Redux](Lessons/lesson-09.md) | - |
-| 10 | Thu, July 1  | [Redux Part 2](Lessons/lesson-10.md) | [Assignment 5](Assignments/Assignment-05.md) - Custom Project | 
+|  7 | Tue, June 22 | [Making Network Requests](Lessons/lesson-07.md) | [Assignment 3 - React + Redux Tutorial](Assignments/Assignment-03.md) - Tutorial |
+|  8 | Thu, June 24 | [Application State](Lessons/lesson-08.md) | - |
+|  9 | Tue, June 29 | [Redux](Lessons/lesson-09.md) | [Assignment 4 - Custom Project](Assignments/Assignment-04.md) - Custom Project |
+| 10 | Thu, July 1  | [Redux Part 2](Lessons/lesson-10.md) | - | 
 | 11 | Tue, July 6  | [React Hooks](Lessons/lesson-11.md) | - |
 | 12 | Thu, July 8  | [Present Final Projects](Lessons/lesson-12.md) | - |
-| 13 | Tue, July 13 | [Lesson 13] | - |
-| 13 | Thu, July 15 | [Final Assessment](Lessons/lesson-14.md) | - |
+| 13 | Tue, July 13 | Final Assessment | - |
+| 13 | Thu, July 15 | Present Final Project | - |
 
 ## Projects 
 
