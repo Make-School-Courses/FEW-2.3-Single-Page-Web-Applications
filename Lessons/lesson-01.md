@@ -17,6 +17,16 @@ This lesson will be a review of React and an introduction to functional programm
 
 <!-- > -->
 
+## Video
+
+Follow this class in these video lessons:
+
+- https://www.youtube.com/playlist?list=PLoN_ejT35AEhmWcDTI6M--ha_E4lTyAtx
+
+The videos are labeled "lesson 01 x" which corresponds to the class lesson numbers. 
+
+<!-- > -->
+
 ## Single Page Applications
 
 <!-- > -->
@@ -190,11 +200,11 @@ import React from 'react';
 
 function App() {
   return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Hello World</h1>
-        </header>
-      </div>
+    <div className="App">
+      <header className="App-header">
+        <h1>Hello World</h1>
+      </header>
+    </div>
   );
 }
 
@@ -239,7 +249,8 @@ What you need to know:
 - React keeps track of all components in the virtual DOM.
 - Making changes to DOM directly does not work with React! 
 - Manipulating the DOM within a React project should almost always be handled with a Component!
-    - In other words `document.getElementById()` is not compatible with React! 
+    - `document.getElementById()` is not compatible with React! 
+    - jQuery is also not compatible with react!
 
 <!-- > -->
 

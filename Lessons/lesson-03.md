@@ -14,13 +14,23 @@ Last, the goal will be to look at conditional rendering techniques that can be i
 
 <!-- > -->
 
-## Objectives 
+## Learning Objectives 
 
 - Implement the Controlled Component Pattern
   - Use forms and form data in React
 - Build an app that works with a public API
 - Build a system to handle network errors gracefully
 - Use conditional rendering patterns in React
+
+<!-- > -->
+
+## Video
+
+Follow this class in these video lessons:
+
+- https://www.youtube.com/playlist?list=PLoN_ejT35AEhmWcDTI6M--ha_E4lTyAtx
+
+The videos are labeled "lesson 03 x" which corresponds to the class lesson numbers. 
 
 <!-- > -->
 

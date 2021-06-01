@@ -8,6 +8,16 @@
 1. Use callbacks to solve problems
 1. Describge promise in JS 
 
+<!-- > -->
+
+## Video
+
+Follow this class in these video lessons:
+
+- https://www.youtube.com/playlist?list=PLoN_ejT35AEhmWcDTI6M--ha_E4lTyAtx
+
+The videos are labeled "lesson 06 x" which corresponds to the class lesson numbers. 
+
 # Functions 
 
 A function is a block of code that your program can use as often as needed. In JavaScript we can write a function in one of a three ways: 

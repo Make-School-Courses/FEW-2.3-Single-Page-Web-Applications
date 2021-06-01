@@ -2,7 +2,7 @@
 
 <!-- > -->
 
-## Props, State, and Profesional Best Practice
+## React Props and State
 
 This class you will work on improving the codebase you've developed in the previous classes.
 
@@ -17,15 +17,22 @@ This class you will work on improving the codebase you've developed in the previ
 
 <!-- > -->
 
+## Video
+
+Follow this class in these video lessons:
+
+- https://www.youtube.com/playlist?list=PLoN_ejT35AEhmWcDTI6M--ha_E4lTyAtx
+
+The videos are labeled "lesson 02 x" which corresponds to the class lesson numbers. 
+
+<!-- > -->
+
 ## Review
 
 1. What is a Single Page Application?
 1. Name some pros and cons of Single Page Applications?
 1. Create a new react project
-1. Where were props used in the tutorial?
-1. What are props? Descibe in as much detail as you can
-1. Where is state used in the tutorial?
-1. What is state? Describe in as much detail as you can
+1. WHat is JSX in your own words?
 
 <!-- > -->
 

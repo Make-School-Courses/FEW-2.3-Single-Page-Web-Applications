@@ -13,6 +13,16 @@ Read the comments here to follow the process.
 1. Use environment variables to handle seinsitive information
 1. Define Promise it's uses and features 
 
+<!-- > -->
+
+## Video
+
+Follow this class in these video lessons:
+
+- https://www.youtube.com/playlist?list=PLoN_ejT35AEhmWcDTI6M--ha_E4lTyAtx
+
+The videos are labeled "lesson 07 x" which corresponds to the class lesson numbers. 
+
 ## .env
 
 The .env or "dot" env file is used to store sensitive information, like API keys! The Create React Starter project has support for .env baked in. 

@@ -16,6 +16,16 @@ Conditional rendering is the process of showing one component or another dependi
 
 <!-- > -->
 
+## Video
+
+Follow this class in these video lessons:
+
+- https://www.youtube.com/playlist?list=PLoN_ejT35AEhmWcDTI6M--ha_E4lTyAtx
+
+The videos are labeled "lesson 05 x" which corresponds to the class lesson numbers. 
+
+<!-- > -->
+
 ##  Review 
 
 - Use the controlled component pattern to create a form
