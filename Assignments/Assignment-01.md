@@ -122,7 +122,7 @@ Create a new React Project with:
 
 `npx create-react-app react-product-list`
 
-Copy the [`data.json`](data.json) file into your src directory. 
+Copy the [`data.json`](https://raw.githubusercontent.com/Make-School-Courses/FEW-2.3-Single-Page-Web-Applications/master/Assignments/data.json) file into your src directory. 
 
 Make a new "module". A module is just a JS file. Name your file: `data.js`
 
