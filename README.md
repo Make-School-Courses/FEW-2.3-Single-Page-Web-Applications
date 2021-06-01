@@ -75,19 +75,19 @@ Hybrid sections are a mixture of online and in person components.  In person ses
 [React Hooks]: Lessons/lesson-11.md
 [Present Final Projects]: Lessons/lesson-12.md
 
-## Projects
-
-During the course of the class you will build the following projects: 
-
-1. [Assignment 1 - React Product List]: Assignments/Assignment-01.md
-2. [Assignment 2 - Weather API]: Assignments/Assignment-02.md
-3. [Assignment 3 - React + Redux Tutorial]: Assignments/Assignment-03.md
-4. [Assignment 4 - Custom Project]: Assignments/Assignment-04.md
-
 [Assignment 1 - React Product List]: Assignments/Assignment-01.md
 [Assignment 2 - Weather API]: Assignments/Assignment-02.md
 [Assignment 3 - React + Redux Tutorial]: Assignments/Assignment-03.md
 [Assignment 4 - Custom Project]: Assignments/Assignment-04.md
+
+## Projects
+
+During the course of the class you will build the following projects: 
+
+1. [Assignment 1 - React Product List](Assignments/Assignment-01.md)
+2. [Assignment 2 - Weather API](Assignments/Assignment-02.md)
+3. [Assignment 3 - React + Redux Tutorial](Assignments/Assignment-03.md)
+4. [Assignment 4 - Custom Project](Assignments/Assignment-04.md)
 
 ## Evaluation
 To pass this course you must meet the following requirements:
