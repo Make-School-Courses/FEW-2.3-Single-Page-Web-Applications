@@ -20,7 +20,7 @@ Your project does have to meet these criteria:
 
 ### Deliverable
 
-Lin k to your project in the class tracker.
+Post your work to GradeScope.
 
 ### Due date
 

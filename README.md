@@ -80,7 +80,7 @@ Hybrid sections are a mixture of online and in person components.  In person ses
 [Assignment 3 - React + Redux Tutorial]: Assignments/Assignment-03.md
 [Assignment 4 - Custom Project]: Assignments/Assignment-04.md
 
-## Projects
+## Homework
 
 During the course of the class you will build the following projects: 
 
@@ -88,6 +88,16 @@ During the course of the class you will build the following projects:
 2. [Assignment 2 - Weather API](Assignments/Assignment-02.md)
 3. [Assignment 3 - React + Redux Tutorial](Assignments/Assignment-03.md)
 4. [Assignment 4 - Custom Project](Assignments/Assignment-04.md)
+
+You should submit each of these assignments to GradeScope. 
+
+Besides the projects above, you are also responsible for completing the self assessment questions on GradeScope. There is one following each lessons. Use thes to measure how much of the course material you have absorbed. 
+
+You will follow all of the lessons in the videos playlist below. 
+
+- https://www.youtube.com/playlist?list=PLoN_ejT35AEhmWcDTI6M--ha_E4lTyAtx
+
+The videos are labeled "lesson XX Y" where XX is the lesson number 01, 02, 03 etc. and Y is video number. You should watch all of the videos for each lesson matching the lessons in the schedule above. 
 
 ## Evaluation
 To pass this course you must meet the following requirements:
