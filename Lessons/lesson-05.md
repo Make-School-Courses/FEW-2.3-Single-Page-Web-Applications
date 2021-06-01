@@ -192,43 +192,6 @@ function App() {
 }
 ```
 
-### Lifecycle methods 
-
-A lifecycle method is a method that is called when a component is created, updated, or will be removed. Use lifecycle methods to: 
-
-- Initialize components 
-- Apply updates
-- Clean up resources
-
-Two important lifecycel methods are: 
-
-- `componentDidMount()` - Called when a component is created and added to the DOM. This is good place to start your component and initialize it's activities.
-- `componentWillUnmount()` - Is called when a component is about to be removed from the DOM. Use this to clean up resources a component will not lobnger need. 
-
-```JS
-class Clock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {date: new Date()};
-  }
-
-  componentDidMount() {
-  }
-
-  componentWillUnmount() {
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>Hello, world!</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-      </div>
-    );
-  }
-}
-```
-
 ### Using Conditional Rendering
 
 This might be good when you want to see the logic at the point where something is rendered. 
