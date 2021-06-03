@@ -373,4 +373,8 @@ Continue working on [Assignment 1](../Assignments/Assignment-01.md)
 
 ## Resources
 
-- 
+- [React State](https://reactjs.org/docs/faq-state.html)
+- [React Props](https://reactjs.org/docs/components-and-props.html)
+- [Video Playlist](https://www.youtube.com/playlist?list=PLoN_ejT35AEhmWcDTI6M--ha_E4lTyAtx)
+- [Lifting State](https://reactjs.org/docs/lifting-state-up.html)
+
