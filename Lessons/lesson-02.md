@@ -32,7 +32,7 @@ The videos are labeled "lesson 02 x" which corresponds to the class lesson numbe
 1. What is a Single Page Application?
 1. Name some pros and cons of Single Page Applications?
 1. Create a new react project
-1. WHat is JSX in your own words?
+1. What is JSX in your own words?
 
 <!-- > -->
 
