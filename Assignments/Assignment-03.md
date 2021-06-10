@@ -10,7 +10,7 @@ Application state is at the core of every app. Using a modern update pattern and
 
 ## Project requirements
 
-Your goal is to choose one of the tutorials below and complete it. The tutorials are ranked in level of difficulty. 
+Your goal is to choose one of the tutorials below and complete it. The tutorials are ranked in level of difficulty.
 
 1. [React+Redux Password List](https://github.com/MakeSchool-Tutorials/web-7-react-redux-passwords-app) - This is an alternate take on the Todo List. The app keeps track of a list of user names and passwords, and generates random passwords. It uses React for views, Redux to manage application state, and resists data in local storage.
 2. [React+Redux Timers App](https://www.makeschool.com/mediabook/oa/tutorials/react-redux-passwords-app-tutorial-oh4/react-redux-timers-introduction/) - An advanced alternative to the Todo list. The app stores a list of timers, timers can be stoped and started. You could use this app to keep track of time spent working projects or billing clients. This project is like the seed for: https://toggl.com. It uses React for views, Redux for application state management, and persists data with local storage. You can also follow this tutorial on GitHub: [React Redux Timers Tutorial](https://www.makeschool.com/mediabook/oa/tutorials/react-redux-passwords-app-tutorial-oh4/react-redux-timers-introduction/)

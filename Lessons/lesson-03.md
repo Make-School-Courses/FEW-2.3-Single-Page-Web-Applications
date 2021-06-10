@@ -305,12 +305,13 @@ This may seem a little strange, but it's important for two reasons.
 
 Use `array.filter()` to solve some of the challenges. Filter is a method of Array that returns a new array that is a subset of the source array. Like map and reduce fitler takes a callback. The callback is passed each element from the source array and it determines if that item should be included in the output array by returning true or false if the item should not be included. 
 
-## Homework
+## After Class
 
-[Assignment 3](../Assignments/Assignment-02.md)
+[Assignment 3](https://github.com/Make-School-Courses/FEW-2.3-Single-Page-Web-Applications/blob/master/Assignments/Assignment-02.md)
 
 ## Additional Resources
 
+1. [Video Tutorials](https://www.youtube.com/playlist?list=PLoN_ejT35AEhmWcDTI6M--ha_E4lTyAtx)
 1. [JSON Formatter](https://jsonformatter.curiousconcept.com)
 1. [React Forms](https://reactjs.org/docs/forms.html)
 1. [JSX in depth](https://reactjs.org/docs/jsx-in-depth.html#comments)
