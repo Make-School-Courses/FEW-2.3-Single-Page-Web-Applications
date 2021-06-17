@@ -73,16 +73,6 @@ Above the double function defines a parameter `n`. When the function is invoked 
 
 Note! **parameter** is the variable that holds the **argument** which is the value.
 
-# Problems on GitHub
-
-The problems below have been consolidated in this GitHub repo: 
-
-https://github.com/Make-School-Labs/callbacks-and-promise
-
-- Fork or clone this repo
-- Solve the problems
-- Submit your work to GradeScope
-
 # Callbacks are used everywhere in JavaScript. 
 
 A callback is a *function* that you pass to another function as an *argument*. One example of this is `Array.forEach()`. 
@@ -242,15 +232,10 @@ Promise.all(arr).then((values) => values)
 
 **Challenge Problems:** https://replit.com/join/ixzvheyv-mitchellhudson
 
+
 ## After Class 
 
-The problems below have been consolidated in this GitHub repo: 
-
-https://github.com/Make-School-Labs/callbacks-and-promise
-
-- Fork or clone this repo
-- Solve the problems
-- Submit your work to GradeScope
+Continue working on the React Weather API project. 
 
 ## ReSources 
 
