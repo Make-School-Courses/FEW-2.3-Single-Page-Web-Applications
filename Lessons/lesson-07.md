@@ -148,6 +148,12 @@ If the code in the try block throws an error we end up in the catch block!
 
 Continue working on assignment 3
 
+If you are up to date with the current work. Try these stretch challenges: 
+
+- The videos add a shopping cart to the product list. Currently each items shows +/- and clear. Challenge: add an input field that displays the quanity. Set this up so it's possible enter a new quantity into the input. 
+- Currently the Product list is a single page. Add react Router. Use Router to display a "detailed" view showing the product. The product list can now show a short version of each product just the name and price. 
+- Use Router to display the shopping cart. Add a show cart button that shows the count (total numebr of items in cart) and clicking the link displays the full cart. You can also solve this problem without Router using conditional rendering techniques. 
+
 ## ReSources 
 
 - https://javascript.info/promise-basics
