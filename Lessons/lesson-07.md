@@ -23,6 +23,27 @@ Follow this class in these video lessons:
 
 The videos are labeled "lesson 07 x" which corresponds to the class lesson numbers. 
 
+## Brainstorming your final project
+
+Start thinking of ideas for your final project. Your final project should use React and Redux. Beyond this you are free to do anything else you like, provided you can finish by the end of the term!
+
+Here are a few ideas: 
+
+- Use the Weather API as a starting place and expand this project to display a 5 day forcast and other weather data. 
+- Use the Weather API project as a starting place but replace the weather API with another API. 
+- Make a Chess board. 
+- Make a Chess Timer
+- Update one of your previous projects that doesn't use React to a React project. 
+- Build a Frontend in React for a backend that you may have created for previous project. 
+- Expand the Timers tutorial into a productivity app of some kind. It could be evolved into a pomodoro timer or a Todo list. The timers app could be expanded to track billable hours. 
+- Create an expense tracker. 
+
+Check out these articles for more ideas: 
+
+- https://www.upgrad.com/blog/react-project-ideas-topics-beginners/
+- https://flatlogic.com/blog/6-stunning-react-js-project-ideas/
+- https://www.freecodecamp.org/news/8-reactjs-project-ideas-to-start-learning-by-doing/
+
 ## .env
 
 The .env or "dot" env file is used to store sensitive information, like API keys! The Create React Starter project has support for .env baked in. 
@@ -154,7 +175,7 @@ If you are up to date with the current work. Try these stretch challenges:
 - Currently the Product list is a single page. Add react Router. Use Router to display a "detailed" view showing the product. The product list can now show a short version of each product just the name and price. 
 - Use Router to display the shopping cart. Add a show cart button that shows the count (total numebr of items in cart) and clicking the link displays the full cart. You can also solve this problem without Router using conditional rendering techniques. 
 
-## ReSources 
+## Resources 
 
 - https://javascript.info/promise-basics
 - https://javascript.info/async-await
