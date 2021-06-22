@@ -37,6 +37,10 @@ Here are a few ideas:
 - Build a Frontend in React for a backend that you may have created for previous project. 
 - Expand the Timers tutorial into a productivity app of some kind. It could be evolved into a pomodoro timer or a Todo list. The timers app could be expanded to track billable hours. 
 - Create an expense tracker. 
+- Pizza Builder
+- Recipes App, could use an API...
+- Try a tutorial
+- Rubiks Cube
 
 Check out these articles for more ideas: 
 
