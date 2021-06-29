@@ -2,7 +2,7 @@
 
 # Redux
 
-This class will cover Redux which is an application state management tool. Application represents the data that your app manages and displays. Often it is shared across mulitple views and can be updated in complex ways. 
+This class will cover Redux which is an application state management tool. Application State represents the data that your app manages and displays. Often it is shared across multiple views and can be updated in complex ways. 
 
 Redux is a JS library based on the Flux pattern that 
 
@@ -24,7 +24,7 @@ What is a reducer?
 
 <!-- > -->
 
-What is a the store?
+What is the store?
 
 <!-- > -->
 
@@ -32,17 +32,17 @@ What is a the store?
 const export NEW_TODO = 'NEW_TODO'
 
 export const newTodo = (item) => {
-	// What goes here?
+  // What goes here?
 }
 ```
 
 <!-- > -->
 
 ```JS
-import  { NEW_TODO } from '../actions'
+import { NEW_TODO } from '../actions'
 
 function todoReducer(state = [], action) {
-	// What goes here? 
+  // What goes here? 
 }
 ```
 
@@ -52,17 +52,17 @@ function todoReducer(state = [], action) {
 
 1. Define Reference and value types
 2. Identify references and values in JavaScript
-3. Use destructuring to create shallow copy of objects and arrays
+3. Use destructuring to create a shallow copy of objects and arrays
 
 <!-- > -->
 
-## The Fianl Project
+## The Final Project
 
 Use this class to get started on your final project!
 
 Your project should include the following: 
 
-- Built in React
+- Built-in React
 - Uses Redux
 - Uses the Controlled component pattern
 
@@ -75,9 +75,9 @@ Since your project will use Redux you'll need to think about the store. Ask your
 
 The store is an object and each key holds a value. The value at each key is assigned by a reducer. 
 
-The keys on the store can be objects, arrays, or other value types. Your project can use more than one reducer btu each reducer is responsible for the value at a single key. 
+The keys in the store can be objects, arrays, or other value types. Your project can use more than one reducer but each reducer is responsible for the value at a single key. 
 
-Imagine your store has a list if posts. It might look like this: 
+Imagine your store has a list of posts. It might look like this: 
 
 ```JS
 store = {
@@ -140,18 +140,18 @@ combineReducers({
 })
 ```
 
-### Define the Application state for app
+### Define the Application state for the app
 
 What does it look like? What shape or form does this data take? Define your data now. Write an object that looks like the data your app needs to store. 
 
 ## Define Actions 
 
-Actions determine the ways your application can make changes to the store. In a Redux application changes to application state can only be made with an action. 
+Actions determine the ways your application can make changes to the store. In a Redux application changes to the application, state can only be made with an action. 
 
 - List all of the actions your application can take
 - For each action think of what information might be required by that action. 
 
-For example, with the example above, creating a new post might require a title and some text content. The action might be called: ADD_POST. Every action will have a corresponding function. In this case the function would need to take the title and content as parameters. 
+For example, with the example above, creating a new post might require a title and some text content. The action might be called: ADD_POST. Every action will have a corresponding function. In this case, the function would need to take the title and content as parameters. 
 
 ```JS
 const ADD_POST = 'ADD_POST'
@@ -168,7 +168,7 @@ Your reducers would be called with the current state value and the action object
 
 ### Define your actions
 
-Think of all of the ways your application will change it's state. Make an action for each state. 
+Think of all of the ways your application will change its state. Make an action for each state. 
 
 ## In Class Challenges 
 
@@ -188,10 +188,15 @@ Think of all of the ways your application will change it's state. Make an action
 
 The goal for today is to have a React Project with Redux. It doesn't have to be fully functional and may need changes, but it should have redux installed and functional. 
 
-- 
+- Install Redux
+- Add Actions
+- Add Reducers
+- Combine Reducers
+- Create Store
 
-Submit your work to gradescope. 
+Submit your work to grade scope. 
 
 ## Additional Resources
 
 1. 
+
