@@ -19,7 +19,13 @@ Why use hooks? Hooks provide a system to use components written as functions eve
 - Use lifecycle events
 - Compare and contrast referecnes and values
 
+## Video Lecture
 
+Follow the video lecture here: 
+
+- https://www.youtube.com/playlist?list=PLoN_ejT35AEhmWcDTI6M--ha_E4lTyAtx
+
+Watch lessons 08 1 - 2
 
 ## Additional Resources
 
