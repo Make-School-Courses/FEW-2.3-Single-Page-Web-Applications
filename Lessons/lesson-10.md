@@ -325,20 +325,41 @@ export default DisplayWeather
 
 This component gets the weather state from the store. If the value is `null` it returns null which will display nothing. If there is a value it returns an h1 with the temp. 
 
+Add the new component to the App. Edit `App.js`:
 
+```JS
+import LoadWeather from './LoadWeather'
+import DisplayTemp from './DisplayTemp'
+import './App.css';
 
+function App() {
+  return (
+    <div className="App">
+      <DisplayTemp />
+      <LoadWeather />
+    </div>
+  );
+}
 
+export default App;
+```
 
+Here I imported `DisplayTemp` and added to the JSX block. 
 
+At this point you should be able to run your App, enter a zip and display the temp. Test it to make sure everything is working: 
 
+### Challenges
 
+If you go this far try these challenges:
 
-
-
-
-
-
-
+- Add some styles
+  - Style the input form in `LoadWeather.js`
+  - Style the temp display in `DisplayTemp.js`
+  - Style the App component
+- Create a component that looks for a message on `state.weather` and display the message
+  - Display the message
+  - Style the message
+- Expand the data you've collected. So far we only have the temperature. Collect more data and pass it along to be added to state. Collect data in the `loadWeather` action.
 
 ## Tutorial concepts Review 
 
@@ -352,16 +373,16 @@ Quick let's review everything. Identify the following in the tutorial projects.
   - The Store
 2. Review and identify all of the parts used by React Redux
   - Provider component 
-  - connect()
-    - mapStateToProps()
-    - mapDispatchToProps()
-3. Identify and describe the parts of Redux and React Redux
+3. React REdux Hooks
+  - useDispatch
+  - useSelector
+4. Identify and describe the parts of Redux and React Redux
   - Actions 
   - Store 
   - Reducers
   - Immutable State 
   - connected components
-4. Identify and described Application State
+5. Identify and described Application State
 
 ## Challenges 
 
