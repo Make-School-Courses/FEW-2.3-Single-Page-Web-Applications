@@ -6,11 +6,16 @@ React Hooks are a new feature that is finding a lot of use. Hooks were introduce
 
 Why use hooks? Hooks provide a system to use components written as functions everywhere. Previously only Class based components could use state and lifecycle methods. Now you have access to state and lifecycle methods with Hooks in components written as functions. 
 
+Using hooks also provides a single unified syntax for all of the components you will write. Before hooks you had to use the class syntax for some components and the function syntax for others. 
+
+Last, using hooks allows you to avoid confusion with JavaScript `this`. That said hooks can also have some confusing situations. 
+
 ## Why you should know this
 
-- Hooks popular expect to see them
-- Hooks allow you to unify your component code to a single style. Rather than writting some components as a functions and others as classes you can write everything as functions. 
-- Hooks make much code easier, or at least shorter than using class based components.
+- Hooks popular expect to see them in production code
+- Hooks allow you to unify your component code to a single style.
+- Components written with hooks are usually shorter than a class based component
+- Using hooks avoids confusion with JavaScript `this`
 
 ## Learning Objectives
 
