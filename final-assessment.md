@@ -131,7 +131,7 @@ You'll need to do it in this order.
 - Use fetch to get the homeworld 
 - Set state to display this data
 
-## Add Some CSS styles 9
+## Add Some CSS styles - 9
 
 Style your work. This is an open-ended challenge. You just need to show that you can apply styles to components. Try these ideas: 
 
@@ -140,7 +140,7 @@ Style your work. This is an open-ended challenge. You just need to show that you
 - Style the headings
 - Style the form elements input and button
 
-## Get the list of films 10
+## Get the list of films - 10
 
 Every character comes with a list of films. This is a list of URLs that return JSON describing a film the character appeared in. Your goal is to display the film title for each film a character appeared in. 
 
