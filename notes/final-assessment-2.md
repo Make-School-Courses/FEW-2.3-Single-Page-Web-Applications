@@ -4,9 +4,7 @@ Your goal is to create a React application with the components and features desc
 
 The Problems below are presented in order of complexity. Doing them in order will be easier. 
 
-Complete each step to the best of your ability. I have listed a point value for each step. Solve as much of each step as you can partial credit will be awarded. 
-
-Do not post this project to GitHub! Instead you will submit your work to me by first **removing the node_modules** folder then copying your work to my USB drive.
+Complete each step to the best of your ability. I have listed a point value for each step. Solve as much of each step as you can partial credit will be awarded.
 
 ## Getting started (10pts)
 
@@ -16,35 +14,44 @@ Create a React Project and name it with 'final' and your first and last name:
 
 `final-<first>-<last>`
 
-I should be able to run your project with `npm start`.
+I should be able to run your project with `npm start` or `yarn start`.
 
-## Home Components (10pts)
-
-Create a **Home** component that displays your name and the name of this class.
+## Components and props (10pts)
 
 Make a **Title** component, use it to display your name. The Title Component _should take a prop that sets the text displayed_ in the title.
 
-In this step you are creating two Components `Home` and `Title` and using the `Title` component inside the `Home` Component to display your name. 
+Display the Title component at the top of your App.  
 
-## Components moderate (10pts)
+## Components patterns (10pts)
 
-Create a 'Clicker' component. 
+Create a form element that uses the controlled component pattern. You'll be entering the id of a Star Wars character and looking up the character via the id in the next step. 
 
-Create a new **Clicker** Component that displays a _button_ and an instance of the _Title_ component you created in the previous step.  
+This component should contain an input element and use state to hold the value entered in the input. 
 
-This component should count the number of times the button was clicked and display the count in the Title. Use state to track the count. 
+**Extra Credit:** Validate your input. 
 
-When you're done with this step the Title should display an initial count of 0, and increase the count by 1 each time I click the button. 
+SWAPI only allows numbers between 1 and 83, and 17 is missing. Solve this stretch challenge by only allowing the numbers 1 to 16 and 18 to 83. 
 
-## Components Patterns (20pts)
+## Loading Data and async JS (20pts)
 
-Display data from the Star Wars API. 
+Display data from the Star Wars API. In this step you'll be using the value entered in the input above to look up a Star Wars Character. 
 
 The Star Wars API is a simple API that takes a number and returns a JSON object describing a character in one of the Star Wars movies. 
 
-For example:
+For example: 
 
-`https://swapi.co/api/people/1/`
+```
+https://swapi.co/api/people/1/
+https://swapi.co/api/people/2/
+https://swapi.co/api/people/3/
+etc.
+```
+
+This request:
+
+```
+https://swapi.co/api/people/1/
+```
 
 Returns: 
 
@@ -83,7 +90,7 @@ Returns:
 }
 ```
 
-Create a new **StarWars** component that has a _text input_, a _button_, and a _Title_. Entering a number in the input and clicking the button should show the name of a Star Wars Character in the Title. 
+**Challenge:** use the input you created earlier to load the data for the Star Wars character for the id entered and display the name of the character in an instance of the Title component you created earlier. 
 
 Use fetch to make a request using the SWAPI api below, handle the response by displaying the name of the character.
 
